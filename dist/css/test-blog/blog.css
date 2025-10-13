@@ -1,0 +1,177 @@
+.contenedor{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header          header           header"
+        "blog-banner     blog-banner      blog-banner"
+        "blog-descrip    blog-descrip     blog-descrip"
+        "tres-banners    tres-banners     tres-banners"
+        "carrusel-unis   carrusel-unis    carrusel-unis"
+        "footer          footer           footer";
+}
+
+/* BARra NAVegación */
+.contenedor .header{ grid-area: header;}
+
+/* BANNER-PRINCIPAL */
+.contenedor .blog-banner{
+    grid-area: blog-banner;
+    color: #fff;
+    padding: 2em 0;
+    width: auto;
+    height: 200px;
+    background-image: url(/2022/dist/images/blog.png);
+    background-position: center center;
+    background-size: cover;
+    text-shadow: 1px 1px 5px #000000;
+}
+
+.contenedor .blog-banner .blog-head{ padding-top: 2.5em;}
+
+.contenedor .blog-banner .blog-head>div >p{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/*Descripción Blog*/
+.contenedor .blog-descrip{grid-area: blog-descrip;}
+.contenedor .blog-descrip .blog-txt{
+    width: 95%;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.contenedor .blog-descrip .blog-txt .red-h1-big {
+    color: #E10031;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.contenedor .blog-descrip .blog-txt .textos-txt {
+    font-size: 16px!important;
+    margin: 0.5em auto!important;
+    width: 78%;
+}
+
+/* 3 banners */
+.contenedor .tres-banners{
+    grid-area: tres-banners;
+    width: 95%;
+    margin: 2em auto;
+    height: 25em;
+    padding: 1em 0;
+    display: flex;
+    gap: 1.2em;
+    justify-self: center;
+}
+
+.contenedor .tres-banners a{ 
+    width: 33%; 
+    font-weight: 500;
+}
+.contenedor .tres-banners a:hover{font-weight: 700;}
+
+.contenedor .tres-banners .blog-links div {
+    display: grid;
+    align-content: flex-end;
+    padding: 0;    
+    text-shadow: 1px 1px 5px #1a1a1a;
+    background-position: center center;
+    background-size: cover;
+    font-size: 22px;
+    margin: 0 auto;
+    height: 17em;
+    color: #fff;
+    line-height: 1em;
+    width: 100%;
+}
+
+.contenedor .tres-banners .banner-1{
+    grid-area: banner-1;
+    background-image: url(/2022/dist/images/banner-blog-social-aucal.png);    
+}
+
+.contenedor .tres-banners .banner-2{
+    grid-area: banner-2;
+    background-image: url(/2022/dist/images/banner-blog-educacion-aucal.png);
+}
+
+.contenedor .tres-banners .banner-3{
+    grid-area: banner-3;
+    background-image: url(/2022/dist/images/banner-blog-actualidad-aucal.png);
+}
+
+/* UNIVERSIDADES */
+.contenedor .carrusel-unis{    grid-area: carrusel-unis;}
+
+/* FOOTER */
+.contenedor .footer{    grid-area: footer;}
+
+/* FOOTER */
+.contenedor .footer{ grid-area: footer;}
+
+
+/********************************/
+/********************************/
+@media (max-width:991.98px){
+    .contenedor .blog-banner {margin-top: 9em;}
+}
+
+
+/***********************************/
+/* @media (min-width:768px){
+  
+} */
+
+/***********************************/
+
+@media (max-width: 767.98px) {
+    /*Contenedor*/
+    .contenedor-blog{
+        display: block;
+        max-width: 95%!important;
+        margin: 0 auto!important;
+    }
+
+    /* BANNER-PRINCIPAL */
+    .contenedor .blog-banner{
+        padding: 0.5em 0;
+        height: 150px;
+    }
+    
+    .contenedor .blog-banner .blog-head>div >p{
+        font-size: 32px;
+        font-weight: 600;
+    }
+    
+    /* 3 banners */
+    .contenedor .tres-banners .blog-links div {
+        margin: 1em auto;
+        height: 12em;
+    }
+
+    .contenedor .tres-banners{
+        width: 100%;
+        display: block;
+        height: max-content;
+    }
+    
+    .contenedor .tres-banners>div {
+        text-align: center;
+        font-weight: 600;
+        height: 10em;
+        margin: 1em auto;
+        width: 95%;
+    }
+
+    .contenedor .tres-banners>div a {
+        font-size: 18px;
+        width: auto;
+        padding: 0.2em 1em;
+    }
+
+    
+
+}
+

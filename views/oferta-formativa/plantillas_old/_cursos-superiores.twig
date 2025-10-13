@@ -1,0 +1,88 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content="Cursos Superiores online reconocidos y válidos en toda la UE. Disponibles becas y descuentos para alumnos AUCAL."/>
+    <link rel="stylesheet" href="/2022/dist/css/oferta.css"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/cursos-supers.png">
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor" style="display: block"> 
+        <aside class="oferta-banner banner-supers">            
+            <div class="oferta-title-banner center-head">
+                <div class="oferta-title center-title">
+                    <p class="h2-oferta">OFERTA EDUCATIVA</p>
+                </div>
+                <div class="oferta-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="oferta-txt center-title">
+                    <p class="h1-oferta">Cursos Superiores</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="oferta-head">
+            <div class="center-title oferta-title-head">
+                <p class="oferta-h1">
+                    Reconocidos y válidos en toda la UE
+                </p>
+            </div> 
+            <div class="oferta-txt-head">
+                <p class="oferta-txt">
+                    Nuestros <b>Cursos Superiores</b> son aquellos que hemos agrupado de acuerdo 
+                    a la cantidad de créditos (ECTS) que poseen y/o la malla curricular 
+                    que presentan. Estos cursos online poseen titulaciones universitarias 
+                    y tienen más de 20 años de colaboración activa con las entidades que nos apoyan.
+                </p>
+            </div> 
+        </aside>
+        <aside class="oferta-btns">
+            <div class="oferta-cards oferta-cards-supers">                
+                <div class="oferta-card card-seguridad">
+                    <a href="/oferta-formativa/curso-superior/curso-director-de-seguridad-privada" class="oferta-a" alt="AUCAL Bussines School Curso Superior Seguridad Privada">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Curso Superior de</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Director de Seguridad</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-detective">
+                    <a href="/oferta-formativa/curso-superior/curso-detective-privado" class="oferta-a" alt="AUCAL Bussines School Curso Superior Detective Privado">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Curso Superior</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">de Detective Privado</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-fincas">
+                    <a href="/oferta-formativa/curso-superior/curso-gestion-inmobiliaria" class="oferta-a" alt="AUCAL Bussines School Curso Superior Gestion Inmobiliaria">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Programa Superior de</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Dirección y Gestión Inmobiliaria y Administración de Fincas (PINM)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-asesor">
+                    <a href="/oferta-formativa/curso-superior/curso-agente-inmobiliario" class="oferta-a">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Curso Superior de</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Asesor Inmobiliario</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <aside class="oferta-links">
+            <a href="/oferta-formativa/master-oficial" class="link-superiores" alt="AUCAL Bussines School Masteres Masters">VER MÁSTERES >> </a>
+            <a href="/oferta-formativa/curso-tecnico" class="link-tecnicos" alt="AUCAL Bussines School Cursos Tecnicos">VER CURSOS TÉCNICOS >></a>
+        </aside>
+    </div>
+{% endblock %}

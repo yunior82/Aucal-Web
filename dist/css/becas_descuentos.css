@@ -1,0 +1,188 @@
+/* BECAS Y DESCUENTOS */
+.contenedor {
+    display: grid;
+    line-height: normal;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header             header              header"
+        "banner-becas       banner-becas        banner-becas"
+        "textos-body        textos-body         textos-body"
+        "becas-info         becas-info          becas-info"
+        "banner-azul-right  banner-azul-right   banner-azul-right"
+        "carrusel-unis      carrusel-unis       carrusel-unis"
+        "footer             footer              footer";    
+}
+
+/* ***************************** */
+/* BECAS y DESCUENTOS */
+/* BARra NAVegación */
+.contenedor .header{  grid-area: header; }
+.dropbtn .hidden-drop{display: none;}
+
+/*Banner*/
+.contenedor .banner-becas{
+    grid-area: banner-becas;
+    color: #fff;
+    padding: 2em 0;
+    width: auto;
+    background-image: url(/2022/dist/images/becas.png);
+    background-position: center center;
+    background-size: cover;
+    text-shadow: 1px 1px 5px #000000;
+}
+
+.contenedor .banner-becas .becas-head>div >p{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.contenedor .banner-becas .becas-head>div >hr{ box-shadow: 1px 1px 2px #000000; }
+
+/* SECCION info */
+.becas-title, .becas-txt{ margin-bottom: 1rem;}
+
+.becas-txt{
+    font-size: 15px;
+    height: max-content;
+}
+
+.contenedor .becas-info{
+    grid-area: becas-info;
+    width: 80%;
+    margin: auto;
+    padding: 2em 4em;
+    background-color: #d3d3d3;
+}
+
+.contenedor .becas-info>div p{  text-align: left; }
+.contenedor .becas-info>div .becas-title, .contenedor .becas-info>div .becas-txt{  font-weight: 700;}
+.contenedor .becas-info>div .becas-drop{width: 100%;}
+
+.contenedor .becas-info>div .becas-drop>div {
+    padding: 0 1em;
+    margin: 0 auto;
+}
+
+.contenedor .becas-info>div .becas-drop .drop-title{
+    position: relative;
+    background: #7F0000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    margin: 0 auto 1em auto;
+}
+
+.contado{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.contenedor .becas-info>div .becas-drop .drop-title .dropbtn{
+    background: #7F0000;
+    border: none;
+    float: right;
+    height: 26px;
+    line-height: 26px;
+}
+
+.contenedor .becas-info>div .becas-drop .drop-title .dropbtn:hover{cursor: pointer;}
+
+.contenedor .becas-info>div .becas-drop .drop-title .dropbtn>img{    
+    height: 22px;
+    padding: 0.2em 0.5em;
+}
+
+#excelencia, #aucalizate, #pymes, #autonomos, #familia, #treinta,
+#seiscinco, #contado, #alumno, #desempleado, .icono-left {  display: none; } 
+
+
+.contenedor .becas-info>div .becas-drop .drop-txt{
+    position: relative;
+    background: #fff;
+    width: auto;
+    text-align: justify;
+    padding: 1em;
+    margin: 0 auto 1em;
+}
+
+
+.contenedor .becas-info>div .becas-drop>div .title-red{
+    color: #E10031;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.contenedor .becas-info>div .becas-drop>div .txt-drop{
+    color: #000000;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.contenedor .becas-info>div .becas-drop .btn-yellow{
+    margin: 4em auto 0;
+    width: 30%;
+    font-size: 15px;
+    height: 2.5em;
+    text-align: center;
+    display: grid;
+    align-content: center;
+}
+
+/*BANNER AZUL*/
+.contenedor .banner-azul-right{grid-area: banner-azul-right;}
+.banner-azul-right .img-becas{background-image: url(/2022/dist/images/becas-AUCAL.jpg);}
+.banner-azul-right .img-descuentos{background-image: url(/2022/dist/images/descuento-AUCAL.jpg);}
+
+/* UNIS */
+.contenedor .carrusel-unis{ grid-area: carrusel-unis;}
+
+/* FOOTER */
+.contenedor .footer{ grid-area: footer;}
+
+/********************************/
+@media (max-width:991.82px){
+    .contenedor .banner-becas {margin-top: 9em;}
+}
+
+/*******************************/
+
+@media  (max-width: 767.98px) { 
+   /* BECAS y DESCUENTOS */
+   /* BANNER */
+   .contenedor .banner-becas .becas-head>div >p {font-size: 2rem;}
+   
+    /* SECCION info */
+    .contenedor .becas-info{
+        width: 90%;
+        margin: 0 auto;
+        padding: 1em;
+    }
+
+    .contenedor .becas-info>div p{ text-align: left; }
+    .contenedor .becas-info>div .becas-title, .contenedor .becas-info>div .becas-txt{ font-weight: 600; }
+    .contenedor .becas-info>div .becas-title{ font-size: 1.4rem; }
+    .contenedor .becas-info>div .becas-txt{ font-size: 15px; }
+    .contenedor .becas-info>div .becas-drop{ width: 100%; }
+
+    .contenedor .becas-info>div .becas-drop>div {
+        padding: 0 1em;
+        margin: auto;
+    }
+
+    .contenedor .becas-info>div .becas-drop .drop-title, .contenedor .becas-info>div .becas-drop>div .title-red{ font-size: 15px; }
+    .contenedor .becas-info>div .becas-drop .drop-title .dropbtn>img{   height: 15px;  }
+
+    .contenedor .becas-info>div .becas-drop>div .txt-drop{
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        font-weight: 400;
+    }
+
+    .contenedor .becas-info>div .becas-drop .btn-yellow{
+        margin: 2em auto 0;
+        font-size: 15px;
+    }
+    
+}

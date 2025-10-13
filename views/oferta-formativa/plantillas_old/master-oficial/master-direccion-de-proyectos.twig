@@ -1,0 +1,467 @@
+{% extends 'app/app.twig' %}
+{% block head %}
+    <meta name="description" content="Conviértete en un experto en Project Management con nuestro Máster Oficial. ¡100% online!"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/master-direccion-y-gestion-de-proyectos-thun.png">
+    <link rel="stylesheet" href="/2022/dist/css/master-cursos.css"/>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor">
+        <aside class="cursos-banner banner-proyectos">            
+            <div class="cursos-title-banner center-head">
+                <div class="cursos-title center-title">
+                    <p class="h2-cursos">MÁSTERES OFICIALES</p>
+                </div>
+                <div class="cursos-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="cursos-txt center-title">
+                    <p class="h1-cursos">Máster Universitario en Project Management</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="cursos-tabs">
+            <div class="tabs-container">
+                <div class="tabs-head tabs-head-responsive">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Máster Universitario en Project Management en AUCAL</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                60 ECTS | 9 meses | Online <br/>
+                                Título Oficial de Universidad of Management - Universitá LUM <br/>
+                                Título propio Aucal
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="https://formulario.aucal.edu/aucalbusinessschool/form/Solicituddecurso/formperma/QQmW1lAAqnFEUwcK0dnScLHFPwCuXaT5TdsO7n3Ro9E" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion" target="_blank">Hoja de Admisión</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'presentacion')">
+                            <span class="cursos-tablink">PRESENTACIÓN</span>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'informacion')">
+                            <span class="cursos-tablink">INFORMACIÓN</span>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'planEstudios')">
+                             <span class="cursos-tablink">PLAN DE ESTUDIOS</span>
+                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'titulacion')">
+                            <span class="cursos-tablink">TITULACIÓN</span>
+                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'materiales')">
+                            <span class="cursos-tablink">MATERIALES</span>                        
+                        </li>
+                    </ul>
+                </div>  
+                <div class="tabs-head tabs-head-principal">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Máster Universitario en Project Management en AUCAL</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                60 ECTS | 9 meses | Online <br/>
+                                Título Oficial de Universidad of Management - Universitá LUM <br/>
+                                Título propio Aucal
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="https://formulario.aucal.edu/aucalbusinessschool/form/Solicituddecurso/formperma/QQmW1lAAqnFEUwcK0dnScLHFPwCuXaT5TdsO7n3Ro9E" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion" target="_blank">Hoja de Admisión</a>
+                        </div>
+                    </div>
+                </div>  
+                <div class="tabs-cuerpo">
+                    <div class="tabs-widgets">
+                        <div class="tab-sec">
+                            <ul class="tab-sec-list">
+                                <li class="tab-link" href="javascript:void(0)"onclick="changeTab(event,'presentacion')" >
+                                    <p class="tab-sec-txt">PRESENTACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)"  onclick="changeTab(event,'informacion')">
+                                    <p class="tab-sec-txt">INFORMACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'planEstudios')">
+                                    <p class="tab-sec-txt">PLAN DE ESTUDIOS</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'titulacion')">
+                                    <p class="tab-sec-txt">TITULACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'materiales')">
+                                    <p class="tab-sec-txt">MATERIALES</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-program">
+                            <div class="tabs-program-img">
+                                <img src="/2022/dist/images/oferta/portada-master-gestion-proyectos.PNG" alt="AUCAL Bussines School Portada Master Direccion Gestion Proyectos" class="image-program" >
+                            </div>
+                            <div class="tabs-program-pdf btn-red-normal">
+                                <a href="/2022/dist/pdf/AUCAL-dossier-Master-gestion-proyectos.pdf" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa Master Direccion Gestion Proyectos">
+                                    <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                    <img src="/2022/dist/images/icons/descarga-blanco.png" alt="AUCAL Bussines School Descargar Master Direccion Gestion Proyectos" class="btn-descarga-blanco">                                            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <!-- PRESENTACION -->
+                        <div class="presentacion tab" id="presentacion">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Presentación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El <b>Máster en Project Management</b> abarca todas las áreas del conocimiento del 
+                                        <b>Project Management Institute (PMI)</b> propias de la dirección y gestión de empresas 
+                                        consultoras en el área de Ingeniería, Procura, Construcción y Ciencias Sociales, 
+                                        adaptadas al mundo de los negocios actuales donde la innovación y el cambio son determinantes.
+                                    </p>
+                                </div>                                
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        Con este Máster se conseguirá una formación exhaustiva en <b>Project Management</b>, 
+                                        que ayudará a dirigir proyectos de Ingeniería, Ciencias, Ciencias de la Salud, 
+                                        Ciencias Sociales y Jurídicas y Arte y Humanidades así como liderar y agilizar 
+                                        los <b>procesos dentro de las empresas</b>.
+                                    </p>
+                                                                      
+                                </div>
+                            </div>
+                            <div class="tabs-video">
+                                <div class="center-title">
+                                    <p class="tab-h2">VIDEO DE PRESENTACION</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red"/>
+                                </div>
+                                <div class="video-curso">    
+                                    <iframe src="https://www.youtube.com/embed/3CFrZKvHG3I" 
+                                    title="YouTube video player" frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen alt="AUCAL Bussines School Video Master Direccion Gestion Proyectos"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- INFORMACION --> 
+                        <div id="informacion" class="informacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Información</p>
+                                </div>                                
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Objetivos</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="informacion-txt">
+                                        En este <b>máster project management online</b> los objetivos que se pretende alcanzar son:
+                                    </p>                        
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            <b>Introducir</b> al participante en los conceptos claves, técnicas y metodologías que intervienen 
+                                            en el proceso de gestión de proyectos en el área de planificación y control de Proyectos en general 
+                                            y aplicada a Proyectos dentro del sector público y privado en sus diferentes etapas (Visualización, 
+                                            Conceptual, Básica y  Detalle) cubriendo todo el ciclo de un proyecto.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            <b>La integración</b> de manera efectiva con las herramientas más adecuadas para realizar la programación 
+                                            en tiempo, recursos y costes asociados a cada una de las actividades, alineada con las recomendaciones 
+                                            del PMI para la culminación exitosa del Proyecto, en sus fases: Inicio, Planificación, Ejecución, Control y Cierre.
+                                        </li>                                       
+                                    </ul> 
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Resultados esperados</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="informacion-txt">
+                                        Al final del Máster y a través de lecciones y prácticas propuestas, los participantes podrán esperar lo siguiente:
+                                    </p>                        
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            Conocimiento de todos los conceptos clave y terminología utilizada en la gestión de proyectos en el área de planificación y control de proyectos.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Aplicación de la metodología para llevar a cabo el proceso de planificación y control de proyectos y en particular, de proyectos complejos, desde la etapa inicial hasta el cierre. Consideraciones de cada etapa y una vez realizada la planificación cómo se aplica el control y seguimiento al proyecto durante su ejecución, instrumentos y reportes.
+                                        </li> 
+                                        <li class="tipo-titulo">
+                                            El proceso de aprendizaje se realizará combinado con prácticas aplicadas en cada una de las etapas del proceso de planificación y control, incorporando el uso de la herramienta Primavera P6 o Microsoft Project para la planificación y control del tiempo. 
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Lecciones aprendidas aplicadas al proceso general de planificación y control.
+                                        </li>                                       
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PLAN ESTUDIOS -->
+                        <div id="planEstudios" class="plan-estudios tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Asignaturas</p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">MATERIAS COMUNES (obligatorias)</p>
+                                </div>                                
+                                <div class="plan-estudios-tabla">
+                                    <ul class="agignaturas-tabla">
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> ASIGNATURAS </span>
+                                            <span class="tabla-ect">ECTS</span>
+                                            <ul class="tabla-detalle">                                                
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Introducción a project management: gerente de proyecto, responsabilidades y funciones</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Inicio de proyectos: viabilidad, creación de un project charter e identificación de stakeholders</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Planificación de proyectos: requerimientos, scope, actividades, cronograma, costes, riesgos</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Ejecución de proyectos: dirección y gestión del trabajo, calidad, equipo y gestión de comunicaciones</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Triple restricción de un proyecto: necesidad de equilibrar alcance, coste y tiempo</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Seguimiento y control de proyectos: cambios, alcance de proyecto, costes, cronograma y recursos</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Cierre de proyectos: lecciones aprendidas, objetivos, beneficios y transferencia del producto</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Herramientas informáticas en la Gestión de Proyectos: Microsoft Project 2021 y Trello</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Metodologías Ágiles y Modelos de mejora continua en la Gestión de Proyectos</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">TRABAJO FIN DE MÁSTER (TFM)</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="tabla-total">
+                                            <span class="tabla-title">TOTALES</span>
+                                            <span class="tabla-ect">60</span>
+                                        </li>
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- TITULACION -->
+                        <div id="titulacion" class="titulacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Titulación</p>
+                                </div>                               
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN OFICIAL UNIVERSIDAD OF MANAGEMENT - Università LUM
+                                    </p>                                      
+                                </div> 
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Máster Degree in Project Management"</p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-SCHOOL.jpg" alt="AUCAL Bussines School Diploma Master Compliance Penal Tecnologico Scholl of Management" class="img-diploma diploma-school">                                    
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN PROPIA AUCAL BUSINESS SCHOOL
+                                    </p>                                      
+                                </div> 
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Máster en Project Management"</p>
+                                </div>           
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-AUCAL.jpg" alt="AUCAL Bussines School Diploma Propio AucalMaster Direccion Gestion Proyectos" class="img-diploma">                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MATERIALES -->
+                        <div id="materiales" class="materiales tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Materiales</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El alumno dispondrá del material de estudio necesario para la realización de la formación en la plataforma virtual.                                    
+				                    </p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/material_aucal.png" alt="AUCAL Bussines School Material Master Direccion Gestion Proyectos" class="materiales-img"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- .tabs-->
+                </div> <!-- .tabs-cuerpo -->
+            </div>
+        </aside>
+        <aside class="coordinador-perfil">
+            <!-- BIOGRAFIA COORDINADOR -->
+            <div class="tabs-banner-bottom">
+                <div class="banner-bottom-img">
+                    <img src="/2022/dist/images/coordis/patricia-pazos.png" alt="AUCAL Bussines School Coordinador Master Direccion Gestion Proyectos" class="img-coordinador"/>
+                </div>
+                <div class="banner-bottom-txt">
+                    <div class="tabs-title">
+                        <p class="tab-h2">Coordinador del Máster</p>
+                        <p class="tab-h1">Patricia Pazos</p>
+                    </div>
+                    <div class="tabs-txt">
+                        <p class="banner-bottom-descript">
+                            Doctora en Relaciones Internacionales (Cum Laude) por la Universidad Complutense de Madrid y Universidad de Liège. 
+                            Project manager con más de 10 años de experiencia coordinando proyectos internacionales en Estados Unidos, 
+                            Bélgica, Qatar y España. Máster en Relaciones Internacionales y certificada en Project Management por la 
+                            Universidad de California. Ha desempeñado roles de analista en el Ministerio de Asuntos Exteriores de Bélgica, 
+                            ha sido coordinadora de máster para la Universidad de Alcalá y actualmente es directora de Talking About 
+                            Terrorism en Washington, D.C. Igualmente es delegada de CISEG Comunidad de Inteligencia para Estados Unidos y 
+                            colabora en varios proyectos internacionales así como imparte formación en project management y seguridad.
+                        </p>
+                    </div>
+                </div>                            
+            </div>   
+            <!-- PERFIL ALUMNO Y DOCUMENTACION -->   
+            <div class="ficha-master">
+                <div class="perfil-alumno ficha-dropdown">
+                    <div class="drop-title">
+                         <div>
+                            <button class="dropbtn" onclick="show_hide(event, 'perfil')"> 
+                                <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School Master" class="icono-down"/>
+                              <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School Master" class="icono-left hidden"/> -->                                          
+                            </button>
+                         </div>
+                        <div>
+                            <p class="tab-h2">Perfil del alumno</p>   
+                        </div>                     
+                    </div>
+                    <div class="ficha-dropdown-txt" id="perfil">
+                        <p class="informacion-txt">
+                            Este <b>Máster en Project Management</b> está dirigido a estudiantes, técnicos, diseñadores, profesionales libres e ingenieros 
+                            con interés de aprendizaje en el área y especialización de Gestión de Proyectos en planificación 
+                            y control de proyectos en general o su aplicación específica a proyectos de Ingeniería, así como 
+                            a profesionales y estudiantes de Ciencias, Ciencias de la Salud, Ciencias Sociales y Jurídicas y Arte y Humanidades.                            
+                        </p>     
+                    </div>
+                </div>
+                <div class="documentacion ficha-dropdown">
+                    <div class="drop-title">
+                        <div>
+                           <button class="dropbtn" onclick="show_hide(event, 'documentacion')"> 
+                               <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School Master" class="icono-down"/>
+                             <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School Master" class="icono-left hidden"/> -->                                          
+                           </button>
+                        </div>
+                       <div>
+                           <p class="tab-h2">Documentación</p>   
+                       </div>                     
+                   </div>
+                    <div class="ficha-dropdown-txt" id="documentacion">
+                        <p class="informacion-txt">
+                            Si estás interesado en estudiar este programa académico, debes cumplir con la entrega de los siguientes documentos: 
+                        </p>
+                        <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo">Fotocopia de documento de identificación.</li>
+                            <li class="tipo-titulo">Foto tipo carnet (o pasaporte).</li>
+                            <li class="tipo-titulo">Titulo Universitario oficial:
+                                <ul style="margin: 1em 0 0 1em;">
+                                    <li style="list-style: disc; margin-left: 1em;">Para Europeos: SET (Suplemento Europeo al Titulo).</li>
+                                    <li style="list-style: disc; margin-left: 1em;">Para LATAM: Declaración de Valor al Italiano o Título con Apostilla de La Haya.</li>
+                                </ul>
+                            </li>
+                            <li class="tipo-titulo">Hoja de Admisión completa y firmada.</li>
+                            <li class="tipo-titulo">Comprobante de pago reserva de plaza.</li>                            
+                        </ul>    
+                        <p class="informacion-txt">
+                            En el caso de que no poseas alguno de estos documentos, 
+                            los interesados tienen la posibilidad de sacar el 
+                            Título Profesional de este Máster emitido por AUCAL Business School 
+                            y a un precio mucho más económico (en este caso no se piden requisitos de ingreso).
+                        </p>                                     
+                    </div>
+                </div>
+            </div>   
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-master"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-becas" class="btn-border" alt="AUCAL Bussines School Master Programa Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>         
+        <aside class="titulo-fomulario" id="formSolicitar">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <iframe frameborder="0" style="height:1150px;width:99%;border:none;" 
+            src='https://formulario.aucal.edu/aucalbusinessschool/form/FormularionuevaWebAUCAL/formperma/7-ULZDtrn9jf9iR3AmWEYjBwVmxtAmdLMjZk9fTGaYg' alt="AUCAL Bussines School Master Formulario Inscripcion">
+            </iframe>  
+        </aside>   
+    </div>
+{% endblock %}

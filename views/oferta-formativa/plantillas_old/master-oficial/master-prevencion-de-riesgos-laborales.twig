@@ -1,0 +1,486 @@
+{% extends 'app/app.twig' %}
+{% block head %}
+    <meta name="description" content="Descubre nuestro Máster Oficial en Prevención de Riesgos Laborales reconocido por el Ministerio de Educación y Verificado por la ANECA"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/master-prl-url.png">
+    <link rel="stylesheet" href="/2022/dist/css/master-cursos.css"/>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor">
+        <aside class="cursos-banner banner-prl">            
+            <div class="cursos-title-banner center-head">
+                <div class="cursos-title center-title">
+                    <p class="h2-cursos">MÁSTERES OFICIALES</p>
+                </div>
+                <div class="cursos-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="cursos-txt center-title">
+                    <p class="h1-cursos">Máster Universitario en Prevención de Riesgos Laborales</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="cursos-tabs">
+            <div class="tabs-container">
+                <div class="tabs-head tabs-head-responsive">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Máster Universitario en Prevención de Riesgos Laborales en AUCAL</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                60 ECTS | 9 meses | Online <br/>
+                                Título Oficial Universidad Francisco de Vitoria UFV Madrid <br/>
+                                (CURSO BAREMABLE PARA OPOSICIONES)
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="https://formulario.aucal.edu/aucalbusinessschool/form/Solicituddecurso/formperma/QQmW1lAAqnFEUwcK0dnScLHFPwCuXaT5TdsO7n3Ro9E" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion" target="_blank">Hoja de Admisión</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'presentacion')">
+                            <span class="cursos-tablink">PRESENTACIÓN</span>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'informacion')">
+                            <span class="cursos-tablink">INFORMACIÓN</span>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'planEstudios')">
+                             <span class="cursos-tablink">PLAN DE ESTUDIOS</span>
+                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'titulacion')">
+                            <span class="cursos-tablink">TITULACIÓN</span>
+                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'materiales')">
+                            <span class="cursos-tablink">MATERIALES</span>                        
+                        </li>
+                    </ul>
+                </div>  
+                <div class="tabs-head tabs-head-principal">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Máster Universitario en Prevención de Riesgos Laborales en AUCAL</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                60 ECTS | 9 meses | Online <br/>
+                                Título Oficial Universidad Francisco de Vitoria UFV Madrid <br/>
+                                (CURSO BAREMABLE PARA OPOSICIONES)
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="https://formulario.aucal.edu/aucalbusinessschool/form/Solicituddecurso/formperma/QQmW1lAAqnFEUwcK0dnScLHFPwCuXaT5TdsO7n3Ro9E" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion" target="_blank">Hoja de Admisión</a>
+                        </div>
+                    </div>
+                </div>  
+                <div class="tabs-cuerpo">
+                    <div class="tabs-widgets">
+                        <div class="tab-sec">
+                            <ul class="tab-sec-list">
+                                <li class="tab-link" href="javascript:void(0)"onclick="changeTab(event,'presentacion')" >
+                                    <p class="tab-sec-txt">PRESENTACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)"  onclick="changeTab(event,'informacion')">
+                                    <p class="tab-sec-txt">INFORMACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'planEstudios')">
+                                    <p class="tab-sec-txt">PLAN DE ESTUDIOS</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'titulacion')">
+                                    <p class="tab-sec-txt">TITULACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'materiales')">
+                                    <p class="tab-sec-txt">MATERIALES</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-program">
+                            <div class="tabs-program-img">
+                                <img src="/2022/dist/images/oferta/portada-master-prevencion-riesgos-laborales.PNG" alt="AUCAL Bussines School Portada Master PRL Prevencion Riesgos Laborales" class="image-program">
+                            </div>
+                            <div class="tabs-program-pdf btn-red-normal">
+                                <a href="/2022/dist/pdf/AUCAL-dossier-Master-prevencion-riesgos-laborales.pdf" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa Master PRL Prevencion Riesgos Laborales">
+                                    <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                    <img src="/2022/dist/images/icons/descarga-blanco.png" alt="AUCAL Bussines School Descargar Master PRL Prevencion Riesgos Laborales" class="btn-descarga-blanco">                                            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <!-- PRESENTACION -->                 
+                        <div class="presentacion tab" id="presentacion"> 
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Presentación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        Se trata de un Máster Oficial en Prevención de Riesgos Laborales
+                                        reconocido por el Ministerio de Educación y <b>Verificado por la ANECA.</b>
+                                    </p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/logos/aneca.png" alt="AUCAL Bussines School Material Master PRL Prevencion Riesgos Laborales Logo ANECA" class="materiales-img"/>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Curso Baremable para Oposiciones.</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        Este Máster Universitario en PRL incluye, en su plan de estudios, todos
+                                        los contenidos regulados por el Real Decreto para el desempeño de las
+                                        funciones de nivel superior en las tres disciplinas preventivas:
+                                        Seguridad en el Trabajo, Higiene Industrial, y Ergonomía y
+                                        Psicosociología Aplicada. El Máster es una <b>titulación oficial de la
+                                        Universidad Francisco de Vitoria y con una carga lectiva de 60 ECTS.</b>
+                                    </p>
+                                    <p class="presentacion-txt">
+                                        El <b>Máster oficial PRL</b> cubrirá las necesidades de formación superior
+                                        universitaria en el ámbito de la Prevención de Riesgos Laborales del
+                                        alumno, donde será capaz de: detectar, valorar y controlar los riesgos
+                                        de seguridad en el trabajo, así como, definir, desarrollar e implantar un
+                                        sistema de gestión de prevención dentro de cualquier empresa o institución.
+                                    </p>
+                                    <p class="presentacion-txt">
+                                        Además obtendrá las competencias técnicas, organizativas y gestoras
+                                        que le permitirán discernir sobre el tipo de acción preventiva más
+                                        conveniente para cada situación, conociendo y aplicando el marco
+                                        legislativo de la prevención en España y en Europa. Este Máster
+                                        Universitario en Prevención de Riesgos Laborales cuenta con varias
+                                        convocatorias al año, está dirigido a <b>Técnicos de los Servicios de
+                                        Prevención Propios y Ajenos y a cualquier trabajador al que le hayan
+                                        designado tareas de prevención en el ámbito laboral.</b>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tabs-video">
+                                <div class="center-title">
+                                    <p class="tab-h2">VIDEO DE PRESENTACION</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red"/>
+                                </div>
+                                <div class="video-curso">
+                                    <iframe src="https://www.youtube.com/embed/UVqfuTiEgkQ"></iframe>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- INFORMACION -->  
+                        <div id="informacion" class="informacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Información</p>
+                                </div>                                
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Objetivos</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            Este Máster Universitario en PRL incluye, en su plan de estudios, todos
+                                            los contenidos regulados por el Real Decreto para el desempeño de las
+                                            funciones de nivel superior en las tres disciplinas preventivas:
+                                            Seguridad en el Trabajo, Higiene Industrial, y Ergonomía y
+                                            Psicosociología Aplicada. El Máster es una <b>titulación oficial de la
+                                            Universidad Francisco de Vitoria y con una carga lectiva de 60 ECTS.</b>
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            El <b>Máster oficial PRL</b> cubrirá las necesidades de formación superior
+                                            universitaria en el ámbito de la Prevención de Riesgos Laborales del
+                                            alumno, donde será capaz de: detectar, valorar y controlar los riesgos
+                                            de seguridad en el trabajo, así como, definir, desarrollar e implantar un
+                                            sistema de gestión de prevención dentro de cualquier empresa o institución.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Además obtendrá las competencias técnicas, organizativas y gestoras
+                                            que le permitirán discernir sobre el tipo de acción preventiva más
+                                            conveniente para cada situación, conociendo y aplicando el marco
+                                            legislativo de la prevención en España y en Europa. Este Máster
+                                            Universitario en Prevención de Riesgos Laborales cuenta con varias
+                                            convocatorias al año, está dirigido a <b>Técnicos de los Servicios de
+                                            Prevención Propios y Ajenos y a cualquier trabajador al que le hayan
+                                            designado tareas de prevención en el ámbito laboral.</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PLAN ESTUDIOS -->
+                        <div id="planEstudios" class="plan-estudios tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Asignaturas</p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">MATERIAS COMUNES (obligatorias)</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="plan-estudios-txt">
+                                        El alumno del Máster Oficial en Prevención de Riesgos Laborales verá
+                                        las siguientes unidades de estudio y asignaturas en detalle:
+                                    </p>
+                                </div>
+                                <div class="plan-estudios-tabla">
+                                    <ul class="agignaturas-tabla">
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> ASIGNATURAS </span>
+                                            <span class="tabla-ect">ECTS</span>
+                                            <ul class="tabla-detalle">
+                                                <li class="table-titulo-precio">
+                                                    <ul class="titulo-precio tabla-title-2">
+                                                        <li class="titulo-descript">
+                                                           <b> MATERIAS COMUNES (OBLIGATORIAS) </b>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">INTRODUCCIÓN A LA PREVENCIÓN</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">SEGURIDAD EN EL TRABAJO</li>
+                                                        <li class="titulo-precio">10</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">HIGIENE INDUSTRIAL, MEDICINA DEL TRABAJO Y VIGILANCIA DE LA SALUD</li>
+                                                        <li class="titulo-precio">10</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">ERGONOMÍA Y PSICOLOGÍA APLICADA</li>
+                                                        <li class="titulo-precio">10</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">GESTIÓN DE LA PREVENCIÓN Y TÉCNICAS AFINES</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">SISTEMAS INTEGRADOS Y LA PREVENCIÓN POR SECTORES</li>
+                                                        <li class="titulo-precio">4</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold"><b>PRÁCTICUM*</b></li>
+                                                        <li class="titulo-precio">8</li>
+                                                    </ul>
+                                                </li>
+
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">TRABAJO FIN DE MÁSTER (TFM)</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="tabla-total">
+                                            <span class="tabla-title">TOTALES</span>
+                                            <span class="tabla-ect">60</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TITULACION -->
+                        <div id="titulacion" class="titulacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Titulación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                       TITULACIÓN OFICIAL UNIVERSIDAD FRANCISCO DE VITORIA
+                                    </p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Máster en Prevención de Riesgos Laborales"</p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-UFV.png" alt="AUCAL Bussines School Diploma Master PRL Prevencion Riesgos Laborales UFV" class="img-diploma">                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MATERIALES -->
+                        <div id="materiales" class="materiales tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Materiales</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El alumno dispondrá del material de estudio necesario para la realización de la formación en la plataforma virtual.                                    
+				                    </p>
+                                </div>                                
+				                <div class="tabs-img">
+                                    <img src="/2022/dist/images/material_aucal.png" alt="AUCAL Bussines School Material Master PRL Prevencion Riesgos Laborales" class="materiales-img"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- .tabs -->
+                </div>    <!-- .tabs-cuerpo -->              
+            </div> <!-- tabs-container -->
+        </aside>
+        <aside class="coordinador-perfil">
+             <!-- BIOGRAFIA COORDINADOR -->
+             <div class="tabs-banner-bottom">
+                <div class="banner-bottom-img">
+                    <img src="/2022/dist/images/coordis/julio-perez.png" alt="AUCAL Bussines School Coordinador Master PRL Prevencion Riesgos Laborales" class="img-coordinador"/>
+                </div>
+                <div class="banner-bottom-txt">
+                    <div class="tabs-title">
+                        <p class="tab-h2">Coordinador del Máster</p>
+                        <p class="tab-h1">Julio Pérez Peláez</p>
+                    </div>
+                    <div class="tabs-txt">
+                        <p class="banner-bottom-descript">
+                            Ingeniero de Caminos, Canales y Puertos; Grado en Ingeniería Mecánica; 
+                            Máster en Prevención de Riesgos Laborales; Máster en Gestión de Calidad, 
+                            Auditor Interno y Medio Ambiente. Cuenta con más de 15 años de experiencia 
+                            en el sector de la gestión de proyectos, siendo además docente universitario 
+                            en el área de la prevención de riesgos laborales.
+                        </p>
+                    </div>
+                </div>                            
+            </div>   
+            <!-- PERFIL ALUMNO Y DOCUMENTACION -->    
+            <div class="ficha-master">
+                <div class="perfil-alumno ficha-dropdown">
+                    <div class="drop-title">
+                         <div>
+                            <button class="dropbtn" onclick="show_hide(event, 'perfil')"> 
+                                <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                              <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                            </button>
+                         </div>
+                        <div>
+                            <p class="tab-h2">Perfil del alumno</p>   
+                        </div>                     
+                    </div>
+                    <div class="ficha-dropdown-txt" id="perfil">
+                        <p class="informacion-txt">
+                            Es requisito indispensable, para poder realizar el máster oficial en PRL, 
+                            tener su <b>titulación universitaria finalizada.</b> Se trata de una 
+                            titulación oficial <b>reconocida por el Ministerio de Educación y Verificada
+                            por la ANECA</b> (Agencia Nacional de Evaluación de la Calidad y Acreditción).
+                        </p>
+                        <p class="informacion-txt">
+                            El Máster en Prevención en Riesgos Laborales se encuentra <b>dirigido principalmente</b> a:
+                        </p>
+                        <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo">
+                                <span class="titulo-title">Titulados universitarios:</span> 
+                                licenciados, graduados, diplomados, ingenieros superiores y técnicos.
+                            </li>
+                            <li class="tipo-titulo"><span class="titulo-title">Arquitectos</span> </li>
+                            <li class="tipo-titulo"><span class="titulo-title">Arquitectos técnicos</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="documentacion ficha-dropdown">
+                    <div class="drop-title">
+                        <div>
+                           <button class="dropbtn" onclick="show_hide(event, 'documentacion')"> 
+                               <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                             <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                           </button>
+                        </div>
+                       <div>
+                           <p class="tab-h2">Documentación</p>   
+                       </div>                     
+                   </div>
+                    <div class="ficha-dropdown-txt" id="documentacion">
+                        <p class="informacion-txt">
+                            Documentación que debe aportar el alumno al formalizar la matrícula
+                            del Máster Universitario en Prevención de Riesgos Laborales:
+                        </p>
+                        <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo">Ficha de Inscripción.</li>
+                            <li class="tipo-titulo">Fotocopia del DNI, NIE o Pasaporte.</li>
+                            <li class="tipo-titulo">Una fotografía reciente tamaño carnet.</li>
+                            <li class="tipo-titulo">Fotocopia del Título académico compulsado o debidamente legalizado (si procede).</li>
+                            <li class="tipo-titulo">Currículum Vitae (más acreditación documental de los méritos que alegue).</li>
+                            <li class="tipo-titulo">Carta personal de exposición de Motivos.</li>
+                            <li class="tipo-titulo">Traducción oficial de la documentación (si procede).</li>
+                            <li class="tipo-titulo">
+				Si has obtenido tu título en una universidad española, deberás presentar copia compulsada ante notario* 
+				por ambas caras y en castellano del título académico universitario (en caso de no haberse expedido el 
+				título de Grado, deberás entregar la Certificación Supletoria del Título segun recoge el Artículo 14, 
+				apartado 2 del RD 1002/2010 de 5 de agosto).
+			    </li>
+                            <li class="tipo-titulo">
+			    	Si has obtenido tu título conforme a un sistema educativo extranjero pero perteneciente al EEES, 
+				deberás presentar copia compulsada ante notario* por todas las caras del título académico y copia compulsada*
+				 del certificado de notas (historial académico), así como la traducción jurada en caso de estar en 
+				idioma distinto al castellano.
+			    </li>
+                            <li class="tipo-titulo">
+				Si has obtenido tu título conforme a un sistema educativo ajeno al EEES, será necesario que aportes copia 
+				compulsada ante notario* por todas las caras del título académico universitario debidamente legalizado, 
+				y copia compulsada* del certificado de notas (historial académico) debidamente legalizado, 
+				así como la traducción jurada en caso de estar en idioma distinto al castellano.  
+			    </li>
+                        </ul>                                    
+                    </div>
+                </div>
+            </div>  
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-master"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-becas" class="btn-border" alt="AUCAL Bussines School Programa Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>         
+        <aside class="titulo-fomulario" id="formSolicitar">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <iframe frameborder="0" style="height:1150px;width:99%;border:none;" 
+            src='https://formulario.aucal.edu/aucalbusinessschool/form/FormularionuevaWebAUCAL/formperma/7-ULZDtrn9jf9iR3AmWEYjBwVmxtAmdLMjZk9fTGaYg' alt="AUCAL Bussines School Formulario Inscripcion">
+            </iframe>  
+        </aside>
+    </div>
+{% endblock %}

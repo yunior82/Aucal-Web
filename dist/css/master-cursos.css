@@ -1,0 +1,740 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header             header              header"
+        "cursos-banner      cursos-banner       cursos-banner"
+        "cursos-tabs        cursos-tabs         cursos-tabs"
+        "coordinador-perfil coordinador-perfil  coordinador-perfil"
+        "banner-azul-right  banner-azul-right   banner-azul-right"
+        "titulo-fomulario   titulo-fomulario    titulo-fomulario"
+        "formulario         formulario          formulario"
+        "carrusel-unis      carrusel-unis       carrusel-unis"
+        "footer             footer              footer";    
+}
+
+/* HEADAR - BARra NAVegación*/
+.contenedor .header{
+    grid-area: header;
+}
+
+/* BANNER PRINCIPAL */
+.contenedor .cursos-banner{
+    grid-area: cursos-banner;
+    color: #fff;
+    padding: 5em 0;
+    width: auto;
+    background-position: center center;
+    background-size: cover; 
+    text-shadow: 5px 5px 20px #000;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
+}
+
+
+.contenedor .banner-fincas{ background-image: url(/2022/dist/images/cursos-tecnicos-administrador-de-fincas.png);}
+.contenedor .banner-asesor{background-image: url(/2022/dist/images/cursos-superior-asesor-inmobiliario.png);}
+.contenedor .banner-detective{background-image: url(/2022/dist/images/curso-superior-detective-privado.png);}
+.contenedor .banner-seguridad{background-image: url(/2022/dist/images/curso-superior-director-de-seguridad.png);}
+.contenedor .banner-pymes{background-image: url(/2022/dist/images/cursos-tecnicos-gestion-pymes.png);}
+.contenedor .banner-inmobiliaria{background-image: url(/2022/dist/images/cursos-superior-direccion-y-gestion-inmobiliaria.png);}
+.contenedor .banner-mediacion{background-image: url(/2022/dist/images/cursos-tecnicos-mediacion-familiar.png);}
+.contenedor .banner-perito{background-image: url(/2022/dist/images/cursos-tecnicos-perito-judicia.png);}
+.contenedor .banner-comercio{background-image: url(/2022/dist/images/master-comercio-internacional.png);}
+.contenedor .banner-compliance{background-image: url(/2022/dist/images/master-compliance-penal.png);}
+.contenedor .banner-proyectos{background-image: url(/2022/dist/images/master-direccion-y-gestion-de-proyectos.png);}
+.contenedor .banner-rrhh{background-image: url(/2022/dist/images/master-recursos-humanos.png);}
+.contenedor .banner-prl{background-image: url(/2022/dist/images/master-prl.png);}
+.contenedor .banner-psicopedagogia{background-image: url(/2022/dist/images/master-psicopedagogia.png);}
+.contenedor .banner-riesgos{ background-image: url(/2022/dist/images/master-prl.png);}
+.contenedor .banner-mba{ background-image: url(/2022/dist/images/master-mba.png);}
+.contenedor .banner-ibm{ background-image: url(/2022/dist/images/master-ibm.png);}
+
+.contenedor .cursos-banner>div .cursos-txt{
+    width: 70%;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* CONTENEDOR tabs */
+.contenedor .cursos-tabs{  grid-area: cursos-tabs;}  
+
+/*Ocultamos páginas*/
+#informacion, #planEstudios, #titulacion, #materiales{display: none;}
+
+/* Clase añadida con JS - barra roja */
+.tablink-black{
+    font-weight: 700;
+    background-color: #fff;
+    color: #E10031;
+    width: 100%;
+    padding: 0.8em;
+}
+
+/* Clase añadida con JS - lateral marrón */
+.tab-link-secciones{
+    color: #fff!important;
+    background: #7F0000;
+}
+
+/* BArra TABS */
+.contenedor .cursos-tabs .tabs-container{ width: 100%; }
+
+.contenedor .cursos-tabs .tabs-container .tabs-list{  background: #d3d3d3; }
+
+.contenedor .cursos-tabs .tabs-container .tabs-list .tabs-barra{
+    background: #E10031;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 3em;
+    height: 3em;
+    text-align: center;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-list .tabs-barra>li {
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-list .tabs-barra>li:hover{ 
+    cursor: pointer; 
+    font-weight: 600;
+}
+
+/*TABS cabecera*/
+.contenedor .cursos-tabs .tabs-container .tabs-head-responsive{display: none;}
+.contenedor .cursos-tabs .tabs-container .tabs-head-principal{display: block;}
+
+.contenedor .cursos-tabs .tabs-container .tabs-head{
+    width: 90%;
+    margin: 2em auto 0 auto;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-head .tabs-title{ 
+    font-size: 24px!important;
+    text-align: left!important;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-head .tabs-script{ display: flex; }
+
+.contenedor .cursos-tabs .tabs-container .tabs-head .tabs-script .tab-txt{
+    width: 60%;
+    margin-left: 3em;
+    font-size: 20px!important;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-head .tabs-script .tab-txt>p{text-align: left;}
+
+.contenedor .cursos-tabs .tabs-container .tabs-head .tabs-script .tab-txt-btn{
+    width: auto;
+    margin: 5em auto 0 auto;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-head .tabs-script .tab-txt-btn>a{
+   padding: 0.5em 1em;
+   font-size: 22px!important;
+   font-weight: 400!important;
+}
+
+/* TABS BODY-contenido*/
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo{
+    border-top: 1px solid #7F0000; 
+    width: 90%;
+    margin: 1em auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+        "tabs-widgets   tabs";
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets{
+    grid-area: tabs-widgets;
+    margin: 3em auto;
+    width: 95%;
+}
+
+/*Caja tabs*/
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets .tab-sec{margin-bottom: 2em;}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets .tab-sec>ul li .tab-sec-txt{
+    border: 2px solid #7F0000;
+    height: 2em;
+    line-height: 2em;
+    margin-bottom: 0.5em;
+    color: #7F0000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets .tab-sec>ul li .tab-sec-txt:hover{
+    cursor: pointer;
+}
+
+/* pdf descarga */
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets .tabs-program{
+    background: #d3d3d3;
+    margin: 1em auto 2em auto;
+    width: 90%;
+    height: auto;
+    position: relative;
+    height: 20em;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets .tabs-program .tabs-program-img>img{
+    height: 15em;   
+    position: relative;   
+    margin: 2em auto 0;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets .tabs-program .tabs-program-pdf{
+    background: #E10031;  
+    position: absolute;  
+    height: 3em;  
+    left: 5%;
+    top: 18em;     
+    z-index: 3;   
+    width: 90%;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets .tabs-program .tabs-program-pdf>a{
+    display: flex;
+    height: 3em;
+    text-align: center;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets .tabs-program .tabs-program-pdf> a p{
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1em;
+    padding: 0.5em 0 0 0.5em;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets .tabs-program .tabs-program-pdf>a img{
+    height: 1.5em;
+    line-height: 1em;
+    float: right; 
+    padding: 0.6em 2em 0;
+}
+
+
+/* TABS - resumen*/
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs{
+    grid-area: tabs;
+    margin: 2em auto;
+    width: 100%;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-cuerpo .tabs>div{width: 90%;}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-resumen{
+    grid-area: tabs-resumen;
+    margin: 0 auto;
+    width: 90%;
+    text-align: left;
+    padding: 8px 40px;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-resumen>div .tab-h1{font-size: 21px;}
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-resumen .tabs-title .tab-h2{
+    margin: 1em 0!important;
+    font-size: 19px;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-resumen .tab-resu-txt{
+    width: 90%; 
+    margin: 0.5em auto; 
+    text-align: justify;
+} 
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-resumen .tabs-txt>p{margin-bottom: 1.5em!important;}
+
+/****************************************/
+/* PRESENTACION */
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-video .video-curso{margin-top: 2em;}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-video .video-curso iframe{
+    width: 640px;
+    height: 480px;
+}
+
+
+/**************************************************/
+/* INFORMACION */
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-cuerpo .tabs .tab .tabs-resumen .info-psico{ margin-bottom: 0.5em!important;}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab  .tabs-video .center-title{ padding: 0!important;}
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab  .tabs-video>div .tab-h2{
+    margin-top: 2em!important;
+    font-size: 20px!important;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs .tab .tabs-cuerpo .tabs .tab  .tabs-video>div .hr-red{
+    height: 0.2em!important;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs .tab .tabs-cuerpo .tabs .tab  .tabs-video .video-curso>iframe{
+    margin-top: 2em;
+    padding-right: 2em;
+}
+
+/**************************************************/
+/* PLAN ESTUDIOS */
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-resumen .plan-estudios-tabla{
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.plan-estudios-tabla> ul li span{
+    color: #E10031;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.plan-estudios-tabla> ul li .tabla-ect{float: right;}
+
+.plan-estudios-tabla>ul li ul li ul{
+    font-size: 14px;
+    border-bottom: 1px solid #d3d3d3;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.plan-estudios-tabla>ul li ul li .tabla-title-2{font-size: 15px;}
+
+.plan-estudios-tabla>ul li ul li ul li{
+    color: #5d5d5d;
+    font-size: 14px;
+}
+
+.plan-estudios-tabla>ul li ul li ul .titulo-precio{text-align: right;}
+
+.plan-estudios-tabla> ul .tabla-total{margin-top: 0.5em;}
+
+.plan-estudios-txt{margin-top: 2em;}
+
+.plan-estudios-txt-sm{
+    font-size: 14px;
+    color: #5d5d5d;
+    margin-top: 0.2em;
+}
+
+/**************************************************/
+/* TITULACION */
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo  .tabs .titulacion .tabs-resumen>div .tab-h2{ text-align: center;}
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo  .tabs .titulacion .tabs-resumen .tabs-img{margin-top: 2em;}
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo  .tabs .titulacion .tabs-resumen .tabs-img>img{
+    width: 512px;
+    height: 384px;
+    margin-bottom: 1em;
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo  .tabs .titulacion .tabs-resumen .tabs-img .diploma-pegaso{
+    height: 500px!important;
+    width: 360px;   
+}
+
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo  .tabs .titulacion .tabs-resumen .tabs-img  .diploma-compliance{
+    height: 280px;
+}
+
+.presentacion-txt-sm{
+    color: #E10031;
+    margin: 1.5em auto 1em;
+    font-weight: 600;
+}
+
+/**************************************************/
+/* MATERIALES */
+.contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .materiales .tabs-resumen .tabs-img .materiales-img{
+    margin: 2em auto;
+    width: 80%;
+}
+
+/*  BANNER CONTENEDOR - FICHAS PERFIL*/
+.contenedor .coordinador-perfil{
+    grid-area: coordinador-perfil;
+    width: 100%;
+}
+
+/* Banner - coordinador*/
+.contenedor .coordinador-perfil .tabs-banner-bottom{
+    position: relative;
+    width: 100%;
+    background: #d3d3d3;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-img>img{
+    position: absolute;
+
+    /* width: 20%; */
+    height: 220px;
+    left: 6%;
+    top: -10%;
+    clip-path: polygon(20% 0, 100% 0%, 80% 100%, 0% 100%);
+}
+
+.contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt{
+    padding-bottom: 2em;
+}
+
+.contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt{
+    padding-bottom: 2em;
+    width: 95%;
+}
+
+.contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt .tabs-title>p{
+    font-size: 20px;
+    margin-top: 0.5em!important;
+}  
+
+.contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt .tabs-txt{
+    font-size: 14px!important;
+}
+
+/* dropdown tablas*/
+.contenedor .coordinador-perfil .ficha-master{
+    width: 95%;
+    margin: 4em auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contenedor .coordinador-perfil .ficha-master>div .drop-title{
+    border-bottom: 1px solid #E10031;
+    width: 95%;
+    text-align: left;
+    height: 3em;
+    line-height: 3em;
+}
+
+.contenedor .coordinador-perfil .ficha-master>div .drop-title>div p{ font-size: 22px;}
+
+.contenedor .coordinador-perfil .ficha-master>div .drop-title>div button{
+    float: right;
+    background: none;
+    border: none;
+    padding: 1em 2em 0;
+}
+
+.contenedor .coordinador-perfil .ficha-master>div .drop-title>div button img {
+    height: 1rem;
+    width: 1rem;
+}
+
+.contenedor .coordinador-perfil .ficha-master>div .ficha-dropdown-txt{
+    width: 85%;
+    text-align: justify;
+    margin: 1em 0;
+    padding: 1em;
+    font-size: 15px;
+
+    display: none;
+}
+
+.contenedor .coordinador-perfil .ficha-master>div .ficha-dropdown-txt>p{
+    margin-bottom: 0.5em;
+}
+
+.tabla-titulaciones{ padding: 0.5em 0; }
+
+.tabla-titulaciones li {
+    list-style: square url(/2022/dist/images/icons/cuadrado-rojo-8.png) inside;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+.tabla-titulaciones li span{
+    color: #3c3c3c;
+    font-weight: 600;
+    padding-left: 0.5em;
+}
+
+/* BANNER AZUL*/
+.contenedor .banner-azul-right { grid-area: banner-azul-right ;}
+.contenedor .banner-azul-right .img-master{background-image: url(/2022/dist/images/becas-AUCAL.jpg);}
+
+/**/
+.contenedor .titulo-fomulario{grid-area: titulo-fomulario;}
+
+.contenedor .formulario{ 
+    grid-area: formulario;
+    margin-top: 2em;
+}
+
+/*CARROSEL UNIS*/
+.contenedor .carrusel-unis{ grid-area: carrusel-unis;}   
+
+/* FOOTER */
+.contenedor .footer{ grid-area: footer;}
+
+ 
+
+ /**************************************************/
+@media (min-width: 768px) and (max-width: 991.98px){
+
+
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab{
+        width: 95%;
+    }
+
+    /* Banner - coordinador*/
+    .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-img>img{
+        position: absolute;
+        width: 22%;
+        left: 2%;
+        top: 10%;
+	clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt{
+        padding-bottom: 1em;
+        width: 90%;
+    }
+
+    .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt .tabs-title .tab-h2{
+        padding-top: 0.5em;
+        font-size: 18px;
+    }
+
+    .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt .tabs-title .tab-h1{
+        font-size: 19px;
+    }
+
+    .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt .tabs-txt>p{
+        font-size: 12px;
+    }
+
+
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-video .video-curso iframe{
+        width: 512px;
+        height: 384px;
+    }
+    
+
+}
+
+ /****************************************************/
+ @media (max-width: 991.98px){
+    /* BANNER */
+    .contenedor .cursos-banner{
+        margin-top: 9em;
+        height: 200px;
+        padding: 0;
+    }
+
+    .contenedor .cursos-tabs .tabs-container .tabs-head .tabs-title{ font-size: 20px!important;}
+
+    .contenedor .cursos-banner>div .cursos-txt{
+        width: 80%;
+        font-size: 22px;
+    }
+
+    /* TABS */
+    /* Clase añadida con JS */
+    .tablink-black{  padding: 0.75em;}
+
+    /* Barra tabs */
+    .contenedor .cursos-tabs .tabs-container .tabs-list .tabs-barra{
+        line-height: 3em;
+        height: 3em;
+    }
+
+    .contenedor .cursos-tabs .tabs-container .tabs-list .tabs-barra>li {
+        margin: 0 auto;
+        font-size: 0.8rem;
+        padding-left: 1em;
+    }
+
+    /* Body-tabs */
+    .cursos-h1{    
+        font-size: 22px;
+        font-weight: 500;
+    }
+     
+    /* Titulos rojos */
+     .tabs-title {
+        width: 90%;
+    }
+
+    /* titulos negros */
+    .tab-h2-big {font-size: 20px;}
+    .tab-h2{ font-size: 15px;}
+
+     /* textos */
+    .tabs-txt{
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+
+/**************************************************/
+@media (max-width: 767.98px) {
+
+	.contenedor .cursos-banner>div .cursos-txt { width: 85%;}
+
+    /* TABS */
+   
+
+    /* CABECERA */
+    .contenedor .cursos-tabs .tabs-container .tabs-head-responsive{display: block;}
+    .contenedor .cursos-tabs .tabs-container .tabs-head-principal{display: none;}
+
+    .contenedor .cursos-tabs .tabs-container .tabs-head{
+        width: 90%;
+        margin: 1em auto 3em auto;
+    }
+
+    
+    
+    .contenedor .cursos-tabs .tabs-container .tabs-head .tabs-script{ display: block; }
+    
+    .contenedor .cursos-tabs .tabs-container .tabs-head .tabs-script .tab-txt{
+        width: 90%;
+        margin: 0 auto;        
+    }
+    
+    .contenedor .cursos-tabs .tabs-container .tabs-head .tabs-script .tab-txt>p{
+        font-size: 16px!important;
+        font-weight: 600;
+    }
+    
+    .contenedor .cursos-tabs .tabs-container .tabs-head .tabs-script .tab-txt-btn{
+        width: auto;
+        margin: 2em auto 0 auto;
+    }
+    
+    .contenedor .cursos-tabs .tabs-container .tabs-head .tabs-script .tab-txt-btn>a{
+    font-size: 18px!important;
+    font-weight: 500!important;
+    }
+
+    /* Barra tabs */
+    .contenedor .cursos-tabs .tabs-container .tabs-list{ padding: 1em 0;}  
+
+    .contenedor .cursos-tabs .tabs-container .tabs-list .tabs-barra{
+        display: block;
+        background: #d3d3d3;
+        width: 90%;
+        height: max-content;
+        font-size: 18px;
+    }
+
+    .contenedor .cursos-tabs .tabs-container .tabs-list .tabs-barra>li {
+        margin: .8em auto;
+        height: 3em;
+        line-height: 3em;
+        font-size: 16px;
+    }
+
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo{
+        border-top: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "tabs"
+            "tabs-widgets ";
+    }
+
+    /* "WIDGETS" */
+    /*Caja tabs*/
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs-widgets .tab-sec{display: none;}
+
+    /* TABS - resumen*/
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-resumen .tab-resu-txt,
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-resumen>div{
+        width: 100%;
+    }
+
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-resumen>div .tab-h2{ font-size: 18px;}
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-resumen .tabs-txt>p{margin-top: 0.5em!important;}
+
+      /* PRESENTACION */ 
+    /* video-curso */
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-video{ margin-top: 3em;}
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .video-curso { margin-top: 1em;}
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .tab .tabs-video .video-curso iframe{
+        width: 256px;
+        height: 192px;
+    }
+
+
+    /* Banner - coordinador*/
+    .contenedor .coordinador-perfil .tabs-banner-bottom{grid-template-columns: 1fr 2fr; }
+    .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-img{
+        grid-area: banner-bottom-img;
+        text-align: left;  
+        width: auto; 
+        height: max-content; 
+    }
+
+    .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-img>img{
+        position: relative;
+        left: 2%;
+	width: 35%;
+        margin-top: 2em;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt{
+        grid-area: banner-bottom-txt;
+        width: 60%;
+        left: 40%;
+        position: relative;
+    }
+
+    .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt .tabs-title>p{ 
+        font-size: 18px!important;
+        text-align: left;
+    }  
+
+    .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-txt .tabs-txt>p{
+        width: 85%;
+        font-size: 12px!important;
+        text-align: left;
+    }
+
+    /* dropdown tablas*/
+    .contenedor .coordinador-perfil .ficha-master{
+        display: block; 
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .contenedor .coordinador-perfil .ficha-master>div .ficha-dropdown-txt{
+        text-align: left;
+        margin: 1em 0;
+    }
+
+    /**************************************************/
+    /* TITULACION */
+    .titulacion .tabs-resumen .tabs-title .tab-h2{   font-size: 16px!important;   }
+
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo  .tabs .titulacion .tabs-resumen .tabs-img>img{
+        width: 256px;
+        height: 192px;
+        margin: 0 auto;
+    }
+
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo  .tabs .titulacion .tabs-resumen .tabs-img .diploma-pegaso{
+        height: 320px;
+    }
+}
+
+
+/***********************/
+@media (max-width:551.98px){
+    .contenedor .cursos-tabs .tabs-container .tabs-cuerpo .tabs .materiales .tabs-resumen .tabs-img .materiales-img{
+       width: 95%;
+    }
+
+  .contenedor .coordinador-perfil .tabs-banner-bottom .banner-bottom-img>img {height: 158px;}
+
+}

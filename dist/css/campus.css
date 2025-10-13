@@ -1,0 +1,131 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contenedor .header{grid-area: header;}
+
+.contenedor .accesos-campus{
+    grid-area: accesos-campus;
+    width: 99%;
+    margin: 0 auto;
+    display: inline-flex;
+    background-image: url(/2022/dist/images/campus-bg-AUCAL.png);
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+}
+
+.formPortal{
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 4em auto;
+    padding: 1em 0;
+    border: 1px solid #dee2e6!important;
+    
+}
+
+.h1-bold{font-weight: 600;}
+.h1-rever{
+    color: #fff; 
+    background:#E10031;
+    text-align: center;
+    padding: 0 4em;
+    height: 3em;
+    display: grid;
+    align-content: center;
+    margin-top: 0.5em;
+}
+
+.txt-sm-form{font-size: 12px;}
+
+.form-group{
+    display: grid;
+    margin: 1em auto;
+}
+
+.form-group label{
+    text-align: left;
+    margin: 0.5em 3em;
+    font-weight: 600;
+}
+
+
+.form-group input{
+    min-height: 45px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 1em;
+    border: none;
+}
+
+.fa, .fas {
+    font-weight: 900;
+}
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+}
+
+.fa-fw {
+    text-align: center;
+    width: 1.25em;
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.iconoPass {
+    cursor: pointer;
+    float: right;
+    left: 90%;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    top: -5px;
+    z-index: 2;
+}
+
+.btn-ingresar{
+    height: 45px;
+    width: 88%;
+    margin: 0.5em;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-ingresar:hover{font-weight: 700;}
+
+.txt-center{text-align: center;}
+
+.contenedor .footer{grid-area: footer;}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .contenedor .accesos-campus{margin-top: 9em;}
+
+    .form-group label{  margin: 0.5em 1.5em;  }
+}
+
+@media (max-width: 767.98px) { 
+    .contenedor .accesos-campus{
+        margin-top: 9em;
+        display: block;
+    }
+
+    .formPortal{
+        width: 80%;
+    }
+    
+}
+
+
+
+
+/* @media (min-width: 576px) and (max-width: 767.98px) {  } */

@@ -1,0 +1,37 @@
+# Dependencias
+/vendor/
+/node_modules/
+
+# Archivos de entorno
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+logs/
+
+# Cache
+cache/
+tmp/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos subidos
+/uploads/
+/storage/
+
+# Configuración local
+config.local.php
+
+# Otros archivos
+.htaccess
+.htaccess_new

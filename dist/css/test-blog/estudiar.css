@@ -1,0 +1,1094 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header             header              header"
+        "estudiar-banner    estudiar-banner     estudiar-banner"
+        "estudiar-tabs      estudiar-tabs       estudiar-tabs"
+        "futuro             futuro              futuro"
+        "carrusel-unis      carrusel-unis       carrusel-unis"
+        "footer             footer              footer";    
+}
+
+/* *********** BARra NAVegación *************** */
+.contenedor .header{ grid-area: header; }
+
+/* ********** BANNER-PRINCIPAL ************ */
+.contenedor .estudiar-banner{
+    grid-area: estudiar-banner;    
+    padding: 5em 0;
+    width: auto;
+    background-image: url(/2022/dist/images/banner_estudiar_.png);
+    background-size: cover;
+    background-position: center center;
+    text-shadow: 1px 1px 5px #000;
+    object-fit: cover;
+}
+
+.contenedor .estudiar-banner .estudiar-content{ color: white; }
+.contenedor .estudiar-banner .h1-estudiar{ font-size: 3.2rem; }
+
+/* *********** TABS ********** */
+/* Ocultamos las "TABS" secundarias*/
+#titula, #certificados, #bolsa, #inter, #admision{ display: none; }
+
+/* Clase añadida con JS */
+.tablink-black{
+    font-weight: 900;
+    background-color: #fff;
+    color: #E10031;
+}
+
+/* ***********ESTILOS comunes de todas las "TABS" *********** */
+.contenedor .estudiar-tabs{ grid-area: estudiar-tabs; }
+
+/* BODY-tabs (resto en styles.css)*/
+.tabs .tab .tabs-cuerpo .tabs-head{margin-top: 1em;}
+.tabs .tab .tabs-cuerpo .tabs-head>div .estudiar-h1{    
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* imagenes */
+.tabs .tab .tabs-cuerpo .tabs-txt>img{
+    box-shadow: 1px 1px 10px 2px #d3d3d3;
+    margin: 2em;
+    width: 95% ;
+}
+
+/* ********** METODOLOGIA ********* */
+/* TEXTOS */
+.metodo .tabs-cuerpo .tabs-txt .metodo-txt-img>p{ margin: auto;}
+.metodo .tabs-cuerpo .tabs-txt .metodo-txt-img>img{
+    float: right;
+    height: 13.2em;
+    padding: 0 1em;
+}
+
+/* METODO */
+.metodo-cuerpo{
+    background: #fff;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    line-height: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "metodo-head        metodo-head        metodo-head"
+        "metodo-subtitle    metodo-subtitle    metodo-subtitle"
+        "metodo-cards       metodo-cards       metodo-cards"
+        "metodo-buttons     metodo-buttons     metodo-buttons";
+}
+
+/* CABECERA */
+.metodo-cuerpo .metodo-head{
+    grid-area: metodo-head;   
+    text-align: center;
+    line-height: 0.5;
+}
+
+.metodo-cuerpo .metodo-head .metodo-title{
+    font-size: 22px;
+    color: #E10031;
+    font-weight: 500;
+    padding: 1em 0;
+}
+
+.metodo-cuerpo .metodo-head .center-txt{  font-size: 15px;}
+
+/* TARJETAS */
+.metodo-cuerpo .metodo-cards{
+    grid-area: metodo-cards;
+    width: 100%;
+    padding: 3em 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Tarjeta */
+.metodo-cuerpo .metodo-cards>div{
+    width: 90%;
+    background-color: white;
+    box-shadow: -1px 12px 20px 10px #d2d2d2;
+    margin: 0 auto;
+    display: grid;
+    gap: 1em;
+    grid-template-rows: 1fr 4.5fr;
+    justify-items: center;
+    align-items: center;
+    height: max-content;
+}
+
+/* Iconos */
+.metodo-cuerpo .metodo-cards .metodo-icons{ height: 4rem;}
+.metodo-cuerpo .metodo-cards .metodo-icons> img{
+    padding: 1em 0;
+    height: 5rem;
+    display: grid;
+    justify-items: center;
+}
+
+/* Textos */
+.metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt{  
+    line-height: 1.2rem;
+    padding: 1em;
+    text-align: start;
+}
+
+/* Título */
+.metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt .metodo-card-title .card-h3{
+    height: 5rem;
+    font-size: 15px;
+    padding: 1em 0;
+}
+
+/* Descripción */
+.metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt .card-descript{
+    height: 8rem;
+    font-size: 15px;
+    padding-bottom: 1.5em;
+}
+
+/* BOTONES GRANDES */
+.metodo-cuerpo .metodo-buttons{
+    grid-area: metodo-buttons;
+    line-height: 2rem;
+    margin: 0 auto 1em auto;
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.metodo-cuerpo .metodo-buttons>a{
+    width: 95%;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: 18rem 9rem;
+}
+
+.metodo-cuerpo .metodo-buttons>a:hover{color: #F8B100;}
+.metodo-cuerpo .metodo-buttons>a .metodo-h2{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    padding-bottom: 2em;
+    text-align: left;
+}
+
+.metodo-cuerpo .metodo-buttons .metodo-btn1, .metodo-cuerpo .metodo-buttons .metodo-btn2{
+    display: grid;
+    justify-self: end;
+    padding-left: 2rem;
+}
+
+.metodo-cuerpo .metodo-buttons>a img{
+    padding-right: 2em;
+    height: 12.6rem;
+}
+
+/* ********** TITULACIONES ********* */
+.tabs .titula .tabs-cuerpo .tabs-txt .posgrados>img{
+    width: 90%;
+    padding-top: 1em;
+    margin: 0 3em;
+}
+
+.tabs .titula .cards{
+    width: 70%;
+    padding: 2em;
+    margin: 0 auto;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "card-1 card-2";
+}
+
+.tabs .titula .cards .card-1{ grid-area: card-1; }
+.tabs .titula .cards .card-2{ grid-area: card-2; }
+.tabs .titula .cards .card{
+    line-height: normal;
+    box-shadow: 1px 1px 10px 2px #d3d3d3;
+    padding: 1.5em;
+}
+
+.tabs .titula .cards .card .card-body .card-title{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 28px;
+    line-height: 28px;
+}
+
+.tabs .titula .cards .card .card-body .card-title .titula-title{
+    text-align: left;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    
+}
+
+.tabs .titula .cards .card .card-body .card-title .titula-title .tab-h2{margin-top: 0;} 
+#ciclo3, #ciclo2{    display: block;}
+.tabs .titula .cards .card .card-body .card-title .titula-btn{display: none;}
+.tabs .titula .cards .card .card-body .card-title .titula-btn>button{
+    background-color: #fff;
+    border: none;
+}
+
+.tabs .titula .cards .card .card-body .card-title .titula-btn button img{
+    height: 22px;
+    border: none;
+    line-height: 24px;
+}
+
+.tabs .titula .cards .card .card-body .card-txt>p{
+    font-size: 13px;
+    text-align: left;
+    padding: 1em 0;
+    line-height: normal;
+}
+
+.tabs .titula .tabs-cuerpo .titula-txt-img{
+    width: 70%;
+    margin: 1em auto 0 auto;
+    text-align: justify;
+}
+
+.tabs .titula .tabs-cuerpo .titula-txt-img .titula-parrafo{
+    float: left;
+    width: 55%;
+    position: relative;
+    padding-right: 2em;
+}
+
+.tabs .titula .tabs-cuerpo .titula-txt-img .mapa-img{
+    float: right;
+    width: 45%;
+    text-align: center;
+    margin: -3em;
+}
+
+.tabs .titula .tabs-cuerpo .titula-txt-img .mapa-img>img{ width: 100%; }
+.tabs .titula .tabs-cuerpo .tabs-title-titulaUnis { padding-top: 0; }
+
+/* Tabla*/
+.tabs .titula .tabs-cuerpo .titula-tabla{
+    box-shadow: 1px 1px 10px 2px #d3d3d3;
+    width: 70%;
+    margin: 1em auto;
+    font-size: 1em;
+}
+
+.tabs .titula .tabs-cuerpo .titula-tabla .tabla-titulaciones{ padding: 1em 2em; }
+.tabs .titula .tabs-cuerpo .titula-tabla>ul li {
+    list-style: square url(/2022/dist/images/icons/cuadrado-rojo-12.png) inside;
+    text-align: left;
+}
+
+.tabs .titula .tabs-cuerpo .titula-tabla>ul li span{
+    color: #7F0000;
+    font-weight: 600;
+    padding-left: 0.5em;
+}
+/* ********** ADMISION ********* */
+.admision-txt-img{
+    margin: 1em auto;
+    width: 90%;
+}
+
+.admision-imagen{  float: left; }
+
+.admision-imagen .admi-img{
+    width: 275px;
+    height: auto;
+}
+.admision-text .admi-txt{
+    float: right; 
+    width: 60%;
+    margin: 3em auto;
+}
+
+/* ********* CERTIFICADOS ******** */
+/* Tabla*/
+.tabs .certificados .tabs-cuerpo .certificados-titulos{    
+    display: flex;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabla-certis {
+    box-shadow: 1px 1px 10px 2px #d3d3d3;
+    width: 60%;
+    margin: 1.5em 0 0 4em;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabla-certis>ul{
+    color: #E10031;
+    text-align: left;
+    font-size: 15px;
+    padding: 2em 1em 0.5em 1em;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabla-certis>ul li .tabla-title{
+    font-weight: 700;
+    padding-bottom: 1em;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabla-certis>ul .tabla-seccion{ margin-bottom: 2em; }
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabla-certis>ul li ul li ul{
+    font-size: 0.7rem;
+    border-bottom: 1px solid #d3d3d3;
+    padding-top: 1em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabla-certis>ul li ul li ul .titulo-precio{
+    text-align: right;
+    margin-left: 50px;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabla-certis>ul li ul .descri-1{ color: #000; }
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabla-certis>ul li .tabla-title-2{
+    font-weight: 600;
+    border-bottom: none;
+}
+
+/* pdf descarga */
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabs-program{
+    background: #d3d3d3;
+    margin: 1em auto 2em auto;
+    width: 90%;
+    height: auto;
+    position: relative;
+    height: 20em;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabs-program .tabs-program-img>img{
+    height: 15em;   
+    position: relative;   
+    margin: 2em auto 0;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabs-program .tabs-program-pdf{
+    background: #E10031;  
+    position: absolute;  
+    height: 3em;  
+    left: 5%;
+    top: 18em;     
+    z-index: 3;   
+    width: 90%;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabs-program .tabs-program-pdf>a{
+    display: flex;
+    height: 3em;
+    text-align: center;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabs-program .tabs-program-pdf> a p{
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1em;
+    padding: 0.5em 0 0 0.5em;
+}
+
+.tabs .certificados .tabs-cuerpo .certificados-titulos .tabs-program .tabs-program-pdf>a img{
+    height: 1.5em;
+    line-height: 1em;
+    float: right; 
+    padding: 0.6em 2em 0;
+}
+
+/* ********* BOLSA ************* */
+/* BOLSA- tarjetas-iconos bolsa */
+.tabs .tab .tabs-cuerpo .bolsa-cards{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tabs .tab .tabs-cuerpo .bolsa-cards .bolsa-card{
+    padding: 1em;   
+    margin: 0 auto;
+    height: auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+        "bolsa-icons bolsa-card-txt";
+    filter: grayscale(5);
+}
+
+
+.tabs .tab .tabs-cuerpo .bolsa-cards .bolsa-card:hover{
+    filter: none;
+    font-weight: 700;
+}
+
+
+.tabs .tab .tabs-cuerpo .bolsa-cards .bolsa-card .bolsa-icons {
+    grid-area: bolsa-icons;
+    display: grid;
+    justify-self: right;
+}
+
+.tabs .tab .tabs-cuerpo .bolsa-cards>div .bolsa-icons{
+    height: 5rem;
+    width: 5rem;
+    border: 3px solid #7F0000;
+    border-radius: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.tabs .tab .tabs-cuerpo .bolsa-cards>div .bolsa-icons:hover{  border: 4px solid #7F0000;}
+.bolsa-cards>div .bolsa-icons>img{  height: 4em;}
+.bolsa-cards .bolsa-card .bolsa-card-txt{
+    color: #7F0000;
+    line-height: normal;
+    text-align: left;
+    padding: 1em;
+}
+
+.bolsa-cards .bolsa-card .bolsa-card-txt .bolsa-card-title{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.bolsa-cards .bolsa-card .bolsa-card-txt .bolsa-card-descript{ font-size: 15px;}
+
+/*Texto*/
+.tabs .tab .tabs-cuerpo .tabs-txt .bolsa-txt{ margin: 1em auto; }
+
+/* Tarjetas Prácticas*/
+.practicas-cards{ 
+    display: flex;
+    width: 90%;
+    margin: 2em auto;
+}
+
+.practicas-cards .practicas-card{
+    width: 25%;
+    margin: 0 auto;
+    height: max-content;
+    box-shadow: 1px 1px 10px #d3d3d3;
+    padding: 2em ;
+    filter: grayscale(2);
+}
+
+.practicas-cards .practicas-card:hover{  filter: grayscale(0);}
+.practicas-cards .practicas-card .practicas-icons,.practicas-cards .practicas-card .practicas-icons>img{    height: 5em;}
+.practicas-cards .practicas-card .practicas-card-txt{
+    height: 8em;
+    color: #E10031;
+    font-size: 15px;
+}
+
+.practicas-cards .practicas-card .practicas-card-txt .practicas-card-title{ 
+    margin: 1em auto;
+    height: 3em;
+} 
+
+/* BANNER AZUL */
+.banner-azul-right .img-bolsa{background-image: url(/2022/dist/images/empresas-AUCAL.jpg);}
+
+/* ********* INTERNACIONAL ************* */
+.tabs .inter .tabs-cuerpo .title-inter{
+    width: 100%;
+    margin: 1em auto;    
+}
+
+.tabs .inter .tabs-cuerpo .tabs-img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tabs .inter .tabs-cuerpo .tabs-img>img{
+    width: 100%;
+    margin: 1em auto;
+}
+
+.tabs .inter .tabs-cuerpo .tabs-img .mapa-inter-movil{ display: none;}
+.tabs .inter .tabs-cuerpo .btns-azules{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.tabs .inter .tabs-cuerpo .tabs-enlaces{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.tabs .inter .tabs-cuerpo .tabs-enlaces>a{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 1em;
+}
+
+/*BOTONES*/
+.fondo-1{
+    background-image: url(/2022/dist/images/aucal-calidad.png);
+    box-shadow: inset 0 0 0 1000px rgba(0,157,223,0.6);
+}
+
+.fondo-2{  background-image: url(/2022/dist/images/banner-futuro-empieza-AUCAL.jpg);}
+
+/* UNIS */
+.contenedor .carrusel-unis{  grid-area: carrusel-unis;}
+
+/* FOOTER */
+.contenedor .footer{  grid-area: footer;}
+
+/***************************************/
+/*RESPONSIVE*/
+@media (min-width: 768px) and (max-width: 1199.98px) { 
+    /* certificados */
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo{ width: 80%;}
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .certificados-parrafo{
+        width: 60%;
+        padding-right: 1em;
+        font-size: 14px;
+    }
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .txt-img-chat{ width: 35%; }
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .txt-img-chat .img-chat>img{  height: 13em;}
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .txt-img-chat .txt-chat{
+        top: 12em;
+        width: 100%;
+    }
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .txt-img-chat>div p, .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .txt-img-chat>div a{ font-size: 14px; }
+    .tabs .certificados .tabs-cuerpo .tabs-txt .certificados-tabla{
+        width: 100%;
+        margin: 4em auto 0;
+    }
+}
+
+/********************************************/
+@media (max-width: 991.98px){
+
+    /* BANNER-PRINCIPAL */
+    .contenedor .estudiar-banner .h1-estudiar{ font-size: 2.8rem;}
+    /* TABS */
+    /* Clase añadida con JS */
+    .tablink-black{  padding: 0.75em;}    
+
+    /* Body-tabs */
+    .tabs .tab .tabs-cuerpo .tabs-head>div .estudiar-h1{    
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .tabs .tab .tabs-cuerpo { width: 100%;}
+    /* Titulos rojos */
+    .tabs .tab .tabs-cuerpo .tabs-title { width: 80%;    }
+
+    /* titulos negros */
+    .tabs .tab .tabs-cuerpo .tabs-title .tab-h2-big {font-size: 20px;}
+    .tabs .tab .tabs-cuerpo .tabs-title .tab-h2{ font-size: 15px;}
+
+    /* textos */
+    .tabs .tab .tabs-cuerpo .tabs-txt{
+        width: 80%;
+        font-size: 14px;
+    }
+
+    /* imagenes */
+    .tabs .tab .tabs-cuerpo .tabs-txt>img{
+        margin: 2em 1em;
+        width: 100% ;
+    }
+
+        /*TITULACIONES - mapa*/   
+    .tabs .titula .tabs-cuerpo .titula-txt-img{
+        font-size: 14px;
+        width: 80%;
+        margin: 1em auto;
+    }
+    
+    .tabs .titula .tabs-cuerpo .titula-txt-img .titula-parrafo{ width: 100%; }    
+    .tabs .titula .tabs-cuerpo .titula-txt-img .mapa-img{ width: 100%;}
+    .tabs .titula .tabs-cuerpo .titula-txt-img .mapa-img>img{ 
+        width: 70%;
+        margin-top: 1em;
+    }
+
+    /* Tabla*/
+    .tabs .titula .tabs-cuerpo .titula-tabla{
+        width: 90%;
+        font-size: 11px;
+    }
+
+    .tabs .titula .tabs-cuerpo .titula-tabla>ul li {
+        list-style: square url(/2022/dist/images/icons/cuadrado-rojo-8.png) inside;
+    }   
+}
+
+@media (min-width: 768px) and (max-width: 1199px){
+    .banner-azul-right .azul-right-txt .azul-right-title{height: 1em;}
+}
+
+/******************/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    /******** METODOLOGIA ********/
+    /* TARJETAS */
+    .metodo-cuerpo .metodo-cards{
+        padding: 2em 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metodo-cuerpo .metodo-cards>div {
+        margin: 1em auto;
+        width: 80%;
+        gap: 0;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    /* Textos */
+    .metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt{ padding: 0 2em; }
+    .metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt .metodo-card-title .card-h3 { 
+        height: 3rem;
+        margin-top: 1em;
+    }
+
+    .metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt .card-descript { height: 5rem;}
+
+    /* BOTONES GRANDES */
+    .metodo-cuerpo .metodo-buttons{gap: 1em;}
+    .metodo-cuerpo .metodo-buttons>a{
+        width: 95%;
+        height: 7rem;
+        grid-template-columns: 12rem 9rem;
+    }
+
+    .metodo-cuerpo .metodo-buttons>a .metodo-h2{
+        font-size: 15px;
+        line-height: normal;
+    }
+
+    .metodo-cuerpo .metodo-buttons .metodo-btn1, .metodo-cuerpo .metodo-buttons .metodo-btn2{ padding-left: 1rem;}
+    .metodo-cuerpo .metodo-buttons>a img{
+        padding-right: 1em;
+        height: 8.9rem;
+    }
+}
+/***********************************/
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    
+    /* **  METODOLOGIA  ** */
+     /* TARJETAS */
+     .metodo-cuerpo .metodo-cards{
+        width: 90%;
+        padding: 2em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Tarjeta */
+    .metodo-cuerpo .metodo-cards>div{
+        width: 80%;
+        margin:  1em auto;
+    }
+
+    /* Iconos */
+    .metodo-cuerpo .metodo-cards .metodo-icons{height: 3rem;}
+    .metodo-cuerpo .metodo-cards .metodo-icons> img{
+        padding-top: 1em;
+        height: 4rem;
+    }
+
+    /* Textos */ 
+    /* Título */
+    .metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt .metodo-card-title .card-h3{
+        height: 2rem;
+        font-size: 14px;
+        padding: 0 0 2em 0;
+    }
+
+    /* Descripción */
+    .metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt .card-descript{
+        height: 5rem;
+        font-size: 13px!important;
+        font-size: 0.9rem;
+    }
+
+    /* BOTONES GRANDES */
+    .metodo-cuerpo .metodo-buttons{ display: block; }
+
+    .metodo-cuerpo .metodo-buttons>a{
+        width: 95%;
+        height: 5em;
+        grid-template-columns: 14rem 7rem;
+        margin: 1em auto;
+    }
+
+    .metodo-cuerpo .metodo-buttons>a .metodo-h2{
+        font-size: 18px;
+        line-height: 1.2rem;
+    }
+
+    .metodo-cuerpo .metodo-buttons .metodo-btn1,
+    .metodo-cuerpo .metodo-buttons .metodo-btn2{
+        padding: 1rem ;
+    }
+
+    .metodo-cuerpo .metodo-buttons>a img{
+        padding: 0 2em;
+        height: 6.4rem;
+    }
+
+    /*ADMISION -imagen */
+    .admision-imagen .admi-img{width: 200px;}
+
+
+    /* BOLSA- tarjetas-iconos */
+    .tabs .tab .tabs-cuerpo .bolsa-cards{ width: 90%;}
+
+    .tabs .tab .tabs-cuerpo .bolsa-cards>div .bolsa-icons{
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .bolsa-cards>div .bolsa-icons>img{ height: 3em;}
+
+    .bolsa-cards .bolsa-card .bolsa-card-txt{ line-height: 1.1rem;}
+
+    .bolsa-cards .bolsa-card .bolsa-card-txt .bolsa-card-title{ font-size: 15px;}
+
+    .bolsa-cards .bolsa-card .bolsa-card-txt .bolsa-card-descript{ font-size: 0.8rem;}
+
+}
+
+/********************************************/
+@media (max-width: 991.98px) { 
+    .contenedor .estudiar-banner {margin-top: 9em;}
+}
+
+/********************************************/
+@media (max-width: 767.98px) { 
+    /* BANNER-PRINCIPAL */
+    .contenedor .estudiar-banner .h1-estudiar{ font-size: 26px;  }
+    
+    /* TABS */  
+    /* Body-tabs */
+    .tabs .tab .tabs-cuerpo .tabs-head>div .estudiar-h1{ font-size: 22px; }
+
+    /* titulos rojos */
+    .tabs .tab .tabs-cuerpo .tabs-title {
+        width: 85%;
+        font-size: 20px;
+    }
+
+    .tabs .tab .tabs-cuerpo .tabs-title .tab-h1{
+        font-size: 18px;
+        margin: 1em 0;
+        text-align: left;
+    }
+
+    /* titulos rojos centrados*/
+    .tabs .tab .tabs-cuerpo .tabs-title .tab-h1-big{
+        width: 85%;
+        font-size: 14px;
+        text-align: left;
+        margin: 1em 0;
+    }
+
+    /* titulos negros */
+    .tabs .tab .tabs-cuerpo .tabs-title .tab-h2{
+        font-size: 16px;
+	text-align: left;
+        margin: 1em 0;
+        font-weight: 450;
+    }
+
+    /* textos */
+    .tabs .tab .tabs-cuerpo .tabs-txt{
+        width: 85%;
+        font-size: 14px;
+        padding-top: 0em;
+    }
+
+    /* imagenes */
+    .tabs .tab .tabs-cuerpo .tabs-txt>img{
+        margin: 1em auto;
+        width: 100% ;
+    }
+
+
+    /* Metodología */
+     /* TEXTOS */    
+     .metodo .tabs-cuerpo .tabs-txt .metodo-txt-img>img{
+        float: none;
+        margin: 0 6em;
+        padding-bottom: 1em;
+    }
+
+    /* METODO */
+    .metodo-cuerpo{ 
+        width: 85%; 
+        padding: 0 2em;
+    }
+
+    /* CABECERA */
+    .metodo-cuerpo .metodo-head .metodo-title{
+        font-size: 18px;
+        text-align: left;
+        margin: 0 auto;
+    }
+    .metodo-cuerpo .metodo-head .center-txt{
+        font-size: 14px;
+        text-align: left;
+        margin: 0 auto;
+        line-height: normal;
+    }
+
+   /* TARJETAS */
+    .metodo-cuerpo .metodo-cards{
+        width: 70%;
+        padding: 2em 0;
+        display: block;
+    }
+
+    /* Tarjeta */
+    .metodo-cuerpo .metodo-cards>div{
+        width: 80%;
+        margin: 1em auto;
+    }
+    /* Iconos */
+    .metodo-cuerpo .metodo-cards .metodo-icons{height: 3rem;}
+    .metodo-cuerpo .metodo-cards .metodo-icons> img{
+        padding-top: 1em;
+        height: 4rem;
+    }
+
+    /* Textos */ 
+    /* Título */
+    .metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt .metodo-card-title .card-h3{
+        height: max-content;
+        font-size: 15px;
+        padding: 0 0 2em 0;
+    }
+
+    /* Descripción */
+    .metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt .card-descript{
+        height: max-content;
+        font-size: 0.8rem;
+        padding-bottom: 1em;
+    }
+
+    /* BOTONES GRANDES */
+    .metodo-cuerpo .metodo-buttons{  display: block; }
+
+    .metodo-cuerpo .metodo-buttons>a{
+        width: 80%;
+        height: 3em;
+        grid-template-columns: 14rem 5rem;
+        padding: 1rem;
+        margin: 0.5em auto;
+    }
+
+    .metodo-cuerpo .metodo-buttons>a .metodo-h2{
+        font-size: 15px;
+        line-height: 1.1rem;
+    }
+
+    .metodo-cuerpo .metodo-buttons .metodo-btn1, .metodo-cuerpo .metodo-buttons .metodo-btn2{ padding: 1rem ; }
+
+    .metodo-cuerpo .metodo-buttons>a img{
+        padding-right: 0;
+        height: 3.8rem;
+    }
+
+    /* Titulaciones */
+    .tabs .titula .tabs-cuerpo .tabs-txt .posgrados>img{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .tabs .titula .cards{
+        width: 80%;
+        display: block;
+        padding: 1em 2em; 
+    }
+
+    .tabs .titula .cards .card{  margin: 1em auto; }
+    #ciclo3,  #ciclo2{  display: none; }
+    .tabs .titula .cards .card .card-body .card-title{width: 90%;}
+    .tabs .titula .cards .card .card-body .card-title>p{ 
+        font-size: 18px; 
+        font-weight: 500;
+    }
+
+    .tabs .titula .cards .card .card-body .card-txt>p{
+        font-size: 15px;
+        padding: 0.5em 0;
+    }
+
+    .tabs .titula .tabs-cuerpo .titula-txt-img{
+        width: 85%;
+        margin: 1em auto;
+    }
+    
+    .tabs .titula .tabs-cuerpo .titula-txt-img .titula-parrafo{font-size: 15px;}
+    .tabs .titula .cards .card .card-body .card-title .titula-btn{
+        display: block;
+        margin-left: 7em;
+    }
+
+    /*ADMISION -imagen */
+    .admision-imagen {
+        float: none;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .admision-text .admi-txt {
+        float: none;
+        width: 95%;
+    }
+   
+    /* CERTIFICADOS */
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo{
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .certificados-parrafo{ width: 100%;}
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .txt-img-chat{ 
+        width: 85%;
+        margin: 1em auto;
+    }
+
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .txt-img-chat .img-chat>img{
+        height: 15em;
+        position: relative;
+        right: 0;
+    }
+
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .txt-img-chat .txt-chat{
+        text-align: center;
+        height: 3em;
+        left: 10%;
+        top: 13.5em;
+        z-index: 3;
+        width: 70%;
+    }
+
+    .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .txt-img-chat>div p, .tabs .certificados .tabs-cuerpo .tabs-txt-fondo .txt-img-chat>div a{  font-size: 15px;  } 
+    .tabs .certificados .tabs-cuerpo .tabs-txt .certificados-tabla{ margin: 2em auto;}
+    .tabs .certificados .tabs-cuerpo .certificados-titulos>ul{
+        color: #E10031;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    /* BOLSA */
+    /*tarjetas-iconos */
+    .tabs .tab .tabs-cuerpo .bolsa-cards{
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .tabs .tab .tabs-cuerpo .bolsa-cards .bolsa-card{
+        margin: 0 auto;
+        width: 90%;
+        display: block;
+    }
+
+    .tabs .tab .tabs-cuerpo .bolsa-cards .bolsa-card .bolsa-icons {
+        grid-area: bolsa-icons;
+        display: grid;
+        justify-self: center;
+        margin: 0 auto;
+    }
+
+    .tabs .tab .tabs-cuerpo .bolsa-cards>div .bolsa-icons{
+        height: 3rem;
+        width: 3rem;
+        border: 1px solid #7F0000;
+
+    }
+
+    .bolsa-cards>div .bolsa-icons>img{height: 2em;}
+    .bolsa-cards .bolsa-card .bolsa-card-txt{
+        text-align: center;
+        padding: 0.5em 0;
+    }
+
+    .bolsa-cards .bolsa-card .bolsa-card-txt .bolsa-card-title{ font-size: 15px;}
+    .bolsa-cards .bolsa-card .bolsa-card-txt .bolsa-card-descript{ font-size: 0.8rem;}
+
+    /* TArjetas prácticas */
+    .practicas-cards{display:block;}
+    .practicas-cards .practicas-card{
+	    width: 85%;
+        padding: 1em;
+        margin: 1em auto;
+        height: max-content;
+    }
+	
+    .practicas-cards .practicas-card .practicas-card-txt {  height: max-content;  }
+    .practicas-cards .practicas-card .practicas-icons,  .practicas-cards .practicas-card .practicas-icons>img{height: 4em;} 
+
+    /* INTERNACIONAL */
+    .tabs .tab .tabs-cuerpo .tabs-title .tab-h2-big {
+        margin: 1em auto;
+        font-size: 18px;
+    }
+
+    .tabs .inter .tabs-cuerpo .tabs-img{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .tabs .inter .tabs-cuerpo .tabs-img>img{width: 95%;}
+    .tabs .inter .tabs-cuerpo .tabs-img .mapa-inter{  display: none; }
+    .tabs .inter .tabs-cuerpo .tabs-img .mapa-inter-movil{display: block;}
+    .tabs .inter .tabs-cuerpo .btns-azules{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .tabs .inter .tabs-cuerpo .tabs-enlaces{
+        width: 70%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+
+    .tabs .inter .tabs-cuerpo .tabs-enlaces>a{
+        font-size: 14px;
+        font-weight: 600;
+        width: 70%;
+        margin: 0 auto;
+        padding: 0.5em 0;
+    }   
+
+    .tabs .tab .tabs-cuerpo .tabs-title {margin: 0;}
+}
+
+/*************************/
+@media (max-width:551.98px){
+     /*METODO*/
+    .metodo-cuerpo .metodo-cards .metodo-card .metodo-card-txt .metodo-card-title .card-h3 {
+	    font-size: 12px;
+	    height: auto;
+    }
+    .metodo .tabs-cuerpo .tabs-txt .metodo-txt-img>img {margin: 0 4em;}
+
+    /*TITULA*/
+    .tabs .titula .cards .card{padding: 1em;}
+    .tabs .titula .cards .card .card-body .card-title .titula-title .tab-h2 {font-size: 15px;}
+    .tabs .titula .tabs-cuerpo .titula-txt-img .mapa-img>img {margin: 2em 6em 2em 0em;}
+
+}

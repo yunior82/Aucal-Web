@@ -1,0 +1,187 @@
+.carrusel-convenios{
+    width: 100%;
+    margin: 2em auto;
+    line-height: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "cc-head        cc-head         cc-head"
+        "cc-carrousel   cc-carrousel    cc-carrousel";
+}
+
+.carrusel-convenios .cc-head{
+    grid-area: cc-head;
+    margin-bottom: 2em;
+}
+
+.carrusel-convenios .cc-carrousel{
+    grid-area: cc-carrousel;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.items {
+	position: relative;
+	margin: 7em 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	user-select: none;
+	width: 95%;
+}
+
+.items .item {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 30%;
+	height: 600px;
+	overflow: hidden;
+	transition: all 300ms ease-in-out;
+	z-index: -1;
+	opacity: 0;
+	padding: 1em;
+    height: 10em;
+}
+
+.item img {
+	width: auto;
+	object-fit: cover;
+}
+
+
+/*LOGOS */
+
+.item .lumensia,
+.item .bbva{ height: 100px; } 
+
+.item .aeen,
+.item .sener{height: 120px;}
+
+.item.active {
+	filter: none;
+	opacity: 1;
+	z-index: 99;
+}
+
+.item.prev {
+	z-index: 2;
+	opacity: 0.25;
+	transform: translate(-125%, -50%);
+}
+
+.item.next {
+	z-index: 2;
+	opacity: 0.25;
+	transform: translate(25%, -50%);
+}
+
+.items .button-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	z-index: 100;
+}
+
+.button-container .button {
+	color: #fff;
+	font-size: 32px;
+	cursor: pointer;
+	position: relative;
+	opacity: 0.75;
+	transition: all 300ms ease-in-out;
+}
+
+.button-container .button:hover {
+	opacity: 1;
+	filter: none;
+}
+
+
+.button-container .button:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	width: 30px;
+	height: 30px;
+	background-color: #E10031;
+	border-radius: 50%;
+	z-index: -99;
+}
+
+.button-container .button:nth-child(1) {
+	float: left;
+}
+
+.button-container .button:nth-child(2) {
+	float: right;
+}
+
+
+
+/**********************************/
+@media (min-width: 768px) and (max-width: 991.98px)  { 
+    .items {width: 60%;}
+	.items .item {
+		width: 60%;
+		height: 7em;
+        padding: 0 ;
+	}
+
+	.items .item img{
+		width: auto;
+	}
+
+	
+	.items .button-container {width: 40em;}
+    .item .once,
+    .item .carrefour,
+    .item .corte,
+    .item .acciona{
+        width: 40%!important;
+    }
+
+    .item .prosegur{
+        width: 30%!important;
+        margin: 1em auto;
+    }
+
+}
+
+/****************************************************/
+@media (max-width: 767.98px) {
+	.carrusel-unis{   margin: 1em auto; }
+	/* .carrusel-unis .cu-carrousel{ position: static;} */
+
+	.items {
+	   width: 35%;
+    	   margin: 2em 0;	
+        }
+
+	.items .item {
+		width: 80%;
+		height: 7em;
+        padding: 0 0.5em;
+	}
+
+	.items .item img{
+		width: auto;
+		height: 60%;
+		margin-top: 2em;
+	}
+
+	
+	.items .button-container {width: 24em;}
+
+	.items .button-container .button {font-size: 15px;}
+
+	.items .button-container .button:before {
+		width: 20px;
+		height: 20px;
+	}
+
+}

@@ -1,0 +1,59 @@
+.contenedor{
+    grid-template-areas:
+        "header               header                header"    
+        "blog-banner          blog-banner           blog-banner"
+        "articulo             articulo              articulo"  
+        "noticias             noticias              noticias"
+        "carrusel-unis        carrusel-unis         carrusel-unis"
+        "footer               footer                footer";
+}
+.contenedor .header{ grid-area: header;}
+.contenedor .blog-banner{
+    grid-area: blog-banner;
+    background-position: center center;
+    background-size: cover;
+    height: 150px;
+}
+.social-banner{  background-image: url(/2022/dist/images/banner-blog-social-aucal.png);}
+.educacion-banner{ background-image: url(/2022/dist/images/banner-blog-educacion-aucal.png);}
+.actualidad-banner{ background-image: url(/2022/dist/images/banner-blog-actualidad-aucal.png);}
+.blog-h2{
+	color: #fff;
+    text-shadow: 2px 2px 10px #000;
+	margin-top: 1em;
+}
+.contenedor .articulo{ grid-area: articulo;}
+.contenedor .noticias{  grid-area: noticias;}
+.contenedor .carrusel-unis{ grid: carrusel-unis ;}
+.contenedor .footer{ grid-area: footer;}
+
+.articulo-txt{
+    width: 85%;
+    margin: 1em auto;
+}
+.articulo-txt ul, .articulo-txt ol, .articulo-txt p{ margin: 1em auto;}
+.articulo-txt ul, .articulo-txt ol{width: 90%;}
+.articulo-txt ul{list-style: disc;}
+.articulo-txt h2{margin-top: 2em;}
+.articulo-txt h3{margin-top: 1em;}
+.articulo-txt hr{margin: 2em 0;}
+.articulo-txt p a:hover{  font-size: 16px;}
+.articulo-txt img, .articulo-txt p img, .articulo-txt p a img, .articulo-txt h2 a img, .articulo-txt h3 a img{
+    display: block;
+    width: 65%;
+    height: auto;
+    margin: 1.5em auto;
+    object-fit: cover;
+}
+
+/****************************************/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .articulo-txt img, .articulo-txt p img, .articulo-txt p a img, .articulo-txt h2 a img, .articulo-txt h3 a img{ width: 75%;  }
+}
+
+/********************************************************************/
+@media (max-width: 767.98px) {
+    .articulo-txt img, .articulo-txt p img, .articulo-txt p a img, .articulo-txt h2 a img, .articulo-txt h3 a img{ width: 95%; }
+    .articulo-txt p a{ width: 80%;}
+    .articulo-txt p a:hover{font-size: 14px;}
+}

@@ -1,0 +1,178 @@
+<div class="contenedor">
+    <header class="header">
+        <div class="nav-contacto">
+            <ul class="nav-redes"> 
+                <li class="icono-redes">
+                    <a href="https://www.instagram.com/aucalformaciones" class="a-header" target="_blank" alt="AUCAL Bussines School Redes Sociales Instagram">
+                        <i class="fa fa-instagram" alt="AUCAL Bussines School icono Instagram"></i>
+                    </a>
+                </li>
+                <li class="icono-redes">
+                    <a href="https://www.facebook.com/aucalformacion" class="a-header" target="_blank" alt="AUCAL Bussines School Redes Sociales Facebook">
+                        <i class="fa fa-facebook-f" alt="AUCAL Bussines School icono Facebook"></i>
+                    </a>
+                </li>
+                <li class="icono-redes">
+                    <a href="https://www.linkedin.com/school/aucal-business-school/" class="a-header" target="_blank" alt="AUCAL Bussines School Redes Sociales LinkedIn">
+                        <i class="fa fa-linkedin" alt="AUCAL Bussines School icono LinkedIn"></i>
+                    </a>
+                </li>
+                <button name="button" class="nav-campus btn-red-normal" id="navCampus">
+                    <a href="/campus.html"  class="a-header campus-link" target="_blank" alt="AUCAL Bussines School Acceso Campus"> ACCESO AL CAMPUS</a>
+                </button>
+            </ul>   
+        </div>
+        <nav class="nav">
+            <div class="logo">
+                <a href="/" alt="AUCAL Bussines School logo">
+                <img src="/2022/dist/images/logos/AUCAL_positivo.png" alt="AUCAL Bussines School Logo AUCAL" class="logo-img" id="logoImg"/>
+            </a>
+            </div>
+            <button name="button" class="nav-toggle" onclick="menuList()">
+                <i class="fas fa-bars" alt="AUCAL Bussines School icono Toggle"></i>
+            </button>                
+            <ul class="nav-menu nav-menu-big" id="navMenu">
+                <li class="nav-menu-item">
+                    <a href="/sobre-aucal" class="nav-menu-link nav-link" alt="AUCAL Bussines School Nosotros">SOBRE AUCAL</a>
+                </li>
+                <li class="nav-menu-item" id="educativa">
+                    <a href="/oferta-formativa" class="nav-menu-link nav-link" alt="AUCAL Bussines School Oferta Educativa">OFERTA EDUCATIVA</a>
+                    <button name="button" href="javascript:void(0)" onclick="menuResponsive(event, 'educativa')"  class="menu-icon">
+                        <img src="/2022/dist/images/icons/drop-down-white.png" alt="AUCAL Bussines School Oferta Educativa icono" class="block-icon" >
+                    </button>
+                    <!-- OFERTA EDUCATIVA -->
+                    <div class="educativa menu-list" id="educativa">
+                        <ul class="oferta-educa" id="ofertList">
+                            <li class="tipo-curso">
+                                <ul class="tecnicos">
+                                    <a href="/oferta-formativa/curso-tecnico" alt="AUCAL Bussines School Cursos Tecnicos">CURSOS TÉCNICOS</a>
+                                    {% for course in global.courses %}
+                                        {% if course.category_id == 1 %}
+                                            <li class="curso-tec">
+                                                <a href="/oferta-formativa/curso-tecnico/{{ course.slug }}" class="curso-link" alt="AUCAL Bussines School {{ course.title }}">{{ course.title }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </li>                    
+                            <li class="tipo-curso">
+                                <ul class="masteres">
+                                    <a href="/oferta-formativa/master-oficial" alt="AUCAL Bussines School Masters Masteres Oficiales">MÁSTERES OFICIALES</a>
+                                    {% for course in global.courses %}
+                                        {% if course.category_id == 2 %}
+                                            <li class="master">
+                                                <a href="/oferta-formativa/master-oficial/{{ course.slug }}" class="curso-link" alt="AUCAL Bussines School {{ course.title }}">{{ course.title }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </li> 
+                            <li class="tipo-curso">
+                                <ul class="superiores">
+                                    <a href="/oferta-formativa/curso-superior" alt="AUCAL Bussines School Cursos Superiores">CURSOS SUPERIORES</a>
+                                    {% for course in global.courses %}
+                                        {% if course.category_id == 3 %}
+                                            <li class="curso-super">
+                                                <a href="/oferta-formativa/curso-superior/{{ course.slug }}" class="curso-link" alt="AUCAL Bussines School {{ course.title }}">{{ course.title }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </li>   
+                            <li class="tipo-curso">
+                                <ul class="masteres">
+                                    <a href="/oferta-formativa/master-executive" alt="AUCAL Bussines School Masters Masteres executives">MÁSTERES EXECUTIVES</a>
+                                    {% for course in global.courses %}
+                                        {% if course.category_id == 4 %}
+                                            <li class="master">
+                                                <a href="/oferta-formativa/master-executive/{{ course.slug }}" class="curso-link" alt="AUCAL Bussines School {{ course.title }}">{{ course.title }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </li>                 
+                        </ul>
+                    </div>  
+                </li>                        
+                <li class="nav-menu-item" id="estudiarAucal">
+                    <a href="/estudiar-en-aucal" class="nav-menu-link nav-link" alt="AUCAL Bussines School Estudiar en AUCAL">ESTUDIAR EN AUCAL</a>
+                    <!-- <div class="estudiarList nav-div" id="estudiarList">
+                        <ul class="estudiar-nav">
+                            <li class="estudiar-tipo"><a href="/estudiar-en-aucal" class="estudiar-link" alt="AUCAL Bussines School Metodologia">Metodología</a></li>
+                            <li class="estudiar-tipo"><a href="/estudiar-en-aucal/titulaciones" class="estudiar-link" alt="AUCAL Bussines School Titulacion">Titulaciones</a></li>
+                            <li class="estudiar-tipo"><a href="/estudiar-en-aucal/titulaciones" class="estudiar-link" alt="AUCAL Bussines School Certificados Diplomas">Certificados</a></li>
+                            <li class="estudiar-tipo"><a href="/estudiar-en-aucal/empleo-practicas" class="estudiar-link" alt="AUCAL Bussines School Bolsa Empleo Practicas Empresas">Bolsa de Empleo |<br/>Prácticas</a></li>
+                            <li class="estudiar-tipo"><a href="/estudiar-en-aucal/empleo-practicas" class="estudiar-link" alt="AUCAL Bussines School, AUCAL Internacional">Internacional</a></li>
+                        </ul>
+                    </div>   -->
+                </li>
+                <li class="nav-menu-item" id="becasDescuentos">
+                    <a style="cursor: pointer" class="nav-menu-link nav-link" alt="AUCAL Bussines School Programa Becas Programa Descuentos">BECAS Y DESCUENTOS</a>
+                    <button name="button" href="javascript:void(0)" onclick="show_hide(event, 'becasList')"  class="menu-icon">
+                        <img src="/2022/dist/images/icons/drop-down-white.png" alt="AUCAL Bussines School icono Programa Becas Descuentos" class="block-icon" >
+                    </button>
+                    <div class="becasList nav-div menu-list" id="becasList">
+                        <ul class="becas-nav">
+                            <li class="beca-tipo"><a href="/programa-becas" class="beca-link" alt="AUCAL Bussines School Programa Becas">Becas</a></li>
+                            <li class="beca-tipo"><a href="/programa-descuentos" class="beca-link" alt="AUCAL Bussines School Programa Descuentos">Descuentos</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-menu-item blogNoticias" id="blogNoticias">
+                    <a style="cursor: pointer" class="nav-menu-link nav-link" alt="AUCAL Bussines School Noticias Blog Seguridad Inmobiliaria">BLOG</a>
+                    <button name="button" href="javascript:void(0)" onclick="show_hide(event, 'blogList')" class="menu-icon">
+                        <img src="/2022/dist/images/icons/drop-down-white.png" alt="AUCAL Bussines School icono Blog Noticias" class="block-icon" >
+                    </button>
+                    <div class="blogList nav-div" id="blogList">
+                        <ul class="blog-nav">
+                            <li class="tipo-blog"><a href="/blog" class="blog-link" alt="AUCAL Bussines School Blog Seguridad Inmobiliaria">Blog</a></li>
+                            <li class="tipo-blog"><a href="/noticias" class="blog-link" alt="AUCAL Bussines School Noticias">Noticias</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="/contacto" class="nav-menu-link nav-link" alt="AUCAL Bussines School Contacto Sedes AUCAL Formularios">CONTACTA</a>                         
+                </li>
+                <li class="nav-menu-item" id="buscador">
+                    <a class="nav-menu-link nav-link nav-link-search" href="javascript:void(0)" onclick="show_hide(event, 'menuBuscar')" alt="AUCAL Bussines School Buscador">
+                        <i class="fa fa-search" id="navSearch" alt="AUCAL Bussines School icono Buscador"></i>
+                    </a>  
+                    <div class="nav-menu-item campus-responsive" id="campus-responsive">
+                        <button name="button" class="nav-campus btn-yellow">
+                            <a href="/campus.html"  class="a-header campus-divnk" target="_blank" alt="AUCAL Bussines School Acceso Campus"> ACCESO AL CAMPUS</a>
+                        </button>
+                    </div> 
+                    <!--BUSCADOR-->
+                    <div class="buscador" id="menuBuscar">
+                        <p id="h3" class="h3">Buscador</p>
+                        <form role="form" action id="formSearch">                               
+                            <div class="input-group">
+                                <input type="search" name="inputSeacrh" class="inputSearch" id="inputSearch" placeholder="Bucar...">
+                                <span id="searchGroup">
+                                    <i class="fas fa-search" alt="AUCAL Bussines School icono Buscador dos"></i>
+                                </span>
+                            </div>                                                               
+                        </form>   
+                        <ul class="nav-redes-bottom"> 
+                            <li class="icono-redes-bottom">
+                                <a href="https://www.instagram.com/aucalformaciones" class="a-red" target="_blank" alt="AUCAL Bussines School Redes Sociales Instagram">
+                                    <i class="fa fa-instagram" alt="AUCAL Bussines School icono Redes Sociales Instagram"></i>
+                                </a>
+                            </li>
+                            <li class="icono-redes-bottom">
+                                <a href="https://www.facebook.com/aucalformacion" class="a-red" target="_blank" alt="AUCAL Bussines School Redes Sociales Facebook">
+                                    <i class="fa fa-facebook-f" alt="AUCAL Bussines School icono Redes Sociales Facebook"></i>
+                                </a>
+                            </li>
+                            <li class="icono-redes-bottom">
+                                <a href="https://www.linkedin.com/school/aucal-business-school/" class="a-red" target="_blank" alt="AUCAL Bussines School Redes Sociales LinkedIn">
+                                    <i class="fa fa-linkedin" alt="AUCAL Bussines School icono Redes Sociales LinkedIn"></i>
+                                </a>
+                            </li>                               
+                        </ul>                         
+                    </div>                                               
+                </li>                    
+            </ul>                              
+        </nav>    
+    </header> 
+</div>

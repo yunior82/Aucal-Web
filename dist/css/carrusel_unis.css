@@ -1,0 +1,106 @@
+.carrusel-unis{
+    width: 100%;
+    margin: 2em auto 1em;
+    line-height: 2rem;
+    display: grid;    
+    grid-template-areas: 
+        "cu-head        cu-head         cu-head"
+        "cu-carrousel   cu-carrousel    cu-carrousel";
+}
+
+.carrusel-unis .cu-head{ grid-area: cu-head;}
+.carrusel-unis .cu-carrousel{
+    grid-area: cu-carrousel;
+    margin: 2em auto 0;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.carrusel-unis .cu-carrousel>div{height: 5em;}
+.logo-uni { filter: grayscale(1);}
+.logo-uni:hover { filter: none;}
+.carrusel-unis .cu-carrousel .card-unis>a img{ width: 100%;}
+
+/* LOGO PEGASO */
+/* #pegaso .pegaso{
+    width: 30%;
+    padding-left: 5em;
+} */
+/* LOGO SCHOOL */
+/* #school .school{
+    padding-top: 1em;
+    width: 80%;
+} */
+
+ /* LOGO eCampus*/
+ #ecampus .ecampus{width: 70% ;}
+/* LOGO NEBRIJA */
+#nebrija .nebrija{ width: 50%; }
+/* LOGO UNI FRANCASCO */
+#ufv .ufv{
+    width: 65%;
+    margin: 1em auto;
+}
+/******************************/
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.carrusel-unis .cu-carrousel>div{ padding: 0 0.8em; }    
+    /* LOGO PEGASO */
+    /* #pegaso .pegaso{
+        width: 45%;
+        padding-left: 1em;
+    } */
+     /* LOGO SCHOOL */
+    /* #school .school{
+        padding-top: 1.5em;
+        padding-right: 2em;
+        width: 100%;
+    } */
+
+    /* LOGO eCampus*/
+    #ecampus .ecampus{width: 100% ;}
+    /* LOGO NEBRIJA */
+    #nebrija .nebrija{ width: 80%;}    
+    /* LOGO UNI FRANCASCO */
+    #ufv .ufv{
+        width: 90%;
+        margin-top: 1.5em;
+    }
+}
+/*******************/
+@media (max-width: 767.98px) { 
+     .carrusel-unis .cu-carrousel {
+        margin: 2em auto 0;
+        width: 90%;
+    }   
+    .carrusel-unis .cu-carrousel>div{  
+        height: 5em; 
+        padding: 0 0.8em;
+    }
+   .logo-uni{filter: none;}   
+    /* LOGO PEGASO */
+    /* #pegaso .pegaso{
+        width: 60%;
+	padding-left: 1em;
+    } */
+    /* LOGO SCHOOL */
+    /* #school .school{ width: 100%; } */
+
+     /* LOGO eCampus*/
+     #ecampus .ecampus{
+        width: 95% ;
+        padding-top: 0.5em;
+    }
+    /* LOGO NEBRIJA */
+    #nebrija .nebrija{
+        width: 100%;
+	    padding-left: 0;
+    }
+    /* LOGO UNI FRANCASCO */
+    #ufv .ufv{
+        width: 100%;
+        margin-top: 0.5em;
+	    padding-left: 1em;
+    }
+}
+
+

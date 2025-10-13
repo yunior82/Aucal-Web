@@ -1,0 +1,225 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="/2022/dist/css/blog.css"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/blog.png">
+    <style>
+        .blog-destacadas{
+        width: 95%;
+        margin: 4em auto;
+    }
+
+    .blog-card{
+        margin: 4em auto;
+        height: auto;
+        height: 10em;
+    }
+
+    .blog-imgs{
+        width: 30%;
+        float: left;
+    }
+
+     .blog-img{
+        width: 90%;
+        object-fit: cover;
+        height: 10em;
+    }
+
+    .blog-date, .blog-card-btn{
+        margin-top: 0.5em;
+        font-weight: 600;
+    }
+
+    .blog-date{text-align: left;}
+
+        
+    .blog-a-txt{    
+        background-color: #E10031;
+        height: 4.5em!important;
+    }
+
+    .blog-txt-link{
+        font-size: 15px;
+        margin: 0.5em auto;
+    }
+
+    .blog-card-btn{
+        background-color: #E10031;
+        height: 2.5em;
+        width: 8em;
+        float: left;
+        text-align: center;
+    }
+
+    .a-btn{ color: #fff; line-height: 2.2em;}
+    /***********************************/
+    @media (min-width: 992px) and (max-width: 1299.98px) { 
+        .blog-a-txt {
+            height: 5em!important;
+            padding: 0.5em 0;
+        }
+    }
+    /***********************************/
+    @media (min-width: 768px) and (max-width: 991.98px) { 
+        .blog-card {height: 15em;}
+        .blog-a-txt {height: 6.5em!important;}
+        .blog-imgs { width: 40%;}
+        .blog-img { height: 14em;}
+    }
+    /************************************/
+    @media (max-width: 767.98px) {
+        .blog-card {height: 24em;}        
+        .blog-imgs { 
+            width: 100%;
+            float: none;
+        }
+        .blog-card-txt, .blog-date, .blog-card-btn{ padding: 0 1em;}
+        .blog-card-btn {
+            width: 6em;
+            float: none;
+            margin-left: 1em;
+        }
+
+    }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor contenedor-blog">
+        <aside class="blog-banner">
+            <div class="blog-head center-head">
+                <div class="center-title">
+                    <p class="blog-h2">Blog AUCAL</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+        </aside>
+        <aside class="blog-descrip">
+            <div class="blog-txt">
+                <p class="red-h1-big">Nuestro espacio de información y actualidad</p>
+                <p class="textos-txt">
+                    Descubre nuestro espacio dedicado a los temas más relevantes y actuales de la educación:
+                    profesiones más demandadas, consejos, ayudas, tips, noticias ¡y mucho más!
+                    Con nuestro blog estarás constantemente informado de todo lo que te rodea
+                    la oferta educativa y laboral de <b>AUCAL</b>
+                </p>
+            </div>
+        <aside>
+        <aside class="tres-banners">
+            <a href="/blog-social" class="blog-links" alt="AUCAL Bussines School Blog Social">
+                <div class="banner-1">
+                    <div class="blog-a-txt">
+                        <p class="blog-title"> SOCIAL</p>
+                        <p class="blog-txt-link">
+                        Artículos relacionados con temas de interés social:<br/>
+                        tecnología, alquiler, psicología y mucho más.
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="/blog-educacion" class="blog-links" alt="AUCAL Bussines School Blog Educacion">
+                <div class="banner-2">
+                    <div class="blog-a-txt">
+                        <p class="blog-title">EDUCACIÓN</p>
+                        <p class="blog-txt-link">
+                        Artículos relacionados con temas educativos:<br/>
+                        e-learning, consejos y tips, aprendizaje, etcétera
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <a href="/blog-actualidad/" class="blog-links"  alt="AUCAL Bussines School Blog Actualidad">
+                <div class="banner-3">
+                    <div class="blog-a-txt">
+                        <p class="blog-title">ACTUALIDAD</p>
+                        <p class="blog-txt-link">
+                        Artículos relacionados con temas del momento:<br/>
+                        leyes, ayudas, inmobiliaria, ODS, etcétera.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </aside>
+        <aside class="blog-destacadas">
+            <div class="ulti-head center-head-sm">
+                <div class="center-title-sm">
+                    <p class="ulti-h2">ÚLTIMAS ENTRADAS</p>
+                </div>
+                <div class="center-hr-sm">
+                    <hr class="hr-red-sm"/>
+                </div>
+            </div>
+            
+       {% for social in sociales %} 
+            <div class="blog-card blog-card-social">
+               
+               <div class="blog-imgs">
+                    <img class="blog-img" src="{{ social.image_url }}" alt="Aucal Bussines School {{ social.title }}">
+                </div>
+                <div class="blog-card-txt">
+                    <div class="blog-card-title">
+                        <p class="card-h3">{{ social.title }}</p>
+                    </div>
+                    <div class="blog-date">
+                        <p class="ndate-item">{{ social.date|date("d/m/Y") }} - Blog Social</p>
+                    </div>
+                    <div class="blog-card-descript">
+                        <p class="card-descript">{{ social.description|raw }}</p>
+                    </div>
+                    <div class="blog-card-btn">
+                        <a href="/blog-social-noticia/{{ social.slug }}" class="a-btn" alt="AUCAL Bussines School Leer Articulo">LEER MÁS</a>
+                    </div>
+                </div>
+                
+            </div>
+            {% endfor %}
+            {% for educacion in educaciones %}
+            <div class="blog-card blog-card-educacion">
+                <div class="blog-imgs">
+                    <img class="blog-img" src="{{ educacion.image_url }}" alt="Aucal Bussines School {{ educacion.title }}">
+                </div>
+                <div class="blog-card-txt">
+                    <div class="blog-card-title">
+                        <p class="card-h3">{{ educacion.title }}</p>
+                    </div>
+                     <div class="blog-date">
+                        <p class="ndate-item">{{ educacion.date|date("d/m/Y") }} - Blog Educación</p>
+                    </div>
+                    <div class="blog-card-descript">
+                        <p class="card-descript">{{ educacion.description|raw }}</p>
+                    </div>
+                    <div class="blog-card-btn">
+                        <a href="/blog-educacion-noticia/{{ educacion.slug }}" class="a-btn" alt="AUCAL Bussines School Leer Articulo">LEER MÁS</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% for article in articles %}
+            <div class="blog-card blog-card-actualidad">
+                <div class="blog-imgs">
+                    <img class="blog-img" src="{{ article.image_url }}" alt="Aucal Bussines School {{ article.title }}">
+                </div>
+                <div class="blog-card-txt">
+                    <div class="blog-card-title">
+                        <p class="card-h3">{{ article.title }}</p>
+                    </div>
+                    <div class="blog-date">
+                        <p class="ndate-item">{{ article.date|date("d/m/Y") }} - Blog Actualidad</p>
+                    </div>
+                    <div class="blog-card-descript">
+                        <p class="card-descript">{{ article.description|raw }}</p>
+                    </div>
+                    <div class="blog-card-btn">
+                        <a href="/blog-actualidad-noticia/{{ article.slug }}" class="a-btn" alt="AUCAL Bussines School Leer Articulo">LEER MÁS</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        {% endfor %}
+    </div>
+{% endblock %}

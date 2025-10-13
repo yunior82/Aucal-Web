@@ -1,0 +1,117 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="/2022/dist/css/noticias.css"/>
+    <link rel="stylesheet" href="/2022/dist/css/ultimas.css"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/banner-blog-educacion-aucal.png">
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor"> 
+       <aside class="notis-banner educacion-banner">
+            <div class="notis-head center-head blog-head">
+                <div class="center-title">
+                    <p class="notis-h2">AUCAL BLOG EDUCACION</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+        </aside>
+        <aside class="noticias" style="background: #FFF">
+            <div class="ultimas">
+                <div class="ulti-head center-head-sm">
+                    <div class="center-title-sm">
+                        <p class="ulti-h2">ÚLTIMAS ENTRADAS</p>
+                    </div>
+                    <div class="center-hr-sm">
+                        <hr class="hr-red-sm"/>
+                    </div>
+                </div>
+                <div class="ulti-cards">
+                    {% for article in articles %}
+                        <div class="ulti-card">
+                            <div class="ulti-imgs">
+                                <img class="ulti-img" src="{{ article.image_url }}" alt="AUCAL Bussines School Blog educacion {{ article.title }}">
+                            </div>
+                            <div class="ulti-card-txt">
+                                <div class="ulti-card-title">
+                                    <p class="card-h3-sm">{{ article.title }}</p>
+                                </div>
+                                <div class="ulti-card-descript">
+                                    <p class="card-descript-sm">{{ article.description|raw }}</p>
+                                </div>
+                            </div>
+                            <div class="ulti-footer">
+                                <div class="categoria-blog">
+                                    <p class="categoria-txt">BLOG EDUCACIÓN</p>
+                                </div>
+                                <div class="ulti-date">
+                                    <p class="ndate-item">{{ article.date|date('d/m/Y') }}</p>
+                                </div>
+                                <div class="ulti-card-btn">
+                                    <a href="/blog-educacion-noticia/{{ article.slug }}" class="btn-red-normal" alt="AUCAL Bussines School Leer Entrada">LEER</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="ulti-paginacion">
+                    <div class="numeracion">
+                        <div class="left">
+                            <a href="?page={{ pages.prev }}" alt="AUCAL Bussines School Pagina Previa Noticias">&lt; &nbsp; &lt;</a>
+                        </div>
+                        {% for page in pages.pages %}
+                            <div class="btn-circle {{ page == pages.current ? 'btn-circle-active' : '' }}">
+                                <a href="?page={{ page }}" class="pag-btn" alt="AUCAL Bussines School Noticias Numero Pagina">{{ page }}</a>
+                            </div>
+                        {% endfor %}
+                    </div>                
+                </div>
+            </div>
+            <div class="noticias-widgets">
+                <div class="buscar">
+                    <div class="bscr-head center-head-sm">
+                        <div class="center-title-sm">
+                            <p class="bscr-h2">BUSCAR</p>
+                        </div>
+                        <div class="center-hr-sm">
+                            <hr class="hr-red-sm"/>
+                        </div>
+                    </div>
+                    <div class="bscr-gris-input">
+                        <input type="search" class="input-search" id="" placeholder=""/>
+                        <span>
+                            <a href="#" class="a-header nav-links" type="search" alt="AUCAL Bussines School Buscador">
+                                <i class="fa fa-search" alt="AUCAL Bussines School icono Buscador"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="destacamos">
+                    <div class="desta-head">
+                        <div class="center-title-red">
+                            <p class="desta-h2">DESTACAMOS</p>
+                        </div>
+                        <div class="center-hr">
+                            <hr class="hr-red"/>
+                        </div>
+                    </div>
+                    <div class="desta-noticias">
+                        {% for article in featured %}
+                            <div class="desta-noti">
+                                <img src="{{ article.image_url }}" alt="AUCAL Bussines School Noticia Destacada" class="desta-img"/>
+                                <div class="desta-txt">
+                                    <a href="/noticia/{{ article.slug }}" class="desta-title" alt="AUCAL Bussines School Noticia">{{ article.title }}</a>
+                                    <p class="desta-date">{{ article.date|date('d/m/Y') }}</p>
+                                </div> 
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>     
+                <div class="desta-banner"></div> 
+            </div>   
+        </aside>        
+    </div>
+{% endblock %}

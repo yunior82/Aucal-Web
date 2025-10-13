@@ -1,0 +1,599 @@
+{% extends 'app/app.twig' %}
+{% block head %}
+    <meta name="description" content="Estudia el Curso Superior de Asesor Inmobiliario en modalidad online y obtén tu titulación oficial."/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/cursos-superior-asesor-inmobiliario-thun.png">
+    <link rel="stylesheet" href="/2022/dist/css/master-cursos.css"/>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor">
+       <aside class="cursos-banner banner-asesor">            
+            <div class="cursos-title-banner center-head">
+                <div class="cursos-title center-title">
+                    <p class="h2-cursos">CURSOS SUPERIORES</p>
+                </div>
+                <div class="cursos-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="cursos-txt center-title">
+                    <p class="h1-cursos">Curso Superior de Asesor Inmobiliario</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="cursos-tabs">
+            <div class="tabs-container">
+                <div class="tabs-head tabs-head-responsive">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Curso Superior de Asesor Inmobiliario</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                480h| 9 meses | Online <br/>
+                                Título propio Fundación Aucal
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="#formSolicitar" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion">Matricúlate ahora</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'presentacion')">
+                            <span class="cursos-tablink">PRESENTACIÓN</span>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'informacion')">
+                            <span class="cursos-tablink">INFORMACIÓN</span>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'planEstudios')">
+                             <span class="cursos-tablink">PLAN DE ESTUDIOS</span>
+                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'titulacion')">
+                            <span class="cursos-tablink">TITULACIÓN</span>
+                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'materiales')">
+                            <span class="cursos-tablink">MATERIALES</span>                        
+                        </li>
+                    </ul>
+                </div>  
+                <div class="tabs-head tabs-head-principal">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Curso Superior de Asesor Inmobiliario</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                480h| 9 meses | Online <br/>
+                                Título propio Fundación Aucal                                
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="#formSolicitar" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion">Matricúlate ahora</a>
+                        </div>
+                    </div>
+                </div>   
+                <div class="tabs-cuerpo">
+                    <div class="tabs-widgets">
+                        <div class="tab-sec">
+                            <ul class="tab-sec-list">
+                                <li class="tab-link" href="javascript:void(0)"onclick="changeTab(event,'presentacion')" >
+                                    <p class="tab-sec-txt">PRESENTACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)"  onclick="changeTab(event,'informacion')">
+                                    <p class="tab-sec-txt">INFORMACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'planEstudios')">
+                                    <p class="tab-sec-txt">PLAN DE ESTUDIOS</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'titulacion')">
+                                    <p class="tab-sec-txt">TITULACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'materiales')">
+                                    <p class="tab-sec-txt">MATERIALES</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-program">
+                            <div class="tabs-program-img">
+                                <img src="/2022/dist/images/oferta/portada-superior-agente-inmobiliario.PNG" alt="AUCAL Bussines School Portada Curso Superior Agente Asesor Inmobiliario" class="image-program">
+                            </div>
+                            <div class="tabs-program-pdf btn-red-normal">
+                                <a href="/2022/dist/pdf/AUCAL-superior-asesor-inmobiliario.pdf" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa Curso Superior Agente Asesor Inmobiliario">
+                                    <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                    <img src="/2022/dist/images/icons/descarga-blanco.png" class="btn-descarga-blanco" alt="AUCAL Bussines School descarga Curso Superior Agente Asesor Inmobiliario">                                            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <di class="tabs">
+                        <!-- PRESENTACION --> 
+                        <div class="presentacion tab" id="presentacion">                             
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Presentación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        Con el <b>Curso de Asesor Inmobiliario,</b> podrás convertirte en un profesional capacitado que comúnmente llamamos agente inmobiliario, donde puedes dedicarte a trabajar de manera independiente o como parte de una empresa, a dirigir, gestionar, rentabilizar una empresa inmobiliaria, elaborar el plan de negocio inmobiliario, planificar la promoción de la marca y del catálogo de propiedades y muchas otras responsabilidades afines.  
+                                    </p>
+                                </div>    
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        Con el perfil de <b>gestor inmobiliario,</b> el mercado laboral del sector se abre a variadas 
+                                        oportunidades de trabajo, incluso si eres un <b>corredor inmobiliario</b> sin experiencia que 
+                                        está partiendo en este mundo, ya que al profesionalizarte y obtener un <b>título de agente 
+                                        inmobiliario,</b> destacarás en el área por los métodos que adquirirás en el curso en cuanto 
+                                        a gestión comercial, operaciones, valoraciones, tasaciones inmobiliarias, gestión de documentos 
+                                        y conocimientos legales del sector, aplicando técnicas organizativas que permiten al cliente 
+                                        confiar en las capacidades de este profesional experto.
+                                    </p>
+                                </div>               
+                            </div>                                                                                    
+                        </div>
+                        <!-- INFORMACION -->
+                        <div id="informacion" class="informacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Información</p>
+                                </div>                                
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Objetivos</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="informacion-txt">
+                                        El <b>Curso de Agente Inmobiliario</b> tiene los siguientes objetivos durante su desarrollo profesional y laboral:      
+                                    </p>
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            Captar inmuebles en cartera y asesorar al propietario en la valoración del inmueble.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Recopilar toda la información del inmueble en administración y solicitar los documentos necesarios para la venta del mismo. Verificar las condiciones jurídicas, tanto de la situación legal actual de la operación inmobiliaria como de su próxima comercialización, para informar sobre su viabilidad en el marco de la normativa vigente.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Armar paquetes de promoción y venta de algún inmueble en administración.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            El <b>Agente Inmobiliario</b> podrá atender, orientar, calificar y registrar a compradores potenciales, como también mediar en las negociaciones entre Vendedores y Compradores.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Un asesor inmobiliario podrá manejar técnicas de ventas, pedir informes y realizar diferentes tipos de contratos para diferenciar propiedades, como también trabajar en complemento con los abogados para que completen la operación.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Intermediar hasta la perfección y/o consolidación de la operación inmobiliaria aplicando técnicas de mediación para concretar y formalizar las condiciones de la misma, respetando la normativa vigente, en el plazo y forma establecidos.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Informar a las partes sobre los gastos de formalización y las obligaciones de la operación inmobiliaria de acuerdo con la normativa vigente.
+                                        </li>
+                                    </ul>                                                                            
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PLAN ESTUDIOS -->
+                        <div id="planEstudios" class="plan-estudios tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Asignaturas</p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">MATERIAS COMUNES (obligatorias)</p>
+                                </div>
+                                <div class="plan-estudios-tabla"> 
+                                     <ul class="agignaturas-tabla">
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> ASIGNATURAS </span>
+                                            <!--<span class="tabla-ect">ECTS</span> -->
+                                            <ul class="tabla-detalle">
+                                                <p class="plan-estudios-txt">
+                                                    <b>DERECHO INMOBILIARIO</b>
+                                                </p>                                         
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"></li>
+                                                        <!--<li class="titulo-precio">6</li>-->
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">La persona</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La obligación</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">El contrato</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La compraventa, la permuta y la donación </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">                                        
+                                                        <li class="titulo-descript">El contrato de arrendamiento</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Otros contratos con relevancia en el mercado inmobiliario (I)</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Otros contratos con relevancia en el mercado inmobiliario (II)</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                       <li class="titulo-descript">Bienes inmuebles y derechos reales (I) </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Bienes inmuebles y derechos reales (II) </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Bienes inmuebles y derechos reales (II)</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio"> 
+                                                        <li class="titulo-descript">El registro de la propiedad </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La Ordenación de la Edificación </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Promociones Inmobiliarias</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="tabla-detalle">
+                                                <p class="plan-estudios-txt">
+                                                    <b>VALORACIONES INMOBILIARIAS</b>
+                                                </p>                                          
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Introducción </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript"> Ordenación urbanística</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Valoración del suelo </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Valoración de inmuebles (edificaciones)</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Métodos de valoración </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Valoración de locales comerciales </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Valoración de naves industriales  </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Valoración de explotaciones económicas</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                       <li class="titulo-descript"> Bienes históricos - artísticos</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Ejemplo de informe de tasación  </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Procedimientos establecidos en la ley del 2000 (I)  </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Procedimientos establecidos en la ley del 2000 (II)  </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> El peritaje según la ley del 2000 </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> El peritaje según la ley del 2000 </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Otros procedimientos con intervención del perito</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="tabla-detalle">
+                                                <p class="plan-estudios-txt">
+                                                    <b>MARKETING INMOBILIARIO</b>
+                                                </p>                                     
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">El marketing y la dirección comercial </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La investigación comercial </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">El producto </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">El precio de venta del producto </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> La distribución</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La distribución el refuerzo de la oferta</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Publicidad y promoción de ventas </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Estrategia comercial y éxito empresarial. Matriz DAFO</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> El mercado y su entorno (Medio ambiente empresarial)</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="tabla-detalle">
+                                                <p class="plan-estudios-txt">
+                                                    <b>DEONTOLOGÍA PROFESIONAL </b>
+                                                </p>                                     
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Introducción a la deontología profesional</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La investigación comercial </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Deontología profesional</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Códigos deontológicos </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Fundamento filosófico de la ética y deontología profesional </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Ética profesional</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La persona como centro de los valores morales</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Calidad profesional</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Código deontológico para profesionales inmobiliarios </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!--<li class="tabla-total">
+                                            <span class="tabla-title">TOTALES</span>
+                                            <span class="tabla-ect">66</span>
+                                        </li>-->
+                                    </ul>                                        
+                                </div>                                                              
+                            </div>
+                        </div>
+                        <!-- TITULACION -->
+                        <div id="titulacion" class="titulacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Titulación</p>
+                                </div>                            
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                       TITULACIÓN PROPIA AUCAL BUSINESS SCHOOL
+                                    </p>                                      
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "curso Superior de Asesor Inmobiliario"</p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-AUCAL.jpg" alt="AUCAL Bussines School Diploma Propio Aucal" class="img-diploma">                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MATERIALES -->
+                        <div id="materiales" class="materiales tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Materiales</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El alumno dispondrá del material de estudio necesario para la realización de la formación en la plataforma virtual.                                    
+				                    </p>
+                                </div>                                                               
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/material_aucal.png" alt="AUCAL Bussines School Material Curso" class="materiales-img"/>
+                                </div>
+                            </div>
+                        </div>
+                    </di> <!-- TABS -->
+                </div> <!-- CUERPO -->
+            </div>
+        </aside>
+        <aside class="coordinador-perfil">
+            <!-- BIOGRAFIA COORDINADOR -->
+            <div class="tabs-banner-bottom">
+                <div class="banner-bottom-img">
+                    <img src="/2022/dist/images/coordis/carolina-sanz.png" alt="AUCAL Bussines School Coordinador Curso Superior Agente Asesor inmobiliario" class="img-coordinador"/>
+                </div>
+                <div class="banner-bottom-txt">
+                    <div class="tabs-title">
+                        <p class="tab-h2">Coordinadora del Curso</p>
+                        <p class="tab-h1">Carolina Sanz Hernández</p>
+                    </div>
+                    <div class="tabs-txt">
+                        <p class="banner-bottom-descript">
+                            Licenciada en Derecho; Máster en Asesoría Jurídica y Fiscal de Empresas; 
+                            Escuela de Práctica Jurídica. Abogada en ejercicio colegiada en el Ilustre 
+                            Colegio de Abogados de Valladolid. Profesora de derecho desde hace más de 7 años.
+                        </p>
+                    </div>
+                </div>                            
+            </div>   
+            <!-- PERFIL ALUMNO Y DOCUMENTACION -->
+            <div class="ficha-master">
+                <div class="perfil-alumno ficha-dropdown">
+                    <div class="drop-title">
+                         <div>
+                            <button class="dropbtn" onclick="show_hide(event, 'perfil')"> 
+                                <img src="/2022/dist/images/icons/drop-down-rojo.png" class="icono-down" alt="AUCAL Bussines School"/>
+                              <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School Matricula Inscripcion" class="icono-left hidden"/> -->                                          
+                            </button>
+                         </div>
+                        <div>
+                            <p class="tab-h2">Perfil del alumno</p>   
+                        </div>                     
+                    </div>
+                    <div class="ficha-dropdown-txt" id="perfil">
+                        <p class="informacion-txt">
+                            El <b>curso de gestor inmobiliario</b> está dirigido a todos aquellos profesionales o estudiantes activos cuyo objetivo es especializarse en el sector inmobiliario de manera profesional y competitiva, y realizar así todas las actividades y objetivos señalados anteriormente que involucran esta completa <b>formación inmobiliaria.</b>
+                        </p>              
+                    </div>
+                </div>
+                <div class="documentacion ficha-dropdown">
+                    <div class="drop-title">
+                        <div>
+                           <button class="dropbtn" onclick="show_hide(event, 'documentacion')"> 
+                               <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School Matricula Inscripcion" class="icono-down"/>
+                             <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School Matricula Inscripcion" class="icono-left hidden"/> -->                                          
+                           </button>
+                        </div>
+                       <div>
+                           <p class="tab-h2">Documentación</p>   
+                       </div>                     
+                   </div>
+                   <div class="ficha-dropdown-txt" id="documentacion">
+                                               
+                        <p class="informacion-txt">
+                           No existe ningún requisito mínimo para estudiar esta formación.
+                        </p>
+                                                            
+                    </div>
+                    
+                </div>
+            </div>   
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-master"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-becas" class="btn-border"  alt="AUCAL Bussines School Programa Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>         
+        <aside class="titulo-fomulario" id="formSolicitar">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <iframe frameborder="0" style="height:1150px;width:99%;border:none;" 
+            src='https://formulario.aucal.edu/aucalbusinessschool/form/FormularionuevaWebAUCAL/formperma/7-ULZDtrn9jf9iR3AmWEYjBwVmxtAmdLMjZk9fTGaYg' alt="AUCAL Bussines School Formulario Inscripcion">
+            </iframe>  
+        </aside>
+    </div>
+{% endblock %}

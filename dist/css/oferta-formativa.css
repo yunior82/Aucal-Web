@@ -1,0 +1,82 @@
+.contenedor{
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header                     header                       header"
+        "oferta-banner              oferta-banner                oferta-banner"
+        "oferta-head                oferta-head                  oferta-head"
+        "oferta-btns-masteres       oferta-btns-masteres         oferta-btns-masteres"
+        "oferta-links-masteres      oferta-links-masteres        oferta-links-masteres"        
+        "oferta-btns-superiores     oferta-btns-superiores       oferta-btns-superiores"
+        "oferta-links-superiores    oferta-links-superiores      oferta-links-superiores"
+        "oferta-btns-tecnicos       oferta-btns-tecnicos         oferta-btns-tecnicos"
+        "oferta-links-tecnicos      oferta-links-tecnicos        oferta-links-tecnicos"
+        "carrusel-unis              carrusel-unis                carrusel-unis"
+        "footer                     footer                       footer";    
+}
+
+.contenedor .banner-oferta{  background-image: url(/2022/dist/images/oferta-formativa-aucal.png);}
+
+.h1-red{
+    font-size: 24px!important;
+    font-weight: 600;
+    color: #E10031;
+}
+
+.oferta-txt-subtitle{
+    width: 90%;
+    margin: 0 auto;    
+    font-size: 14px;  
+    color: #6a6a6a;
+}
+
+.contenedor .oferta-links-oferta{
+    text-align: end;
+    width: 90%;  
+}
+
+.contenedor .oferta-links-oferta>a:hover{font-weight: 700;}
+
+.contenedor .oferta-btns-masteres{grid-area: oferta-btns-masteres;}
+.contenedor .oferta-links-masteres{ grid-area: oferta-links-masteres;}
+.contenedor .oferta-btns-tecnicos{ grid-area: oferta-btns-tecnicos;}
+.contenedor .oferta-links-tecnicos{ grid-area: oferta-links-tecnicos;}
+.contenedor .oferta-btns-superiores{ grid-area: oferta-btns-superiores;}
+.contenedor .oferta-links-superiores{ grid-area: oferta-links-superiores;}
+
+
+/********************************************/
+@media (max-width: 767.98px) {
+    .contenedor .oferta-btns .oferta-cards{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 12em);
+    }
+
+    .contenedor .oferta-links-oferta{ display: block;}
+    .contenedor .oferta-links-oferta{text-align: center;}
+    .contenedor .oferta-btns {  margin-top: 1em; }
+    .contenedor .oferta-btns .oferta-cards>div a>div .card-title {font-size: 1.4rem;}
+}
+
+/*********************/
+
+@media (max-width: 575.98px){
+    .oferta-txt-subtitle{
+	text-align: justify;
+	margin:1em auto;
+    }
+		
+    .contenedor .oferta-links>a {margin: 2em 0; }
+
+    .contenedor .oferta-btns>div .oferta-card {
+	padding: 1.5em 1em;
+    	height: 6em;
+    	margin: 0;
+    }
+
+    .contenedor .oferta-btns .oferta-cards>div a>div .card-txt, 
+    .contenedor .oferta-btns .oferta-cards>div a>div .card-title {
+  	font-size: 20px;
+    }
+}

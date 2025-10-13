@@ -1,0 +1,472 @@
+{% extends 'app/app.twig' %}
+{% block head %}
+    <meta name="description" content="Máster en International Business Management (IBM) proporciona a directivos de diversos sectores todos los conocimientos y habilidades para la gestión de negocios internacionales."/>
+    <meta property="og:image" content="/2022/dist/images/master-ibm-thun.png">
+    <meta property="og:title" content="MÁSTER EN INTERNATIONAL BUSINESS MANAGEMENT (IBM) | Aucal">
+    <link rel="stylesheet" href="/2022/dist/css/master-cursos.css"/>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor">
+        <aside class="cursos-banner banner-ibm">            
+            <div class="cursos-title-banner center-head">
+                <div class="cursos-title center-title">
+                    <p class="h2-cursos">MÁSTERES OFICIALES</p>
+                </div>
+                <div class="cursos-hr center-hr">
+                    <hr class="hr-red"/>                    
+                </div>
+                <div class="cursos-txt center-title">
+                    <p class="h1-cursos">Máster en International Business Management (IBM)</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="cursos-tabs">
+            <div class="tabs-container">
+                <div class="tabs-head tabs-head-responsive">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Máster en International Business Management (IBM) en AUCAL</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                60 ECTS | 9 meses | Online <br/>
+                                Título Oficial de Universidad of Management - Universitá LUM <br/>
+                                Título propio Aucal
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="https://formulario.aucal.edu/aucalbusinessschool/form/Solicituddecurso/formperma/QQmW1lAAqnFEUwcK0dnScLHFPwCuXaT5TdsO7n3Ro9E" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion" target="_blank">Hoja de Admisión</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'presentacion')">
+                            <span class="cursos-tablink">PRESENTACIÓN</span>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'informacion')">
+                            <span class="cursos-tablink">INFORMACIÓN</span>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'planEstudios')">
+                             <span class="cursos-tablink">PLAN DE ESTUDIOS</span>
+                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'titulacion')">
+                            <span class="cursos-tablink">TITULACIÓN</span>
+                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'materiales')">
+                            <span class="cursos-tablink">MATERIALES</span>                        
+                        </li>
+                    </ul>
+                </div>  
+                <div class="tabs-head tabs-head-principal">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Máster en International Business Management (IBM) en AUCAL</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                60 ECTS | 9 meses | Online <br/>
+                                Título Oficial de Universidad of Management - Universitá LUM <br/>
+                                Título propio Aucal
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="https://formulario.aucal.edu/aucalbusinessschool/form/Solicituddecurso/formperma/QQmW1lAAqnFEUwcK0dnScLHFPwCuXaT5TdsO7n3Ro9E" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion" target="_blank">Hoja de Admisión</a>
+                        </div>
+                    </div>
+                </div>  
+                <div class="tabs-cuerpo">
+                    <div class="tabs-widgets">
+                        <div class="tab-sec">
+                            <ul class="tab-sec-list">
+                                <li class="tab-link" href="javascript:void(0)"onclick="changeTab(event,'presentacion')" >
+                                    <p class="tab-sec-txt">PRESENTACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)"  onclick="changeTab(event,'informacion')">
+                                    <p class="tab-sec-txt">INFORMACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'planEstudios')">
+                                    <p class="tab-sec-txt">PLAN DE ESTUDIOS</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'titulacion')">
+                                    <p class="tab-sec-txt">TITULACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'materiales')">
+                                    <p class="tab-sec-txt">MATERIALES</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-program">
+                            <div class="tabs-program-img">
+                                <img src="/2022/dist/images/oferta/portada-master-ibm.png" alt="AUCAL Bussines School Portada Master Máster en International Business Management (IBM)" class="image-program">
+                            </div>
+                            <div class="tabs-program-pdf btn-red-normal">
+                                <a href="/2022/dist/pdf/AUCAL-dossier-Master-ibm.pdf" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa Master Máster en International Business Management (IBM)">
+                                    <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                    <img src="/2022/dist/images/icons/descarga-blanco.png" alt="AUCAL Bussines School Descargar Master Máster en International Business Management (IBM)" class="btn-descarga-blanco">                                            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <!-- PRESENTACION -->                 
+                        <div class="presentacion tab" id="presentacion"> 
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Presentación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El <b>Máster en International Business Management (IBM)</b> proporciona a directivos de diversos sectores todos los conocimientos y habilidades para la gestión de negocios internacionales, la planificación y el desarrollo de estrategias de crecimiento global y para alcanzar los objetivos y afrontar los retos del constante cambio del mercado.
+                                    </p>
+                                </div>                               
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        El <b>Máster en International Business Management</b> forma profesionales con capacidad para afrontar los retos que plantea el entorno internacional, y les proporciona las claves para liderar a las empresas en el proceso de internacionalización. El programa académico se estructura en bloques y culmina con el Trabajo de Fin de Máster.
+                                    </p>                                   
+                                </div>
+                            </div>
+                            <!--<div class="tabs-video">
+                                <div class="center-title">
+                                    <p class="tab-h2">VIDEO DE PRESENTACION</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red"/>
+                                </div>
+                                <div class="video-curso">
+                                    <iframe src=""></iframe>
+                                </div>
+                            </div>-->
+                        </div> 
+                        <!-- INFORMACION -->  
+                        <div id="informacion" class="informacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Información</p>
+                                </div>                                
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Objetivos</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">El objetivo principal es que los gerentes desarrollen habilidades en:</p>
+                                    <ul class="tabla-titulaciones">                                       
+                                        <li class="tipo-titulo">
+                                           <b>El área de gestión internacional:</b> utilizar el conocimiento de las nuevas tecnologías y sistemas de información aplicables al comercio internacional y en la gestión de operaciones internacionales.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            <b>El área de negocios internacionales:</b> desarrollar habilidades y técnicas de negociación comercial para tener éxito a nivel internacional.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            <b>El ámbito del análisis económico:</b> conocer y aplicar las herramientas de análisis económico más actuales para identificar los retos y oportunidades que plantea la globalización.
+                                        </li> 
+                                        <li class="tipo-titulo">
+                                            <b>El área de operaciones comerciales:</b> identificar las diferentes variables que inciden en la creación de redes comerciales y el impacto de la logística como recurso para la actividad comercial.
+                                        </li>                                       
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PLAN ESTUDIOS -->
+                        <div id="planEstudios" class="plan-estudios tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Asignaturas</p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">MATERIAS COMUNES (obligatorias)</p>
+                                </div>                                
+                                <div class="plan-estudios-tabla">
+                                    <ul class="agignaturas-tabla">
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> ASIGNATURAS </span>
+                                            <span class="tabla-ect">ECTS</span>
+                                            <ul class="tabla-detalle">
+                                                <li class="table-titulo-precio">
+                                                    <ul class="titulo-precio tabla-title-2">
+                                                        <li class="titulo-descript">
+                                                           <b> MATERIAS COMUNES (OBLIGATORIAS) </b>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">
+                                                            Integración y Entorno Económico Internacional <br/>
+                                                            <i>(Integration and International Economic Environment)</i>
+                                                        </li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">
+                                                            Dirección e Innovación de Empresas Internacionales<br/>
+                                                            <i>(Direction and Management of International Companies)</i>
+                                                        </li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">
+                                                            Marketing Estratégico Global <i>(Global Strategic Marketing)</i>
+                                                        </li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">
+                                                            Gestión Financiera Internacional <i>(International Financial Operation)</i>
+                                                        </li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">
+                                                            Gestión Intercultural <i>(Cross-Cultural Management)</i> <b>- asignatura en inglés.</b>
+                                                        </li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">
+                                                            Estrategias de comercio electrónico internacional<br/>
+                                                            <i>(International E-Business Strategies) </i> <b>- asignatura en inglés.</b>
+                                                        </li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">
+                                                            Emprendimiento e Innovación Global<br/>
+                                                            <i>(Entrepreneurship and Global Innovation)</i>
+                                                        </li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">
+                                                            Gestión Integrada del Comercio Internacional<br/>
+                                                            <i>(Integrated Management of International Trade)</i>
+                                                        </li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio tabla-title-2">
+                                                        <li class="titulo-descript">
+                                                            Gestión de la Cadena de Suministro Global<br/>
+                                                            <i>(Global Supply Chain Management)</i> <b> - asignatura en inglés.</b>
+                                                        </li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>                                                 
+                                                 <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Trabajo Fin de Máster (TFM)  <i>- Master's Thesis</i></li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="tabla-total">
+                                            <span class="tabla-title">TOTALES</span>
+                                            <span class="tabla-ect">60</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TITULACION -->
+                        <div id="titulacion" class="titulacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Titulación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                       TITULACIÓN OFICIAL UNIVERSIDAD OF MANAGEMENT - Universitá LUM
+                                    </p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Master Degree in International Business Management"</p>
+                                </div>
+                               <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-SCHOOL.png" alt="AUCAL Bussines School Diploma Master Máster en International Business Management (IBM)" class="img-diploma">                                    
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                       TITULACIÓN PROPIA AUCAL BUSINESS SCHOOL
+                                    </p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Máster en Administración de Negocios Internacionales"</p>
+                                </div>       
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-AUCAL.jpg" alt="AUCAL Bussines School Diploma Master Comercio Internacional Aucal" class="img-diploma">                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MATERIALES -->
+                        <div id="materiales" class="materiales tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Materiales</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El alumno dispondrá del material de estudio necesario para la realización de la formación en la plataforma virtual.                                    
+				                    </p>
+                                </div>                                
+				                <div class="tabs-img">
+                                    <img src="/2022/dist/images/material_aucal.png" alt="AUCAL Bussines School Material Master Máster en International Business Management (IBM)" class="materiales-img"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- .tabs -->
+                </div>    <!-- .tabs-cuerpo -->              
+            </div> <!-- tabs-container -->
+        </aside>
+        <aside class="coordinador-perfil">
+             <!-- BIOGRAFIA COORDINADOR -->
+             <div class="tabs-banner-bottom">
+                <div class="banner-bottom-img">
+                    <img src="/2022/dist/images/coordis/jose-antonio-martinez.png" alt="AUCAL Bussines School Coordinador Master Máster en International Business Management (IBM)" class="img-coordinador"/>
+                </div>
+                <div class="banner-bottom-txt">
+                    <div class="tabs-title">
+                        <p class="tab-h2">Coordinador del Máster</p>
+                        <p class="tab-h1">José Antonio Martínez Fernández</p>
+                    </div>
+                    <div class="tabs-txt">
+                        <p class="banner-bottom-descript">
+                            Ingeniero Industrial y Doctor en Administración y Dirección de Empresas. <br/>
+                            Posee 23 años de experiencia laboral en el Sector Privado (Grupo ENDESA, Getronics y Siemens) 
+                            y en el Sector Público en gestión de proyectos de mejora organizacional y TIC. Máster MBA; 
+                            Máster en Gestión de las TICs; Máster en Business Intelligent y Big Data; Máster en Innovación. 
+                            Programa de Alta Dirección Directiva. Profesor de Universidad y en Escuelas de Negocios.
+                        </p>
+                    </div>
+                </div>                            
+            </div>   
+            <!-- PERFIL ALUMNO Y DOCUMENTACION -->    
+            <div class="ficha-master">
+                <div class="perfil-alumno ficha-dropdown">
+                    <div class="drop-title">
+                         <div>
+                            <button class="dropbtn" onclick="show_hide(event, 'perfil')"> 
+                                <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                              <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                            </button>
+                         </div>
+                        <div>
+                            <p class="tab-h2">Perfil del alumno</p>   
+                        </div>                     
+                    </div>
+                    <div class="ficha-dropdown-txt" id="perfil">
+                        <p class="informacion-txt">
+                            El <b>IBM de AUCAL</b>, se encuentra dirigido principalmente a:
+                        </p>                        
+                        <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo">
+                                <span class="titulo-title">Titulados universitarios</span> que deseen orientar su vida profesional hacia la dirección y administración de empresas tanto nacionales como con proyección internacional, contando con una formación especializada y actualizada en modernos sistemas de gestión.
+                            </li>                           
+                            <li class="tipo-titulo">
+                                Tanto Alumnos que hayan finalizado sus estudios recientemente, como para aquellos que tengan experiencia profesional y deseen especializarse.                                
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="documentacion ficha-dropdown">
+                    <div class="drop-title">
+                        <div>
+                           <button class="dropbtn" onclick="show_hide(event, 'documentacion')"> 
+                               <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                             <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                           </button>
+                        </div>
+                       <div>
+                           <p class="tab-h2">Documentación</p>   
+                       </div>                     
+                   </div>
+                    <div class="ficha-dropdown-txt" id="documentacion">
+                        <p class="informacion-txt">
+                            Si estás interesado en estudiar este programa académico en MBA, de título oficial, debes cumplir con la entrega de los siguientes documentos:
+                        </p>
+                        <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo">Fotocopia de documento de identificación.</li>
+                            <li class="tipo-titulo">Foto tipo carnet (o pasaporte).</li>
+                            <li class="tipo-titulo">Titulo Universitario oficial:
+                                <ul style="margin: 1em 0 0 1em;">
+                                    <li style="list-style: disc; margin-left: 1em;">Para Europeos: SET (Suplemento Europeo al Titulo).</li>
+                                    <li style="list-style: disc; margin-left: 1em;">Para LATAM: Declaración de Valor al Italiano o Título con Apostilla de La Haya.</li>
+                                </ul>
+                            </li>
+                            <li class="tipo-titulo">Hoja de Admisión completa y firmada.</li>
+                            <li class="tipo-titulo">Comprobante de pago reserva de plaza.</li>                            
+                        </ul>    
+                        <p class="informacion-txt">
+                            En el caso de que no poseas alguno de estos documentos, 
+                            los interesados tienen la posibilidad de sacar el 
+                            Título Profesional de este Máster emitido por AUCAL Business School 
+                            y a un precio mucho más económico (en este caso no se piden requisitos de ingreso).
+                        </p>                                
+                    </div>
+                </div>
+            </div>  
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-master"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-becas" class="btn-border" alt="AUCAL Bussines School Programa Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>         
+        <aside class="titulo-fomulario" id="formSolicitar">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <iframe frameborder="0" style="height:1150px;width:99%;border:none;" 
+            src='https://formulario.aucal.edu/aucalbusinessschool/form/FormularionuevaWebAUCAL/formperma/7-ULZDtrn9jf9iR3AmWEYjBwVmxtAmdLMjZk9fTGaYg' alt="AUCAL Bussines School Formulario Inscripcion">
+            </iframe>  
+        </aside>
+    </div>
+{% endblock %}

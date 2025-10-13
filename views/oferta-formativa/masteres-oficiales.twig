@@ -1,0 +1,56 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content="Másteres Universitarios online reconocidos y válidos en toda la UE. Disponibles becas y descuentos para alumnos AUCAL."/>
+    <link rel="stylesheet" href="/2022/dist/css/oferta.css"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/master-general-banner.png">
+{% endblock %}
+{% block body %}
+    <div class="contenedor" style="display: block"> 
+        <aside class="oferta-banner banner-master">            
+            <div class="oferta-title-banner center-head">
+                <div class="oferta-title center-title">
+                    <p class="h2-oferta">OFERTA EDUCATIVA</p>
+                </div>
+                <div class="oferta-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="oferta-txt center-title">
+                    <p class="h1-oferta">Másteres Oficiales</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="oferta-head">
+            <div class="center-title oferta-title-head">
+                <p class="oferta-h1">
+                    Reconocidos y válidos en toda la UE
+                </p>
+            </div> 
+            <div class="oferta-txt-head">
+                <p class="oferta-txt">
+                    Nuestros <b>Másteres Universitarios</b> online se han desarrollado con la colaboración de grandes Universidades de reconocida 
+                    trayectoria, tanto en España como internacional, avalando la calidad de nuestros programas académicos y las expectativas 
+                    profesionales de lograr un futuro laboral sólido y exitoso.
+                </p>
+            </div> 
+        </aside>
+        <aside class="oferta-btns ">
+            <div class="oferta-cards oferta-cards-masteres">
+            {% for course in courses %}  
+                <div class="oferta-card card-img" style="background-image: url({{course.image_url}});">
+                    <a href="/oferta-formativa/master-oficial/{{ course.slug }}" class="oferta-a" alt="AUCAL Bussines School {{ course.title }}">
+                        <div class="ofer-card-title">
+                            <p class="card-title">{{ course.title }}</p>
+                        </div>
+                    </a>
+                </div>  
+             {% endfor %}            
+            </div>
+        </aside>
+        <aside class="oferta-links">
+            <a href="/oferta-formativa/curso-superior" class="link-superiores" alt="AUCAL Bussines School Cursos Superiores">VER CURSOS SUPERIORES >> </a>
+            <a href="/oferta-formativa/master-executive" class="link-executives" alt="AUCAL Bussines School Masteres Executives">VER MÁSTERES EXECUTIVES>> </a>
+            <a href="/oferta-formativa/curso-tecnico" class="link-tecnicos" alt="AUCAL Bussines School Cursos Tecnicos">VER CURSOS TÉCNICOS >></a>
+        </aside>
+    </div>
+{% endblock %}

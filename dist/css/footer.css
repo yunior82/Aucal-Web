@@ -1,0 +1,199 @@
+.footer{   
+    color: white;
+    background: #E10031;
+    margin-top: 2em;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    grid-template-areas: 
+        "logos-footer   logos-footer      logos-footer    logos-footer"
+        "logo-footer    enlaces-footer    politicas       metodos-pago"
+        "logo-footer    enlaces-footer    politicas       metodos-pago"
+        "redes-footer   enlaces-footer    search-footer   search-footer"
+        "copyright      copyright         copyright       copyright";
+    justify-content: space-evenly; 
+    align-content: center;
+}
+.a-footer:hover, .a-footer{ color: white;}
+.footer .logos-footer{
+    grid-area: logos-footer;
+    background: #fff;
+    width: 100%;
+    margin: 0 auto;
+}
+.footer .logos-footer .empresas-footer{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+}
+.footer .logos-footer .empresas-footer div{ padding: 1em;}
+.footer .logos-footer .empresas-footer div img{
+    height: 4em;
+    background: #fff;
+}
+.footer .logos-footer .empresas-footer div .logo-sello-euphe,
+.footer .logos-footer .empresas-footer div .logo-sello-aneca,
+.footer .logos-footer .empresas-footer .logo-sello-aeem{height: 5em;}
+.footer .logo-footer {
+    grid-area: logo-footer;
+    padding-top: 6em;
+    display: grid;
+    justify-items: end;
+}
+.footer .logo-footer>img { width: 75%;}
+.footer .enlaces-footer{
+    padding: 5em 1em 1em 1em;
+    width: 100%;
+    grid-area: enlaces-footer;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+}
+.footer .enlaces-footer>a{
+    height: 1em;
+    font-size: 15px;
+    text-align: left;    
+}
+.footer .politicas{
+    grid-area: politicas;
+    display: grid;
+    padding-top: 5em;
+    padding-left: 2em;
+    line-height: 1rem;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: left;
+}
+.footer .redes-footer{
+    grid-area: redes-footer;
+    display: grid;
+    justify-items: stretch;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    margin-top: -3em;
+}
+.footer .redes-footer .a-footer{
+    text-align: end;
+    font-size: 1.5rem;
+}
+.footer .redes-footer .a-footer .fa-instagram{
+    display: grid;
+    justify-self: right;
+}
+.footer .redes-footer .a-footer .fa-facebook-f{
+    display: grid;
+    justify-items: center;
+}
+.footer .redes-footer .a-footer .fa-linkedin{
+    display: grid;
+    justify-items: left;
+}
+.footer .search-footer{
+    grid-area: search-footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: left;
+    padding-top: 0;
+}
+.footer .search-footer>input{
+    height: 2em;    
+    width: 100%;
+    color: #000000;
+    border: none;
+    border-radius: 2.5rem;
+    text-align: center;
+}
+.footer .search-footer .search-a>i{
+    font-size: 1.5rem;
+    padding-top: 0.2em;
+    padding-left: 0.5em;
+    display: grid;
+    align-items: center;
+}
+.footer .metodos-pago{
+    grid-area: metodos-pago;
+    width: 90%;
+    margin: 1em auto;
+    padding: 1em 2em 0 0;
+}
+.footer .metodos-pago a> p{
+    text-align: center;
+    width: 90%;
+}
+.footer .metodos-pago a> img{ width: 70%;}
+.footer .copyright{
+    grid-area: copyright;
+    background: #7F0000;
+    margin-top: 2em;
+}
+.buscador-footer{display: none;}
+/*************************/
+@media (max-width: 991.98px) {
+    .footer .logos-footer{display: none;}  
+    .carrusel-unis .cu-carrousel{margin: 2em auto;}
+}
+/*************************/
+@media (max-width: 767.98px) { 
+    .footer .enlaces-footer{  display: none; }        
+    .footer{  
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "logos-footer     logos-footer"
+            "search-footer    search-footer"
+            "logo-footer      metodos-pago "
+            "redes-footer     metodos-pago"
+            "politicas        politicas"
+            "copyright        copyright";
+    }
+    .footer .logos-footer{ margin: 0 auto; }
+    /* .footer .logos-footer .center-head{display: none;} */
+    .footer .logos-footer .empresas-footer div{padding: 1em;}    
+    .footer .logos-footer .empresas-footer div img{ height: 3.5em; }
+    .footer .logos-footer .empresas-footer .logo-sello-aeem{height: 4.5em;}
+	.logo-sello{filter: none;}  
+    .footer .search-footer{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        justify-self: end;
+        margin-top: 2em;
+    }
+    .footer .search-footer>input{        
+        height: 1.5em;
+        width: 90%;
+        color: #000000;
+        border: none;
+        border-radius: 2.5rem;
+        justify-content: end;
+        margin-left: 15em;
+        /* display: none; */
+    }
+    .footer .search-footer .search-a>i{font-size: 1rem;}    
+    .footer .logo-footer {
+        padding: 0.5em;
+        margin:  0 auto;
+        justify-items: center;
+    }    
+    .footer .logo-footer>img {
+        width: 95%;
+        margin-top: 5em;
+    } 
+    .footer .metodos-pago{ width: 81%; }
+    .footer .metodos-pago a> p {width: 85%;}    
+    .footer .politicas{
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        padding: 2em 0 0;
+        line-height: 1rem;
+    }
+    .footer .politicas>a{
+        padding-left: 1em;
+        font-size: 0.8rem;
+    } 
+    .footer .copyright{
+        font-size: 0.8rem;
+        padding: 0.5em 0;
+    }
+}
+/*************************/
+@media (max-width: 575.98px) {.footer .search-footer>input {margin-left: 10em;}}

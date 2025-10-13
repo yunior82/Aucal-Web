@@ -1,0 +1,24 @@
+.contenedor{
+    line-height: normal;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header             header              header"
+        "banner-becas       banner-becas        banner-becas"
+        "textos-body        textos-body         textos-body"
+        "becas-info         becas-info          becas-info"
+        "banner-azul-right  banner-azul-right   banner-azul-right"
+        "titulo-fomulario   titulo-fomulario    titulo-fomulario"
+        "formulario         formulario          formulario"
+        "carrusel-unis      carrusel-unis       carrusel-unis"
+        "footer             footer              footer";    
+}
+
+.contenedor .titulo-fomulario{
+    grid-area: titulo-fomulario;
+}
+
+.contenedor .formulario{
+    grid-area: formulario;
+    width: 100%;
+}

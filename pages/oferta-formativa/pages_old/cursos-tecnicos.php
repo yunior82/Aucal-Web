@@ -1,0 +1,14 @@
+
+<?php
+require './../../vendor/autoload.php';
+require_once './../../../includes/sistema.inc.php';
+$renderer = new \Aucal\Web\Renderer();
+
+$courses=[];
+$query = mysqli_query($conexion, "SELECT urlcur, nomcur, imgcur, durcur, modcur,h1cur FROM microsites_cursos WHERE pubcur=1 AND tipocur=4 ORDER BY nomcur");
+while($item = $query->fetch_assoc()) {
+    $courses[] = $item;
+}
+
+echo $renderer->render('oferta-formativa/cursos-tecnicos.twig', ['courses' => $courses]);
+die();

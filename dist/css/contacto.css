@@ -1,0 +1,209 @@
+.contenedor.contenedor-contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header         header          header"
+        "contacto       contacto        contacto"
+        "subtitulo      subtitulo       subtitulo"
+        "formulario     formulario      formulario"
+        "contactar      contactar       contactar"
+        "banner-azul-right  banner-azul-right   banner-azul-right"
+        "alumnos        alumnos         alumnos"
+        "cformacion     cformacion      cformacion"
+        "footer         footer          footer";
+}
+
+.contenedor .header{
+    grid-area: header;
+}
+
+/* BANNER */
+.contenedor .contacto{
+    grid-area: contacto;
+    background-image: url(/2022/dist/images/contacto.png);
+    padding: 2em 0;
+    text-shadow: 1px 1px 10px 2px #d3d3d3;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+}
+
+.contenedor .contacto .form-head .center-txt> p{
+    width: 90%;
+    display: inline-block;
+    line-height: normal;
+    padding-top: 0.5em;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.contenedor .subtitulo{ grid-area: subtitulo;}
+
+.contenedor .subtitulo .tabs-title {
+    width: 90%;
+    text-align: center;
+    display: inline-block;
+    line-height: normal;
+    margin: 2em auto;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.contenedor .subtitulo .tabs-title .tab-h2{ color: #000;}
+
+/* FORMULARIO */
+.contenedor .formulario{ grid-area: formulario;}
+
+.contenedor .contactar{ grid-area: contactar; }
+
+/* DATOS CONTACTO */
+.contactar{
+    display: grid;
+    padding: 4em 0;
+    width: 80%;
+    gap: 1em;
+    line-height: normal;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "direccion     contacto-tlfs      horario"
+        "direccion     contacto-tlfs      horario"
+        "direccion     contacto-tlfs      horario";
+    align-items: stretch;
+    justify-self: center;
+}
+
+.icono{
+    display: grid;    
+    color:#E10031;
+    font-size: 28px;
+    justify-content: end;
+    padding-right: 0.2em;
+}
+
+.h2{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 1em;
+    color: #000000;
+}
+
+.contactar .direccion{
+    grid-area: direccion;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+}
+
+.contactar .contacto-tlfs{
+    grid-area: contacto-tlfs;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+}
+
+.contactar .contacto-tlfs .tlfs{
+    text-align: left;
+}
+
+.contactar .horario{
+    grid-area: horario;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+}
+
+.contactar>div{
+    text-align: left;
+    color: #a2a2a2;
+    font-weight: 500;
+}
+
+.contactar .direccion .sedes .sede-enlace{
+    font-weight: 700;
+}
+
+.contactar .horario .horarios .hora-dia,
+.contactar .contacto-tlfs .tlfs .nro-tlf{    
+    font-weight: 600;
+}
+
+/* Banner azul */
+.contenedor .banner-azul-right { grid-area: banner-azul-right ;}
+
+.contenedor .banner-azul-right .img-contacto{background-image: url(/2022/dist/images/banner-futuro-AUCAL-1.jpg);}
+
+
+.contenedor .cformacion{ grid-area: cformacion;}
+
+.contenedor .footer{ grid-area: footer;}
+
+/********************************/
+/********************************/
+@media (max-width:991.82px){
+    .contenedor .contacto{
+        width: 100%;   
+        margin-top: 9em;   
+    }
+}
+
+/*********************************/
+@media(min-width:768px) and (max-width: 991.98px){
+    .contenedor .contacto-right {
+        grid-template-rows: 7em 5em 8em!important;
+    }
+
+    .contenedor .contacto-right  .azul-right-btn {
+        margin: 3em 4em 0 0;
+    }
+    
+    .contenedor .contacto-right .azul-right-txt .azul-right-title .txt-eslogan{
+        font-size: 16px!important;
+    }
+}
+
+/*********************************/
+@media (max-width: 767.98px) {
+    .contenedor{ font-size: 15px; }
+    
+    /* BANNER */    
+    .contenedor .contacto .form-head .center-txt> p{
+        width: 70%;
+        font-size: 15px;
+    }
+
+    .contenedor .subtitulo .tabs-title {
+        width: 85%;
+        margin: 1em auto;
+        font-size: 18px!important;
+    }  
+    
+    .subtitulo .tabs-title .tab-h2-big {font-size: 18px!important;}
+
+
+    /* DATOS CONTACTO */
+    .contactar{
+        display: block;
+        padding: 0 0 1em 0;                
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .h2 {margin-bottom: 0em;}
+
+    .contactar>div{ 
+        margin-top: 2em;
+        grid-template-columns: 0.5fr 3fr!important;
+    }
+
+    .icono{ font-size: 22px;}
+
+    .contactar .direccion .sedes .sede-enlace,
+    .contactar .horario .horarios .hora-dia{
+        font-size: 14px;
+    }
+
+    .contactar .direccion .sedes .direc,
+    .contactar .contacto-tlfs .tlfs .nro-tlf,
+    .contactar .horario .horarios .horas{
+        font-size: 13px;
+    }    
+}
+

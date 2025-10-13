@@ -1,0 +1,1015 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: content-box; */
+}
+
+body{    
+    color: #212529;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 85rem;
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: #E10031;
+}
+
+a:hover{  font-weight: 700; }
+ul{  list-style: none; }
+
+button{
+    border:none;
+    background-color: #fff;    
+}
+
+/* TEXTOS */
+.bold-txt{ font-weight: 700; }
+
+/* BOTONES */
+.btn-red-normal, .btn-red-form{
+    background-color: #E10031;
+    color: #fff;
+}
+
+.btn-red{
+    background-image: url(/2022/dist/images/boton-bonificada.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+}
+
+.btn-yellow, .btn-yellow-big{
+    background-color: #F8B100;
+    color: #E10031;
+    font-size: 600;
+}
+
+.btn-yellow{
+    font-weight: 600;
+    margin-top: 0.625em;
+    font-size: 16px;
+}
+
+.btn-yellow-big{
+    display: inline-block;
+    height: 6rem;
+}
+
+/*btn gris y azul*/
+.btn-gris, .btn-azul{
+    background-position: center center;
+    background-size: cover;
+    height: 6rem; 
+    width: 30%;
+    margin: 0 auto;
+}
+
+.btn-gris{    
+    box-shadow: inset 0 0 0 1000px rgba(240,240,240,0.6);
+    width: 30%;
+}
+
+.btn-azul{    
+    padding: 0 1em;
+    width: 35%;
+}
+
+.btn-gris>a, .btn-azul>a{
+    font-size: 16px;
+    font-weight: 700;
+    color: #7F0000;
+    text-shadow: 1px 1px 10px #1a1a1a;  
+}
+
+.btn-gris>a{ color: #7F0000; }
+.btn-azul>a{ color: #fff;}
+.btn-gris>a:hover, .btn-azul>a:hover{ font-weight: 900;}
+
+.btn-gris>a p{
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1em;
+    padding: 2em 1em;
+}
+
+.btn-azul>a p{
+    text-align: left; 
+    padding-top: 2rem;
+}
+
+.btn-azul>a img{
+    height: 1.5em;
+    float: right; 
+    padding: 2em 0;
+}
+
+.btn-border{
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-brown{
+    background-image: url(/2022/dist/images/boton-empleo.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    border: none;
+}
+
+.btn-titlle{
+    border: none;
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+    background: #fff;
+}
+
+.btn-circle-active{
+    background-color: #E10031;
+    color: #fff;
+    border: 2px solid #E10031;
+    border-radius: 100%;
+}
+
+.btn-circle{
+    border-radius: 100%;
+    border: 2px solid #bdbdbd;
+}
+
+.btn-transp{
+    height: 2.5em;
+    border: 2px solid #bdbdbd;
+    color: #bdbdbd;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Títulos centrados */
+.center-head{
+    display: grid;
+    grid-template-rows: repeat(1, 2fr 1fr);
+}
+
+.center-title{
+    font-size: 28px;
+    font-weight: 500;
+    padding: 0.5em 0;
+}
+
+.center-hr{
+    padding: 0!important;
+    margin: 0!important;
+    height: 1rem!important;
+    display: grid!important;
+    justify-content: center;
+}
+
+/* Títulos centrados PEQUEÑOS -sm*/
+.center-title-sm{    
+    font-size: 22px;
+    font-weight: 400;
+    padding: 0.2em 0;
+    display: grid;
+    justify-content: start;
+}
+
+.center-hr-sm{
+    padding: 0!important;
+    margin: 0!important;
+    height: 0.5em!important;
+    display: grid!important;
+    justify-content: start!important;
+}
+
+/* Títulos centrados ROJOS -red*/
+.center-title-red{
+    color: #E10031;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+/* TITULOS TARJETAS */
+.card-h3{
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.card-descript{
+    font-size: 15px;
+    font-weight: 400;    
+}
+
+.card-h3, .card-descript{
+    padding: 0em 1em;
+    line-height: 1.5em;
+}
+
+/* TITULOS TARJETAS PEQUEÑOS*/
+.card-h3-sm{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.card-descript-sm{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* LINKS  */
+.red-link, .a-red{
+    color: #E10031;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* SEPARADOR <hr/> */
+.hr-red {
+    background-color: #E10031!important;
+    height: 0.3rem!important;
+    width: 7rem!important;
+    border: none!important;
+    border-radius: 5px!important;
+}
+
+.hr-gris {
+    background-color: black!important;    
+    height: 0.1rem!important;
+    width: 100%!important;
+    border: none!important;
+    border-radius: 5px!important;
+}
+
+.hr-red-sm{
+    background-color: #E10031!important;
+    height: 0.2em!important;
+    width: 4rem!important;
+    border: none!important;
+    border-radius: 5px!important;
+}
+
+/*BANNERS AZULES*/
+.banner-azul-left, .banner-azul-right{
+    color: white;
+    text-align: left;    
+    background-color: #009DDF;
+    line-height: 2em;
+    height: max-content;
+    display: grid;
+}
+
+.banner-azul-left .azul-left-txt, .banner-azul-right .azul-right-txt{
+    line-height: 1.5rem;
+    width: 85%;
+    margin: 0;
+    padding: 1em;
+    display: grid;
+}
+
+.banner-azul-left .azul-left-txt .azul-left-title, .banner-azul-right .azul-right-txt .azul-right-title{
+    height: 2em;
+    font-size: 26px;
+    line-height: normal;
+    font-weight: 500;    
+}
+
+.banner-azul-right .azul-right-txt .azul-right-title .txt-eslogan, .banner-azul-left .azul-left-txt .azul-left-title .txt-azul-left{
+    font-size: 20px;
+}
+
+.banner-azul-right .azul-right-txt .azul-right-hr, .banner-azul-left .azul-left-txt .azul-left-hr{
+    padding: 0!important;
+    margin: 1em 0!important;
+    height: 1rem!important;
+}
+
+.banner-azul-right .azul-right-txt .azul-right-descript, .banner-azul-left .azul-left-txt .azul-left-descript{
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.2rem;
+}
+
+
+/*BANNER AZUL IZQUIERDA*/
+.banner-azul-left{
+    grid-area: banner-azul-left;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "azul-left-txt  azul-left-img"
+    "azul-left-txt  azul-left-img"
+    "azul-left-unis azul-left-img";
+    grid-template-rows: 6em 4em 6em;
+} 
+
+.banner-azul-left .azul-left-img{
+    grid-area: azul-left-img;
+    width: auto;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 30% 100%);
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner-azul-left .azul-left-img>img{ width: 100%; }
+
+.banner-azul-left .azul-left-txt{  
+    grid-area: azul-left-txt;
+    display: grid;
+    grid-template-rows: 4em 2em 4em;
+    margin-left: 1em;
+}
+
+.banner-azul-left .azul-left-unis{
+    grid-area: azul-left-unis;
+    margin: 1em 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.banner-azul-left .azul-left-unis .azul-left-logos>img{height: 4.5em;}
+
+.banner-azul-left .azul-left-unis .azul-left-logos .school{
+    width: 70%;
+    height: 2em!important;
+    padding: 1em;
+}
+
+/*BANNER AZUL DERECHA*/
+.banner-azul-right{
+    grid-area: banner-azul-right;
+    margin: 2em auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "azul-right-img    azul-right-txt"
+        "azul-right-img    azul-right-txt"
+        "azul-right-img    azul-right-btn";
+   grid-template-rows: 7em 5em 10em;    
+} 
+
+.banner-azul-right .azul-right-img{
+    grid-area: azul-right-img;
+    text-align: left;
+    width: auto;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner-azul-right .azul-right-txt{ grid-area: azul-right-txt; }
+.banner-azul-right .azul-right-txt .azul-right-title{padding: 0.8em 0; }
+
+.banner-azul-right .azul-right-btn{
+    grid-area: azul-right-btn;    
+    margin: 5em 4em 0 0em;
+    display: grid;
+    justify-content: end;
+}
+
+.banner-azul-right .azul-right-btn>a{
+    display: grid;
+    text-align: center;
+    align-content: center;
+    font-size: 16px;
+    width: 11rem;
+    height: 2rem;
+} 
+
+/* CARRUSEL FORMACION */
+.contenedor .cformacion{
+    grid-area: cformacion;
+    width: 100%;
+    background-color: #fff;  
+    line-height: 2rem;
+    justify-content: center;   
+} 
+.contenedor .cformacion .cf-head{margin: 1.5em 0;}
+
+.contenedor .cformacion .cf-head .cf-title{
+    font-size: 2.5em;
+    font-weight: 500;
+    padding: 1em 0;
+}
+
+.contenedor .cformacion .cf-head .cf-hr{ justify-content: center!important; }
+
+.contenedor .cformacion .cf-carousel{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 14em); 
+}
+
+.contenedor .cformacion .cf-carousel>div{
+    text-align: left;
+    padding: 2em 1em 0;
+    line-height: 1.8rem; 
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 5px #000000;
+    box-shadow: inset 0 0 0 1000px rgba(1,1,1,0.3);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contenedor .cformacion .cf-carousel .card-rrhh{background-image: url(/2022/uploads/courses/master-executive-rrhh-aucal.png);}
+.contenedor .cformacion .cf-carousel .card-executive-mba{background-image: url(/2022/uploads/courses/master-executive-mba-aucal.png);}
+.contenedor .cformacion .cf-carousel .card-tecnologico{background-image: url(/2022/dist/images/master-compliance-penal-thun.png);}
+.contenedor .cformacion .cf-carousel>div a{color: #fff;}
+.contenedor .cformacion .cf-carousel>div a:hover{color: #F8B100;}
+.contenedor .cformacion .cf-carousel>div a>div .card-title{ font-size: 1.6rem;}
+
+.contenedor .cformacion .cf-btn{
+    grid-area: cf-btn;
+    display: grid;
+    justify-content: center;
+    margin: 1em auto 2em auto;
+}
+
+.contenedor .cformacion .cf-btn>a{
+    display: grid;
+    padding: 0.2em;
+    font-size: 15px;
+    width: 24rem;
+    font-weight: 600;
+}
+
+.contenedor .cformacion .cf-btn>a:hover{font-weight: 700;}
+
+/* Banner PEQUEÑO  Blog - Noticias*/
+.contenedor .desta-banner{
+    background: url(/2022/dist/images/banner_pequeño_aucal_blog.png);
+    background-size: cover;
+    background-position: center center;
+    height: 335px;
+    width: auto;
+    margin-top: 2em;
+}
+
+/* TEXTO IMAGEN FLOTANTE*/
+.textos-body{
+    grid-area: textos-body;
+    margin: 2em auto;
+}
+
+.textos-body>div .black-h1-big{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.textos-body .textos-txt-img{
+    width: 90%;
+    margin: 2em auto;
+}
+
+.textos-body .textos-txt-img .textos-img{
+    float: right;
+    position: relative;
+    background: #fff;
+    width: 40%;
+    text-align: right;
+}
+
+.textos-body .textos-txt-img>div img{ width: 80%;}
+
+.textos-body .textos-txt-img>div{
+    font-weight: 400;
+    width: 55%;
+    float: left;
+}
+
+.textos-body .textos-txt-img>div p{
+    font-size: 15px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+/*BANNER FUTURO*/
+.futuro{ 
+    grid-area: futuro;
+    background: url(/2022/dist/images/banner-futuro-empieza-AUCAL.jpg);
+    background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+    height: auto;
+    width: 100%;
+    margin: 1em auto;
+    /* capa transparente de color 
+    box-shadow: inset 0 0 0 1000px rgba(127,0,0,0.6);*/
+}
+
+.futuro .futuro-head>div>p{
+    color:#fff;
+    position: relative
+}
+
+.futuro .futuro-btns{
+    height: auto;
+    width: 90%;
+    gap: 3em;
+    padding: 1em 3em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "btns-yellow-1  btns-yellow-2   btns-yellow-3";
+}
+
+.futuro .futuro-btns .btns-yellow-1{
+    grid-area: btns-yellow-1;    
+    display: grid;    
+}
+
+.futuro .futuro-btns .btns-yellow-2{
+    grid-area: btns-yellow-2;    
+    display: grid;
+}
+
+.futuro .futuro-btns .btns-yellow-3{
+    grid-area: btns-yellow-3;    
+    display: grid;
+}
+
+.futuro .futuro-btns .btn-yellow-big >p{
+    font-size: 24px;
+    line-height: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1.2em;
+}
+
+.futuro .futuro-btns .btns>a:hover{ color: #fff; } 
+
+/* TABS (estudiar, cursos-masteres)*/
+/* Barra tabs */
+.contenedor .estudiar-tabs .tabs-container{ width: 100%; }
+.contenedor .estudiar-tabs .tabs-container .tabs-list{  background: #d3d3d3; }
+.contenedor .estudiar-tabs .tabs-container .tabs-list .tabs-barra{display: flex;}
+
+.contenedor .estudiar-tabs .tabs-container .tabs-list .tabs-barra>li { 
+    width: 90%;
+    background: #E10031;
+    font-size: 16px;
+    color: #fff;
+    height: 3em;
+    line-height: 3em;
+    margin: 0 auto;    
+}
+.contenedor .estudiar-tabs .tabs-container .tabs-list .tabs-barra>li:hover{ cursor: pointer; }
+
+.contenedor .estudiar-tabs .tabs-container .tabs-list>ul li .estudiar-tablink{
+    line-height: 1em;
+    padding: 1em 0;
+    height: auto;
+    width: auto;
+    font-weight: 600;
+}
+
+/* Cuerpo (contenedor)*/
+.tabs .tab .tabs-cuerpo {
+    width: 90%;
+    padding: 1em 0;
+    margin: 0 auto;
+}
+
+/* TABS Títulos */
+.articulo-title, .tabs-title {
+    width: 90%;
+    text-align: justify;
+    display: inline-block;
+    line-height: normal;
+    color: #E10031;
+    font-size: 22px;
+    font-weight: 500;   
+    margin-top: 0.5em; 
+}
+
+.tab-h1-big{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+.tab-h2-big{
+    color: #000;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 1em auto 1.5em auto;
+    text-align: center;
+}
+
+.tab-h2{
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+}
+
+.articulo-title{text-align: center;}
+
+/* TABS Textos */
+.articulo-txt, .tabs-txt{
+    font-size: 15px;
+    width: 90%;
+    text-align: justify;
+    padding-top: 0.5rem;
+    display: inline-block;
+    line-height: normal;
+}
+
+.articulo-txt> div p, .tabs .tab .tabs-cuerpo .tabs-txt>p {margin-bottom: 0.5em;}
+
+
+/* TITULO FORMULARIO */
+.titulo-fomulario .becas-head>div .becas-h1{
+    color: #E10031;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.titulo-fomulario .becas-title>p{
+    width: 70%;
+    font-size: 15px;
+    margin: auto;
+    font-weight: 600;
+}
+
+/*********************/
+/* RESPONSIVE */
+@media (max-width: 1199.98px){
+    .contenedor {
+        max-width: 1199.98px;
+        width: 100%;
+        font-size: 0.875rem;
+        margin: 0 auto;
+    }
+
+    /* SEPARADOR <hr/> */
+    .hr-red {
+        height: 0.2rem;
+        width: 5rem;
+    }    
+}
+
+/*********************/
+@media (max-width:991.98px){
+    .btn-yellow-big{
+        display: inline-block;
+        height: 4rem;
+    }
+
+    /* BANNER AZUL DERECHA*/
+    .banner-azul-right .azul-right-btn{ margin: 6em 4em 0 0; }
+
+    /* FUTURO */
+    .futuro .futuro-btns{
+        gap: 1em;
+        padding: 1em;
+        margin: 0 auto;
+    }
+
+    .futuro .futuro-btns .btn-yellow-big >p{
+        font-size: 18px;
+        line-height: 1rem;
+    }
+
+    .futuro .futuro-btns .btns-yellow-2 .btn-2>p{line-height: 1rem;}
+
+    /* Barra tabs */
+    .contenedor .estudiar-tabs .tabs-container .tabs-list .tabs-barra{
+        line-height: 3em;
+        height: 3em;
+    }
+
+    .contenedor .estudiar-tabs .tabs-container .tabs-list .tabs-barra>li {
+        margin: auto;
+        font-size: 13px;
+        height: 100%;
+    }
+
+    .contenedor .estudiar-tabs .tabs-container .tabs-list .tabs-barra>li span{ padding-top: 0.2em; }
+
+}
+/*****/
+@media (min-width: 768px) and (max-width: 991.98px){
+    .card-h3 { font-size: 15px;}
+}
+
+/*********************/
+@media (min-width: 768px) and (max-width: 1199.98px){
+    /*BANNERS AZULES*/
+    .banner-azul-right .azul-right-txt .azul-right-title, .banner-azul-left .azul-left-txt .azul-left-title{
+        font-weight: 500;
+        height: 2em;
+        font-size: 18px;
+    }
+
+    .banner-azul-left .azul-left-txt .azul-left-title .txt-azul-left { font-size: 16px; }
+    .banner-azul-right .azul-right-txt .azul-right-hr, .banner-azul-left .azul-left-txt .azul-left-hr{height: 0.5em}
+
+    .banner-azul-right .azul-right-btn>a, .banner-azul-right .azul-right-txt .azul-right-descript,  .banner-azul-left .azul-left-txt .azul-left-descript{  
+        font-size: 12px;
+        line-height: 1.2rem;
+    }
+    
+    /* BANNER AZUL IZQUIERDA */
+    .banner-azul-left{ 
+        grid-template-columns: 2fr 1.5fr;        
+        grid-template-rows: 5em 3em 5em;
+    } 
+
+    .banner-azul-left .azul-left-txt{  
+        grid-area: azul-left-txt;
+        display: grid;
+        grid-template-rows: 3em 2em 5em;
+        margin-left: 1em;
+    }
+
+    .banner-azul-left .azul-left-unis{  margin: 1em; }
+    .banner-azul-left .azul-left-unis .azul-left-logos>img {  height: 3em; }
+    .banner-azul-left .azul-left-unis .azul-left-logos .school{
+        width: 75%;
+        height: 1.5em!important;
+        padding: 0.8em 0 0 1em;
+    }
+
+    /* BANNER AZUL DERECHA */
+    .banner-azul-right{     
+        grid-template-columns: 2fr 2fr; 
+        grid-template-rows: 7em 5em 12em;
+            
+    }   
+
+    /* FORMACION DESTACADA */
+    .contenedor .cformacion .cf-carousel>div a{ 
+        font-size: 17px;
+        line-height: 1.4em;
+    }         
+}
+
+/*********************/
+@media (max-width: 767.98px){  
+    .contenedor {
+        padding: 0;
+        margin: 0;
+        max-width: max-content;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /*BOTONES - TITULOS - TEXTOS*/
+    .btn-yellow{
+        font-weight: 500;
+        margin-top: 0.5em;
+    }
+
+    .card-h3, .card-descript {font-size: 14px;}
+    .center-title{ font-size: 22px;}
+
+    .center-title-sm{    
+        font-size: 20px;
+        font-weight: 400;
+        padding: 0.2em 0;
+        display: block;
+        justify-content: start;
+    }
+    
+    .center-hr-sm{
+        padding: 0!important;
+        margin: 0 auto!important;
+        height: 0.5em!important;
+        width: 4rem!important;
+        display: block;
+        justify-content: start!important;
+    }
+
+    .hr-red-sm{
+        height: 0.2em!important;
+        width: 4rem!important;
+        border: none!important;
+        border-radius: 5px!important;
+    }
+
+    .btn-gris, .btn-azul{ 
+        margin: 1em auto;  
+        width: 80%;
+    }  
+
+    .btn-azul>a p{ line-height: 1em; }
+    .btn-azul>a img{  padding: 2em;  }   
+
+    /*BANNERS AZULES*/    
+    .banner-azul-right .azul-right-img,.banner-azul-left .azul-left-img{ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); }    
+    .banner-azul-right .azul-right-txt, .banner-azul-left .azul-left-txt{ grid-template-rows: auto 1.25em 5em; }
+
+    .banner-azul-right .azul-right-txt .azul-right-title, .banner-azul-left .azul-left-txt .azul-left-title{
+        font-size: 18px;
+        font-weight: 400;
+        padding: 0.5em 0;
+        height: auto;
+    }
+
+    .banner-azul-right .azul-right-txt .azul-right-title .txt-eslogan, .banner-azul-left .azul-left-txt .azul-left-title .txt-azul-left{ font-size: 17px; }
+
+    .banner-azul-right .azul-right-txt .azul-right-hr,
+    .banner-azul-left .azul-left-txt .azul-left-hr{
+        padding: 1.5em 0!important;
+        margin: 0!important;
+        height: 1em!important;
+    }
+
+    .banner-azul-right .azul-right-txt .azul-right-descript, .banner-azul-left .azul-left-txt .azul-left-descript{
+        padding: 1em 0;
+        width: 100%;
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.1rem;
+    }
+
+    .banner-azul-right .azul-right-btn>a {font-size: 15px;}
+
+    /* BANNER AZUL IZQUIERDA */
+    .banner-azul-left{
+        padding: 0;      
+        grid-template-columns: 2fr 1fr;  
+        grid-template-areas:
+            "azul-left-img    azul-left-img"
+            "azul-left-txt    azul-left-txt"
+            "azul-left-unis    azul-left-unis";
+        grid-template-rows: 300px 200px 80px;
+    }
+
+    .banner-azul-left .azul-left-img>img{ width: 100%; }
+    .banner-azul-left .azul-left-unis{ margin: 0 auto; }
+    .banner-azul-left .azul-left-unis .azul-left-logos>img{ height: 3em;}
+    .banner-azul-left .azul-left-unis .azul-left-logos .school{
+        width: 75%;
+        height: 1.5em!important;
+        padding: 0.8em 0.5em 0 1em;
+    }
+    
+    /* BANNER AZUL DERECHA */
+    .banner-azul-right{
+        grid-template-areas:
+            "azul-right-img    azul-right-img"
+            "azul-right-txt    azul-right-txt"
+            "azul-right-btn    azul-right-btn";
+        grid-template-rows: 350px 200px 80px;
+    } 
+
+    .banner-azul-right .azul-right-btn{        
+        margin-left: 20em;
+        margin-top: 2em;
+    }       
+
+        
+    /* CARRUSEL FORMACION */
+    .contenedor .cformacion{
+        grid-area: cformacion;
+        width: 85%;
+        margin: 0 auto;
+        background-color: #fff;  
+        line-height: 2rem;
+        justify-content: center;
+        padding: 0 2em;   
+    }
+
+    .contenedor .cformacion .cf-carousel{
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 10em); 
+
+    }
+
+    .contenedor .cformacion .cf-carousel>div{
+        padding: 2em 1em 0;
+        line-height: 1.8rem; 
+        text-shadow: 1px 1px 5px #000000;
+        box-shadow: inset 0 0 0 1000px rgba(1,1,1,0.4);
+    }
+
+    .contenedor .cformacion .cf-carousel>div a>div .card-txt,
+    .contenedor .cformacion .cf-carousel>div a>div .card-title{ font-size: 20px;}
+    .contenedor .cformacion .cf-carousel>div a:hover{font-weight: 600;}
+
+    /* TEXTO IMAGEN FLOTANTE*/    
+    .textos-body .textos-txt-img .textos-img{ width: 100%; }
+        
+    .textos-body .textos-txt-img>div img{ 
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 2em;
+        height: 26em;
+    }
+     
+    .textos-body .textos-txt-img>div{ width: 100%; }
+     
+    .textos-body>div .black-h1-big{
+        width: 90%;
+        font-weight: 600;
+        font-size: 18px;
+    }
+ 
+    .textos-body .textos-txt-img>div p { font-size: 14px; }
+
+    /* FUTURO */
+    .futuro{  margin: 3em auto 1em auto; }
+
+    .futuro .futuro-btns{
+        margin: 0 auto;
+        padding: 1em;
+        display: block;
+    }
+
+    .futuro .futuro-btns .btns{  margin: 0.5em auto;}
+
+    .futuro .futuro-btns .btns .btn-yellow-big >p{
+        font-size: 1.2rem;
+        text-align: center;
+        padding-top: 1em;
+        line-height: 1.5rem;
+    }
+
+    /* TITULO FORMULARIO */
+    .titulo-fomulario{ margin: 1em auto 0;}
+
+    .titulo-fomulario .becas-head>div .becas-h1{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    
+    .titulo-fomulario .becas-title>p{
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    /* Barra tabs */
+    .contenedor .estudiar-tabs .tabs-container .tabs-list{ padding: 1em 0;}   
+
+    .contenedor .estudiar-tabs .tabs-container .tabs-list .tabs-barra{
+        display: block;
+        height: max-content;
+    }
+
+    .contenedor .estudiar-tabs .tabs-container .tabs-list .tabs-barra>li {
+        margin: 0.8em auto;
+        height: 3em;
+    }            
+}
+
+/**********************/
+@media (max-width: 575.98px) { 
+	.contenedor .cformacion .cf-btn>a {width: 18rem;}
+	.center-title { font-size: 20px;}
+
+	.textos-body .textos-txt-img>div img {
+    		width: 100%;
+    		margin: 2em 1em 0 0;
+    		height: 18em;
+	}	
+}
+/************************/
+@media (max-width: 499.98px) {.contenedor .desta-banner {height: 250px;}}
+
+	
+/**************************************************/
+/* Paleta de colores + fuente de la web */
+.colorsWeb{
+    background-color: #009DDF;
+    bottom: #E10031;
+    background-clip: #F8B100;
+    background: #7F0000;
+    background-color: #dedede;
+}
+
+.fontWeb{  font-family: 'Poppins', sans-serif; }
+
+/* 
+@media (max-width: 575.98px) { ... }
+
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+@media (min-width: 1200px) { ... } */

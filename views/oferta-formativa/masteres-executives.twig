@@ -1,0 +1,58 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content="Másteres Executives online tienen como objetivo entregar al profesional una excelencia académica al mismo nivel de un título oficial, combinada con una experiencia de alto valor y reconocimiento en el desarrollo práctico más que el teórico, preparando al alumno a enfrentar de mejor manera los desafíos laborales del futuro."/>
+    <link rel="stylesheet" href="/2022/dist/css/oferta.css"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/banner-master-executive.png">
+{% endblock %}
+{% block body %}
+    <div class="contenedor" style="display: block"> 
+        <aside class="oferta-banner banner-executive">            
+            <div class="oferta-title-banner center-head">
+                <div class="oferta-title center-title">
+                    <p class="h2-oferta">OFERTA EDUCATIVA</p>
+                </div>
+                <div class="oferta-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="oferta-txt center-title">
+                    <p class="h1-oferta">Másteres Executives</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="oferta-head">
+            <div class="center-title oferta-title-head">
+                <p class="oferta-h1">
+                    Reconocidos y válidos en toda la UE
+                </p>
+            </div> 
+            <div class="oferta-txt-head">
+                <p class="oferta-txt">
+                    Nuestros <b>Másteres Executives</b> online tienen como objetivo 
+                    entregar al profesional una excelencia académica al mismo nivel 
+                    de un título oficial, combinada con una experiencia de alto valor 
+                    y reconocimiento en el desarrollo práctico más que el teórico, 
+                    preparando al alumno a enfrentar de mejor manera los desafíos laborales del futuro.
+                </p>
+            </div> 
+        </aside>
+        <aside class="oferta-btns ">
+            <div class="oferta-cards oferta-cards-masteres">
+            {% for course in courses %}  
+                <div class="oferta-card card-img" style="background-image: url({{course.image_url}});">
+                    <a href="/oferta-formativa/master-executive/{{ course.slug }}" class="oferta-a" alt="AUCAL Bussines School {{ course.title }}">
+                        <div class="ofer-card-title">
+                            <p class="card-title">{{ course.title }}</p>
+                        </div>
+                    </a>
+                </div>  
+             {% endfor %}            
+            </div>
+        </aside>
+        <aside class="oferta-links">
+            <a href="/oferta-formativa/curso-superior" class="link-superiores" alt="AUCAL Bussines School Cursos Superiores">VER CURSOS SUPERIORES >> </a>
+            <a href="/oferta-formativa/curso-tecnico" class="link-tecnicos" alt="AUCAL Bussines School Cursos Tecnicos">VER CURSOS TÉCNICOS >></a>
+            <a href="/oferta-formativa/master-oficial" class="link-tecnicos" alt="AUCAL Bussines School Másteres Oficiales">VER MÁSTERES OFICIALES >></a>
+        </aside>
+    </div>
+{% endblock %}

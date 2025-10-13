@@ -1,0 +1,41 @@
+.contenedor {
+    display: grid;
+    line-height: normal;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header             header              header"
+        "info-politica      info-politica       info-politica"
+        "formulario         formulario          formulario"
+        "carrusel-unis      carrusel-unis       carrusel-unis"
+        "footer             footer              footer";    
+}
+
+/* ***************************** */
+/* BARra NAVegación */
+.contenedor .header{ grid-area: header; }
+
+/* Cuerpo */
+.contenedor .info-politica{ grid-area: info-politica;}
+.politica-red{
+    color: #E10031;
+    margin-bottom: 0.5em;
+}
+/* FORMULARIO*/
+.contenedor .formulario{
+    grid-area: formulario;
+}
+
+/* UNIS */
+.contenedor .carrusel-unis{ grid-area: carrusel-unis;}
+
+/* FOOTER */
+.contenedor .footer{ grid-area: footer;}
+
+
+@media screen  and (max-width: 991.98px){
+    .contenedor .info-politica{ 
+        margin: 8em auto 0; 
+        width: 90%;
+
+    }
+}

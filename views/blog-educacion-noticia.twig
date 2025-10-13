@@ -1,0 +1,66 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="/2022/dist/css/articulo.css"/>
+    <link rel="stylesheet" href="/2022/dist/css/articulo-blog.css"/>
+    <title>{{ article.title }} - Aucal Business School</title>
+    <meta property="og:image" content="{{ article.image_url }}">
+    <meta property="og:title" content="{{ article.title }} - Aucal">
+    <meta property="og:description" content="{{ article.content|striptags|slice(0, 160) }}...">
+    <meta property="description" content="{{ article.content|striptags|slice(0, 160) }}...">
+    <meta property="twitter:image" content="{{ article.image_url }}">
+    <meta property="twitter:title" content="{{ article.title }} - Aucal">
+{% endblock %}
+{% block body %}
+    <div class="contenedor"> 
+        <aside class="blog-banner social-banner">
+            <div class="blog-head center-head">
+                <div class="center-title">
+                    <p class="blog-h2">Blog AUCAL</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+        </aside>       
+        <aside class="articulo">
+            <div class="tabs-title">
+                <p class="tab-h2-big">  {{ article.title }} </p>
+                <p class="tab-h2 tab-h2-center">{{ article.subtitle }} </p>
+            </div>            
+            <div class="img-articulo" style="background-image: url({{ article.image_url }})"></div> 
+            <div class="info-articulo">
+                <ul class="articulo-list">
+                    <li class="blog-noticia">Blog Aucal</li>
+                    <li class="fecha-articulo">{{ article.created_at|date('d-m-Y') }}</li>
+                    <li class="categoria-blog">EDUCACIÓN</li>
+                </ul>
+            </div>  
+             <div class="articulo-txt">
+                {{ article.content|raw }}
+            </div>  
+
+            <div class="footer-articulo">
+                <div class="comparte-articulo">
+                    <div class="compartir-visible" >
+                        <p class="comparte-txt">Comparte este artículo</p>
+                        <button class="comparte-link" id="btnMostrar">
+                            <i class="fas fa-share-alt icono-comparte" alt="AUCAL Bussines School Compartir"></i>
+                        </button>
+                    </div>
+                    <div class="compartir-oculto" id="divOculto">
+                        <p class="tab-h2">COMPARTE</p>
+                        <div class="social-media">
+                            <a alt="AUCAL Bussines School Redes Sociales" href="https://www.whatsapp.com/" class="social-media-btn" target="_blank"><i class="fab fa-whatsapp" alt="AUCAL Bussines School icono Redes Sociales"></i></a>
+                            <a alt="AUCAL Bussines School Redes Sociales" href="https://www.instagram.com/" class="social-media-btn" target="_blank"><i class="fab fa-instagram" alt="AUCAL Bussines School icono Redes Sociales"></i></a>
+                            <a alt="AUCAL Bussines School Redes Sociales" href="https://twitter.com/" class="social-media-btn" target="_blank"><i class="fab fa-twitter" alt="AUCAL Bussines School icono Redes Sociales"></i></a>
+                            <a alt="AUCAL Bussines School Redes Sociales" href="https://www.facebook.com/" class="social-media-btn" target="_blank"><i class="fab fa-facebook-f" alt="AUCAL Bussines School icono Redes Sociales"></i></a>
+                            <a alt="AUCAL Bussines School Redes Sociales" href="https://www.linkedin.com/" class="social-media-btn" target="_blank"><i class="fab fa-linkedin-in" alt="AUCAL Bussines School icono Redes Sociales"></i></a>
+                        </div>
+                    </div>                    
+                </div>                
+            </div>
+        </aside> 
+    </div>
+{% endblock %}

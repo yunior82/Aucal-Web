@@ -1,0 +1,593 @@
+{% extends 'app/app.twig' %}
+{% block head %}
+    <meta name="description" content="Curso Superior Online de Detective Privado reconocido por el Ministerio del Interior. ¡Solicita más información!"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/curso-superior-detective-privado-thun.png">
+    <link rel="stylesheet" href="/2022/dist/css/master-cursos.css"/>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor">
+       <aside class="cursos-banner banner-detective">            
+            <div class="cursos-title-banner center-head">
+                <div class="cursos-title center-title">
+                    <p class="h2-cursos">CURSOS SUPERIORES</p>
+                </div>
+                <div class="cursos-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="cursos-txt center-title">
+                    <p class="h1-cursos">Curso Superior de Detective Privado</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="cursos-tabs">
+            <div class="tabs-container">
+                <div class="tabs-head tabs-head-responsive">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Curso Superior de Detective Privado</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                180 ECTS | 36 meses | Online <br/>
+                                Reconocido por el Ministerio del Interior.
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="#formSolicitar" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion">Matricúlate ahora</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'presentacion')">
+                            <p class="cursos-tablink">PRESENTACIÓN</p>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'informacion')">
+                            <p class="cursos-tablink">INFORMACIÓN</p>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'planEstudios')">
+                             <p class="cursos-tablink">PLAN DE ESTUDIOS</p>
+                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'titulacion')">
+                            <p class="cursos-tablink">TITULACIÓN</p>
+                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'materiales')">
+                            <p class="cursos-tablink">MATERIALES</p>                        
+                        </li>
+                    </ul>
+                </div>  
+                <div class="tabs-head tabs-head-principal">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Curso Superior de Detective Privado</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                180 ECTS | 36 meses | Online <br/>
+                                Reconocido por el Ministerio del Interior.                                
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="#formSolicitar" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion">Matricúlate ahora</a>
+                        </div>
+                    </div>
+                </div>   
+                <div class="tabs-cuerpo">
+                    <div class="tabs-widgets">
+                        <div class="tab-sec">
+                            <ul class="tab-sec-list">
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'presentacion')" >
+                                    <p class="tab-sec-txt">PRESENTACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'informacion')">
+                                    <p class="tab-sec-txt">INFORMACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'planEstudios')">
+                                    <p class="tab-sec-txt">PLAN DE ESTUDIOS</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'titulacion')">
+                                    <p class="tab-sec-txt">TITULACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'materiales')">
+                                    <p class="tab-sec-txt">MATERIALES</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-program">
+                            <div class="tabs-program-img">
+                                <img src="/2022/dist/images/oferta/portada-superior-detective-privado.PNG" alt="AUCAL Bussines School Portada Superior Detective Privado" class="image-program">
+                            </div>
+                            <div class="tabs-program-pdf btn-red-normal">
+                                <a href="/2022/dist/pdf/AUCAL-superior-detective-privado.pdf" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa Superior Detective Privado">
+                                    <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                    <img src="/2022/dist/images/icons/descarga-blanco.png" class="btn-descarga-blanco" alt="AUCAL Bussines School Descargar Superior Detective Privado">                                            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <di class="tabs">
+                        <!-- PRESENTACION --> 
+                        <div class="presentacion tab" id="presentacion">                             
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Presentación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El <b>curso de detective privado</b> es un <b>curso de investigación privada reconocido por el ministerio del interior,</b> que te permitirá la habilitación en el MIR debido a que se encuentra reconocido para la solicitud de la Tarjeta de Identidad Profesional <b>(tip detective privado)</b>. Es un título de la universidad Antonio de Nebrija dotado de 180 ECTS que se distribuyen 3 años académicos, pudiendo convalidar asignaturas en este programa. 
+                                    </p>
+                                </div>    
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        Esta <b>formación en detective privado</b> tiene multitud de salidas profesionales ya que, a través de la realización de planes de investigación y sus posteriores conclusiones utilizando técnicas de observación, detección y vigilancia que permite, tanto a empresas como a particulares, facilitarles la información necesaria para la toma de decisiones e incluso tomar acciones legales si lo considerasen oportuno.
+                                    </p>
+                                </div>  
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        <b>Ser detective privado</b> cada vez es más importante en la sociedad actual, incluso ampliándose cada vez más su campo de actuación. Algunos ámbitos donde desarrollan su actividad son: laboral, social, empresarial, industrial, tecnológico y muchos más.
+                                    </p>
+                                </div> 
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">    
+                                        A través de este <b>curso detective privado online</b>, podrás dominar las distintas herramientas y métodos de investigación y técnicas de seguimiento, conocer también los límites legales para poder establecer el ejercicio y recabar pruebas para que sean válidas en un proceso judicial si fuese necesario.
+                                    </p>
+                                </div>                                  
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        El <b>título detective privado</b> ha sido diseñado para crear y desarrollar a profesionales en la investigación privada a través de conocimientos teórico-prácticos, con una selecta elaboración de su plan de estudios con contenidos multidisciplinares hasta la elección de su profesorado con profesionales reconocidos en el área y con amplio bagaje tanto profesional como académico.
+                                    </p>
+                                </div>  
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        <b>Estudiar para detective privado</b> con AUCAL no es un sacrificio imposible de conseguir debido a que su impartición es online, lo que te permite poder compatibilizarlo con otras actividades.
+                                    </p>
+                                </div> 
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        Además, con el <b>curso de investigador privado</b> puedes optar a otras titulaciones anexas por lo que podrás obtener un total de 4 titulaciones:
+
+                                    </p>
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            Diploma de Extensión Universitaria de Detective Privado.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Perito Judicial en Blanqueo de Capitales y Financiación del Terrorismo.
+                                        </li>                                        
+                                        <li class="tipo-titulo">
+                                            Perito Judicial en Ciberseguridad.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Perito Judicial en Documentascopia.
+                                        </li>
+                                    </ul>
+                                </div>  
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        Tienes la posibilidad de registrarte en <b>Aspejure</b>, lo que te permitirá ejercer como perito judicial en los listados judiciales en los Tribunales Superiores de Justicia, Audiencia Provinciales y Juzgados Decanos, así como, los juzgados en las provincias que selecciones. 
+                                    </p>
+                                </div>                                                       
+                            </div> 
+                            <div class="tabs-video">
+                                <div class="center-title">
+                                    <p class="tab-h2">VIDEO DE PRESENTACION</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red"/>
+                                </div>
+                                <div class="video-curso">
+                                    <iframe src="https://www.youtube.com/embed/ErJfACoeqIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  alt="AUCAL Bussines School Video Superior Detective Privado"></iframe>
+                                </div>
+                            </div>                                                        
+                        </div>
+                        <!-- INFORMACION -->
+                        <div id="informacion" class="informacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Información</p>
+                                </div>                                
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Objetivos</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="informacion-txt">
+                                        Obteniendo el <b>título detective privado</b> alcanzarás los siguientes objetivos: 
+                                    </p>
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            <b> Proporcionar</b> las herramientas necesarias para el desarrollo de funciones como profesional en el área de la seguridad privada y en especial el ámbito de la investigación privada como detective privado.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            <b> Razonar</b> y comprender los procedimientos y funcionamiento de un despacho de detective privado y la legislación vigente de la investigación privada.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            <b>Manejar</b>  herramientas jurídicas, sociológicas o psicológicas necesarias en la investigación privada.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            <b> Conocer</b> las diferentes formas de delincuencia existentes, así como sus distintas facetas, realizando un análisis de sus partes fundamentales como son el delito, el delincuente, la víctima y el control del delito.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            <b> Analizar</b> los métodos de investigación para poder elegir el más adecuado en cada ocasión para obtener toda la información necesaria y requerida para la argumentación de conclusiones, así como integrar conocimientos necesarios afines a la criminología para comprender el escenario criminal.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            <b>Planificar</b> una investigación, aplicando herramientas y métodos necesarios para la realización de los diferentes tipos de seguimientos respetando siempre los límites legales de actuación para respetar los Derechos Fundamentales y libertades públicas.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            <b>Realizar</b> informes con las argumentaciones obtenidas para ratificar las conclusiones del caso, adoptando las medidas oportunas para que la investigación pueda ser utilizada como elemento de prueba válido en juzgados y Tribunales de Justicia.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            <b>Diseñar</b> estrategias de política criminal eficaces en la prevención y represión del fenómeno delictivo. 
+                                        </li>
+                                    </ul>                                                                            
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PLAN ESTUDIOS -->
+                        <div id="planEstudios" class="plan-estudios tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Asignaturas</p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">MATERIAS COMUNES (obligatorias)</p>
+                                </div>
+                                 <div class="plan-estudios-tabla">
+                                    <ul class="agignaturas-tabla">
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> ASIGNATURAS </span>                                            
+                                            <!--<span class="tabla-ect">ECTS</span> -->
+                                            <ul class="tabla-detalle">
+                                                <p class="plan-estudios-txt">
+                                                    <b>CURSO 1</b>
+                                                </p>                                          
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho Constitucional</li>
+                                                        <!--<li class="titulo-precio">6</li>-->
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Derecho Penal I</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Ciencias Sociales, Psicológicas y Criminológicas</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Seguridad Sectorial</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho Mercantil I</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho Procesal Penal</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Técnicas de Investigación Privada I</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Normativa de Seguridad Privada</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Peritaje en Ciberseguridad</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Vigilancias, Contravigilancias y Seguimientos</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="tabla-detalle">
+                                                <p class="plan-estudios-txt">
+                                                    <b>CURSO 2</b>
+                                                </p>                                             
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho Civil I</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Delitos Económicos y Societarios</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho Mercantil II</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Prevención de riesgos laborales</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho Penal II</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho Laboral</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Auditoría de Seguridad</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho Procesal Civil</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Seguridad Lógica, Física y Electrónica</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Técnicas de Investigación Privada II</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho Administrativo General I</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="tabla-detalle">
+                                                <p class="plan-estudios-txt">
+                                                    <b>CURSO 3</b>
+                                                </p>                                              
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho Civil II</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Derecho Administrativo General II</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Documentoscopia, Transmisiones, Imagen y Sonido</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Dirección y Gestión de un Departamento de Seguridad Privada</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Técnicas de Investigación Privada III</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Prevención de Riesgos Laborales y Seguridad contra Incendios</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Deontología de la Investigación Privada</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Prácticas de la Investigación Privada</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Trabajo Práctico Fin de Título </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>                                            
+                                        </li>                                       
+                                    </ul>
+                                </div>  
+                                <br>
+                                <div class="tabs-txt">
+                                    <p class="plan-estudios-txt-sm">
+                                        * Se contemplan convalidaciones para este programa académico, consultar con su Asesor Académico.
+                                    </p>
+                                    <p class="plan-estudios-txt-sm">
+                                        ** El pago de este título de Detective Privado se realizará anualmente.   
+                                    </p>
+                                </div>
+                                                                
+                            </div>
+                        </div>
+                        <!-- TITULACION -->
+                        <div id="titulacion" class="titulacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Titulación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El estudio de este <b>curso de detective privado online</b> te dará la titulación de “Diploma de Extensión Universitaria de Detective Privado” acreditada por la Universidad Antonio de Nebrija dotada con 180 ECTS. Además podrás acceder a otros diplomas otorgados por <b>AUCAL</b> Business School, obteniendo un total de 5 títulos:
+                                    </p>
+                                    <ul class="tabla-titulaciones">                                        
+                                        <li class="tipo-titulo">Diploma de Extensión Universitaria de Detective Privado</li>
+                                        <li class="tipo-titulo">Perito Judicial en Blanqueo de Capitales y Financiación del Terrorismo.</li>
+                                        <li class="tipo-titulo">Auditor de Seguridad</li>
+                                        <li class="tipo-titulo">Perito Judicial en Ciberseguridad</li>
+                                        <li class="tipo-titulo">Perito Judicial en Documentoscopia</li>
+                                    </ul>  
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN UNIVERSIDAD ANTONIO DE NEBRIJA
+                                    </p>                                      
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Diploma Superior Universitario Detective Privado"</p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-NEBRIJA.jpg" alt="AUCAL Bussines School Diploma Superior Detective Privado Nebrija" class="img-diploma">                                    
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN PROPIA AUCAL BUSINESS SCHOOL
+                                    </p>                                      
+                                </div> 
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Curso Superior de Detective Privado"</p>
+                                </div>           
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-AUCAL.jpg" alt="AUCAL Bussines School Portada Superior Detective Privado Propio Aucal" class="img-diploma">                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MATERIALES -->
+                        <div id="materiales" class="materiales tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Materiales</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El alumno dispondrá del material de estudio necesario para la realización de la formación en la plataforma virtual.                                    
+				                    </p>
+                                </div>  
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/material_aucal.png" alt="AUCAL Bussines School Material" class="materiales-img"/>
+                                </div>
+                            </div>
+                        </div>
+                    </di> <!-- TABS -->
+                </div> <!-- CUERPO -->
+            </div>
+        </aside>
+        <aside class="coordinador-perfil">
+            <!-- BIOGRAFIA COORDINADOR -->
+            <div class="tabs-banner-bottom">
+                <div class="banner-bottom-img">
+                    <img src="/2022/dist/images/coordis/carolina-sanz.png" alt="AUCAL Bussines School Corrdinador Curso Superior Detective Privado" class="img-coordinador"/>
+                </div>
+                <div class="banner-bottom-txt">
+                    <div class="tabs-title">
+                        <p class="tab-h2">Coordinadora del Curso</p>
+                        <p class="tab-h1">Carolina Sanz Hernández</p>
+                    </div>
+                    <div class="tabs-txt">
+                        <p class="banner-bottom-descript">
+                            Licenciada en Derecho; Máster en Asesoría Jurídica y Fiscal de Empresas; 
+                            Escuela de Práctica Jurídica. Abogada en ejercicio colegiada en el Ilustre 
+                            Colegio de Abogados de Valladolid. Profesora de derecho desde hace más de 7 años.
+                        </p>
+                    </div>
+                </div>                            
+            </div>   
+            <!-- PERFIL ALUMNO Y DOCUMENTACION -->
+            <div class="ficha-master">
+                <div class="perfil-alumno ficha-dropdown">
+                    <div class="drop-title">
+                         <div>
+                            <button class="dropbtn" onclick="show_hide(event, 'perfil')"> 
+                                <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>                                         
+                            </button>
+                         </div>
+                        <div>
+                            <p class="tab-h2">Perfil del alumno</p>   
+                        </div>                     
+                    </div>
+                    <div class="ficha-dropdown-txt" id="perfil">
+                        <p class="informacion-txt">
+                            Este <b>curso de Detective Privado online</b> está dirigido a profesionales de la seguridad privada y Cuerpos de Seguridad del Estado, así como a licenciados o graduados que estén relacionados directamente con la investigación y la seguridad, así como otras ramas como Derecho, peritaje,… Además de todos aquellos profesionales que quieran enfocar su carrera hacia la investigación y deseen ejercer como detective privado.
+                        </p>         
+                    </div>
+                </div>
+                <div class="documentacion ficha-dropdown">
+                    <div class="drop-title">
+                        <div>
+                           <button class="dropbtn" onclick="show_hide(event, 'documentacion')"> 
+                               <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                             <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                           </button>
+                        </div>
+                       <div>
+                           <p class="tab-h2">Documentación</p>   
+                       </div>                     
+                   </div>
+                    <div class="ficha-dropdown-txt" id="documentacion">
+                        <p class="informacion-txt">
+                            Para la obtención de la habilitación como Detective Privado es necesario cumplir con los requisitos académicos que impone el Ministerio del Interior: estar en posesión de la titulación de Bachiller o equivalente (FP II o acceso a la universidad para mayores de 25 años).
+                        </p> 
+                       
+                        <p class="informacion-txt">
+                            Puede revisar todos los requisitos exigidos por el Ministerio del Interior en el siguiente enlace:
+                            <a href="http://www.interior.gob.es/web/servicios-al-ciudadano/personal-de-seguridad-privada/detectives-privados/habilitacion" alt="AUCAL Bussines School Requisitos Gobierno Superior Detective Privado">Aquí</a>
+                        </p>
+                                                            
+                    </div>
+                </div>
+            </div>   
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-master"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-becas" class="btn-border" alt="AUCAL Bussines School Programa Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>         
+        <aside class="titulo-fomulario" id="formSolicitar">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <iframe frameborder="0" style="height:1150px;width:99%;border:none;" 
+            src='https://formulario.aucal.edu/aucalbusinessschool/form/FormularionuevaWebAUCAL/formperma/7-ULZDtrn9jf9iR3AmWEYjBwVmxtAmdLMjZk9fTGaYg'
+	    alt="AUCAL Bussines School Formulario Inscripcion"></iframe>  
+        </aside>
+    </div>
+{% endblock %}

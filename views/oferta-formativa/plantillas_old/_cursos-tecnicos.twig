@@ -1,0 +1,77 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content="Cursos Técnicos online de corta duración reconocidos y ví�lidos en toda la UE. Consigue tu títulaci�n oficial."/>
+    <link rel="stylesheet" href="/2022/dist/css/oferta.css"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/cursos-tecnicos.png">
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor" style="display: block"> 
+     <aside class="oferta-banner banner-tecnicos">            
+            <div class="oferta-title-banner center-head">
+                <div class="oferta-title center-title">
+                    <p class="h2-oferta">OFERTA EDUCATIVA</p>
+                </div>
+                <div class="oferta-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="oferta-txt center-title">
+                    <p class="h1-oferta">Cursos Técnicos</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="oferta-head">
+            <div class="center-title oferta-title-head">
+                <p class="oferta-h1">
+                    Reconocidos y válidos en toda la UE
+                </p>
+            </div> 
+            <div class="oferta-txt-head">
+                <p class="oferta-txt">
+                    Nuestros <b>Cursos Técnicos</b> son aquellos que se componen de un 
+                    programa o malla curricular corto, generalmente menor a 6 
+                    meses de duración y que poseen dentro de sus características, 
+                    salidas laborales rápidas y con mayor especialización en el área. 
+                    Podemos encontrar títulos universitarios como propios.
+                </p>
+            </div> 
+        </aside>
+        <aside class="oferta-btns ">
+            <div class="oferta-cards oferta-cards-tecnicos">  
+                <div class="oferta-card card-perito">
+                    <a href="/oferta-formativa/curso-tecnico/curso-perito-judicial-inmobiliario" class="oferta-a" alt="AUCAL Bussines School Curso Tecnico Perito Judicial Tasaciones Valoraciones Inmobiliarias">
+                        <div class="ofer-card-title">
+                            <p class="card-title"> Perito Judicial en Tasaciones y Valoraciones Inmobiliarias</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-administrador">
+                    <a href="/oferta-formativa/curso-tecnico/curso-administracion-de-fincas" class="oferta-a" alt="AUCAL Bussines School Curso Tecnico Administracion Fincas">
+                        <div class="ofer-card-title">
+                            <p class="card-title">Especialista en Administración de Fincas</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-familiar">
+                    <a href="/oferta-formativa/curso-tecnico/curso-mediacion-familiar" class="oferta-a" alt="AUCAL Bussines School Curso Tecnico Mediacion Familiar">
+                        <div class="ofer-card-title">
+                            <p class="card-title">Mediación Familiar</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-pymes">
+                    <a href="/oferta-formativa/curso-tecnico/curso-gestion-de-empresas" class="oferta-a" alt="AUCAL Bussines School Curso Tecnico Gestion Empresas Pymes">
+                        <div class="ofer-card-title">
+                            <p class="card-title">Experto en Gestión de Pymes</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <aside class="oferta-links">
+            <a href="/oferta-formativa/curso-superior" class="link-superiores" alt="AUCAL Bussines School Cursos Superiores">VER CURSOS SUPERIORES >> </a>
+            <a href="/oferta-formativa/master-oficial" class="link-tecnicos" alt="AUCAL Bussines School Masters Masteres">VER MÁSTERES >></a>
+        </aside>
+    </div>
+{% endblock %}

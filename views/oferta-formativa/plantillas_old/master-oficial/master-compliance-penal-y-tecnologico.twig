@@ -1,0 +1,530 @@
+{% extends 'app/app.twig' %}
+{% block head %}
+    <meta name="description" content="Matricúlate en nuestro Máster Compliance y obtén los conocimientos necesarios para conocer los riesgos a los que se enfrenta cualquier organización y ser un verdadero Compliance Officer"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/master-compliance-penal-thun.png">
+    <link rel="stylesheet" href="/2022/dist/css/master-cursos.css"/>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor"> 
+        <aside class="cursos-banner banner-compliance">            
+            <div class="cursos-title-banner center-head">
+                <div class="cursos-title center-title">
+                    <p class="h2-cursos">MÁSTERES OFICIALES</p>
+                </div>
+                <div class="cursos-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="cursos-txt center-title">
+                    <p class="h1-cursos">Estudia el Máster Universitario en Compliance Penal y Tecnológico</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="cursos-tabs">
+            <div class="tabs-container">
+                <div class="tabs-head tabs-head-responsive">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Máster Universitario en Compliance Penal y Tecnológico</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                60 ECTS | 9 meses | Online <br/>
+                                Título Oficial de Universidad of Management - Universitá LUM <br/>
+                                Título propio Aucal 
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="https://formulario.aucal.edu/aucalbusinessschool/form/Solicituddecurso/formperma/QQmW1lAAqnFEUwcK0dnScLHFPwCuXaT5TdsO7n3Ro9E" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion" target="_blank">Hoja de Admisión</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'presentacion')">
+                            <span class="cursos-tablink">PRESENTACIÓN</span>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'informacion')">
+                            <span class="cursos-tablink">INFORMACIÓN</span>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'planEstudios')">
+                             <span class="cursos-tablink">PLAN DE ESTUDIOS</span>
+                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'titulacion')">
+                            <span class="cursos-tablink">TITULACIÓN</span>
+                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'materiales')">
+                            <span class="cursos-tablink">MATERIALES</span>                        
+                        </li>
+                    </ul>
+                </div>  
+                <div class="tabs-head tabs-head-principal">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Máster Universitario en Compliance Penal y Tecnológico</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                60 ECTS | 9 meses | Online <br/>
+                                Título Oficial de Universidad of Management - Universitá LUM <br/>
+                                Título propio Aucal
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="https://formulario.aucal.edu/aucalbusinessschool/form/Solicituddecurso/formperma/QQmW1lAAqnFEUwcK0dnScLHFPwCuXaT5TdsO7n3Ro9E" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion" target="_blank">Hoja de Admisión</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-cuerpo">
+                    <div class="tabs-widgets">
+                        <div class="tab-sec">
+                            <ul class="tab-sec-list">
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'presentacion')" >
+                                    <p class="tab-sec-txt">PRESENTACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'informacion')">
+                                    <p class="tab-sec-txt">INFORMACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'planEstudios')">
+                                    <p class="tab-sec-txt">PLAN DE ESTUDIOS</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'titulacion')">
+                                    <p class="tab-sec-txt">TITULACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'materiales')">
+                                    <p class="tab-sec-txt">MATERIALES</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-program">
+                            <div class="tabs-program-img">
+                                <img src="/2022/dist/images/oferta/portada_dosier_compliance.PNG" alt="AUCAL Bussines School Portada Master Compliance Penal Tecnologico" class="image-program">
+                            </div>
+                            <div class="tabs-program-pdf btn-red-normal">
+                                <a href="/2022/dist/pdf/AUCAL-dossier-Master-Compliance-Penal-Tecnologico.pdf" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa Master Compliance Penal Tecnologico">
+                                    <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                    <img src="/2022/dist/images/icons/descarga-blanco.png" alt="AUCAL Bussines School Descargar Master Compliance Penal Tecnologico" class="btn-descarga-blanco" >                                            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <!-- PRESENTACION --> 
+                        <div class="presentacion tab" id="presentacion">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Presentación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El <b>Máster en Compliance</b> te permitirá tener los conocimientos necesarios para conocer 
+                                        los riesgos a los que se enfrenta cualquier organización y ser un verdadero <b>Compliance Officer</b>. 
+                                        Además, podrás profundizar en materias como prevención del fraude, soborno, 
+                                        blanqueo de capitales, financiación del terrorismo, protección de datos personales, 
+                                        responsabilidad social corporativa, <b>ESG</b> (Environmental, Social and Governance), riesgos 
+                                        laborales, conducta con consumidores y usuarios o propiedad intelectual e industrial. 
+                                    </p>
+                                </div>   
+                                 <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        Aprenderás en qué consisten los <b>riesgos tecnológicos</b> a los que se enfrentan las empresas, 
+                                        incluyendo todos aquellos <b>ciberriesgos</b> que cada día son más comunes y variados. 
+                                        Conocidos estos riesgos, profundizarás en las actividades y  <b>acciones necesarias para prevenirlos</b>, 
+                                        evitarlos y reaccionar frente a ellos. Se aprenderán las herramientas más importantes para prevenir 
+                                        la comisión de delitos en una organización: canales de denuncias, formación y concienciación, 
+                                        desarrollo de normativa interna, sistemas disciplinarios; la contextualización de por qué es 
+                                        importante el Compliance y sobre el auge actual de la tecnología.
+                                    </p>
+                                </div>  
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        El <b>Máster en Compliance</b> cuenta con el apoyo y la estrecha colaboración 
+                                        de dos de los principales organismos en materias de Compliance y Anticorrupción, 
+                                        de modo que al finalizar los estudios, obtendrás acceso directo y preparado para 
+                                        superar los exámenes que te permitirán obtener ambas certificaciones internacionales:
+                                    </p>  
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            <b>Instituto Oficiales Cumplimiento (IOC): </b>creado por responsables de Cumplimiento de compañías multinacionales y abierto a todos los profesionales con interés en el desarrollo de esta profesión, se configura como una institución de referencia en el creciente ámbito de la profesión de Compliance Officer, siendo uno de sus objetivos fundamentales formar a profesionales del Compliance en base a los más altos estándares internacionales.
+                                        </li>
+                                        <br/>
+                                        <li class="tipo-titulo">
+                                            <b>Asociación Internacional para la Cooperación en la Prevención del Fraude (ICPF): </b>es una asociación sin ánimo de lucro cuya finalidad es contribuir al desarrollo, difusión y profesionalización de la prevención y gestión del fraude, abarcando un enfoque multidisciplinar que intensifique la toma de conciencia e importancia de lo que significa la lucha contra el fraude. Para ello, pretende ser un referente en español de la prevención y detección del fraude y ser un instrumento adecuado para aglutinar profesionales y entidades, privadas o públicas preocupadas por la innovación, el análisis, la mejora y la proyección a futuro de la prevención del fraude. Todo ello siempre bajo el compromiso de la excelencia, la ética, la innovación y el respeto, contando con un Comité Internacional de Coordinación Académica (CICA) que está constituido por un equipo de profesionales expertos en prevención y gestión del fraude con amplia experiencia en compañías multinacionales.
+                                        </li>                                   
+                                    </ul>                                  
+                                </div>                                
+                            </div>
+                            <!-- <div class="tabs-video">
+                                <div class="center-title">
+                                    <p class="tab-h2">VIDEO DE PRESENTACION</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red"/>
+                                </div>
+                                <div class="video-curso">
+                                    <iframe width="280" height="180" src="https://www.youtube.com/embed/jyJt3PtypNg" alt="AUCAL Bussines School Video Master Compliance Penal Tecnologico"></iframe>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!-- INFORMACION --> 
+                        <div id="informacion" class="informacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Información</p>
+                                </div>                         
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Objetivos</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="informacion-txt info-psico">
+                                        El objetivo principal es desarrollar e implementar los conocimientos teóricos y prácticos necesarios 
+                                        para un modelo de prevención y control de delitos relacionados con el cumplimiento normativo de la persona jurídica, 
+                                        haciendo hincapié en los aspectos tecnológicos y digitales del mismo.
+                                    </p> 
+                                    <p class="informacion-txt info-psico">
+                                       Esto es posible a través de la consecución de objetivos específicos fundamentales como son:
+                                    </p>                                     
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            La profunda comprensión de la responsabilidad penal de las personas jurídicas y sus implicaciones.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                             El conocimiento del contexto digital y tecnológico, así como sus riesgos, en el que a día de hoy se encuentra inevitablemente inmersa cualquier organización.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            La capacidad de adaptación a las necesidades normativas y técnicas siempre en continua transformación.
+                                        </li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PLAN ESTUDIOS -->
+                        <div id="planEstudios" class="plan-estudios tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Asignaturas</p>
+                                </div>                               
+                                <div class="tabs-txt">
+                                    <p class="plan-estudios-txt">
+                                        El Máster en Compliance distribuye los 60 ECTS en las siguientes asignaturas
+                                    </p>
+                                </div>
+                                <div class="plan-estudios-tabla">
+                                    <ul class="agignaturas-tabla">
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> ASIGNATURAS </span>
+                                            <span class="tabla-ect">ECTS</span>
+                                            <ul class="tabla-detalle">                                                
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Introducción al Compliance</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript"> RSC y ESG: Responsabilidad social corporativa, ética empresarial, medioambiente y sostenibilidad</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Anticorrupción y prevención del fraude</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Blanqueo de capitales y financiación del terrorismo</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Diseño e implantación de un Programa de Compliance, mitigación de riesgos de Compliance y figura del Compliance Officer</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript"> Compliance sectorial y en el mundo</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold"> Ciberdelincuencia</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Protección de datos personales y mitigación de riesgos tecnológicos</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold"> Otros riesgos que afectan a las organizaciones</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">TRABAJO FIN DE MÁSTER (TFM)</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="tabla-total">
+                                            <span class="tabla-title">TOTALES</span>
+                                            <span class="tabla-ect">60</span>
+                                        </li>
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- TITULACION -->
+                        <div id="titulacion" class="titulacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Titulación</p>
+                                </div>
+                               <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN OFICIAL UNIVERSIDAD OF MANAGEMENT - Università LUM
+                                    </p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Máster Universitario en Compliance Penal y Tecnológico"</p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-SCHOOL.jpg" alt="AUCAL Bussines School Diploma Master Compliance Penal Tecnologico Scholl of Management" class="img-diploma diploma-school">                                    
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                       TITULACIÓN PROPIA AUCAL BUSINESS SCHOOL
+                                    </p>                                      
+                                </div>  
+                                 <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Máster en Compliance Penal y Tecnológico"</p>
+                                </div>          
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-AUCAL.jpg" alt="AUCAL Bussines School Diploma Propio Aucal Master Compliance Penal Tecnologico" class="img-diploma">                                    
+                                </div>
+                                <div class="tab-resu-txt">
+                                   <p class="tab-h2">
+                                        <a href="/2022/dist/pdf/sistema-equivalencia-sistema-educacional-italiano.pdf" target="_blank" alt="AUCAL Bussines School Programa Master Compliance Penal Tecnologico">Equivalencias</a>
+                                    </p>
+                                </div>
+                                <br/>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        Además, con la realización del examen CICO obtendrás:
+                                    </p>
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">Una <b>Certificación reconocida internacionalmente </b>  y avalada por el IOC.</li>
+                                        <li class="tipo-titulo">Mayores  <b>oportunidades </b> de inserción en el mercado laboral.</li>
+                                        <li class="tipo-titulo">Impulso en tu <b>carrera profesional</b> y aumento del prestigio profesional.</li>
+                                        <li class="tipo-titulo">Ampliar y actualizar tus conocimientos relativos a la <b>Función de Cumplimiento</b>, con la obtención de una perspectiva global de la misma.</li>
+                                    </ul>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">CERTIFICACIONES ADICIONALES</p>
+                                </div> 
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        Cuando termines el estudio de este Máster en Compliance, podrás optar de manera voluntaria y pagando una tarifa independiente, 2 certificaciones internacionales muy reconocidas en el sector. 
+                                    </p>                              
+                                </div> 
+                                <br/>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        <b>CERTIFICADO INTERNACIONAL CICO</b> 
+                                    </p> 
+                                    <p class="presentacion-txt">
+                                        El Instituto de Oficiales de Cumplimiento (IOC) ha elaborado un sistema de Certificación de Profesionales de Cumplimiento, basado en la experiencia y la cualificación técnica. Esta Certificación es un elemento de valor para que las organizaciones, entidades y empresas, públicas o privadas, puedan contar con una evidencia contrastada sobre la aptitud e idoneidad de los eventuales candidatos a desarrollar, en o para las mismas, responsabilidades relacionadas con la <b>Función de Cumplimiento (Compliance Officer).</b>
+                                    </p>                                                                     
+                                </div>  
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-cico.png" alt="AUCAL Bussines School Diploma Master Compliance Penal Tecnologico CICO" class="img-diploma diploma-compliance">                                    
+                                </div>
+                                <br/>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        <b>CERTIFICADO INTERNACIONAL CIEAF</b> 
+                                    </p>
+                                    <p class="presentacion-txt">
+                                        El Certificado Internacional de Experto Anti-Fraude (CIE-AF®) emitido por la Asociación Internacional para la Cooperación en la Prevención del Fraude (ICPF), es una certificación profesional con reconocimiento internacional que acredita que, los profesionales que la obtienen, cuentan con suficientes conocimientos profesionales en el ámbito de la Prevención, Control e Investigación de Fraude.
+                                    </p>                                                                    
+                                </div>  
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-cieaf.png" alt="AUCAL Bussines School Diploma Master Compliance Penal Tecnologico CIEAF" class="img-diploma diploma-compliance">                                    
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- MATERIALES -->
+                        <div id="materiales" class="materiales tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Materiales</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El alumno dispondrá del material de estudio necesario para la realización de la formación en la plataforma virtual.                                    
+				                    </p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/material_aucal.png" alt="AUCAL Bussines School Material Master Compliance Penal Tecnologico" class="materiales-img"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- .tabs -->
+                </div>    <!-- .tabs-cuerpo -->              
+            </div> <!-- tabs-container -->
+        </aside>
+        <aside class="coordinador-perfil">
+            <!-- BIOGRAFIA COORDINADOR -->
+            <div class="tabs-banner-bottom">
+                <div class="banner-bottom-img">
+                    <img src="/2022/dist/images/coordis/bernard-cortijo.png" alt="AUCAL Bussines School Coordinador Master Compliance Penal Tecnologico" class="img-coordinador"/>
+                </div>
+                <div class="banner-bottom-txt">
+                    <div class="tabs-title">
+                        <p class="tab-h2">Coordinador del Máster</p>
+                        <p class="tab-h1">Bernard Cortijo</p>
+                    </div>
+                    <div class="tabs-txt">
+                        <p class="banner-bottom-descript">
+                            Experto en Compliance Officer y DPO; Grado en Derecho; 
+                            Ingeniería Superior Civil; Licenciatura en Ciencias Policiales; 
+                            Máster en Comunicaciones, en Derecho Internacional e Internet. 
+                            Analista Superior de Sistemas, Inteligencia Artificial y Sistemas 
+                            Expertos; Detective Privado, Perito Judicial colegiado y Director 
+                            de Seguridad acreditado por el Ministerio del Interior. Experiencia 
+                            en docencia más de 15 años.
+                        </p>
+                    </div>
+                </div>                            
+            </div>   
+            <!-- PERFIL ALUMNO Y DOCUMENTACION -->    
+            <div class="ficha-master">
+                <div class="perfil-alumno ficha-dropdown">
+                    <div class="drop-title">
+                         <div>
+                            <button class="dropbtn" onclick="show_hide(event, 'perfil')"> 
+                                <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                              <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                            </button>
+                         </div>
+                        <div>
+                            <p class="tab-h2">Perfil del alumno</p>   
+                        </div>                     
+                    </div>
+                    <div class="ficha-dropdown-txt" id="perfil">
+                        <p class="informacion-txt">
+                            El Máster Universitario en Compliance Penal y Tecnológico se encuentra <b>dirigido principalmente</b> a:
+                        </p>
+                        <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo"><span class="titulo-title">Alumnos que han terminado su Grado:</span> Aquellos en posesión de titulación universitaria, grado o máster</li>
+                            <li class="tipo-titulo"><span class="titulo-title">Compliance Officers:</span> Aquellos profesionales del cumplimiento normativo</li>
+                            <li class="tipo-titulo"><span class="titulo-title">Profesionales de las áreas de Derecho:</span> Interesados en el cumplimiento normativo de una empresa</li>
+                            <li class="tipo-titulo"><span class="titulo-title">Profesionales Interesados:</span> Cualquier profesional con interés en el compliance y ciber riesgo</li>
+                        </ul>
+                        <br/>
+                        <p class="informacion-txt">
+                            Algunas de las oportunidades laborales que el alumno del Máster en Compliance podrá optar después de terminar sus estudios:
+                        </p>
+                        <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo"><b>Compliance Officer.</b></li>
+                            <li class="tipo-titulo"><b>Analista y Auditor de cumplimiento normas</b></li>
+                            <li class="tipo-titulo"><b>Experto en Función de Cumplimiento.</b></li>
+                            <li class="tipo-titulo"><b>Investigador de Fraude.</b></li>
+                        </ul>
+                    </div>                   
+                </div>
+                <div class="documentacion ficha-dropdown">
+                    <div class="drop-title">
+                        <div>
+                           <button class="dropbtn" onclick="show_hide(event, 'documentacion')"> 
+                               <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                             <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                           </button>
+                        </div>
+                       <div>
+                           <p class="tab-h2">Documentación</p>   
+                       </div>                     
+                   </div>
+                    <div class="ficha-dropdown-txt" id="documentacion">
+                        <p class="informacion-txt">
+                            Si estás interesado en estudiar este programa académico en Compliance, de título oficial, debes cumplir con la entrega de los siguientes documentos:
+                        </p>
+                        <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo">Fotocopia de documento de identificación.</li>
+                            <li class="tipo-titulo">Foto tipo carnet (o pasaporte).</li>
+                            <li class="tipo-titulo">Titulo Universitario oficial:
+                                <ul style="margin: 1em 0 0 1em;">
+                                    <li style="list-style: disc; margin-left: 1em;">Para Europeos: SET (Suplemento Europeo al Titulo).</li>
+                                    <li style="list-style: disc; margin-left: 1em;">Para LATAM: Declaración de Valor al Italiano o Título con Apostilla de La Haya.</li>
+                                </ul>
+                            </li>
+                            <li class="tipo-titulo">Hoja de Admisión completa y firmada.</li>
+                            <li class="tipo-titulo">Comprobante de pago reserva de plaza.</li>                            
+                        </ul>    
+                        <p class="informacion-txt">
+                            En el caso de que no poseas alguno de estos documentos, 
+                            los interesados tienen la posibilidad de sacar el 
+                            Título Profesional de este Máster emitido por AUCAL Business School 
+                            y a un precio mucho más económico (en este caso no se piden requisitos de ingreso).
+                        </p>                                                           
+                    </div>
+                </div>
+            </div>   
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-master"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-becas" class="btn-border" alt="AUCAL Bussines School Programa Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>         
+        <aside class="titulo-fomulario" id="formSolicitar">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <iframe frameborder="0" style="height:1150px;width:99%;border:none;" 
+            src='https://formulario.aucal.edu/aucalbusinessschool/form/FormularionuevaWebAUCAL/formperma/7-ULZDtrn9jf9iR3AmWEYjBwVmxtAmdLMjZk9fTGaYg' alt="AUCAL Bussines School Formulario Inscripcion">
+            </iframe>  
+        </aside>
+    </div>
+{% endblock %}

@@ -1,0 +1,354 @@
+.talento{
+    background-color: white;
+    margin: 1em auto;
+    display: grid;
+    line-height: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+        "talent-head        talent-head        talent-head"
+        "talent-subtitle    talent-subtitle    talent-subtitle"
+        "talent-cards       talent-cards       talent-cards"
+        "talent-enlace      talent-enlace      talent-enlace"
+        "talent-buttons     talent-buttons     talent-buttons";
+}
+
+/* CABECERA */
+.talento .talent-head{ grid-area: talent-head; }
+
+.talento .talent-subtitle{
+    grid-area: talent-subtitle;
+    height: 2em;
+    padding: 0;
+}
+
+.talento .talent-subtitle>p{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0.3em;
+}
+
+/* TARJETAS */
+.talento .talent-cards{
+    grid-area: talent-cards;
+    height: max-content;
+    width: 90%;
+    margin: 3em auto 0 auto;
+    gap: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Tarjeta */
+.talento .talent-cards>div{
+    height: max-content;
+    width: 90%;
+    padding: 1em;
+    background-color: white;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    box-shadow: -1px 12px 20px 10px #d2d2d2;
+}
+
+
+/* Iconos */
+.talento .talent-cards>div .talent-icons{
+    height: 7rem;
+    width: 7rem;
+    margin-top: 1em;
+    border: 3px solid #7F0000;
+    border-radius: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.talento .talent-cards .talent-icons> img{ height: 4rem;}
+
+/* Textos */
+.talento .talent-cards .talent-card .talent-card-txt{
+    height: 12rem;
+    line-height: 1.2rem;  
+}
+
+/* Título */
+.talento .talent-cards .talent-card .talent-card-txt .talent-card-title { 
+    margin: 2em auto ; 
+    line-height: 1.6rem;  
+    align-items: center;
+}
+
+.talento .talent-cards .talent-card .talent-card-txt .talent-card-title .card-h3{
+    font-size: 20px;
+    height: 3em;  
+    align-self: center; 
+    text-align: center;
+}
+
+/* Descripción */
+.talento .talent-cards .talent-card .talent-card-txt .talent-card-title .card-descript{
+    height: 4rem;
+    font-size: 15px;
+    width: 90%;
+}
+
+/* Botón */
+.talento .talent-cards .talent-card .talent-card-btn{ padding-bottom: 1em; }
+
+.talento .talent-cards .talent-card .talent-card-btn>a{
+    display: grid;
+    width: 7em;
+    height: 2.5em;
+    align-items: center;
+}
+
+/* ENLACE */
+.talento .talent-enlace{
+    grid-area: talent-enlace;
+    padding: 2em 0 4em 0;
+    font-size: 15px;   
+}
+
+/* BOTONES GRANDES */
+.talento .talent-buttons{
+    grid-area: talent-buttons;
+    gap: 6rem;
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1rem;
+}
+
+.talento .talent-buttons>a{
+    width: 32em;
+    height: 9rem;
+    display: grid;
+    grid-template-columns: 15rem 9rem;
+}
+
+.talento .talent-buttons>a:hover{ color: #F8B100;}
+
+.talento .talent-buttons>a .talent-h2{
+    display: grid;
+    align-content: center;
+    justify-content: left;
+    font-size: 22px;
+    padding: 1em 2em;
+}
+
+.talento .talent-buttons .talent-btn1{
+    display: grid;
+    justify-self: end;
+}
+
+.talento .talent-buttons .talent-btn1 .talent-h2{ padding-left: 2rem; }
+
+.talento .talent-buttons>a img{  height: 10rem;}
+
+/***************************************************************/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+   
+    /* Iconos */
+    .talento .talent-cards>div .talent-icons{
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .talento .talent-cards .talent-icons> img{ height: 3rem; }
+
+    /* BOTONES GRANDES */
+    .talento .talent-buttons{ gap: 2rem; }
+
+    .talento .talent-buttons>a{
+        height: 9em;
+        line-height: 1.5rem;
+        grid-template-columns: 17rem 6rem;
+    }
+
+    .talento .talent-buttons>a .talent-h2{
+        font-size: 1.5rem;
+        padding:  0 1em 2em;
+    }
+
+    .talento .talent-buttons .talent-btn1 .talent-h2{ padding-left: 2rem; }
+
+    .talento .talent-buttons>a img{
+        padding-left: 3em;
+        height: 10rem;
+    }
+}
+
+/***************************************************************/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    /* TARJETAS */
+    .talento .talent-cards{
+        width: 80%;
+        padding: 0;
+        gap: 1em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Tarjeta */
+    .talento .talent-cards>div{
+        width: 90%;
+        padding: 1em;
+    }
+
+    /* Iconos */
+    .talento .talent-cards>div .talent-icons{
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .talento .talent-cards .talent-icons> img{ height: 3rem;  }
+
+    /* Texto */
+    .talento .talent-cards .talent-card .talent-card-txt {
+        height: 9rem; 
+        line-height: 1.5em;
+    }
+
+    .talento .talent-cards .talent-card .talent-card-txt .talent-card-title{margin: 1em auto;}
+
+    .talento .talent-cards .talent-card .talent-card-txt .talent-card-title .card-h3{ 
+        font-size: 15px;
+        height: 1.5em;
+    }
+
+    
+    /* ENLACE */
+    .talento .talent-enlace{  padding-bottom: 1em; }     
+
+    /* BOTONES GRANDES */
+    .talento .talent-buttons{
+        display: block;
+        width: 90%;
+        padding: 1em;
+        margin: 0 auto;
+    }
+
+    .talento .talent-buttons>a{
+        width: 95%;
+        height: 9em;
+        line-height: 1.5rem;
+        grid-template-columns: 17rem 6rem;
+    }
+
+    .talento .talent-buttons>a .talent-h2{
+        font-size: 1.6rem;
+        line-height: normal;
+        text-align: left;
+        padding: 0.5em 0 1em 2em;
+    }
+    
+    .talento .talent-buttons>a img{
+        padding-left: 10em;
+        height: 10rem;
+    } 
+
+    .talento .talent-buttons .talent-btn1{ margin-bottom: 1em;  }
+}
+
+@media (max-width: 768px){
+    .talento .talent-cards{
+        width: 70%;
+        padding: 1em 0 0 0;
+        gap: 0;
+        display: inline;
+    }
+
+    /* Tarjeta */
+    .talento .talent-cards>div{
+        width: 80%;  
+        margin: 1em auto;
+    }
+
+    /* Iconos */
+    .talento .talent-cards>div .talent-icons{
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .talento .talent-cards .talent-icons> img{  height: 3rem;  }
+
+    /* Textos */
+    .talento .talent-cards .talent-card .talent-card-txt{
+        line-height: 1.2rem;
+        height: 10em;
+    }
+
+    /* Título */
+    .talento .talent-cards .talent-card .talent-card-txt .talent-card-title { margin: 0.5em 0;  }
+
+    .talento .talent-cards .talent-card .talent-card-txt .talent-card-title .card-h3{
+        height: 3rem;
+        font-size: 15px;    
+    }
+
+    /* Descripción */
+    .talento .talent-cards .talent-card .talent-card-txt .talent-card-title .card-descript{
+        height: 2rem;
+        font-size: 15px;
+    }
+    
+    /* ENLACE */
+    .talento .talent-enlace{ 
+        width: 90%;
+        margin: 0 auto;
+        font-size: 12px;
+        padding-bottom: 1em;
+    }
+
+    /* BOTONES GRANDES */
+    .talento .talent-buttons{
+        display: block;
+        width: 80%;
+        padding: 1em;
+        margin: 0 auto;
+    }
+
+    .talento .talent-buttons>a{
+        width: 90%;
+        height: 6em;
+        margin-bottom: 1em;
+    }
+
+    .talento .talent-buttons>a .talent-h2{
+        font-size: 15px;
+        line-height: normal;
+        text-align: left;
+        padding: 0.5em 0 1em 2em;
+    }
+    
+    .talento .talent-buttons>a img{
+        padding: 0;
+        height: 6em;
+    }
+
+    .talento .talent-enlace>a{
+        padding-bottom: 2em;
+        font-size: 0.9rem;   
+    }
+
+}
+
+/***************************************************************/
+
+@media (max-width: 575.98px) { 
+	
+	.talento .talent-buttons>a .talent-h2 {
+		font-size: 15px;
+		padding:0.5em;
+	}	
+	
+	.talento .talent-buttons>a img {display:none;}
+	
+	.talento .talent-buttons .talent-btn1 .talent-h2 {
+    		padding-left: 1rem;
+	}
+}
+

@@ -1,0 +1,501 @@
+{% extends 'app/app.twig' %}
+{% block head %}
+    <meta name="description" content="Conviértete en un profesional del área de gestión de recursos humanos. ¡100% online!"/>
+    <meta property="og:image" content="master-recursos-humanos-thun.png">
+    <link rel="stylesheet" href="/2022/dist/css/master-cursos.css"/>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor">
+        <aside class="cursos-banner banner-rrhh">            
+            <div class="cursos-title-banner center-head">
+                <div class="cursos-title center-title">
+                    <p class="h2-cursos">MÁSTERES OFICIALES</p>
+                </div>
+                <div class="cursos-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="cursos-txt center-title">
+                    <p class="h1-cursos">Máster Universitario en Dirección de Recursos Humanos y Salud Laboral</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="cursos-tabs">
+            <div class="tabs-container">
+                <div class="tabs-head tabs-head-responsive">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Máster Universitario en Dirección de Recursos Humanos y Salud Laboral en AUCAL</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                60 ECTS | 9 meses | Online <br/>
+                                Título Oficial de Universidad of Management - Universitá LUM <br/>
+                                Título propio Aucal 
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="https://formulario.aucal.edu/aucalbusinessschool/form/Solicituddecurso/formperma/QQmW1lAAqnFEUwcK0dnScLHFPwCuXaT5TdsO7n3Ro9E" class="btn-yellow" alt="AUCAL Bussines School Master Matricula Inscripcion">Hoja de Admisión</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'presentacion')">
+                            <span class="cursos-tablink">PRESENTACIÓN</span>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'informacion')">
+                            <span class="cursos-tablink">INFORMACIÓN</span>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'planEstudios')">
+                             <span class="cursos-tablink">PLAN DE ESTUDIOS</span>
+                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'titulacion')">
+                            <span class="cursos-tablink">TITULACIÓN</span>
+                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'materiales')">
+                            <span class="cursos-tablink">MATERIALES</span>                        
+                        </li>
+                    </ul>
+                </div>  
+                <div class="tabs-head tabs-head-principal">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Máster Universitario en Dirección de Recursos Humanos y Salud Laboral en AUCAL</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                60 ECTS | 9 meses | Online <br/>
+                                Título Oficial de Universidad of Management - Universitá LUM <br/>
+                                Título propio Aucal 
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="https://formulario.aucal.edu/aucalbusinessschool/form/Solicituddecurso/formperma/QQmW1lAAqnFEUwcK0dnScLHFPwCuXaT5TdsO7n3Ro9E" class="btn-yellow" alt="AUCAL Bussines School Master Matricula Inscripcion">Hoja de Admisión</a>
+                        </div>
+                    </div>
+                </div>  
+                <div class="tabs-cuerpo">
+                    <div class="tabs-widgets">
+                        <div class="tab-sec">
+                            <ul class="tab-sec-list">
+                                <li class="tab-link" href="javascript:void(0)"onclick="changeTab(event,'presentacion')" >
+                                    <p class="tab-sec-txt">PRESENTACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)"  onclick="changeTab(event,'informacion')">
+                                    <p class="tab-sec-txt">INFORMACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'planEstudios')">
+                                    <p class="tab-sec-txt">PLAN DE ESTUDIOS</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'titulacion')">
+                                    <p class="tab-sec-txt">TITULACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'materiales')">
+                                    <p class="tab-sec-txt">MATERIALES</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-program">
+                            <div class="tabs-program-img">
+                                <img src="/2022/dist/images/oferta/portada-master-rrhh.PNG" alt="AUCAL Bussines School Portada Master Direccion Recursos Humanos RRHH" class="image-program">
+                            </div>
+                            <div class="tabs-program-pdf btn-red-normal">
+                                <a href="/2022/dist/pdf/AUCAL-Dossier-Master-rrhh.pdf" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa Master Direccion Recursos Humanos RRHH">
+                                    <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                    <img src="/2022/dist/images/icons/descarga-blanco.png" alt="AUCAL Bussines School Descargar Master Direccion Recursos Humanos RRHH" class="btn-descarga-blanco">                                            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <!-- PRESENTACION -->
+                        <div class="presentacion tab" id="presentacion">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Presentación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El <b>Máster en Dirección de Recursos Humanos y Salud Laboral</b> capacita para ser capaz de dominar las diferentes 
+                                        técnicas y herramientas que componen este importante departamento dentro de todas las compañías. 
+                                        Proporcionando el conocimiento, aptitudes, habilidades y conexiones necesarias para el 
+                                        desarrollo profesional en el área de <b>gestión de recursos humanos.</b>
+                                    </p>
+                                </div>                                
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        Se convertirá en un profesional capaz de desempeñar su labor de una manera eficiente y eficaz 
+                                        ante un entorno cambiante y altamente competitivo.
+                                    </p>
+                                    <p class="presentacion-txt">
+                                        El <b>Máster en RRHH</b> permitirá al alumno conocer todas las áreas de <b>Gestión de Recursos Humanos:</b> 
+                                        gestión de personal, <b>gestión de equipos de trabajo,</b> derecho laboral, técnicas de negociación, 
+                                        gestión del desempeño, políticas de selección, formación, acogida y retribución de los empleados.
+                                    </p>
+                                    <p class="presentacion-txt">
+                                        El alumno titulado de este <b>máster recursos humanos online</b> será un experto en la 
+                                        gestión de personas, gestión de la innovación, cultura empresarial y employer branding, 
+                                        cuya finalidad no será otra que alcanzar el éxito empresarial.
+                                    </p>
+                                    <p class="presentacion-txt">
+                                        Las habilidades directivas, la estrategia empresarial, las nuevas tendencias y modelos de 
+                                        gestión de personas, la cultura empresarial y employer branding, entre otros, serán elementos 
+                                        prioritarios de análisis dentro de la función del director de <b>Recursos Humanos.</b>
+                                    </p>
+                                    <p class="presentacion-txt">
+                                        <b>Máster Oficial en RRHH online</b> que tiene una duración de 12 meses, es un título oficial 
+                                        de la universidad Pegaso reconocido en más de 49 países de acuerdo al Plan Bolonia.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tabs-video">
+                                <div class="center-title">
+                                    <p class="tab-h2">VIDEO DE PRESENTACION</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red"/>
+                                </div>
+                                <div class="video-curso">                                        
+                                    <iframe src="https://www.youtube.com/embed/5S-e_dSErj0" alt="AUCAL Bussines School Video Master Direccion Recursos Humanos RRHH"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- INFORMACION --> 
+                        <div id="informacion" class="informacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Información</p>
+                                </div>                                
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Objetivos</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="informacion-txt">
+                                        Esta formación abre la puerta a puestos de dirección como el de <b>director de Recursos Humanos</b> 
+                                        o responsable de la gestión del talento al desarrollar tanto competencias en la dirección 
+                                        y gestión empresarial como en los aspectos fundamentales de la <b>gestión de recursos humanos.</b>
+                                    </p>
+                                    <p class="informacion-txt">
+                                        El <b>Máster en RRHH</b> está enfocado a formar profesionales integrales en la 
+                                        <b>dirección y gestión de recursos humanos,</b> a través de:
+                                    </p>
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            Una visión global y estratégica dentro de la empresa.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Desarrollo de competencias tanto directivas como técnicas, 
+                                            a través del uso de las herramientas más importantes e innovadoras del sector.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Capacitarte para el desarrollo organizacional, de personas y 
+                                            equipos impulsando el cambio en las organizaciones.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Adquirir las competencias para la comunicación interna y externa, siendo capaz 
+                                            de generar una comunicación global acorde a las necesidades de la compañía y el entorno laboral.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Habilidades de liderazgo, indispensables para poder dirigir y gestionar el cambio.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Aprender a diseñar e implementar políticas de integración y motivación en la empresa, 
+                                            así como aplicar técnicas de mejora del clima laboral.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Adquirir las habilidades necesarias para el desarrollo del liderazgo 
+                                            y la gestión de <b>equipos de trabajo.</b>
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Elaborar y diseñar la estrategia organizativa del <b>departamento de Recursos Humanos,</b> 
+                                            acorde con la estrategia de la organización y con la situación competitiva actual.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Comunicación Interna. El <b>profesional de RRHH</b> es responsable de comunicar internamente 
+                                            los mensajes de la empresa, realizar actividades de integración y llevar adelante los canales 
+                                            como revista interna, boletines, carteleras.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Tomar responsabilidades para llevar adelante las relaciones de la empresa con los gremios, 
+                                            participar en cámaras empresariales y llevar adelante los juicios laborales. En su mayoría 
+                                            son abogados los responsables de éste área.
+                                        </li>
+                                    </ul> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PLAN ESTUDIOS -->
+                        <div id="planEstudios" class="plan-estudios tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Asignaturas</p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">MATERIAS COMUNES (obligatorias)</p>
+                                </div>                                
+                                <div class="plan-estudios-tabla">
+                                    <ul class="agignaturas-tabla">
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> ASIGNATURAS </span>
+                                            <span class="tabla-ect">ECTS</span>
+                                            <ul class="tabla-detalle">
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Modelos de organización y gestión de RRHH</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Modelos integrales de gestión por competencias</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Planificación Estratégica</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Nuevas tecnologías aplicadas a la gestión de RRHH</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Conflictos laborales. Mediación, negociación y medios 
+                                                            alternativos de resolución de conflictos</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Team Building y gestión del liderazgo en RRHH</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Coaching ejecutivo</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Prevención de riesgos laborales en el departamento de RRHH</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Bienestar laboral y organizaciones saludables</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">TRABAJO FIN DE MÁSTER (TFM)</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="tabla-total">
+                                            <span class="tabla-title">TOTALES</span>
+                                            <span class="tabla-ect">60</span>
+                                        </li>
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- TITULACION -->
+                        <div id="titulacion" class="titulacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Titulación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN OFICIAL UNIVERSIDAD OF MANAGEMENT - Università LUM
+                                    </p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Máster Universitario en Recursos Humanos y Salud Laboral"</p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-SCHOOL.jpg" alt="AUCAL Bussines School Diploma Master Compliance Penal Tecnologico Scholl of Management" class="img-diploma diploma-school">                                    
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN PROPIA AUCAL BUSINESS SCHOOL 
+                                    </p>                                      
+                                </div>  
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Máster en Recursos Humanos y Salud Laboral"</p>
+                                </div>          
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-AUCAL.jpg" alt="AUCAL Bussines School Diploma Propio Aucal Master Direccion Recursos Humanos RRHH" class="img-diploma">                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MATERIALES -->
+                        <div id="materiales" class="materiales tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Materiales</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El alumno dispondrá del material de estudio necesario para la realización de la formación en la plataforma virtual.                                    
+				                    </p>
+                                </div>                                
+				                <div class="tabs-img">
+                                    <img src="/2022/dist/images/material_aucal.png" alt="AUCAL Bussines School Material Master Direccion Recursos Humanos RRHH" class="materiales-img"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- .tabs-->
+                </div> <!-- .tabs-cuerpo -->
+            </div>
+        </aside>
+        <aside class="coordinador-perfil">
+            <!-- BIOGRAFIA COORDINADOR -->
+            <div class="tabs-banner-bottom">
+                <div class="banner-bottom-img">
+                    <img src="/2022/dist/images/coordis/neidy-dominguez.png" alt="AUCAL Bussines School Coordinador Master Direccion Recursos Humanos RRHH" class="img-coordinador"/>
+                </div>
+                <div class="banner-bottom-txt">
+                    <div class="tabs-title">
+                        <p class="tab-h2">Coordinador del Máster</p>
+                        <p class="tab-h1">Neidy Dominguez Pineda</p>
+                    </div>
+                    <div class="tabs-txt">
+                        <p class="banner-bottom-descript">
+                            Licenciada en Psicología por la Universidad Tecnológica Centroamericana y 
+                            Máster universitario en Criminología y Victimología por la Universidad 
+                            Internacional de Valencia. Doctoranda en el programa de investigación 
+                            en Derecho, Educación y Desarrollo de la Universidad Pegaso Internacional. <br><br>
+                            Posee amplia experiencia en atención educativa a colectivos desfavorecidos 
+                            y en la implementación de programas de reducción de violencia en la educación. 
+                            Ha sido directora de programas de postgrado y profesora de varias asignaturas 
+                            en dichos programas, realizando además contenidos para varias universidades. 
+                            Ha participado en varias publicaciones y congresos internacionales, además 
+                            de participar en proyectos de investigación en convocatorias competitivas.
+                        </p>
+                    </div>
+                </div>                            
+            </div>   
+            <!-- PERFIL ALUMNO Y DOCUMENTACION --> 
+            <div class="ficha-master">
+                <div class="perfil-alumno ficha-dropdown">
+                    <div class="drop-title">
+                         <div>
+                            <button class="dropbtn" onclick="show_hide(event, 'perfil')"> 
+                                <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                              <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School"" class="icono-left hidden"/> -->                                          
+                            </button>
+                         </div>
+                        <div>
+                            <p class="tab-h2">Perfil del alumno</p>   
+                        </div>                     
+                    </div>
+                    <div class="ficha-dropdown-txt" id="perfil">
+                        <p class="informacion-txt">
+                            La formación de <b>Máster recursos humanos online</b> es de carácter multidisciplinar, 
+                            es decir, está dirigido a todo tipo de estudiantes, profesionales y titulados universitarios 
+                            de todas las ramas de conocimiento, que deseen <b>estudiar recursos humanos</b> y crecer en 
+                            la Organización liderando el departamento de <b>gestión de recursos humanos.</b>
+                        </p>
+                        <p class="informacion-txt">
+                            Este programa no exige una experiencia previa en el ámbito específico de los Recursos Humanos.
+                        </p>                    
+                    </div>
+                </div>
+                <div class="documentacion ficha-dropdown">
+                    <div class="drop-title">
+                        <div>
+                           <button class="dropbtn" onclick="show_hide(event, 'documentacion')"> 
+                               <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                             <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                           </button>
+                        </div>
+                       <div>
+                           <p class="tab-h2">Documentación</p>   
+                       </div>                     
+                   </div>
+                    <div class="ficha-dropdown-txt" id="documentacion">
+                        <p class="informacion-txt">
+                            Si estás interesado en estudiar este programa académico, debes cumplir con la entrega de los siguientes documentos: 
+                        </p>
+                        <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo">Fotocopia de documento de identificación.</li>
+                            <li class="tipo-titulo">Foto tipo carnet (o pasaporte).</li>
+                            <li class="tipo-titulo">Titulo Universitario oficial:
+                                <ul style="margin: 1em 0 0 1em;">
+                                    <li style="list-style: disc; margin-left: 1em;">Para Europeos: SET (Suplemento Europeo al Titulo).</li>
+                                    <li style="list-style: disc; margin-left: 1em;">Para LATAM: Declaración de Valor al Italiano o Título con Apostilla de La Haya.</li>
+                                </ul>
+                            </li>
+                            <li class="tipo-titulo">Hoja de Admisión completa y firmada.</li>
+                            <li class="tipo-titulo">Comprobante de pago reserva de plaza.</li>                            
+                        </ul>    
+                        <p class="informacion-txt">
+                            En el caso de que no poseas alguno de estos documentos, 
+                            los interesados tienen la posibilidad de sacar el 
+                            Título Profesional de este Máster emitido por AUCAL Business School 
+                            y a un precio mucho más económico (en este caso no se piden requisitos de ingreso).
+                        </p>                                     
+                    </div>
+                </div>
+            </div>   
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-master"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-becas" class="btn-border" alt="AUCAL Bussines School Programa Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>         
+        <aside class="titulo-fomulario" id="formSolicitar">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <iframe frameborder="0" style="height:1150px;width:99%;border:none;" 
+            src='https://formulario.aucal.edu/aucalbusinessschool/form/FormularionuevaWebAUCAL/formperma/7-ULZDtrn9jf9iR3AmWEYjBwVmxtAmdLMjZk9fTGaYg' alt="AUCAL Bussines School Formulario Inscripcion">
+            </iframe>  
+        </aside>
+    </div>
+{% endblock %}

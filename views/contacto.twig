@@ -1,0 +1,320 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content="Contacta con nuestra área de atención al público: 911 16 17 85. Nos encontramos en Calle Emilia Pardo Bazán, 1, Madrid"/>
+    <link rel="stylesheet" href="/2022/dist/css/contacto.css"/>
+    <link rel="stylesheet" href="/2022/dist/css/form_styles.css"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/contacto.png">
+    <style>
+        .formulario {
+            background-color: #d3d3d6;
+        }
+
+        .CaptchaWrap { position: relative; }
+        .CaptchaTxtField { 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+            display: block;  
+            box-sizing: border-box;
+        }
+        #CaptchaImageCode { 
+            text-align:center;
+            margin-top: 15px;
+            padding: 0px 0;
+            width: 300px;
+            overflow: hidden;
+        }
+        .capcode { 
+            font-size: 46px; 
+            display: block; 
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none; 
+            cursor: default;
+            letter-spacing: 1px;
+            color: #ccc;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+        .ReloadBtn { 
+            background:url('https://iposos.com/wp-content/uploads/2023/10/recaptcha.png') left top no-repeat;   
+            background-size : 100%;
+            width: 32px; 
+            height: 32px;
+            border: 0px; outline none;
+            position: absolute; 
+            bottom: 30px;
+            left: 310px;
+            outline: none;
+            cursor: pointer; /**/
+        }
+        .error { 
+            color: red; 
+            font-size: 12px; 
+            display: none; 
+        }
+        .success {
+            color: green;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: none;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor contenedor-contacto"> 
+        <aside class="contacto">
+            <div class="form-head center-head">
+                <div class="center-title">
+                    <p class="form-h2">CONTÁCTANOS</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+        </aside>
+        <aside class="subtitulo">
+            <div class="tabs-title">
+                <p class="tab-h2-big">
+                    Rellena el formulario y nos pondremos en contacto contigo para asesorarte lo 
+                    mejor posible, en todo lo que necesites. <span class="bold-txt">Estamos contigo desde el principio.</span> 
+                </p>
+            </div>
+        </aside>        
+        <aside class="formulario">
+            <div style="width: 80%; margin-left: 10%;">
+                
+                <form class="section-6-form" id="form-becas" action="https://www.sotecza.es/crm/index/cupones/insertar" method="post">
+                    <div style="text-align: center;">
+                        <span style="color:#082146; font-size:36px; font-family:Verdana;">¿Tienes alguna duda?</span>
+                    </div>
+                    <div style="text-align: center;">
+                        <h4 style="font-weight: 400;">
+                            <span style="color:#082146; font-size:18px; font-family:Verdana;">Solicita información aquí y te ayudaremos en todo lo que necesites</span>
+                        </h4>
+                    </div>
+
+                    <input type="hidden" value="12713" name="id_curso" id="id_curso" />
+                    <input type="hidden" value="667" name="id_remitente" id="id_remitente" />
+                    <input type="hidden" value="aucal-contacto" name="utm_source" id="utm_source" />
+                    <input type="hidden" value="https://www.aucal.edu/solicitud-ok" name="redir_peticion_ok" id="redir_peticion_ok" />
+                    <input type="hidden" value="https://www.aucal.edu/solicitud-ko" name="redir_peticion_fallo" id="redir_peticion_fallo" />
+                    <input type="hidden" name="token" id="token" />
+
+                    <div class="form-group-container">
+                        <div class="form-group">
+                            <div class="section-6-input">
+                                <input class="input-6" type="text" name="nombre" id="nombre" placeholder="Nombre*" required>
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                            <div class="section-6-input">
+                                <input class="input-6" type="text" name="apellido1" id="apellido1" placeholder="Apellidos*" required>
+                                <i class="bi bi-person-fill"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="section-6-input">
+                                <input class="input-6" type="email" id="email" name="email" placeholder="Email*" required>
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div class="section-6-input input-6-phone ">
+                                <div class="selected-option">
+                                    <input class="input-6" type="tel" id="phone" name="telefono1" minlength="5" maxlength="14"
+                                        placeholder="Número de Teléfono*" required />
+                                </div>
+                                <div class="options">
+                                    <input type="text" class="search-box" placeholder="Busca País Por Nombre">
+                                    <ol>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="section-6-input">
+                                <select class="input-6" name="estudios" id="estudios" title="estudios" >
+                                    <option value="" selected disabled>Nivel de Estudios</option>
+                                    <option value="1">Sin estudios</option>
+                                    <option value="2">Graduado escolar o similar</option>
+                                    <option value="3">ESO</option>
+                                    <option value="4">FP1</option>
+                                    <option value="5">FP2</option>
+                                    <option value="6">Grado Medio FP</option>
+                                    <option value="8">Bachillerato</option>
+                                    <option value="9">Grado Superior FP</option>
+                                    <option value="10">Diplomatura Universitaria</option>
+                                    <option value="11">Licenciatura Universitaria</option>
+                                    <option value="12">Máster</option>
+                                    <option value="13">Doctorado</option>
+                                    <option value="14">Postgrado</option>
+                                    <option value="15">Grado Universitario</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="section-6-input">
+                                <select class="section-6-select input-6" name="pais_iso" id="pais" title="paises" >
+                                    <option value="" selected disabled>Pais</option>
+                                </select>
+                            </div>
+                        </div>                    
+                    </div>
+                    <label for="condiciones" class="condiciones">
+                        <input class="conditions" type="checkbox" name="condiciones" id="condiciones" required>
+                        Al enviar este formulario, acepto estas 
+                        <a href="https://www.aucal.edu/condiciones-de-uso" target="_blank" rel="noopener noreferer">condiciones legales </a>
+                    </label>
+                    <label for="otras_condiciones" class="otras_condiciones" style="display:none;">
+                        <input class="conditions" type="checkbox" name="otras_condiciones" id="otras_condiciones" required>
+                        Al enviar este formulario, acepto estas 
+                        <a href="https://www.aucal.edu/condiciones-de-uso" target="_blank" rel="noopener noreferer">condiciones legales </a>
+                    </label>
+                    <button class="form-btn-becas g-recaptcha" data-sitekey="6LegDCEpAAAAAIgWa7Q1zxuxt5G3Nt7MIJldEbzi" data-callback='onClick' type="button" data-action='click' id="form_button">Enviar</button>
+                    <span id="WrongCaptchaError" class="error"></span>
+                </form>
+            </div>
+        </aside>
+        <aside class="contactar">
+            <div class="direccion">
+                <div class="direc-icono">
+                    <span class="icono">
+                        <i class="fa fa-map-marker" alt="AUCAL Bussines School icono Direccion"></i>
+                    </span>                    
+                </div>
+                <div class="sedes">
+                    <p class="h2">Dirección</p>                    
+                    <a href="https://www.google.com/maps/place/C.+Emilia+Pardo+Baz%C3%A1n,+1,+28903+Getafe,+Madrid/@40.324445,-3.721793,16z/data=!4m5!3m4!1s0xd4220c99579a49b:0xf8b423b86111fe29!8m2!3d40.3244449!4d-3.7217932?hl=es" 
+                        class="sede-enlace sede-madrid" target="_blank" alt="AUCAL Bussines School Sede Madrid">SEDE MADRID</a>
+                    <p class="direc">
+                        C/Emilia Pardo Bazán, 1 <br/>
+                        28903 Getafe
+                    </p>    
+                    <br/>                               
+                    <a href="https://www.google.com/maps/place/Aucal+Business+School/@41.5236639,-5.3948757,17z/data=!4m9!1m2!2m1!1sPostigo+de+Nuestra+Se%C3%B1ora+2,+49800+Toro,+Zamora!3m5!1s0xd4228a9c5ed17f7:0x5280cf2e2e1dc40e!8m2!3d41.5246694!4d-5.3914456!15sCjBQb3N0aWdvIGRlIE51ZXN0cmEgU2XDsW9yYSAyLCA0OTgwMCBUb3JvLCBaYW1vcmGSAQ9idXNpbmVzc19zY2hvb2w?hl=es-ES" 
+                        class="sede-enlace sede-zamora" target="_blank" alt="AUCAL Bussines School Sede Zamora">SEDE ZAMORA</a>
+                    <p class="direc">
+                        Postigo de Nuestra Señora, 2 <br/>
+                        49800 Toro
+                    </p>
+                </div>
+            </div>
+            <div class="contacto-tlfs">
+                <div class="tlfs-icono">
+                    <span class="icono">
+                        <i class="fa fa-phone" alt="AUCAL Bussines School icono TElefono"></i>
+                    </span>
+                </div>
+                <div class="tlfs">
+                    <p class="h2">Contacto</p>                
+                    <p class="nro-tlf tlf-madrid">911 16 17 85 (Madrid)</p>
+                    <p class="nro-tlf tlf-zamora">980 69 12 33 (Zamora)</p>
+                    <p class="nro-tlf tlf-whatsapp">698 94 67 60 (WhatsApp)</p>
+                </div>
+            </div>
+            <div class="horario">
+                <div class="hora-icono">
+                    <span class="icono">
+                        <i class="fa fa-clock-o" alt="AUCAL Bussines School icono Horario"></i>
+                    </span>                    
+                </div>
+                <div class="horarios">
+                    <p class="h2">Horario de atención</p>                    
+                    <p class="hora-dia">Lunes a Jueves</p>
+                    <p class="horas">De 9:00 a 14:00h y de 17:00 a 20:00h</p> 
+                    <br/>               
+                    <p class="hora-dia">Viernes</p>
+                    <p class="horas">De 9:00 a 14:00h y de 16:00 a 19:00h</p>                    
+                </div>
+            </div>
+        </aside>
+        <aside class="banner-azul-right contacto-right">
+            <div class="azul-right-img img-contacto"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">AUCAL Business School</p>
+                    <p class="txt-eslogan">Con nosotros, tu futuro empieza hoy</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="h2-azul-right">
+                        Más de <b>60000 alumnos han confiado</b> en la metodología innovadora y la calidad de nuestra formación online. 
+                        <br/>¿Te unes a nuestra comunidad?
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-descuentos" class="btn-border" alt="AUCAL Bussines School Programa Descuentos">VER DESCUENTOS
+                </a>
+            </div>                     
+        </aside>   
+        <aside class="cformacion">
+            <div class="cf-head center-head">
+                <div class="center-title">
+                    <p class="cf-h2">FORMACIÓN DESTACADA</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+            <div class="cf-carousel">
+                <div class="formacion-card card-rrhh">
+                    <a href="/oferta-formativa/master-oficial/master-direccion-recursos-humanos" class="formacion-a" alt="AUCAL Bussines School Master Direccion Recursos Humanos RRHH">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Universitario en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Dirección de Recursos Humanos</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="formacion-card card-psicologica">
+                    <a href="/oferta-formativa/master-oficial/master-psicopedagogia" class="formacion-a" alt="AUCAL Bussines School Master Orientacion Educativa Intervencion Psicopedagogia">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Universitario en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Orientación Educativa e Interveción Psicológica</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="formacion-card card-tecnologico">
+                    <a href="/oferta-formativa/master-oficial/master-compliance-penal-y-tecnologico" class="formacion-a" alt="AUCAL Bussines School Master Compliance Penal Tecnologico">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Universitario en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Compliace Penal y Tecnológico</p>
+                        </div>
+                    </a>
+                </div> 
+            </div>
+            <div class="cf-btn">
+                <a href="/oferta-formativa/master-oficial" class="btn-yellow" alt="AUCAL Bussines School Oferta Formativa">TODA LA OFERTA FORMATIVA</a>
+            </div>
+        </aside>       
+    </div>
+    <script defer src="/2022/dist/js/forms.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LegDCEpAAAAAIgWa7Q1zxuxt5G3Nt7MIJldEbzi"></script>
+    <script>
+        function onClick(e) {
+            if ($('#nombre').val() == "" || $('#apellido1').val() == "" || $('#email').val() == "" || $('#phone').val() == "" || $("#otras_condiciones").is(':checked')) {
+					
+                $('#WrongCaptchaError').text('Error! Rellene los campos obligatorios.').show();
+
+            } else {
+                //e.preventDefault();
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LegDCEpAAAAAIgWa7Q1zxuxt5G3Nt7MIJldEbzi', {action: 'click'}).then(function(token) {
+                        // Add your logic to submit to your backend server here.
+                        $('#token').val(token);
+                        $('#form-becas').submit();
+                    });
+                });
+            }
+        }
+    </script>
+{% endblock %}

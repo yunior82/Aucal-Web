@@ -1,0 +1,41 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content=""/>
+    <link rel="stylesheet" href="/2022/dist/css/campus.css"/>
+    <title>Campus - Aucal</title>
+    <meta name="description" content="Bienvenido al Campus Universitario de AUCAL. Tu herramienta de gestión, estudio y comunicación.">
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor" style="display: block;"> 
+        <aside class="accesos-campus">
+            <div class="formPortal">
+                <form action="https://www.aucal.net/aula/login/index.php" method="post" role="form" siq_id="autopick_4291">
+                    <div class="tabs-title">
+                        <p class="tab-h1 h1-bold">Acceso al Campus</p>
+                        <p class="tab-h1 h1-rever">Aucal Business School</p>
+                    </div>
+                    <div class="tabs-txt">
+                        <p class="txt-sm-form">Ingresa al Campus Universitario online de AUCAL.</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="portalUser">Usuario:</label>
+                        <input type="text" name="username" id="portalUser" placeholder="Ingresa tu usario aquí"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="portalPass">Contraseña:</label>
+                        <input type="password" name="password" id="portalPass" placeholder="Ingresa tu contraseña aquí"/>
+                        <span toggle="#portalPass" class="fa fa-eye fa-fw iconoPass"></span>
+                    </div>                    
+                    <button type="submit" class="btn-red-normal btn-ingresar">Ingresar</button>
+                    <div class="tabs-txt">
+                        <p class="tab-h1 h1-bold txt-center" style="color: #7f0000;">{{ error }}</p>
+                        <a href="https://www.aucal.net/aula/login/forgot_password.php" alt="AUCAL Bussines School Campus Password"><p class="txt-sm-form txt-center">¿Has olvidado tu contraseña?</p></a>                    
+                        <a href="/contacto" alt="AUCAL Bussines School Campus Entrar"><p class="txt-sm-form txt-center">Ingresa al Campus Universitario online de AUCAL.</p></a>
+                    </div>
+                </form>
+            </div>
+        </aside>   
+    </div>
+{% endblock %}

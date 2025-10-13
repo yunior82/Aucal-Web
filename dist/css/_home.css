@@ -1,0 +1,520 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header             header             header"
+        "matriculate        matriculate        matriculate"
+        "selects            selects            selects"
+        "banner-masterclass banner-masterclass banner-masterclass"
+        "banner-azul-left   banner-azul-left   banner-azul-left "
+        "school             school             school"
+        "cformacion         cformacion         cformacion"
+        "banner-azul-right  banner-azul-right  banner-azul-right"
+        "alumnos            alumnos            alumnos"
+        "talento            talento            talento"
+        "noticias           noticias           noticias"
+        "newsletter         newsletter         newsletter"
+        "carrusel-unis      carrusel-unis      carrusel-unis"
+        "footer             footer             footer";
+}
+
+/* BARRA NAVEGACION */
+.contenedor .header{ grid-area: header;}
+
+/* BANNER PRINCIPAL */
+.contenedor .matriculate{
+    grid-area: matriculate;
+    color: #fff;
+    padding: 5em 0;
+    line-height: 3.5rem;
+    width: auto;
+    background-image: url(/2022/dist/images/home.png);
+    background-position: center center;
+    text-shadow: 1px 1px 10px #000;
+    background-size: cover;
+}
+
+.contenedor .matriculate .h1-matriculate{ font-size: 51.2px;}
+
+.contenedor .matriculate .text-matriculate{
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.contenedor .matriculate>div a{text-decoration: none;}
+
+.contenedor .matriculate>div a:hover{
+    color: #fff;
+    font-weight: 700;
+}
+
+.contenedor .matriculate .btn-matriculate{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+/* SELECCIONAR FORMACION */
+.contenedor .selects{
+    grid-area: selects;
+    background-color: #dedede;
+    line-height: 2rem;
+    gap: 2em;
+    padding: 2em 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "select-title   select-title    select-title"
+        "select-1       select-2        btn-select"
+        "select-1       select-2        btn-select";
+}
+
+.selects .select-title{
+    grid-area:  select-title;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.selects .select-title .h2-select{
+    color: #E10031;
+    font-size: 28px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.selects>div>p{
+    color: #000000;
+    display: flex;
+    font-size: 16px;
+    justify-content: flex-start;
+}
+
+.selects>div select{
+    width: 20em;
+    height: 2em;
+    font-size: 18px;
+    color: #a1a1a1;
+    background: white;
+    border: none;
+    padding: 0.5rem;
+}
+
+.selects .select-1 {
+    grid-area: select-1;
+}
+
+.selects .select-1 .p-select-1,
+.selects .select-1 .desplegable-1 {
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    margin: 0 8em;
+}
+
+.selects .select-1 .p-select-1{margin: 0 9em;}
+
+.selects .select-2 {
+    grid-area: select-2;
+}
+
+.selects .select-2 .p-select-2,
+.selects .select-2 .desplegable-2 {
+    display: flex;
+    justify-items: right;
+    width: 100%;
+    margin: 0 8em;
+}
+
+.selects .select-2 .p-select-2{margin: 0 9em;}
+
+.selects .select-btn{
+    grid-area: btn-select;
+    margin: 5em auto 0 auto;
+}
+
+.selects .btn-select{
+    display: grid;
+    width: 5em;
+    height: 2.2em;
+    font-size: 15px;
+    text-align: center;
+}
+
+/*BANNER masterclass*/
+.contenedor .banner-masterclass{   
+    /* display: none;  */
+    grid-area: banner-masterclass;
+    padding: 1.2em 0;
+    margin: 2em auto;
+    width: 90%;
+    
+}
+
+/* .contenedor .banner-masterclass .center-head{
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+ } */
+
+.contenedor .banner-masterclass .masterclass-content{
+    background-image: url(https://static.rfstat.com/renderforest/images/website_maker_images/components/component-images/features22-1.0.0.jpg);
+    background-position: center center;
+    text-shadow: 1px 1px 5px #000;
+    background-size: cover;    
+    object-fit: cover;
+    color: #fff;
+    text-align: left;  
+    height: 300px; 
+    padding: 2em 9em;
+    margin: 0 auto;
+    text-align: justify;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
+}
+
+.contenedor .banner-masterclass .h1-masterclass{ 
+    font-size: 40px;
+    margin-top: 0.5em;
+    line-height: 1.2;
+}
+
+.contenedor .banner-masterclass .text-masterclass{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: normal;
+    display: flex;
+    background-position: center center;
+}
+
+.contenedor .banner-masterclass .txt-mc-hour{font-size: 20px;}
+
+.contenedor .banner-masterclass .text-masterclass .mc-icon{
+    width: 20px;
+    background-size: cover;    
+    object-fit: cover;
+    margin: 5px 10px 5px 0;
+}
+.contenedor .banner-masterclass .text-masterclass .mc-icon-calen{background-image: url(/2022/dist/images/icons/calendario_icono.png);}
+.contenedor .banner-masterclass .text-masterclass .mc-icon-watch{
+    margin-left: 20px;
+    background-image: url(/2022/dist/images/icons/reloj_icono.png);}
+
+.contenedor .banner-masterclass>div a{
+    text-decoration: none;
+    font-size: 26px;
+    padding: 0.3em 0.5em;
+    margin-left: 40%;
+}
+
+.contenedor .banner-masterclass>div a:hover{
+    color: #fff;
+    font-weight: 700;
+}
+
+.contenedor .banner-masterclass .btn-masterclass{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+
+/* BANNERS AZULES */
+.contenedor .banner-azul-left{ grid-area: banner-azul-left;}
+.banner-azul-right .img-school{background-image: url(/2022/dist/images/formacion-a-distancia-AUCAL.jpg);}
+.contenedor .banner-azul-right{ grid-area: banner-azul-right;}
+.banner-azul-right .img-alumnos{background-image: url(/2022/dist/images/home-AUCAL.jpg);}
+
+.banner-azul-right .azul-right-txt .azul-right-title{ height: 2em!important;}
+.banner-azul-right .azul-right-txt .azul-right-hr{height: 0.4em!important;}
+
+
+
+/* SECCION BECAS */
+.contenedor .talento{  grid-area: talento; }
+
+/* CARRUSEL NOTICIAS */
+.contenedor .noticias{ grid-area: noticias; }
+
+/* CARRUSEL FORMACION */
+.contenedor .cformacion{ grid-area: cformacion;}
+
+/* NEWSLETTER */
+.contenedor .newsletter{
+    grid-area: newsletter;
+    margin: 3em auto;
+    width: 90%;
+    background-color: #009DDF;
+    height: 18em;
+    clip-path: polygon(10% 0%, 95% 0%, 90% 100%, 5% 100%);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "nl-logo    nl-title"
+        "nl-logo    nl-text"
+        "nl-logo    newsletter-mail";
+    justify-content: center;
+}
+
+.newsletter .nl-logo{
+    grid-area: nl-logo;
+    display: grid;
+    margin-left: 5em;
+    justify-items: left;
+    align-items: stretch;
+}
+
+.newsletter .nl-logo .nl-logo-agua{
+    position: absolute;
+    height: 22.8em;
+    opacity: 0.2; /* Firefox, Chrome, Safari, Opera, IE >= 9 (preview) */
+    filter:alpha(opacity=50);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.newsletter .nl-title {  grid-area: nl-title; }
+
+.newsletter .nl-title .nl-h2{
+    color: white;
+    height: 1.8rem;
+    font-size: 2em;
+    font-weight: 400;
+    padding-top: 1em;
+    display: grid;
+    justify-content: start;
+}
+
+.newsletter .nl-text{ grid-area: nl-text; }
+
+.newsletter .nl-text .nl-p{
+    height: auto;
+    color: #000000;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: initial;
+}
+
+.newsletter .newsletter-mail{
+    grid-area: newsletter-mail;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.newsletter .newsletter-mail .nl-input>input{
+    display: grid;
+    width: 90%;
+    height: 2.5em;
+    border-radius: 2.5rem;
+    border: none;
+    padding-left: 2em;
+    font-size: 1em;
+}
+
+.newsletter .newsletter-mail .newsletter-btn>a{
+    display: grid;
+    margin: 0.5em;
+    width: 40%;
+    font-size: 15px;
+    align-content: center;
+    justify-content: center;
+}
+
+/* CARRUSEL UNIS */
+.contenedor .carrusel-unis{  grid-area: carrusel-unis; }
+
+/* FOOTER */
+.contenedor .footer{ grid-area: footer; }
+
+/***********************************/
+
+@media  (max-width: 991px){
+
+    /* BANNER PRINCIPAL */
+    .contenedor .matriculate{
+        padding: 4em 0 2em 0;
+        line-height: 3rem;
+    }
+
+    .contenedor .matriculate .h1-matriculate{font-size: 2rem; }
+
+    .contenedor .matriculate .text-matriculate{ font-size: 15px; }
+
+    .contenedor .matriculate .btn-matriculate{ font-size: 15px; }
+
+    /* SELECCIONAR FORMACION */
+    .contenedor .selects{
+        display: block;
+        padding: 2em;
+        text-align: justify;
+    }
+
+    .selects .select-title{
+        text-align: left;
+        width: 100%;
+    }
+
+    .selects .select-title .h2-select{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .selects>div{ margin: 1rem 0;}
+
+    .selects>div select{
+        width: 100%;
+        height: 2.5em;
+        font-size: 15px;
+    }
+
+    .selects .select-1 .p-select-1 ,
+    .selects .select-1 .desplegable-1,
+    .selects .select-2 .p-select-2 ,
+    .selects .select-2 .desplegable-2 {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .selects .select-btn{margin: 2em auto 0 auto;} 
+
+    .selects .btn-select{  display: block;}  
+
+    .alumnos .alumnos-btn{ margin: 4em auto; }
+
+    .alumnos .alumnos-btn>a{ font-size: 15px; }  
+    
+     /* BANNER masterclass */
+     .contenedor .banner-masterclass{
+        padding: 2em 0;
+        line-height: normal;
+    }
+
+    /* .contenedor .banner-masterclass .masterclass-content{ 
+        margin: 0 auto;
+        width: 95%;
+        text-align: left;
+    }*/
+
+    .contenedor .banner-masterclass .masterclass-content{
+        padding: 2em;
+        background-position: initial;
+        height: 400px;
+        text-align: left;
+    }
+
+    .contenedor .banner-masterclass .h1-masterclass{
+        font-size: 2rem; 
+        /* margin: 3.5em auto 0.5em 1em; */
+        line-height: 1;
+    }
+
+    .contenedor .banner-masterclass .text-masterclass{ 
+        font-size: 18px; 
+        line-height: 1;
+        height: 20px;
+        margin: 0.8em auto;
+    }
+
+    .contenedor .banner-masterclass .text-masterclass .mc-icon{ width: 10px; }
+
+    .contenedor .banner-masterclass>div a {
+        font-size: 18px;
+        padding: 0.2em 0.5em;
+        margin: 0.5em auto 0.5em 35%;
+    }
+        
+
+}
+
+/***********************************/
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* NEWSLETTER */
+    .contenedor .newsletter{ width: 95%; }
+
+    .newsletter .nl-logo{ margin-left: 2em;}
+
+    .newsletter .nl-title .nl-h2{ font-size: 1.6rem;}
+
+    .newsletter .newsletter-mail .nl-input>input{
+        width: 95%;
+        border-radius: 1.5rem;
+    }
+    .newsletter .newsletter-mail .newsletter-btn>a{ margin: 0.5em 1em;}
+}
+
+/***********************************/
+
+@media (max-width: 767.98px){  
+     /* BANNER PRINCIPAL Y BANNER masterclass */  
+    .contenedor .matriculate{
+        margin-top: 9em;
+    }
+
+    /* BANNER masterclass */
+    .contenedor .banner-masterclass{
+        margin: 2em auto;
+        object-fit: contain;
+        padding: 0;
+    }
+    
+    /*BANNER AZUL DERECHA*/
+    .banner-azul-right .azul-right-txt{
+        grid-template-rows: 4em 1.5em 5em!important;
+    }
+
+    /* NEWSLETTER */
+    .contenedor .newsletter{
+        grid-area: newsletter;
+        margin: 0 auto;
+        width: 100%;
+        height: 16em;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+        grid-template-columns: none;
+        grid-template-rows: 1fr 2fr 2fr;
+    }
+
+    .newsletter .nl-logo{   display: none;  }
+
+      
+    .newsletter .nl-title .nl-h2{
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+        font-size: 1.4rem;
+        padding: 1em 0;
+        justify-content: center;
+    }                
+
+    .newsletter .nl-text .nl-p{
+        width: 100%;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .newsletter .newsletter-mail{
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .newsletter .newsletter-mail .nl-input>input{
+        margin: 0 auto;
+        width: 100%;
+        height: 2.5em;
+        border-radius: 0.5rem;
+        padding-left: 1em;
+        justify-content: center;
+    }
+
+    .newsletter .newsletter-mail .newsletter-btn>a{
+        margin: 1em auto;
+        width: 25%;
+        font-size: 15px;
+        align-items: center;
+    }
+
+}
+

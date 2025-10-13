@@ -1,0 +1,202 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content="Descubre nuestro programa de descuentos de AUCAL, para que puedas acceder a la mejor formación. ¡Solicítelos aquí!"/>
+    <link rel="stylesheet" href="/2022/dist/css/becas_descuentos.css"/>
+    <link rel="stylesheet" href="/2022/dist/css/descuentos.css"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/becas.png">
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor"> 
+       <aside class="banner-becas">
+            <div class="becas-head center-head">
+                <div class="center-title">
+                    <p class="becas-h2">DESCUENTOS</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+        </aside>
+        <aside class="textos-body">            
+            <div class="textos-title">
+                <p class="black-h1-big">
+                    Descubre nuestro programa de descuentos de AUCAL, para que puedas acceder 
+                    a la mejor formación. ¡Solicítalas aquí!
+                </p>
+            </div>
+            <div class="textos-txt-img">                
+                <div class="textos-parrafo">
+                    <p class="textos-txt">
+                        En Aucal Business School ofrecemos todos nuestros programas 
+                        académicos con precios muy accesibles para nuestros 
+                        alumnos, y no existe ningún coste de inscripción adicional en 
+                        concepto de apertura ni por gestión de matrícula.
+                    </p>  
+                    <br/>
+                    <p class="textos-txt">
+                        El importe de la matrícula incluye tanto la formación (expertos y 
+                        tutor) como el acceso a laplataforma virtual (campus), el uso de 
+                        las herramientas de estudio y comunicación, y los materiales 
+                        interactivos. No se incluyen los materiales de terceros como 
+                        libros de texto, aunque podrás conseguirlos a través de AUCAL en 
+                        condiciones especiales.
+                    </p> 
+                </div>    
+                <div class="textos-img">
+                    <img src="/2022/dist/images/descuentos-y-becas-AUCAL.jpg" alt="AUCAL Bussines School Programa Descuentos" class="img"/>  
+                </div>          
+            </div>
+        </aside>
+        <aside class="becas-info">
+            <div class="center-title-red">
+                <p class="becas-title">
+                    Todas nuestras ayudas
+                </p>
+            </div>
+            <div class="center-txt">
+                <p class="becas-txt">
+                    ¿Sabías que puedes aplicar a nuestras becas y descuentos de hasta el 50%? ¡Solicita tu beca!
+                </p>
+            </div>
+            <div class="becas-dropdown">
+                <div class="becas-drop">
+                    
+                    <div class="drop-title dropdown">
+                        <button class="dropbtn" href="javascript:void(0)" onclick="show_hide(event, 'familia')"> 
+                            <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                            <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden-drop"/>      
+                        </button>             
+                        <p class="drop-h1">DESCUENTO FAMILIA NUMEROSA</p>  
+                        <div class="drop-txt " id="familia">
+                            <p class="title-red">HASTA 20%</p>
+                            <p class="txt-drop">
+                                El alumno que se encuentre en esta situación, deberá enviar algún certificado de
+                                familia (libro de familia) que acredite que tiene más de 2 hijos que dependen
+                                económicamente de los padres (menores de 32 años). 
+                            </p>
+                        </div>                      
+                    </div>                   
+                    
+                    <div class="drop-title dropdown">
+                        <button class="dropbtn" href="javascript:void(0)" onclick="show_hide(event, 'treinta')"> 
+                            <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                            <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left"/>      
+                        </button>          
+                        <p class="drop-h1">DESCUENTO MINUSVALÍA MAYOR A 30% Y MENOR A 65%</p>
+                        <div class="drop-txt dropdown-content" id="treinta">
+                            <p class="title-red">Hasta 20%</p>
+                            <p class="txt-drop">
+                                El alumno deberá enviar su acreditación respectiva y el descuento es automático.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="drop-title dropdown">
+                        <button class="dropbtn" href="javascript:void(0)" onclick="show_hide(event, 'seiscinco')"> 
+                            <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                            <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left"/>      
+                        </button>   
+                        <p class="drop-h1">DESCUENTO MINUSVALÍA MAYOR 65%</p>
+                        <div class="drop-txt dropdown-content" id="seiscinco">
+                            <p class="title-red">Hasta 50%</p>
+                            <p class="txt-drop">
+                                El alumno deberá enviar su acreditación respectiva y el descuento es automático.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="drop-title dropdown">
+                        <button class="dropbtn" href="javascript:void(0)" onclick="show_hide(event, 'contado')"> 
+                            <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                            <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left"/>      
+                        </button>   
+                        <p class="drop-h1">DESCUENTO PAGO ANTICIPADO <span class="contado">(CONTADO)</span></p>
+                        <div class="drop-txt dropdown-content" id="contado">
+                            <p class="title-red">Hasta 10%</p>
+                            <p class="txt-drop">
+                                Cualquier alumno que quiera pagar el precio total del programa en una sola cuota. Es el único descuento que se puede aplicar junto con otro de esta lista.
+                            </p>
+                        </div>
+                    </div>
+                   
+                    <div class="drop-title dropdown">
+                        <button class="dropbtn" href="javascript:void(0)" onclick="show_hide(event, 'alumno')"> 
+                            <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                            <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left"/>      
+                        </button> 
+                        <p class="drop-h1">DESCUENTO ALUMNO AUCAL</p>
+                        <div class="drop-txt dropdown-content" id="alumno">
+                            <p class="title-red">Hasta 15%</p>
+                            <p class="txt-drop">
+                                Alumno que ha estudiado algún curso en Aucal en el pasado o presente.
+                                Debe estar registrado en nuestro CRM.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="drop-title dropdown">
+                        <button class="dropbtn" href="javascript:void(0)" onclick="show_hide(event, 'desempleado')"> 
+                            <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                            <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left"/>      
+                        </button> 
+                        <p class="drop-h1">DESCUENTO A DESEMPLEADOS</p>
+                        <div class="drop-txt dropdown-content" id="desempleado">
+                            <p class="title-red">Hasta 20%</p>
+                            <p class="txt-drop">
+                                Desempleados en el momento de solicitar el descuento. El alumno debe
+                                enviar su documentación respectiva para activar este descuento.
+                            </p>
+                        </div>
+                    </div>
+                    <div>               
+                        <script type="text/javascript" src="https://api.clientify.net/web-marketing/superforms/script/132735.js"></script>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-becas"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-becas" class="btn-border" alt="AUCAL Bussines School Programa Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>        
+        <aside class="titulo-fomulario"  id="formulario">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <iframe frameborder="0" style="height:1150px;width:99%;border:none;" alt="AUCAL Bussines School Formulario" 
+            src='https://formulario.aucal.edu/aucalbusinessschool/form/FormularionuevaWebAUCAL/formperma/7-ULZDtrn9jf9iR3AmWEYjBwVmxtAmdLMjZk9fTGaYg'>
+            </iframe>  
+        </aside>
+    </div>
+{% endblock %}

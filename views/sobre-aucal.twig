@@ -1,0 +1,265 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content="Aucal Business School, tu Escuela de Negocios con más de 22 a�os de experiencia en formación online. Solicita información sin compromiso."/>
+    <link rel="stylesheet" href="/2022/dist/css/sobre-aucal.css"/>
+    <link rel="stylesheet" href="/2022/dist/css/aucal-banner.css"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/aucal-calidad.png">
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor"> 
+           <aside class="aucal-banner">            
+            <div class="aucal-head">
+                <div class="aucal-title">
+                    <p class="h2-aucal">SOBRE AUCAL</p>
+                </div>
+                <div class="aucal-hr center-hr-sm">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="aucal-txt">
+                    <p class="h1-aucal">Pioneros en la educación a distancia</p>
+                </div>
+            </div>
+            <div class="aucal-img">
+                <img src="/2022/dist/images/logos/AUCAL_imagotipo_transparente_rojo.png" alt="AUCAL Bussines School Logo" class="img-aucal">
+            </div>
+            <div class="aucal-cards">
+                <div class="aucal-card card1">
+                    <div class="aucal-icons">
+                        <img src="/2022/dist/images/icons/laptop-transparente.ico" alt="AUCAL Bussines School Formacion Online" class="icon-laptop">
+                    </div>
+                    <div class="aucal-card-txt">
+                        <div class="aucal-card-title">
+                            <p class="card-h2">22 años</p>
+                        </div>
+                        <div class="aucal-card-descript">
+                            <p class="">de experiencia <br/> en formación online</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aucal-card card2">
+                    <div class="aucal-icons">
+                        <img src="/2022/dist/images/icons/graduate-hat-transparente.ico" alt="AUCAL Bussines School Calidad Educatica">
+                    </div>
+                    <div class="aucal-card-txt">
+                        <div class="aucal-card-title">
+                            <p class="card-h2">2586 titulados</p>
+                        </div>
+                        <div class="aucal-card-descript">
+                            <p class="">avalan la calidad <br/> educativa de AUCAL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="aucal-card card3">
+                    <div class="aucal-icons">
+                        <img src="/2022/dist/images/icons/hands-transparente.ico" alt="AUCAL Bussines School Bolsa de Empleo Empresas Instituciones Colaboradoras">
+                    </div>
+                    <div class="aucal-card-txt">
+                        <div class="aucal-card-title">
+                            <p class="card-h2">+20 acuerdos</p>
+                        </div>
+                        <div class="aucal-card-descript">
+                            <p class="">con empresas <br/> e instituciones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>             
+        </aside>
+        <aside class="textos-body">   
+            <div class="textos-txt-img textos-sobre-aucal">    
+                <div class="textos-img img-sobre-aucal">
+                    <img src="/2022/dist/images/banner-futuro-AUCAL-2.jpg" alt="AUCAL Bussines School Alternativa Futuro" class="img"/>  
+                </div>  
+                <div class="textos-title titulo-sobre-aucal">
+                    <p class="red-h1-big">
+                        Aucal Business School, una real alternativa para tu futuro.
+                    </p>
+                </div>                           
+                <div class="textos-parrafo parrafo-sobre-aucal">
+                    <p class="textos-txt txt-sobre-aucal">
+                        En Aucal Business School ofrecemos todos nuestros programas 
+                        académicos con precios muy accesibles para nuestros 
+                        alumnos, y no existe ningún coste de inscripción adicional en 
+                        concepto de apertura ni por gestión de matrícula 
+                        (excepto para títulos Oficiales y de Seguridad, ver sección 
+                        <a href="/estudiar-en-aucal" alt="AUCAL Bussines School | Estudiar en AUCAL" target="_blank">"Estudiar en AUCAL"</a> ).
+                    </p> 
+                    <p class="textos-txt">
+                        AUCAL <b>nació en 1999 como una de las pioneras en 
+                        materia de formación online en España</b>, ubicada en las 
+                        ciudades de Madrid y Zamora. Creada por Manuel 
+                        González Folgado, un profesional experto del área de 
+                        seguridad privada y ligado siempre al mundo 
+                        educacional, ha ido desarrollando un <b>sistema de 
+                        formación innovador y de carácter emprendedor.</b> 
+                    </p> 
+                    <p class="textos-txt">
+                        La metodología se adapta al ritmo de cada alumno, 
+                        desde casa y sin variar el ritmo de vida de los alumnos, a 
+                        través de una <b>plataforma online propia</b> que conecta y 
+                        comunica a los alumnos entre sí y con los docentes de 
+                        forma personalizada. AUCAL te ofrece la posibilidad de 
+                        progresar profesionalmente dando <b>soluciones 
+                        adaptadas al mercado laboral actual.</b> 
+                    </p> 
+                </div>                             
+            </div>
+        </aside>
+        <aside class="tabs">
+            <div class="tabs-img">
+                <img src="/2022/dist/images/aucal-mision.png" alt="AUCAL Bussines School Sobre Aucal" class="imagen_sobre_aucal">
+            </div>
+            <div class="tabs-container"> 
+                <div class="tabs-btn">
+                    <a href="javascript:void(0)" class="btn-titlle" onclick="openTab(event,'mision')" alt="AUCAL Bussines School Mision Formar Profesionales">
+                        <span class="tablink">Misión</span>
+                    </a>
+                    <a href="javascript:void(0)" class="btn-titlle" onclick="openTab(event,'valores')" alt="AUCAL Bussines School Vision Innovacion">
+                        <span class="tablink">Valores</span>
+                    </a>
+                    <a href="javascript:void(0)" class="btn-titlle" onclick="openTab(event,'calidad')" alt="AUCAL Bussines School Calidad Aprender Ensenar Conceptos">
+                     <span class="tablink">Calidad</span>
+                    </a>
+                </div>
+                <div class="tabs-txt">
+                    <div id="mision" class="tab tab-mision">
+                        <p class="tabs-p">
+                            Nuestra misión es formar a profesionales del
+                            futuro, respondiendo a las necesidades de
+                            formación o especialización que demanda el
+                            mercado en cada momento para ampliar el
+                            perfil técnico de los profesionales y su
+                            competitividad laboral.
+                        </p>
+                        <div class="circulos">
+                            <img src="/2022/dist/images/icons/circulo-rojo.png" alt="AUCAL Bussines School Mision Formar Profesionales" class="circulo-rojo circulo-active">
+                            <img src="/2022/dist/images/icons/circulo-rojo.png" alt="AUCAL Bussines School Vision Innovacion" class="circulo-rojo">
+                            <img src="/2022/dist/images/icons/circulo-rojo.png" alt="AUCAL Bussines School Calidad Aprender Ensenar Conceptos" class="circulo-rojo">
+                        </div>
+                    </div>
+                    <div id="valores" class="tab tab-valores">
+                        <p class="tabs-p">
+                            Basamos nuestra actividad en la innovación , 
+                            fomentando el espíritu emprendedor . No solo transmitimos 
+                            conocimientos, sino que queremos inculcar a nuestros alumnos 
+                            habilidades profesionales para que puedan sacar el máximo 
+                            rendimiento como expertos.
+                        </p>
+                        <div class="circulos">
+                            <img src="/2022/dist/images/icons/circulo-rojo.png" alt="AUCAL Bussines School Mision Formar Profesionales" class="circulo-rojo">
+                            <img src="/2022/dist/images/icons/circulo-rojo.png" alt="AUCAL Bussines School Vision Innovacion" class="circulo-rojo circulo-active">
+                            <img src="/2022/dist/images/icons/circulo-rojo.png" alt="AUCAL Bussines School Calidad Aprender Ensenar Conceptos" class="circulo-rojo">
+                        </div>
+                    </div>
+                    <div id="calidad" class="tab tab-calidad">
+                        <p class="tabs-p">
+                            En Aucal creemos que es importante enseñar conceptos 
+                            pero más aún como se aprenden. Por ello, ofrecemos 
+                            información de calidad basada en su aplicación práctica 
+                            y siendo lo más dinámico posible para que sea un aprendizaje 
+                            efectivo y entretenido.
+                        </p>
+                        <div class="circulos">
+                            <img src="/2022/dist/images/icons/circulo-rojo.png" alt="AUCAL Bussines School Mision Formar Profesionales" class="circulo-rojo">
+                            <img src="/2022/dist/images/icons/circulo-rojo.png" alt="AUCAL Bussines School Vision Innovacion" class="circulo-rojo">
+                            <img src="/2022/dist/images/icons/circulo-rojo.png" alt="AUCAL Bussines School Calidad Aprender Ensenar Conceptos" class="circulo-rojo circulo-active">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </aside>
+        <aside class="editorial">
+            <div class="editorial-head">
+                <div class="center-title">
+                    <p class="editorial-h2">NUESTRA LÍNEA EDITORIAL</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+            <div class="editorial-body">
+                <div class="editorial-title">
+                    <p class="editorial-h1">“La educación es el pasaporte hacia el futuro”</p>
+                </div>
+                <div class="editorial-txt">                    
+                    <p class="editorial-p">
+                        La <b>formación on line</b> está viviendo una transformación importante en la actualidad y 
+                        ya es considerada una real alternativa para estudiantes o profesionales que tienen  
+                        como objetivo avanzar en su carrera laboral.
+                    </p>
+                    <p class="editorial-p">
+                        <b>AUCAL Business School</b> ha apostado por este tipo de <b>formación para profesionales</b>
+                        desde hace más de 20 años, promoviendo la innovación y una moderna metodología 
+                        de estudio como parte de esta revolución académica de nuestra sociedad.  
+                    </p> 
+                    <p class="editorial-p">
+                        <b>AUCAL</b> ha dejado de ser sólo una Escuela de Negocios para convertirse en tu mejor 
+                        opción de futuro. Somos la comunidad académica con la red de contactos más 
+                        estable en España entre todos los profesionales y emprendedores que han estudiado 
+                        nuestros <b>cursos on line</b> y <b>master oficiales online</b> desde sus inicios.
+                    </p>                    
+                </div>
+                <div class="editorial-txt editorial-hidden" id="editHidden">
+                    <p class="editorial-p">
+                        Accede a <b>estudiar cursos con salida laboral</b>  real y donde puedas encontrar tu 
+                        pasión, tu vocación y tu compromiso de entrega. Nos importa que tú como persona 
+                        te destaques por tus capacidades y habilidades, y por eso nuestro compromiso es 
+                        entregarte las herramientas necesarias para que puedas enfrentarte a todos los 
+                        desafíos que vendrán.
+                    </p>                     
+                    <div class="editorial-img">
+                        <p class="edit-txt-banner">"Con nosotros, tu futuro empieza hoy"</p>
+                    </div>
+                    <p class="editorial-p">
+                        Nuestro modelo educativo se basa en considerar la <b>experiencia</b> y la <b>práctica</b> como 
+                        los elementos más importantes del conocimiento, complementando esas acciones 
+                        con la tradicional teoría académica como camino hacia el éxito profesional.
+                    </p> 
+                    <p class="editorial-p">
+                        Queremos escucharte, comprenderte, apoyarte y acompañarte en este camino que 
+                        emprenderás. <b>AUCAL</b> es tu <b>hoy</b> y hoy empieza a construirse tu <b>futuro</b>. 
+                        No tengas miedo de los obstáculos que encontrarás en este camino, decide y 
+                        atrévete a cambiar el mundo con pequeños detalles y acciones que puedes iniciar 
+                        ahora, y conviértete en ese ser humano que deseas en el futuro y que queremos 
+                        <b>escuchar, comprender, apoyar y acompañar</b> durante esa etapa en que estarás con 
+                        nosotros. 
+                    </p> 
+                </div>
+                <div class="editorial-txt">
+                    <button class="editorial-click link-edit-hidden" id="editLink">LEER MÁS</button>
+                    <button class="editorial-click link-edit-hidden" id="editClick">LEER MENOS</button>
+                </div>
+            </div>           
+        </aside>
+        <aside class="futuro">
+            <div class="futuro-head">
+                <div class="center-title">
+                    <p class="futuro-h2">TU FUTURO EMPIEZA AQUÍ</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+            <div class="futuro-btns">
+                <div class="btns btns-yellow-1">
+                    <a href="/oferta-formativa/master-oficial" class="btn-yellow-big btn-1" alt="AUCAL Bussines School Oferta Formativa Masters Masteres">
+                        <p>Explora cursos y programas</p>
+                    </a>
+                </div>
+                <div class="btns btns-yellow-2">
+                    <a href="/contacto" class="btn-yellow-big btn-2" alt="AUCAL Bussines School Contacto">
+                        <p>Solicita más información</p>
+                    </a>
+                </div>
+                <div class="btns btns-yellow-3">
+                    <a href="/programa-becas" class="btn-yellow-big btn-3" alt="AUCAL Bussines School Programa Becas">
+                        <p>Descubre más sobre AUCAL</p>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+        <script defer src="/2022/dist/js/sobre-aucal.js"></script>
+{% endblock %}

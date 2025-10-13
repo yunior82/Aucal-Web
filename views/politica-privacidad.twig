@@ -1,0 +1,552 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <link rel="stylesheet" href="/2022/dist/css/politica.css"/>
+    <link rel="stylesheet" href="/2022/dist/css/form_styles.css"/>
+    <style>
+        .formulario {
+            background-color: #d3d3d6;
+        }
+
+        .CaptchaWrap { position: relative; }
+        .CaptchaTxtField { 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+            display: block;  
+            box-sizing: border-box;
+        }
+        #CaptchaImageCode { 
+            text-align:center;
+            margin-top: 15px;
+            padding: 0px 0;
+            width: 300px;
+            overflow: hidden;
+        }
+        .capcode { 
+            font-size: 46px; 
+            display: block; 
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none; 
+            cursor: default;
+            letter-spacing: 1px;
+            color: #ccc;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+        .ReloadBtn { 
+            background:url('https://iposos.com/wp-content/uploads/2023/10/recaptcha.png') left top no-repeat;   
+            background-size : 100%;
+            width: 32px; 
+            height: 32px;
+            border: 0px; outline none;
+            position: absolute; 
+            bottom: 30px;
+            left: 310px;
+            outline: none;
+            cursor: pointer; /**/
+        }
+        .error { 
+            color: red; 
+            font-size: 12px; 
+            display: none; 
+        }
+        .success {
+            color: green;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: none;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor"> 
+       <aside class="info-politica">
+            <div class="center-head">
+                <div class="center-title">
+                    <p class="cu-h2">Política de Privacidad y Finalidad del Servicio</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+            <div class="tabs-title">
+                <p class="tab-h1">Recomendación previa</p>
+            </div>
+            <div class="tabs-txt">                
+                <p class="titula-txt">
+                    Te damos la bienvenida a aucal.edu y te recomendamos que leas nuestra Política de Privacidad. 
+                    Aquí te describimos la manera en la que Aucal y todos sus subdominios recaban y utilizan 
+                    información sobre sus clientes, usuarios y suscriptores de esta web. En esta web se respetan 
+                    y cuidan los datos personales de los usuarios. Como usuario debes saber que tus derechos están 
+                    garantizados. Nos esforzamos en crear un espacio seguro y confiable.
+                </p>
+                <br/>  
+                <p class="titula-txt">
+                    Tu <b>privacidad es importante para nosotros</b>. En esta declaración de 
+                    privacidad te explicamos qué datos personales recogemos de nuestros 
+                    usuarios y cómo los utilizamos.
+                </p>
+            </div>
+            <div class="tabs-txt">                
+                <p class="titula-txt">
+                    Te animamos a leer detenidamente estos términos antes de facilitar 
+                    tus datos personales en esta web.
+                </p>
+                <br/>                            
+                <p class="titula-txt">
+                    En esta web se respetan y cuidan los datos personales de los usuarios. 
+                    Como usuario debes saber que tus derechos están garantizados. 
+                    Nos esforzamos en crear un espacio seguro y confiable y por eso contamos 
+                    con unos principios respecto a tu privacidad:
+                </p>
+                <br/>                
+            </div>
+            <div class="tabs-txt">                
+                <ul class="tabla-titulaciones">
+                    <li class="tipo-titulo politica-red">
+                        Nunca compartimos información personal de nuestros usuarios con nadie, 
+                        excepto para cumplir con la ley o en caso que contemos con tu autorización expresa.
+                    </li>
+                    <li class="tipo-titulo politica-red">
+                        Nunca usamos tus datos personales con una finalidad diferente a la 
+                        expresada en esta política de privacidad.
+                    </li>
+                </ul>               
+            </div>
+            <div class="tabs-txt">                
+                <p class="titula-txt">
+                    Es preciso advertir que esta Política de Privacidad podría variar en función de exigencias 
+                    legislativas o de autorregulación, por lo que se aconseja a los usuarios que la visiten 
+                    periódicamente. Será aplicable en caso de que los usuarios decidan rellenar algún formulario 
+                    de cualquiera de sus formularios de contacto donde se recaben datos de carácter personal.
+                </p>
+                <br/>    
+                <p class="titula-txt">
+                    Aucal Business School ha adecuado esta web a las exigencias de la Ley Orgánica 15/1999, 
+                    de 13 de diciembre, de Protección de Datos de Carácter Personal (LOPD), y al Real Decreto 
+                    1720/2007, de 21 de diciembre, conocido como el Reglamento de desarrollo de la LOPD. 
+                    Cumple también con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 
+                    27 de abril de 2016 relativo a la protección de las personas físicas (RGPD), así como con 
+                    la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio 
+                    Electrónico (LSSICE o LSSI).
+                </p>
+                <br/>                
+            </div>
+            <div class="tabs-title">
+                <p class="tab-h1">Responsable del tratamiento de tus datos personales</p>
+            </div>
+            <div class="tabs-txt">                
+                <ul class="tabla-titulaciones">
+                    <li class="tipo-titulo"> Identidad del Responsable: AUCAL BUSINESS SCHOOL S.L.</li>
+                    <li class="tipo-titulo"> Nombre comercial: Aucal</li>
+                    <li class="tipo-titulo"> NIF/CIF: B49276868</li>
+                    <li class="tipo-titulo"> Dirección: Postigo de Nuestra Señora, 2 Bajo - 49800 - Toro - Zamora - España</li>
+                    <li class="tipo-titulo"> Correo electrónico: informacion@aucal.edu</li>
+                    <li class="tipo-titulo"> Actividad: Educación</li>
+                </ul>               
+            </div>
+            <div class="tabs-txt">                
+                <p class="titula-txt">
+                    A efectos de lo previsto en el Reglamento General de Protección de Datos antes citado, 
+                    los datos personales que envíes a través de los formularios de la web, recibirán el 
+                    tratamiento de datos de “Usuarios de la web y suscriptores”. Para el tratamiento de 
+                    datos de nuestros usuarios, implementamos todas las medidas técnicas y organizativas 
+                    de seguridad establecidas en la legislación vigente.
+                </p>
+                <br/>                
+            </div>
+            <div class="tabs-title">
+                <p class="tab-h1">Principios que aplicaremos a tu información personal</p>
+            </div>
+            <div class="tabs-txt">                
+                <p class="titula-txt">
+                    En el tratamiento de tus datos personales, aplicaremos los siguientes principios que 
+                    se ajustan a las exigencias del nuevo reglamento europeo de protección de datos:
+                </p>
+                <br/>      
+                <ul class="tabla-titulaciones">
+                    <li class="tipo-titulo"> 
+                        <b>Principio de licitud, lealtad y transparencia: </b> 
+                        Siempre vamos a requerir tu consentimiento para el tratamiento de tus datos personales 
+                        para uno o varios fines específicos que te informaremos previamente con absoluta transparencia.
+                    </li>
+                    <li class="tipo-titulo"> 
+                        <b>Principio de minimización de datos: </b>
+                        Solo vamos a solicitar datos estrictamente necesarios en relación con los fines para los 
+                        que los requerimos. Los mínimos posibles.
+                    </li>
+                    <li class="tipo-titulo"> 
+                        <b>Principio de limitación del plazo de conservación: </b>
+                        los datos serán mantenidos durante no más tiempo del necesario para los fines del tratamiento, 
+                        en función a la finalidad, te informaremos del plazo de conservación correspondiente, 
+                        en el caso de suscripciones, periódicamente revisaremos nuestras listas y eliminaremos aquellos 
+                        registros inactivos durante un tiempo considerable.
+                    </li>
+                    <li class="tipo-titulo"> 
+                        <b>Principio de integridad y confidencialidad: </b>
+                        Tus datos serán tratados de tal manera que se garantice una seguridad adecuada de los datos 
+                        personales y se garantice confidencialidad. Debes saber que tomamos todas las precauciones 
+                        necesarias para evitar el acceso no autorizado o uso indebido de los datos de nuestros usuarios 
+                        por parte de terceros.
+                    </li>                    
+                </ul>               
+            </div>
+            <div class="titula-title titulo-negro" style="margin-left: 3em;">
+                <p class="tab-h2" style="text-align: left;">¿Cómo hemos obtenido tus datos?</p>
+            </div>
+            <div class="tabs-txt">                
+                <p class="titula-txt">
+                    Cualquier persona tiene derecho a obtener confirmación sobre si en Aucal 
+                    estamos tratando datos personales que nos conciernen, o no.
+                </p>
+                <br/>
+                <p class="titula-txt">
+                    Las personas interesadas tienen derecho a:
+                </p>     
+                <ul class="tabla-titulaciones">
+                    <li class="tipo-titulo"> Solicitar el acceso a los datos personales relativos al interesado.</li>
+                    <li class="tipo-titulo"> Solicitar su rectificación o supresión.</li>                                      
+                    <li class="tipo-titulo"> Solicitar la limitación de su tratamiento.</li>                                      
+                    <li class="tipo-titulo"> Oponerse al tratamiento.</li>                                      
+                    <li class="tipo-titulo"> Solicitar la portabilidad de los datos.</li>                                      
+                </ul> 
+                <br/> 
+                <p class="titula-txt">
+                    Los interesados podrán acceder a sus datos personales, así como a solicitar la rectificación de los datos inexactos o, en su caso, solicitar su supresión cuando, entre otros motivos, los datos ya no sean necesarios para los fines que fueron recogidos. En determinadas circunstancias, los interesados podrán solicitar la limitación del tratamiento de sus datos, en cuyo caso únicamente los conservaremos para el ejercicio o la defensa de reclamaciones.
+                </p>
+                <br/> 
+                <p class="titula-txt">
+                    En determinadas circunstancias y por motivos relacionados con su situación particular, los interesados podrán oponerse al tratamiento de sus datos. AUCAL BUSINESS SCHOOL S.L. dejará de tratar los datos, salvo por motivos legítimos imperiosos, o el ejercicio o la defensa de posibles reclamaciones. Cómo interesado, tienes derecho a recibir los datos personales que te incumban, que nos hayas facilitado y en un formato estructurado, de uso común y lectura mecánica, y a transmitirlos a otro responsable del tratamiento cuando:
+                </p>     
+                <ul class="tabla-titulaciones">
+                    <li class="tipo-titulo"> El tratamiento esté basado en el consentimiento.</li>
+                    <li class="tipo-titulo"> Los datos hayan sido facilitados por la persona interesada.</li>                                      
+                    <li class="tipo-titulo"> El tratamiento se efectúe por medios automatizados.</li>                                   
+                </ul> 
+                <br/> 
+                <p class="titula-txt">
+                    Al ejercer tu derecho a la portabilidad de los datos, tendrás derecho a que los datos personales se transmitan directamente de responsable a responsable cuando sea técnicamente posible. Los interesados también tendrán derecho a la tutela judicial efectiva y a presentar una reclamación ante la autoridad de control, en este caso, la Agencia Española de Protección de Datos, si consideran que el tratamiento de datos personales que le conciernen infringe el Reglamento.
+                </p> 
+                <br/>              
+            </div>
+            <div class="tabs-title">
+                <p class="tab-h1">Derecho de oposición al marketing directo</p>
+            </div>
+            <div class="tabs-txt">
+                <p class="titula-txt">
+                    Usted tiene derecho a oponerse al marketing directo, incluyendo la elaboración de perfiles realizada para dicho marketing directo a través de newsletters. Puede desvincularse del marketing directo en cualquier momento de los siguientes modos:
+                </p>     
+                <ul class="tabla-titulaciones">
+                    <li class="tipo-titulo">Siguiendo las indicaciones facilitadas en cada correo de email marketing.</li>                                      
+                    <li class="tipo-titulo">Enviándonos un email a boletines@emailenvios.com solicitando la baja.</li>                                   
+                </ul>
+                <br>
+            </div>  
+            <div class="tabs-title">
+                <p class="tab-h1">¿Con qué finalidad tratamos tus datos personales?</p>
+            </div>
+            <div class="tabs-txt">
+                <p class="titula-txt">
+                    Cuando un usuario se conecta con esta web por ejemplo para matricularse en un curso, enviarnos un correo de solicitud de información, o escribirnos a través del formulario de contacto, está facilitando información de carácter personal de la que es responsable Aucal.
+                </p>  
+                <br>
+                <p class="titula-txt">
+                    Esa información puede incluir datos de carácter personal como pueden ser tu dirección IP, nombre, dirección física, dirección de correo electrónico, número de teléfono, y otra información. Al facilitar esta información, el usuario da su consentimiento para que su información sea recopilada, utilizada, gestionada y almacenada por https://www.aucal.edu, sólo como se describe en las Condiciones de Uso y en la presente Política de Privacidad.
+                </p>   
+                <p class="titula-txt">
+                    En Aucal existen diferentes sistemas de captura de información personal y tratamos la información que nos facilitan las personas interesadas con el siguiente fin por cada sistema de captura (formularios):
+                </p>   
+                <ul class="tabla-titulaciones">
+                    <li class="tipo-titulo"> <b>Formulario de contacto: </b>Solicitamos los siguientes datos personales: Nombre, Email, para responder a los requerimientos de los usuarios de https://www.aucal.edu. Por ejemplo, podemos utilizar esos datos para responder a tu solicitud y dar respuesta a las dudas, quejas, comentarios o inquietudes que puedas tener relativas a la información incluida en la web, los servicios que se prestan a través de la web, el tratamiento de sus datos personales, cuestiones referentes a los textos legales incluidos en la web, así como cualesquiera otras consultas que puedas tener y que no estén sujetas a las condiciones de contratación. Te informamos que los datos que nos facilitas estarán ubicados en los servidores de Loading (proveedor de AUCAL BUSINESS SCHOOL S.L.) dentro de la UE.</li>                                      
+                    <li class="tipo-titulo"> <b>Formulario de solicitud de información: </b>Solicitamos los siguientes datos personales: Nombre, Apellido, Email, Teléfono, País de residencia, para solicitar información de los cursos que https://aucal.edu pone a disposición de sus usuarios. La información recabada permitirá enviar información completa del curso interés del usuario. Las solicitudes serán respondidas por correo electrónico. La web permite gestionar pagos directamente. Te informamos que los datos que nos facilitas estarán ubicados en los servidores de Loading (proveedor de AUCAL BUSINESS SCHOOL S.L.) dentro de la UE.</li>                                   
+                    <li class="tipo-titulo"> <b>Formulario de Suscripción de newsletter:  </b>En este caso, solicitamos los siguientes datos personales: Nombre, Email, para que puedas recibir en tu correo electrónico nuestras promociones y novedades a través de nuestra newsletter. Te informamos que los datos que nos facilitas estarán ubicados en los servidores de Loading (proveedor de AUCAL BUSINESS SCHOOL S.L.) dentro de la UE.</li>                                   
+                </ul>
+            </div>  
+            <div class="tabs-txt">                
+                <p class="titula-txt">Existen otras finalidades por las que tratamos tus datos personales:</p>
+                <br/>  
+                <p class="titula-txt">
+                    Para garantizar el cumplimiento de las condiciones de uso y la ley aplicable. Esto puede incluir el desarrollo de herramientas y algoritmos que ayudan a esta web a garantizar la confidencialidad de los datos personales que recoge.
+                </p>    <br/>          
+                <p class="titula-txt">Para apoyar y mejorar los servicios que ofrece nuestra web.</p> <br/>             
+                <p class="titula-txt">También se recogen otros datos no identificativos que se obtienen mediante algunas cookies que se descargan en el ordenador del usuario cuando navega en esta web que detallamos en la política de cookies.</p>  <br/>            
+                <p class="titula-txt">Para gestionar las redes sociales. Aucal puede tiene presencia en redes sociales. El tratamiento de los datos que se lleve a cabo de las personas que se hagan seguidoras en las redes sociales de las páginas oficiales de https://aucal.edu, se regirá por este apartado. Así como por aquellas condiciones de uso, políticas de privacidad y normativas de acceso que pertenezcan a la red social que proceda en cada caso y aceptadas previamente por el usuario de AUCAL BUSINESS SCHOOL S.L.. Tratará sus datos con las finalidades de administrar correctamente su presencia en la red social, informando de actividades, productos o servicios de Aucal. Así como para cualquier otra finalidad que las normativas de las redes sociales permitan. En ningún caso utilizaremos los perfiles de seguidores en redes sociales para enviar publicidad de manera individual.</p>  <br/>            
+                <p class="titula-txt">De acuerdo a lo establecido en el reglamento general de protección de datos europeo (RGPD) 2016/679, AUCAL BUSINESS SCHOOL S.L. (Aucal) con domicilio en Postigo de Nuestra Señora, 2 Bajo - 49800 - Toro - Zamora - España, será responsable del tratamiento de los datos correspondientes a Usuarios de la web y suscriptores.</p>  <br/>            
+                <p class="titula-txt">Aucal no vende, alquila ni cede datos de carácter personal que puedan identificar al usuario, ni lo hará en el futuro, a terceros sin el consentimiento previo. Sin embargo, en algunos casos se pueden realizar colaboraciones con otros profesionales, en esos casos, se requerirá consentimiento a los usuarios informando sobre la identidad del colaborador y la finalidad de la colaboración. Siempre se realizará con los más estrictos estándares de seguridad.</p>              
+                <br/>
+            </div>
+            <div class="tabs-title">
+                <p class="tab-h1">Información relativa al uso de datos en relación con las matrículas online en Aucal.</p>
+            </div> 
+            <div class="tabs-txt">                
+                <p class="titula-txt">
+                    Dependiendo el método de pago que elijas, puede que debas facilitar información de pago a Aucal para permitir que se lleve a cabo la operación. Por ejemplo, si pagas con tarjeta de crédito, deberás facilitarle a Aucal los datos relativos a su tarjeta de crédito (el número de la tarjeta de crédito, la fecha de caducidad y el código de seguridad) para permitir la operación.
+                </p>
+                <br/>  
+                <p class="titula-txt">
+                    La base legal para el tratamiento de datos mencionado en esta sección es la prestación del servicio que usted ha solicitado (artículo 6, párrafo 1 (b) del RGPD).
+                </p>         
+                <br>
+            </div>   
+            <div class="tabs-title">
+                <p class="tab-h1">Campañas de pago</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">
+                    En https://aucal.edu utilizamos diversas campañas de pago como Adwords, Facebook ads, Twitter, Linkedin e Instagram, que nos permite crear campañas y anuncios. Al generar un anuncio, se puede segmentar el público por:
+                </p>     
+                <ul class="tabla-titulaciones">
+                    <li class="tipo-titulo">Lugar.</li>                                      
+                    <li class="tipo-titulo">Datos demográficos (edad, sexo, etc.).</li>                                   
+                    <li class="tipo-titulo">Intereses (actividades, aficiones, etc.).</li>                                   
+                    <li class="tipo-titulo">Lo que compran en internet y por otros canales.</li>                                   
+                    <li class="tipo-titulo">Etc.</li>                                   
+                </ul>
+                <br>
+                <p class="titula-txt">
+                    Los datos obtenidos a través de estas campañas de pago están sujetos a esta política de privacidad desde el momento en que el usuario deja sus datos en el formulario de esta web para unirse al boletín de suscripciones o solicitar información. En ningún caso se utilizará la información procedente de ninguna de esas plataformas mencionadas con una finalidad diferente.
+                </p>
+                <br>
+            </div>  
+            <div class="tabs-title">
+                <p class="tab-h1">Legitimación para el tratamiento de tus datos.</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">
+                    La base legal para el tratamiento de sus datos es: el consentimiento. Para contactar se requiere el consentimiento con esta política de privacidad. La oferta prospectiva o comercial de productos y servicios está basada en el consentimiento que se le solicita, sin que en ningún caso la retirada de este consentimiento condicione la ejecución del contrato de suscripción.
+                </p> 
+                <br>
+            </div>
+            <div class="tabs-title">
+                <p class="tab-h1">Categoría de datos recogidos.</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">
+                    Las categorías de datos que se tratan son datos identificativos. En ningún caso se tratan categorías de datos especialmente protegidos.
+                </p> 
+                <br>
+            </div>   
+            <div class="tabs-title">
+                <p class="tab-h1">¿Por cuánto tiempo conservaremos tus datos?</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">
+                    Los datos personales proporcionados se conservarán hasta que no se solicite su supresión por el interesado.
+                </p> 
+                <br>
+            </div> 
+            <div class="tabs-title">
+                <p class="tab-h1">¿A qué destinatarios se comunicarán tus datos?</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">
+                    Muchas herramientas que utilizamos para gestionar tus datos son contratados por terceros. Para prestar servicios estrictamente necesarios para el desarrollo de la actividad, https://aucal.edu, comparte datos con los siguientes prestadores bajo sus correspondientes condiciones de privacidad:
+                </p>     
+                <ul class="tabla-titulaciones">
+                    <li class="tipo-titulo"> Google Analytics: un servicio analítico de web prestado por Google, Inc., una compañía de Delaware cuya oficina principal está en 1600 Amphitheatre Parkway, Mountain View (California), CA 94043, Estados Unidos (“Google”). Google Analytics utiliza “cookies”, que son archivos de texto ubicados en tu ordenador, para ayudar a https://prensalink.com a analizar el uso que hacen los usuarios del sitio web. La información que genera la cookie acerca de su uso de https://aucal.edu (incluyendo tu dirección IP) será directamente transmitida y archivada por Google en los servidores de Estados Unidos.</li>                                      
+                    <li class="tipo-titulo">Email marketing: Mdirector, con domicilio en Marqués de Riscal, 11 2º 28010 Madrid. Más información en: https://mdirector.com/.</li>                                   
+                </ul>
+                <br>
+                <p class="titula-txt">
+                    Además, Aucal compartirá los datos de sus usuarios necesarios para los trámites administrativos con la universidad o universidades que certifiquen la titulación de los estudios realizados.
+                </p>
+                <br>
+            </div> 
+            <div class="tabs-title">
+                <p class="tab-h1">Navegación</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">
+                    Al navegar por https://aucal.edu se pueden recoger datos no identificables, que pueden incluir, direcciones IP, ubicación geográfica (aproximadamente), un registro de cómo se utilizan los servicios y sitios, y otros datos que no pueden ser utilizados para identificar al usuario. Entre los datos no identificativos están también los relacionados a tus hábitos de navegación a través de servicios de terceros. Esta web utiliza los siguientes servicios de análisis de terceros:
+                </p>     
+                <ul class="tabla-titulaciones">
+                    <li class="tipo-titulo">Google Analytics</li>                                      
+                    <li class="tipo-titulo">Pixel de Facebook</li>                                   
+                </ul>
+                <br>
+                <p class="titula-txt">
+                    Utilizamos esta información para analizar tendencias, administrar el sitio, rastrear los movimientos de los usuarios alrededor del sitio y para recopilar información demográfica sobre nuestra base de usuarios en su conjunto.
+                </p>
+                <br>
+            </div> 
+            <div class="tabs-title">
+                <p class="tab-h1">Secreto y seguridad de los datos.</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">
+                    https://aucal.edu se compromete en el uso y tratamiento de los datos incluidos personales de los usuarios, respetando su confidencialidad y a utilizarlos de acuerdo con la finalidad del mismo, así como a dar cumplimiento a su obligación de guardarlos y adaptar todas las medidas para evitar la alteración, pérdida, tratamiento o acceso no autorizado, de conformidad con lo establecido en la normativa vigente de protección de datos.  
+                </p> 
+                <br>
+                <p class="titula-txt">
+                    https://aucal.edu no puede garantizar la absoluta inexpugnabilidad de la red Internet y por tanto la violación de los datos mediante accesos fraudulentos a ellos por parte de terceros.
+                </p> 
+                <br>
+                <p class="titula-txt">
+                    Con respecto a la confidencialidad del procesamiento, AUCAL BUSINESS SCHOOL S.L se asegurará de que cualquier persona que esté autorizada por Aucal para procesar los datos del cliente (incluido su personal, colaboradores y prestadores), estará bajo la obligación apropiada de confidencialidad (ya sea un deber contractual o legal).
+                </p> 
+                <br>
+                <p class="titula-txt">
+                    Cuando se presente algún incidente de seguridad, al darse cuenta Aucal, deberá notificar al Cliente sin demoras indebidas y deberá proporcionar información oportuna relacionada con el Incidente de Seguridad tal como se conozca o cuando el Cliente lo solicite razonablemente.
+                </p> 
+                <br>
+            </div>  
+            <div class="tabs-title">
+                <p class="tab-h1">Exactitud y veracidad de los datos</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">
+                    Como usuario, eres el único responsable de la veracidad y corrección de los datos que remitas a https://aucal.edu exonerando a AAUCAL BUSINESS SCHOOL S.L (Aucal), de cualquier responsabilidad al respecto.
+                </p> 
+                <br>
+                <p class="titula-txt"> 
+                    Los usuarios garantizan y responden, en cualquier caso, de la exactitud, vigencia y autenticidad de los datos personales facilitados, y se comprometen a mantenerlos debidamente actualizados. El usuario acepta proporcionar información completa y correcta en el formulario de contacto o suscripción.
+                </p> 
+                <br>                
+            </div>   
+            <div class="tabs-title">
+                <p class="tab-h1">Aceptación y consentimiento.</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt"> 
+                    El usuario declara haber sido informado de las condiciones sobre protección de datos de carácter personal, aceptando y consintiendo el tratamiento de los mismos por parte de AUCAL BUSINESS SCHOOL S.L (Aucal) en la forma y para las finalidades indicadas en esta política de privacidad.
+                </p> 
+                <br>                
+            </div>
+            <div class="tabs-title">
+                <p class="tab-h1">Revocabilidad.</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">El consentimiento prestado, tanto para el tratamiento como para la cesión de los datos de los interesados, es revocable en cualquier momento comunicándolo a AUCAL BUSINESS SCHOOL S.L (Aucal) en los términos establecidos en esta Política para el ejercicio de los derechos. Esta revocación en ningún caso tendrá carácter retroactivo.</p> 
+                <br>                
+            </div>
+            <div class="tabs-title">
+                <p class="tab-h1">Cambios en la política de privacidad.</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">AUCAL BUSINESS SCHOOL S.L se reserva el derecho a modificar la presente política para adaptarla a novedades legislativas o jurisprudenciales, así como a prácticas de la industria. En dichos supuestos, AUCAL BUSINESS SCHOOL S.L anunciará en esta página los cambios introducidos con razonable antelación a su puesta en práctica. </p> 
+                <br>                
+            </div>
+            <div class="tabs-title">
+                <p class="tab-h1">Correos comerciales.</p>
+            </div> 
+            <div class="tabs-txt">
+                <p class="titula-txt">De acuerdo con la LSSICE, https://aucal.edu no realiza prácticas de SPAM, por lo que no envía correos comerciales por vía electrónica que no hayan sido previamente solicitados o autorizados por el usuario. En consecuencia, el usuario al aceptar la presente Política de privacidad da su consentimiento expreso para recibir el boletín, con independencia de la información comercial puntualmente solicitada. Conforme a lo dispuesto en la Ley 34/2002 de Servicios de la Sociedad de la Información y de comercio electrónico, https://aucal.edu se compromete a no enviar comunicaciones de carácter comercial sin identificarlas debidamente. </p> 
+                <br>
+                <p class="titula-txt"> Documento revisado en mayo de 2018.</p> 
+                <br>                
+            </div>  
+        </aside>   
+        <aside class="formulario"> 
+            <div class="tabs-title">
+                <p class="tab-h1">¡Quiero Inscribirme!</p>
+                <div class="tabs-txt">
+                    <p class="titula-txt">Dejanos tus datos para que podemos llamarte y asesorate lo mejor posible en todo lo que necesites. Estamos contigo desde el principio</p> 
+                    <br>
+                                    
+                </div> 
+            </div> 
+            <form class="section-6-form" id="form-becas" action="https://www.sotecza.es/crm/index/cupones/insertar" method="post">
+                <input type="hidden" value="12713" name="id_curso" id="id_curso" />
+                <input type="hidden" value="667" name="id_remitente" id="id_remitente" />
+                <input type="hidden" value="aucal-contacto" name="utm_source" id="utm_source" />
+                <input type="hidden" value="https://www.aucal.edu/solicitud-ok" name="redir_peticion_ok" id="redir_peticion_ok" />
+                <input type="hidden" value="https://www.aucal.edu/solicitud-ko" name="redir_peticion_fallo" id="redir_peticion_fallo" />
+                <input type="hidden" name="token" id="token" />
+
+                <div class="form-group-container">
+                    <div class="form-group">
+                        <div class="section-6-input">
+                            <input class="input-6" type="text" name="nombre" id="nombre" placeholder="Nombre*" required>
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <div class="section-6-input">
+                            <input class="input-6" type="text" name="apellido1" id="apellido1" placeholder="Apellidos*" required>
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="section-6-input">
+                            <input class="input-6" type="email" id="email" name="email" placeholder="Email*" required>
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div class="section-6-input input-6-phone ">
+                            <div class="selected-option">
+                                <input class="input-6" type="tel" id="phone" name="telefono1" minlength="5" maxlength="14"
+                                    placeholder="Número de Teléfono*" required />
+                            </div>
+                            <div class="options">
+                                <input type="text" class="search-box" placeholder="Busca País Por Nombre">
+                                <ol>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="section-6-input">
+                            <select class="input-6" name="estudios" id="estudios" title="estudios" >
+                                <option value="" selected disabled>Nivel de Estudios</option>
+                                <option value="1">Sin estudios</option>
+                                <option value="2">Graduado escolar o similar</option>
+                                <option value="3">ESO</option>
+                                <option value="4">FP1</option>
+                                <option value="5">FP2</option>
+                                <option value="6">Grado Medio FP</option>
+                                <option value="8">Bachillerato</option>
+                                <option value="9">Grado Superior FP</option>
+                                <option value="10">Diplomatura Universitaria</option>
+                                <option value="11">Licenciatura Universitaria</option>
+                                <option value="12">Máster</option>
+                                <option value="13">Doctorado</option>
+                                <option value="14">Postgrado</option>
+                                <option value="15">Grado Universitario</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="section-6-input">
+                            <select class="section-6-select input-6" name="pais_iso" id="pais" title="paises" >
+                                <option value="" selected disabled>Pais</option>
+                            </select>
+                        </div>
+                    </div>                    
+                </div>
+                <label for="condiciones" class="condiciones">
+                    <input class="conditions" type="checkbox" name="condiciones" id="condiciones" required>
+                    Al enviar este formulario, acepto estas 
+                    <a href="https://www.aucal.edu/condiciones-de-uso" target="_blank" rel="noopener noreferer">condiciones legales </a>
+                </label>
+                <label for="otras_condiciones" class="otras_condiciones" style="display:none;">
+                    <input class="conditions" type="checkbox" name="otras_condiciones" id="otras_condiciones" required>
+                    Al enviar este formulario, acepto estas 
+                    <a href="https://www.aucal.edu/condiciones-de-uso" target="_blank" rel="noopener noreferer">condiciones legales </a>
+                </label>
+                <button class="form-btn-becas g-recaptcha" data-sitekey="6LegDCEpAAAAAIgWa7Q1zxuxt5G3Nt7MIJldEbzi" data-callback='onClick' type="button" data-action='click' id="form_button">Enviar</button>
+                <span id="WrongCaptchaError" class="error"></span>
+            </form>     
+        </aside>
+    </div>
+    <script defer src="/2022/dist/js/forms.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LegDCEpAAAAAIgWa7Q1zxuxt5G3Nt7MIJldEbzi"></script>
+    <script>
+        function onClick(e) {
+            if ($('#nombre').val() == "" || $('#apellido1').val() == "" || $('#email').val() == "" || $('#phone').val() == "" || $("#otras_condiciones").is(':checked')) {
+					
+                $('#WrongCaptchaError').text('Error! Rellene los campos obligatorios.').show();
+
+            } else {
+                //e.preventDefault();
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LegDCEpAAAAAIgWa7Q1zxuxt5G3Nt7MIJldEbzi', {action: 'click'}).then(function(token) {
+                        // Add your logic to submit to your backend server here.
+                        $('#token').val(token);
+                        $('#form-becas').submit();
+                    });
+                });
+            }
+        }
+    </script>
+{% endblock %}

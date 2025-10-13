@@ -1,0 +1,32 @@
+/* BECAS FORMULARIOS */
+.contenedor {
+    display: grid;
+    line-height: normal;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header             header              header"
+        "formulario-becas   formulario-becas    formulario-becas"
+        "carrusel-unis      carrusel-unis       carrusel-unis"
+        "footer             footer              footer";    
+}
+/* ***************************** */
+/* BARra NAVegación */
+.contenedor .header{ grid-area: header; }
+
+/*Formulario*/
+.contenedor .formulario-becas{ 
+    grid-area: formulario-becas;
+    margin-top: 3em;
+}
+
+.form-title>p{font-size: 32px;}
+
+/* UNIS */
+.contenedor .carrusel-unis{ grid-area: carrusel-unis;}
+
+/* FOOTER */
+.contenedor .footer{ grid-area: footer;}
+
+@media screen  and (max-width: 991.98px){
+    .contenedor .formulario-becas{ margin-top: 2em;}
+}

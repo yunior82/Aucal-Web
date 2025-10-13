@@ -1,0 +1,390 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+	<meta name="description" content="Escuela de formación online especializada en Másteres oficiales y Cursos Superiores. Accede a nuestras prácticas profesionales y bolsa de empleo. Disponible programa de becas y descuentos para alumnos"/>
+	<style>
+		@media (max-width: 767.98px){
+ 			.banner-azul-left .azul-left-txt .azul-left-hr { padding: 0!important;}
+		}
+	</style>
+{% endblock %}
+
+{% block body %} 
+    <div class="contenedor">
+        <aside class="matriculate">
+           <div class="matriculate-content">
+                <h1 class="h1-matriculate">AUCAL BUSINESS SCHOOL</h1>
+                <h4 class="text-matriculate">La mejor formación superior en nuestra escuela online</h4>
+                <a href="/oferta-formativa" class="btn-matriculate btn-red-normal" alt="AUCAL Bussines School Oferta Educativa">Descubre nuestro catálogo</a>
+           </div>
+        </aside>
+        <aside class="selects">
+            <div class="select-title">
+                <p class="h2-select">Encuentra la formación online que necesitas</p>
+            </div>
+            <div class="select-1">
+                <p class="p-select-1">Seleccionar tipo de formación</p>
+                <select name="tipoFormacion" id="selected_formacion" class="desplegable-1">
+                    <option value="">Seleccionar...</option>
+                    <option value="1" id="selectMaster">Máster</option>
+                    <option value="2" id="selectSuper">Curso Superior</option>
+                    <option value="3" id="selectTecni">Curso Técnico</option>
+                </select>
+            </div>
+            <div class="select-2">
+                <p class="p-select-2">Selecciona la titulación</p>
+                <select name="titulacion" id="slect_programas" class="desplegable-2">
+                    <option value="">Seleccionar...</option>
+                </select>
+            </div>
+            <div class="select-btn"> 
+                <a style="cursor: pointer" class="btn-yellow btn-select" onclick="handleSearch()"  alt="AUCAL Bussines School Oferta Educativa Buscar">Buscar</a>
+            </div>
+        </aside>
+        <!-- <script type="text/javascript" src="https://api.clientify.net/web-marketing/superforms/script/113541.js"></script> -->
+        
+        <aside class="banner-masterclass">
+            <div class="masterclass-content" style="background-image: url({{ banner.image_url }});">
+                <h1 class="h1-masterclass">
+                    {{ banner.title }}
+                </h1>
+                <h4 class="text-masterclass">{{ banner.subtitle }}</h4>
+                
+                 <br/>
+                <a href="{{ banner.href }}" target="_blank" class="btn-red-normal" alt="AUCAL Bussines School MASTER EXCUTIVE">{{ banner.button }}</a>
+           </div>
+        </aside>
+
+        <!-- <aside class="banner-masterclass">
+            <div class="masterclass-content" style="background-image: url({{ banner.image_url }});">
+                <h1 class="h1-masterclass">
+                    {{ banner.title }}
+                </h1>
+                <h4 class="text-masterclass">{{ banner.subtitle }}</h4>
+                
+                 <br/>
+                <a href="{{ banner.href }}" target="_blank" class="btn-red-normal" alt="AUCAL Bussines School MASTER EXCUTIVE">{{ banner.button }}</a>
+           </div>
+        </aside> -->
+
+        <aside class="banner-azul-left">
+            <div class="azul-left-img">
+                <img src="/2022/dist/images/formacion-a-distancia-AUCAL.jpg" alt="AUCAL Bussines School Formacion Distancia Online" class="img-azul-1">
+            </div> 
+            <div class="azul-left-txt">
+               <div class="azul-left-title">
+                    <p class="h2-azul-left">Aucal Business School</p>
+                    <p class="txt-azul-left">Con nosotros, tu futuro empieza hoy</p>
+               </div>
+                <div class="azul-left-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-left-descript">
+                    <p class="p-azul-left"><b>Más de 35.000 alumnos</b> han confiado en la metodología innovadora 
+                        y calidad de nuestra formación online.</p>
+                </div>
+            </div>
+            <div class="azul-left-unis">
+                {# <div class="azul-left-logos">
+                    <img src="/2022/dist/images/icons/uni_school.png" class="school" alt="AUCAL Bussines School Logo School Universidad LUM">
+                </div> #}
+                
+                <div class="azul-left-logos">
+                    <img src="/2022/dist/images/icons/uni_nebrija.png"  class="nebrija" alt="AUCAL Bussines School Logo Universidad Nebrija">
+                </div>
+                <div class="azul-left-logos">
+                    <img src="/2022/dist/images/icons/e-campus_logo.png" class="nebrija" alt="AUCAL Bussines School Logo e-Campus">
+                </div>
+                {# <div class="azul-left-logos">
+                    <img src="/2022/dist/images/icons/uni_fvitoria.png" class="fvitoria" alt="AUCAL Bussines School Logo Universidad FVitoria">
+                </div> #}
+            </div>                    
+        </aside>
+        <aside class="cformacion">
+            <div class="cf-head center-head">
+                <div class="center-title">
+                    <p class="cf-h2">FORMACIÓN DESTACADA</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+            <div class="cf-carousel">
+                <div class="formacion-card card-rrhh">
+                    <a href="/oferta-formativa/master-executive/master-executive-en-recursos-humanos-y-salud-laboral" class="formacion-a" alt="AUCAL Bussines School Master Direccion Recursos Humanos RRHH">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Executive en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Dirección de Recursos Humanos y Salud Laboral</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="formacion-card card-executive-mba">
+                    <a href="oferta-formativa/master-executive/master-executive-en-direccion-y-administracion-de-empresas-mba" class="formacion-a" alt="AUCAL Bussines School Master Orientacion Educativa Intervencion Psicopedagogica">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Executive en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">en Dirección y Administración de Empresas (MBA)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="formacion-card card-tecnologico">
+                    <a href="/oferta-formativa/master-oficial/master-compliance-penal-y-tecnologico" class="formacion-a" alt="AUCAL Bussines School Master Compliance Penal Tecnologico">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Universitario en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Compliance Penal y Tecnológico</p>
+                        </div>
+                    </a>
+                </div> 
+            </div>
+            <div class="cf-btn">
+                <a href="/oferta-formativa" class="btn-yellow" alt="AUCAL Bussines School Oferta Educativa">TODA LA OFERTA FORMATIVA</a>
+            </div>
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-alumnos"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Cuáles son las ventajas de AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        La modalidad online permite una dedicación y aprendizaje <b>flexible adaptado</b> 
+                        a las necesidades de cada alumno, además de ser compatible con otras 
+                        actividades a través de un modelo con el que podrás acceder a la plataforma 
+                        las <b>24 horas, los 7 días de la semana.</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/estudiar-en-aucal" class="btn-border" alt="AUCAL Bussines School Estudiar Aucal">SABER MÁS</a>
+            </div>                     
+        </aside>  
+        <aside class="talento">
+            <div class="talent-head center-head">
+                <div class="center-title">
+                    <p class="talent-h2">APOYAMOS TALENTO</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+            <div class="talent-subtitle">
+                <p class="talent-p">
+                    Descubre nuestras becas y descuentos
+                </p>
+            </div>
+            <div class="talent-cards">                
+                <div class="talent-card card1">
+                    <div class="talent-icons">
+                        <img class="talent-icon" src="/2022/dist/images/icons/graduate.png" alt="AUCAL Bussines School Beca Excelencia Academica">
+                    </div>
+                    <div class="talent-card-txt">
+                        <div class="talent-card-title">
+                            <p class="card-h3">BECAS DE EXCELENCIA ACADÉMICA</p>
+                        </div>
+                        <div class="talent-card-descript">
+                            <p class="card-descript">
+                                Premiamos tu esfuerzo académico bonificando el 50% del precio total.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="talent-card-btn">
+                        <a href="/solicitar-beca" class="btn-yellow" alt="AUCAL Bussines School Solicitar Beca Excelencia Academica">SOLICITAR</a>
+                    </div>
+                </div>
+                <div class="talent-card card2">
+                    <div class="talent-icons">
+                        <img class="talent-icon" src="/2022/dist/images/icons/rocket.png" alt="AUCAL Bussines School Beca Apoyo a Pymes">
+                    </div>
+                    <div class="talent-card-txt">
+                        <div class="talent-card-title">
+                            <p class="card-h3">BECAS DE APOYO A PYMES </p>
+                        </div>
+                        <div class="talent-card-descript">
+                            <p class="card-descript">
+                                Creemos en los emprendedores como tú, obtén una ayuda del 35%.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="talent-card-btn">
+                        <a href="/solicitar-beca" class="btn-yellow" alt="AUCAL Bussines School Solicitar Beca Apoyo a Pymes">SOLICITAR</a>
+                    </div>
+                </div>
+                <div class="talent-card card3">
+                    <div class="talent-icons">
+                        <img class="talent-icon" src="/2022/dist/images/icons/hands.png" alt="AUCAL Bussines School Beca Apoyo a Aut�nomos">
+                    </div>
+                    <div class="talent-card-txt">
+                        <div class="talent-card-title">
+                            <p class="card-h3">BECAS DE APOYO A AUTÓNOMOS </p>
+                        </div>
+                        <div class="talent-card-descript">
+                            <p class="card-descript">
+                                Si eres independiente, tienes la oportunidad 
+                                de crecer profesionalmente en AUCAL.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="talent-card-btn">
+                        <a href="/solicitar-beca" class="btn-yellow btn-card" alt="AUCAL Bussines School Solicitar Beca apoyo a Autonomos">SOLICITAR</a>
+                    </div>
+                </div>
+                <div class="talent-card card2">
+                    <div class="talent-icons">
+                        <img class="talent-icon" src="/2022/dist/images/icons/ballot.png" alt="AUCAL Bussines School Beca Aucalizate">
+                    </div>
+                    <div class="talent-card-txt">
+                        <div class="talent-card-title">
+                            <p class="card-h3">BECA AUCALÍZATE </p>
+                        </div>
+                        <div class="talent-card-descript">
+                            <p class="card-descript">
+                                Rellena nuestra encuesta de interés para conocer en 
+                                profundidad tu situación y consigue un 40%.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="talent-card-btn">
+                        <a href="/beca-aucalizate" class="btn-yellow" alt="AUCAL Bussines School Solicitar Beca Aucalizate">SOLICITAR</a>
+                    </div>
+                </div>
+            </div>
+            <div class="talent-enlace">
+                <!-- redirecciona a Becas y Ayudas -->
+                <a href="/programa-becas" class="red-link" alt="AUCAL Bussines School Programa Becas DEscuentos">TODA LA INFORMACION SOBRE LAS BECAS Y DESCUENTOS >></a>
+            </div>
+            <div class="talent-buttons">
+                <a href="/estudiar-en-aucal/empleo-practicas" class="talent-btn1 btn-brown" alt="AUCAL Bussines School Estudias Aucal Bolsa Empleo Practicas">
+                    <h2 class="talent-h2">BOLSA DE EMPLEO Y PRÁCTICAS</h2>
+                    <img src="/2022/dist/images/logos/logo-transparent.png" alt="AUCAL Bussines School Logo-Aucal" class="talent-aucalLogo">
+                </a>
+                <a href="/programa-descuentos" class="talent-btn2 btn-red" alt="AUCAL Bussines School">
+                    <h2 class="talent-h2">FORMACIÓN BONIFICADA</h2>
+                    <img src="/2022/dist/images/logos/logo-transparent.png" alt="AUCAL Bussines School Logo-Aucal" class="talent-aucalLogo">
+                </a>
+            </div>
+        </aside>
+        <aside class="noticias">
+            <div class="news-head center-head">
+                <div class="center-title">
+                    <p class="news-h2">ÚLTIMAS NOTICIAS</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+            <div class="news-cards">
+                {% for article in articles %}
+                    <div class="news-card card1">
+                        <div class="news-imgs">
+                            <img class="news-img" src="{{ article.image_url }}" alt="Aucal Bussines School {{ article.title }}">
+                        </div>
+                        <div class="news-card-txt">
+                            <div class="news-card-title">
+                                <p class="card-h3">{{ article.title }}</p>
+                            </div>
+                            <div class="news-card-descript">
+                                <p class="card-descript">{{ article.description|raw }}</p>
+                            </div>
+                        </div>
+                        <div class="news-footer">
+                            <div class="news-date">
+                                <p class="ndate-item">{{ article.date|date("d/m/Y") }}</p>
+                            </div>
+                            <div class="news-card-btn">
+                                <a href="/noticia/{{ article.slug }}" class="a-red" alt="AUCAL Bussines School Leer Noticia Articulo">LEER</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="news-enlace">
+                <a href="/noticias" class="red-link" alt="AUCAL Bussines School Noticias">TODAS LAS NOTICIAS >></a>
+            </div>
+        </aside>        
+    </div>
+
+    <script>
+        const values = [
+            [
+                {% for course in global.courses %}
+                    {% if course.category_id == 2 %}
+                        '{{ course.title }}',
+                    {% endif %}
+                {% endfor %}
+            ],
+            [
+                {% for course in global.courses %}
+                    {% if course.category_id == 3 %}
+                        '{{ course.title }}',
+                    {% endif %}
+                {% endfor %}
+            ],
+            [
+                {% for course in global.courses %}
+                    {% if course.category_id == 1 %}
+                        '{{ course.title }}',
+                    {% endif %}
+                {% endfor %}
+            ]
+        ];
+
+
+        const urls = [
+            [
+                {% for course in global.courses %}
+                    {% if course.category_id == 2 %}
+                        '/oferta-formativa/master-oficial/{{ course.slug }}',
+                    {% endif %}
+                {% endfor %}
+            ],
+            [
+                {% for course in global.courses %}
+                    {% if course.category_id == 3 %}
+                        '/oferta-formativa/curso-superior/{{ course.slug }}',
+                    {% endif %}
+                {% endfor %}
+            ],
+            [
+                {% for course in global.courses %}
+                    {% if course.category_id == 1 %}
+                        '/oferta-formativa/curso-tecnico/{{ course.slug }}',
+                    {% endif %}
+                {% endfor %}
+            ]
+        ];
+
+        let formacion = document.getElementById('selected_formacion');
+        let programa = document.getElementById('slect_programas');
+
+        const handleSearch = () => {
+            const url = urls[parseInt(formacion.value) - 1][programa.value];
+            if(url)
+                window.location.href = url;
+        }
+
+        formacion.addEventListener('change', (e) => {
+            programa.querySelectorAll('option').forEach((e) => {
+                if(e.value != '') {
+                    programa.removeChild(e);
+                }
+            })
+
+            for(let i in values[parseInt(e.target.value) - 1]) {
+                var option = document.createElement("option");
+                option.value = i;
+                option.text = values[parseInt(e.target.value) - 1][i];
+                programa.add(option); 
+            }
+
+        });
+    </script>
+{% endblock %}

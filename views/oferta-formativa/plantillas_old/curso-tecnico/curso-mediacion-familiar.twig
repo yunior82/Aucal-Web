@@ -1,0 +1,446 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content="Cursos Técnicos online de corta duración reconocidos y válidos en toda la UE. Consigue tu titulación oficial."/>
+    <link rel="stylesheet" href="/2022/dist/css/master-cursos.css"/>    
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/cursos-tecnicos-mediacion-familiar-thun.png">
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor">
+        <aside class="cursos-banner banner-mediacion">            
+            <div class="cursos-title-banner center-head">
+                <div class="cursos-title center-title">
+                    <p class="h2-cursos">CURSOS TÉCNICOS</p>
+                </div>
+                <div class="cursos-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="cursos-txt center-title">
+                    <p class="h1-cursos">Mediación Familiar</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="cursos-tabs">
+            <div class="tabs-container">
+                <div class="tabs-head tabs-head-responsive">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Curso Técnico en Mediación Familiar</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                12 ECTS | 6 meses | Online <br/>
+                                Título Propio universitario de la <br/>
+                                Universidad Antonio de Nebrija.  
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="#formSolicitar" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion">Matricúlate ahora</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'presentacion')">
+                            <span class="cursos-tablink">PRESENTACIÓN</span>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'informacion')">
+                            <span class="cursos-tablink">INFORMACIÓN</span>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'planEstudios')">
+                             <span class="cursos-tablink">PLAN DE ESTUDIOS</span>
+                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'titulacion')">
+                            <span class="cursos-tablink">TITULACIÓN</span>
+                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'materiales')">
+                            <span class="cursos-tablink">MATERIALES</span>                        
+                        </li>
+                    </ul>
+                </div>  
+                <div class="tabs-head tabs-head-principal">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Curso Técnico en Mediación Familiar</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                12 ECTS | 6 meses | Online <br/>
+                                Título Propio universitario de la <br/>
+                                Universidad Antonio de Nebrija.                                 
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="#formSolicitar" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion">Matricúlate ahora</a>
+                        </div>
+                    </div>
+                </div>   
+                <div class="tabs-cuerpo">
+                    <div class="tabs-widgets">
+                        <div class="tab-sec">
+                            <ul class="tab-sec-list">
+                                <li class="tab-link" href="javascript:void(0)"onclick="changeTab(event,'presentacion')" >
+                                    <p class="tab-sec-txt">PRESENTACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)"  onclick="changeTab(event,'informacion')">
+                                    <p class="tab-sec-txt">INFORMACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'planEstudios')">
+                                    <p class="tab-sec-txt">PLAN DE ESTUDIOS</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'titulacion')">
+                                    <p class="tab-sec-txt">TITULACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'materiales')">
+                                    <p class="tab-sec-txt">MATERIALES</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-program">
+                            <div class="tabs-program-img">
+                                <img src="/2022/dist/images/oferta/portada-tecnico-mediacion-familiar.PNG" alt="AUCAL Bussines School Portada Curso Superior Mediacion Familiar" class="image-program">
+                            </div>
+                            <div class="tabs-program-pdf btn-red-normal">
+                                <a href="/2022/dist/pdf/AUCAL-dossier-tecnico-mediacion-familiar.pdf" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa Curso Superior Mediacion Familiar">
+                                    <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                    <img src="/2022/dist/images/icons/descarga-blanco.png" alt="AUCAL Bussines School Descargar Curso Superior Mediacion Familiar" class="btn-descarga-blanco">                                            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <di class="tabs">
+                        <!-- PRESENTACION --> 
+                        <div class="presentacion tab" id="presentacion">                             
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Presentación</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        Los conflictos familiares necesitan soluciones rápidas y sencillas, por eso, 
+                                        son de enorme relevancia los técnicos en mediación familiar. Con este 
+                                        <b>Curso en Mediación Familiar,</b> que es un título propio de la Universidad 
+                                        Antonio de Nebrija y tiene una carga lectiva de 300 horas (12 ECTS), el alumno 
+                                        adquirirá los conocimientos necesarios para intervenir en el ámbito familiar, 
+                                        indicando pautas de intervención satisfactorias, en función de las necesidades 
+                                        de la familia en cuestión, con el objetivo de llegar a una resolución pacífica 
+                                        de los conflictos en el ámbito familiar.
+                                    </p>                                   
+                                </div> 
+                                <div class="tabs-txt">
+                                     <p class="presentacion-txt">
+                                        Este programa académico permite al alumno registrarse en el Registro de Mediadores 
+                                        del Ministerio de Justicia de España.
+                                    </p>
+                                </div>      
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt"></p>
+                                </div>                                             
+                            </div>                                                         
+                        </div>
+                        <!-- INFORMACION -->
+                        <div id="informacion" class="informacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Información</p>
+                                </div>                                
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Objetivos</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            Capacitar para intervenir en procesos de mediación familiar.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Ofrecer una panorámica general de las situaciones de conflicto existente en el ámbito familiar, como contexto en el que se desarrollan los procesos de mediación.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Ubicar los procesos de mediación familiar en el horizonte de la cultura de la paz, como prioridad del momento actual.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Presentar el marco legislativo en el que se apoyan los procesos de mediación familiar.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Describir la realidad del conflicto y los factores que lo generan en el ámbito familiar.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Describir los procesos de mediación familiar y las etapas que incluyen.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Dibujar el perfil del mediador familiar, describiendo las habilidades que ha de cultivar y las técnicas que debe conocer.
+                                        </li>
+                                    </ul>                                
+                                </div>
+                            </div>
+                        </div>
+                        <!-- PLAN ESTUDIOS -->
+                        <div id="planEstudios" class="plan-estudios tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Asignaturas</p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">MATERIAS COMUNES (obligatorias)</p>
+                                </div>                                
+                                <div class="plan-estudios-tabla">
+                                    <ul class="agignaturas-tabla">
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> ASIGNATURAS </span>
+                                            <ul class="tabla-detalle">                                                
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Descripción de la situación</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">La cultura de la paz</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La mediación familiar: Marco legislativo y políticas públicas</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">El conflicto familiar</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Resolución de conflictos</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La mediación</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">La mediación familiar</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Modelos y técnicas en mediación familiar</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">El proceso de mediación</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">El mediador</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Mediación en la acogida o adopción</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La mediación en el divorcio</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La mediación en el divorcio con hijos I</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">La mediación en el divorcio con hijos II</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Tributación de las Comunidades de propietarios (I)</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Tributación de las Comunidades de propietarios (II)</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Anexos</li>
+                                                    </ul>
+                                                </li>                                                
+                                            </ul>
+                                        </li>                                        
+                                    </ul>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- TITULACION -->
+                        <div id="titulacion" class="titulacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Titulación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN UNIVERSIDAD ANTONIO DE NEBRIJA
+                                    </p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Curso en Mediación Familiar"</p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-NEBRIJA.jpg" alt="AUCAL Bussines School Diploma Curso Superior Mediacion Familiar Nebrija" class="img-diploma">                                    
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN PROPIA AUCAL BUSINESS SCHOOL
+                                    </p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Curso Superior en Mediación Familiar"</p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-AUCAL.jpg" alt="AUCAL Bussines School Diploma Curso Superior Mediacion Familiar AUCAL" class="img-diploma">                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MATERIALES -->
+                        <div id="materiales" class="materiales tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Materiales</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El alumno dispondrá del material de estudio necesario para la realización de la formación en la plataforma virtual.                                    
+				    </p>
+                                </div>                                
+				<div class="tabs-img">
+                                    <img src="/2022/dist/images/material_aucal.png" alt="AUCAL Bussines School Material Curso Superior Mediacion Familiar" class="materiales-img"/>
+                                </div>
+                            </div>
+                        </div>
+                    </di> <!-- TABS -->
+                </div> <!-- CUERPO -->
+            </div>
+        </aside>
+        <aside class="coordinador-perfil">
+            <!-- BIOGRAFIA COORDINADOR -->
+            <div class="tabs-banner-bottom">
+                <div class="banner-bottom-img">
+                    <img src="/2022/dist/images/coordis/elena-caballeira.png" alt="AUCAL Bussines School Coordinador Curso Superior Mediacion Familiar" class="img-coordinador"/>
+                </div>
+                <div class="banner-bottom-txt">
+                    <div class="tabs-title">
+                        <p class="tab-h2">Coordinadora del Curso</p>
+                        <p class="tab-h1">Elena Carballeira</p>
+                    </div>
+                    <div class="tabs-txt">
+                        <p class="banner-bottom-descript">
+                            Profesional de enseñanza superior, especialista en área Social. 
+                            Amplia experiencia en formación elearning.
+                        </p>
+                    </div>
+                </div>                            
+            </div>   
+            <!-- PERFIL ALUMNO Y DOCUMENTACION --> 
+            <div class="ficha-master">
+                <div class="perfil-alumno ficha-dropdown">
+                    <div class="drop-title">
+                         <div>
+                            <button class="dropbtn" onclick="show_hide(event, 'perfil')"> 
+                                <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                              <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                            </button>
+                         </div>
+                        <div>
+                            <p class="tab-h2">Perfil del alumno</p>   
+                        </div>                     
+                    </div>
+                    <div class="ficha-dropdown-txt" id="perfil">
+                        <p class="informacion-txt">
+                            Este curso está dirigido a todos los profesionales o estudiantes que quieren enfocar su trayectoria profesional a la mediación en el ámbito familiar, especialmente a:
+                        </p> 
+                        <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo"> <b>Abogados y procuradores</b></li>
+                            <li class="tipo-titulo"><b>Trabajadores sociales</b></li>
+                            <li class="tipo-titulo"><b>Psicólogos</b></li>
+                            <li class="tipo-titulo"><b>Graduados Sociales</b></li>                            
+                        </ul>  
+                        <p class="informacion-txt">
+                            No hay requisito mínimo para el estudio de esta formación.
+                        </p>               
+                    </div>
+                </div>
+                <div class="documentacion ficha-dropdown">
+                    <div class="drop-title">
+                        <div>
+                           <button class="dropbtn" onclick="show_hide(event, 'documentacion')"> 
+                               <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                             <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                           </button>
+                        </div>
+                       <div>
+                           <p class="tab-h2">Documentación</p>   
+                       </div>                     
+                   </div>
+                    <div class="ficha-dropdown-txt" id="documentacion">
+                        <p class="informacion-txt">
+                            No existe ningún requisito mínimo para estudiar esta formación.
+                        </p>                                     
+                    </div>
+                </div>
+            </div>   
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-master"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-becas" class="btn-border"  alt="AUCAL Bussines School Programa Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>         
+        <aside class="titulo-fomulario" id="formSolicitar">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <iframe frameborder="0" style="height:1150px;width:99%;border:none;" 
+            src='https://formulario.aucal.edu/aucalbusinessschool/form/FormularionuevaWebAUCAL/formperma/7-ULZDtrn9jf9iR3AmWEYjBwVmxtAmdLMjZk9fTGaYg' alt="AUCAL Bussines School Formulario Inscripcion">
+            </iframe>  
+        </aside>
+    </div>
+{% endblock %} 

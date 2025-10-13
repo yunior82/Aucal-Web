@@ -1,0 +1,231 @@
+.contenedor{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/********************/
+.articulo .tabs-title .tab-h2-big {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 1em auto;
+}
+
+.articulo-title{
+    width: 90%;
+    text-align: center;
+    display: inline-block;
+    line-height: normal;
+    color: #E10031;
+    font-size: 22px;
+    font-weight: 500;   
+    margin-top: 0.5em; 
+}
+
+.articulo-parrafo{
+    width: 100%;
+    margin: 1em auto;
+}
+
+.articulo-txt{
+    font-size: 15px;
+    width: 90%;
+    text-align: justify;
+    padding-top: 0.5rem;
+    display: inline-block;
+    line-height: normal;
+}
+
+.articulo-txt> div p{margin-bottom: 0.5em;}
+
+/* CUERPO POST*/
+/*imagen*/
+.articulo .img-articulo{background-image: url(/2022/dist/images/...);}
+
+.articulo .img-articulo,
+.articulo .img-articulo img{
+    color: #fff;
+    padding: 0;
+    width: 95%;
+    margin: 1em auto;
+    height: 500px;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* TEXTO */
+.articulo .info-articulo{
+    margin: 2em auto 1em;
+    text-align: center;
+}
+
+.articulo .info-articulo .articulo-list{
+    display: flex;
+    margin: 0 auto 2em auto;
+    width: 90%;
+    height: auto;
+}
+
+.articulo .info-articulo .articulo-list>li{
+    padding: 0 1em;
+    font-weight: 600;
+}
+
+.articulo .info-articulo ul .blog-noticia{color: #E10031;}
+
+.articulo .info-articulo ul .fecha-articulo{color: #b1aeae;}
+
+.tab-h2-center{text-align: center;}
+
+.tab-h2-left{
+    text-align: left;
+    font-weight: 700;
+}
+
+/*LISTAS*/
+.articulo-ul{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.articulo-li{
+    list-style: disc;
+    font-size: 14px;
+    margin: 1em 0;
+}
+
+/*IMAGENES CENTRADAS EN TEXTO*/
+.articulo-img-text{
+    width: 50%;
+    object-fit: cover;
+    margin: 2em auto 0 25%;
+}
+
+/* footer */
+.footer-articulo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 4em auto;
+    width: 90%;
+}
+
+.footer-articulo .hashtag-articulo{
+    display: flex;
+    text-align: left;
+    color: #b1aeae;
+}
+
+.footer-articulo .comparte-articulo{
+    text-align: end;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.compartir-visible{  display: flex;}
+
+.comparte-txt{
+    font-weight: 600;
+}
+
+.comparte-link{
+    text-align: center;
+    cursor: pointer;
+    border-radius: 100%;    
+    background-color: #7F0000; 
+    height: 30px;
+    width: 30px;
+    margin-left: 1em;
+}
+
+.icono-comparte{
+    color: #fff;
+    font-size: 20px;
+}
+
+.compartir-oculto{  
+    display: none;
+    text-align: center;
+    background: #f3efef;
+    margin: -3em 1em 0;
+    padding: 1em;
+}
+
+.compartir-oculto .tab-h2{margin-top: 0!important;}  
+
+.social-media-btn{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 0 0.5em;
+}
+
+.social-media-btn i:hover{font-weight: bold;}
+
+
+/****************************************/
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /*IMAGENES*/
+    .articulo .img-articulo, .articulo .img-articulo img{ height: 280px; }
+
+    /*IMAGENES CENTRADAS EN TEXTO*/
+    .articulo-img-text{
+        width: 70%;
+        height: 280px;
+        margin-left: 15%;
+        margin-top: 0;
+    }
+
+
+}
+
+/********************************************************************/
+@media (max-width: 767.98px) {
+    /* TEXTO */
+    .articulo .tabs-title .tab-h2-big {font-size: 22px;}
+    .tab-h2-center { font-size: 16px; }
+    .articulo-txt{
+        font-size: 14px;
+        text-align: left;
+    }    
+    .articulo-li {margin: 0.5em 0;}
+
+    /*IMAGENES*/
+    .articulo .img-articulo, .articulo .img-articulo img{ height: 220px;}
+
+    /*IMAGENES CENTRADAS EN TEXTO*/
+    .articulo-img-text{
+        width: 90%;
+        object-fit: cover;
+        height: 200px;
+        margin-left: 5%;
+        margin-top: 0;
+    }
+    
+    /* footer */
+    .footer-articulo {width: 100%; }
+
+    .footer-articulo .hashtag-articulo{
+        display: block;
+        width: 20%;
+    }
+
+    .footer-articulo .comparte-articulo{
+        text-align: end;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .compartir-visible { margin-right: 1em;}
+
+    .compartir-oculto{ 
+        margin: 1em 1em 0 0;
+        width: 80%;
+    }
+
+    .social-media-btn{
+        font-size: 20px;    
+        margin: 0 0.2em;
+    }
+}

@@ -1,0 +1,486 @@
+.header{
+    /* width: 100%; */
+    padding-bottom: 0.5em;
+    z-index: 9995;
+    /* position: fixed;
+    background-color: #fff;
+    width: max-content;
+    box-shadow: 0px 0px 10px rgba(197, 197, 197, 0.9); */
+}
+
+/*contacto REDES*/
+.nav-contacto{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5em auto;
+}
+
+.nav,
+.nav-redes{
+    display: flex;
+    position: relative;
+    z-index: 9995;
+}
+
+.nav-redes-bottom{display: none;}
+
+.icono-redes{
+    font-size: 24px;
+    padding: 0 0.5em;
+}
+
+.nav-campus>a{
+    color: #fff;
+    padding: 0 0.5em;
+    font-size: 15px;
+}
+
+/*BARRA NAVEGACION*/
+.nav{height: 3em;}
+
+/* logo */
+/* .logo-img{
+    position:relative;   
+    top: -50%;
+    left: 0;
+    width: auto;
+    height: 5em;
+} */
+.logo-img {
+    position: relative;
+    top: -75%;
+    left: 15%;
+    width: auto;
+    height: 5em;
+}
+
+/* Enlaces */
+.nav-menu-big{
+    display: flex;
+    margin: 0.5em auto;
+}
+
+.nav-menu-list{width: 100%;}
+
+.nav-menu-item{  font-size: 15px;}
+
+.nav-link{
+    color: #000;
+    font-weight: 600;
+}
+
+.nav-menu-link{ 
+    padding: 5px 15px 0; 
+    display: inline-flex;
+}
+
+.nav-menu-link:hover{
+    color:#E10031;
+    transition: 0.5s;
+}
+
+.nav-link-search .fa-search{margin-top:0.3em;}
+
+/* MENU DESPLAGABLE toggle*/
+.nav-toggle{
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0 auto;
+    line-height: 2.5rem;
+    justify-content: flex-end;
+
+    display: none;
+}
+
+
+
+/* Desplegable OFERTA EDUCATIVA  */
+.educativa{
+    position: absolute; 
+    width: 98%;
+    margin: 0.2em auto 0;
+    text-align: left;
+    left: 0;
+    display: none;
+}
+
+.oferta-educa{
+    width: auto;
+    background: #d3d3d3;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.menu-icon{display: none;}
+
+.tipo-curso{
+    font-size: 15px;
+    font-weight: 600;
+    background: #d3d3d3;
+    color: #E10031;
+    width: 93.4%;
+    line-height: 1.2em;
+    padding: 2em 0 1em 4em;
+}
+
+.tipo-curso>ul li{
+    padding: 0.2em;
+    font-weight: 500;
+    width: 86%;
+}
+
+/*Desplegable BUSCADOR*/ 
+.buscador{
+    padding: 4em 0;
+    background: #fff;
+    width: 100%;
+    position: absolute!important; 
+    left: 0;
+    
+    display: none;
+}
+
+.h3{
+    font-size: 15px;
+    font-weight: 500;
+    color: #E10031;
+    margin-bottom: 1rem;
+}
+
+.input-group{
+    margin: auto;
+    background: #fff;
+    position: relative;
+    border: 1px solid #000;
+    border-radius: 50rem;
+    width: 50%;
+}
+
+.inputSearch{
+    border-radius: 50rem;
+    position: relative;
+    padding: 0 1em;
+    border: none;
+    font-size: 1.1rem;
+    line-height: 2.5em;
+    width: 95%;
+}
+
+.campus-responsive{display: none;}
+
+
+/* Comunes desplegables*/
+
+/*Div listado*/
+.blogList,
+.becasList,
+.estudiarList{
+    width: 90%;  
+    line-height: normal; 
+}
+
+/*ul litado*/
+.blog-nav,
+.becas-nav,
+.estudiar-nav{
+    background: #fff;
+    width: 100%;
+    padding: 0.625rem;
+}
+
+.blog-nav{
+    padding: 10px 5px;
+}
+
+/*a de cada sección*/
+.curso-link,
+.beca-link,
+.blog-link,
+.estudiar-link{
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.blog-link:hover,
+.estudiar-link:hover,
+.becasList:hover,
+.curso-link:hover{
+    color: #E10031;
+}
+
+/*ESCONDEMOS el div de cada lista*/
+.nav-div{
+    background: #fff;
+    text-align: left;
+    position: relative;
+    margin: auto;
+
+    display: none;
+}
+
+/*mostramos el listado al hacer hover*/
+#educativa:hover .educativa,
+#estudiarAucal:hover .estudiarList,
+#becasDescuentos:hover .becasList,
+#blogNoticias:hover .blogList,
+#buscador:hover .buscador {
+    display:block;
+}
+
+
+@media (min-width: 992px) and (max-width: 1104.98px) {
+    .header{
+        max-width: 1104.98px;
+        width: auto;
+    }
+
+     /* logo */
+    .logo-img{  top: -100%; }
+
+    /* Enlaces */
+    .nav-menu{  margin: 0.5em 0;}
+    .nav-menu-item{  font-size: 14px;}
+    .nav-menu-link{ 
+        padding: 5px 20px 0 0; 
+        display: inline-flex;
+    }
+    
+    /* DEsplegable OFERTA EDUCATIVA  */
+    .educativa{
+        width: 96%;
+        margin: 0em auto;
+        padding: 1em 0.5em;
+    }
+
+    .tipo-curso{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .curso-link{font-size: 12px; }
+
+}
+/***************/
+@media (max-width: 991.98px){
+    .header{
+        height: 8em;
+        position: fixed;
+        background-color: #fff;
+        width: 100%;
+        left: 0;
+        top:0
+    }
+
+    .logo{ 
+        padding: 0.5em;}
+        
+
+    .logo-img{
+        height: 6em;
+        top: -180%;
+    }
+
+    .nav-contacto{
+        padding: 0;
+        margin: 0.5em auto;
+        width: 90%;
+    }
+
+    .icono-redes{
+        display: none;
+    }
+
+    .nav-campus{
+        height: 2em;
+        margin: 1em;        
+    }
+
+    .nav-campus>a{
+        color: #fff;
+        padding: 0.5em;
+        font-size: 18px;
+
+    }
+    .a{
+        color: black;
+        background: black;
+        fill: black;
+    }
+    
+    .nav-menu{
+        display: none;
+        
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        margin-right: 20px;
+        background: #E10031;
+        position: fixed;
+        left: 0;
+        top: 8em;
+        width: 100%;
+        padding: 3em 0;
+        z-index: 9995;
+        height: 100%;
+        overflow-y: auto;
+        transition: letf 0.3s;
+    }
+
+    .nav-link{
+        color: #fff;
+        line-height: 1.5rem;
+        padding: 0.5em 0;
+    }
+
+    .nav-menu-item{
+        font-size: 16px;
+        line-height: 1.5rem;
+        border-bottom: 1px solid #fff ;
+        width: 80%;
+    }
+    
+    .nav-menu-link:hover{ color:#000;  }
+
+    .fa-bars{
+        color: #F8B100;
+        text-align: end;
+        margin-left: 130px;
+    }
+
+    .nav-toggle{  
+        display: block;  
+        margin-right: 1.5em;
+    }
+
+    /* Desplegable OFERTA EDUCATIVA  */
+    .educativa{
+        position: relative;
+        width: 89%;
+        margin: 0;
+        padding: 0;
+        /* top: 12%; */
+        left: 0;
+    }
+    
+    .oferta-educa{ display: block; }  
+
+    .menu-icon{
+        display: block;        
+        float: right;
+        padding: 0.8em;
+        background: none;
+        border: none;
+    }   
+    
+    .block-icon{ height: 1.5em;}
+    
+    .tipo-curso{
+        font-size: 14px;
+        font-weight: 600;
+        background: #fff;
+        color: #E10031;
+        padding: 1em 2em;
+        margin: 0 auto;
+    }
+    
+    .tipo-curso>ul li{
+        font-size: 12px;
+        font-weight: 500;
+        width: 80%;
+
+    }
+
+    /*Desplegable BUSCADOR*/ 
+    .buscador{ 
+        display: block;
+        padding: 2em 0; 
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .nav-link-search{display: none;}
+
+    .h3{ display: none;  }
+
+    .input-group{ width: 85%;  }
+
+    .inputSearch{  width: 90%;}
+    
+    /* REDES */
+    .campus-responsive{
+        display: block;
+        text-align: center;
+        width: 90%;
+        margin: 2em auto;
+        border-bottom: none;
+    }
+
+    .campus-responsive button{
+        height: 2em;             
+    }
+
+    .campus-responsive button a{
+        color: #7F0000;
+        font-size: 20px; 
+        font-weight: 500;  
+    }
+
+    .campus-responsive button a:hover{font-weight: 700;  }
+
+    .nav-redes-bottom{
+        display: flex;
+        justify-content: center;
+        margin: 3em auto 1em auto;
+        height: 28px;
+    }
+
+    .icono-redes-bottom a{
+        font-size: 24px;
+        padding: 0 1em;
+    }
+
+    .icono-redes-bottom a:hover{font-size: 26px;}
+
+
+    /* Comunes desplegables*/   
+    /*Div listado*/
+    .blogList,
+    .becasList,
+    .estudiarList{
+        width: 95%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*mostramos el listado al hacer hover*/
+    #educativa:hover .educativa,
+    #estudiarAucal:hover .estudiarList,
+    #becasDescuentos:hover .becasList,
+    #blogNoticias:hover .blogList,
+    #menuBuscar:hover .buscador {
+        display:none;
+    }
+   
+}
+
+/***************/
+@media (max-width: 551.98px){
+    .nav-contacto {
+        padding: 0;
+        margin: 0.5em 2em 0 auto;
+        width: 50%;
+        display: flex;
+    }
+
+    .nav-campus a{ font-size: 12px; }
+
+    .logo-img {
+        height: 4em;
+        top: -50%;
+    }
+
+    
+}

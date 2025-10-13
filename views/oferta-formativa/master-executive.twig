@@ -1,0 +1,496 @@
+{% extends 'app/app.twig' %}
+{% block head %}
+    <meta name="description" content="{{ course.meta_description }} "/>
+    <link rel="stylesheet" href="/2022/dist/css/master-cursos.css"/>
+    <link rel="stylesheet" href="/2022/dist/css/form_styles.css"/>
+    <meta property="og:image" content="{{ course.thumbnail_url }}">
+    <title>Máster en {{ course.title }} | Aucal Business School</title>
+    <style>
+        .formulario {
+            background-color: #d3d3d6;
+        }
+
+        .CaptchaWrap { position: relative; }
+        .CaptchaTxtField { 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+            display: block;  
+            box-sizing: border-box;
+        }
+        #CaptchaImageCode { 
+            text-align:center;
+            margin-top: 15px;
+            padding: 0px 0;
+            width: 300px;
+            overflow: hidden;
+        }
+        .capcode { 
+            font-size: 46px; 
+            display: block; 
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none; 
+            cursor: default;
+            letter-spacing: 1px;
+            color: #ccc;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+        .ReloadBtn { 
+            background:url('https://iposos.com/wp-content/uploads/2023/10/recaptcha.png') left top no-repeat;   
+            background-size : 100%;
+            width: 32px; 
+            height: 32px;
+            border: 0px; outline none;
+            position: absolute; 
+            bottom: 30px;
+            left: 310px;
+            outline: none;
+            cursor: pointer; /**/
+        }
+        .error { 
+            color: red; 
+            font-size: 12px; 
+            display: none; 
+        }
+        .success {
+            color: green;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .tab p, .tabs-txt p { margin: 12px 0; }
+
+        h3, h2 {
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .tab img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .tab h1{
+            color: #E10031;
+            font-size: 21px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .tab h3, .tab h2 {
+            font-weight: 500;
+        }
+
+        .tabla-titulaciones li p {
+           margin: 0;
+           display: inline;
+        }
+
+       
+
+        @media(max-width: 540px) {
+            .tabs-resumen {
+                padding: 0;
+            }
+        }
+
+       
+        .plan-estudios table {
+            width: 100%;
+        }
+
+        .plan-estudios table p {
+            margin: 0;
+            padding-top: 1em;
+        }
+
+        .plan-estudios table td {
+            border-bottom: 1px solid #d3d3d3;
+            color: #5d5d5d;
+            font-size: 14px;
+        }
+
+        .plan-estudios table th {
+            color: #E10031;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        #materiales img, #titulacion img {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .ficha-dropdown-txt ul{padding: 0.5em 0;}
+
+        .ficha-dropdown-txt ul li{
+            list-style: square url(/2022/dist/images/icons/cuadrado-rojo-8.png);
+            text-align: left;
+            margin: 0 0 0.5em 1em;
+        }
+
+        .ficha-dropdown-txt ul li ul{ margin: 0.5em 0 0 1em;}
+
+        .ficha-dropdown-txt ul li ul li{
+            list-style: disc;
+            margin-left: 1em;
+        }
+
+       .presentacion .tabs-resumen p img{margin: 0.5em auto;}
+       .presentacion .tabs-resumen h2{margin-top:1em}
+       .presentacion .tabs-resumen h3{margin-bottom:1em}
+
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor">
+       <aside class="cursos-banner banner-executive" style="background-image: url({{course.image_url}});">            
+            <div class="cursos-title-banner center-head">
+                <div class="cursos-title center-title">
+                    <p class="h2-cursos">MÁSTERES EXECUTIVES</p>
+                </div>
+                <div class="cursos-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="cursos-txt center-title">
+                    <p class="h1-cursos">{{ course.title }}</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="cursos-tabs">
+            <div class="tabs-container">
+                <div class="tabs-head tabs-head-responsive">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el {{ course.title }}</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                {{ course.ects}} ECTS | {{ course.months}} meses | {{ course.methodology}} <br/>
+                                {{ course.subtitle1 }}</br>
+                                {{ course.subtitle2 }}</br>
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            {# Los masters tienen su propio formulario de inscripción: {{course.admision_url}}, diferente al de cursos superiores y técnicos: {{course.form_url}}#}
+                            <a href="#formSolicitar" class="btn-yellow" alt="AUCAL Bussines School Solicita Información">Solicita Información</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'presentacion')">
+                            <span class="cursos-tablink">PRESENTACIÓN</span>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'informacion')">
+                            <span class="cursos-tablink">INFORMACIÓN</span>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'planEstudios')">
+                             <span class="cursos-tablink">PLAN DE ESTUDIOS</span>
+                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'titulacion')">
+                            <span class="cursos-tablink">TITULACIÓN</span>
+                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'materiales')">
+                            <span class="cursos-tablink">MATERIALES</span>                        
+                        </li>
+                    </ul>
+                </div>  
+                <div class="tabs-head tabs-head-principal">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el {{ course.title }}</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                {{ course.ects}} ECTS | {{ course.months}} meses | {{ course.methodology}} <br/>
+                                {{ course.subtitle1 }}</br>
+                                {{ course.subtitle2 }}</br>
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">                                                        
+                            {# Los masters tienen su propio formulario de inscripción: {{course.admision_url}}, diferente al de cursos superiores y técnicos: {{course.form_url}}#}
+                            <a href="#formSolicitar" class="btn-yellow" alt="AUCAL Bussines School Solicita Información">Solicita Información</a>
+                        </div>
+                    </div>
+                </div>   
+                <div class="tabs-cuerpo">
+                    <div class="tabs-widgets">
+                        <div class="tab-sec">
+                            <ul class="tab-sec-list">
+                                <li class="tab-link" href="javascript:void(0)"onclick="changeTab(event,'presentacion')" >
+                                    <p class="tab-sec-txt">PRESENTACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)"  onclick="changeTab(event,'informacion')">
+                                    <p class="tab-sec-txt">INFORMACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'planEstudios')">
+                                    <p class="tab-sec-txt">PLAN DE ESTUDIOS</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'titulacion')">
+                                    <p class="tab-sec-txt">TITULACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'materiales')">
+                                    <p class="tab-sec-txt">MATERIALES</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-program">
+                            <div class="tabs-program-img">
+                                <img src="{{ course.pdf_image_url }}" alt="AUCAL Bussines School Portada {{ course.title }}" class="image-program">
+                            </div>
+                            <div class="tabs-program-pdf btn-red-normal">
+                                <a href="{{ course.pdf_url }}" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa {{ course.title }}">
+                                    <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                    <img src="/2022/dist/images/icons/descarga-blanco.png" alt="AUCAL Bussines School Descargar {{ course.title }}" class="btn-descarga-blanco">                                            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs tabla-titulaciones">
+
+                        <!-- PRESENTACION --> 
+                        <div class="presentacion tab" id="presentacion">                             
+                            <div class="tabs-resumen">
+                                <h1>Presentación</h1>
+                                {{ course.section1|raw }}
+                            </div>
+                        </div>
+
+                        <!-- INFORMACION -->
+                        <div id="informacion" class="informacion tab">
+                            <div class="tabs-resumen">
+                                <h1>Información</h1>
+                                {{ course.section2|raw }}
+                            </div>
+                        </div>
+
+                        <!-- PLAN ESTUDIOS -->
+                        <div id="planEstudios" class="plan-estudios tab">
+                            <div class="tabs-resumen">
+                                <h1>Asignaturas</h1>
+                                {{ course.section3|raw }}
+                            </div>
+                        </div>
+
+                        <!-- TITULACION -->
+                        <div id="titulacion" class="titulacion tab">
+                            <div class="tabs-resumen">
+                                <h1>Titulación</h1>
+                                {{ course.section4|raw }}
+                            </div>
+                        </div>
+
+                        <!-- MATERIALES -->
+                        <div id="materiales" class="materiales tab">
+                          <div class="tabs-resumen">
+                                <h1>Materiales</h1>
+                                {{ course.section5|raw }}
+                            </div>
+                        </div>
+                    </di> <!-- TABS -->
+                </div> <!-- CUERPO -->
+            </div>
+        </aside>
+        <aside class="coordinador-perfil">
+            <!-- BIOGRAFIA COORDINADOR -->
+            <div class="tabs-banner-bottom">
+                <div class="banner-bottom-img">
+                    <img src="{{ course.teacher_image_url }}" alt="AUCAL Bussines School Coordinador {{ course.title }}" class="img-coordinador"/>
+                </div>
+                <div class="banner-bottom-txt">
+                    <div class="tabs-txt">
+                         {{ course.section8|raw }}
+                    </div>
+                </div>                            
+            </div>   
+            <!-- PERFIL ALUMNO Y DOCUMENTACION --> 
+            <div class="ficha-master">
+                <div class="perfil-alumno ficha-dropdown">
+                    <div class="drop-title">
+                         <div>
+                            <button class="dropbtn" onclick="show_hide(event, 'perfil')"> 
+                                <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                              <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                            </button>
+                         </div>
+                        <div>
+                            <p class="tab-h2">Perfil del alumno</p>   
+                        </div>                     
+                    </div>
+                    <div class="ficha-dropdown-txt" id="perfil">
+                        {{ course.section6|raw }}        
+                    </div>
+                </div>
+                <div class="documentacion ficha-dropdown">
+                    <div class="drop-title">
+                        <div>
+                           <button class="dropbtn" onclick="show_hide(event, 'documentacion')"> 
+                               <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                           </button>
+                        </div>
+                       <div>
+                           <p class="tab-h2">Documentación</p>   
+                       </div>                     
+                   </div>
+                    <div class="ficha-dropdown-txt" id="documentacion">
+                        {{ course.section7|raw }}                                                         
+                    </div>
+                </div>
+            </div>   
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-master"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="/programa-becas" class="btn-border" alt="AUCAL Bussines School Programas Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>         
+        <aside class="titulo-fomulario" id="formSolicitar">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <form class="section-6-form" id="form-becas" action="https://www.sotecza.es/crm/index/cupones/insertar" method="post">
+                <div style="text-align: center;">
+                    <span style="color:#082146; font-size:36px; font-family:Verdana;">¿Tienes alguna duda?</span>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="font-weight: 400;">
+                        <span style="color:#082146; font-size:18px; font-family:Verdana;">Solicita información aquí y te ayudaremos en todo lo que necesites</span>
+                    </h4>
+                </div>
+
+                <input type="hidden" value="{{ course.idcrm}}" name="id_curso" id="id_curso" />
+                <input type="hidden" value="667" name="id_remitente" id="id_remitente" />
+                <input type="hidden" value="https://www.aucal.edu/solicitud-ok" name="redir_peticion_ok" id="redir_peticion_ok" />
+                <input type="hidden" value="https://www.aucal.edu/solicitud-ko" name="redir_peticion_fallo" id="redir_peticion_fallo" />
+                <input type="hidden" name="token" id="token" />
+
+                <div class="form-group-container">
+                    <div class="form-group">
+                        <div class="section-6-input">
+                            <input class="input-6" type="text" name="nombre" id="nombre" placeholder="Nombre*" required>
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <div class="section-6-input">
+                            <input class="input-6" type="text" name="apellido1" id="apellido1" placeholder="Apellidos*" required>
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="section-6-input">
+                            <input class="input-6" type="email" id="email" name="email" placeholder="Email*" required>
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div class="section-6-input input-6-phone ">
+                            <div class="selected-option">
+                                <input class="input-6" type="tel" id="phone" name="telefono1" minlength="5" maxlength="14"
+                                    placeholder="Número de Teléfono*" required />
+                            </div>
+                            <div class="options">
+                                <input type="text" class="search-box" placeholder="Busca País Por Nombre">
+                                <ol>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="section-6-input">
+                            <select class="input-6" name="estudios" id="estudios" title="estudios" >
+                                <option value="" selected disabled>Nivel de Estudios</option>
+                                <option value="1">Sin estudios</option>
+                                <option value="2">Graduado escolar o similar</option>
+                                <option value="3">ESO</option>
+                                <option value="4">FP1</option>
+                                <option value="5">FP2</option>
+                                <option value="6">Grado Medio FP</option>
+                                <option value="8">Bachillerato</option>
+                                <option value="9">Grado Superior FP</option>
+                                <option value="10">Diplomatura Universitaria</option>
+                                <option value="11">Licenciatura Universitaria</option>
+                                <option value="12">Máster</option>
+                                <option value="13">Doctorado</option>
+                                <option value="14">Postgrado</option>
+                                <option value="15">Grado Universitario</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="section-6-input">
+                            <select class="section-6-select input-6" name="pais_iso" id="pais" title="paises" >
+                                <option value="" selected disabled>Pais</option>
+                            </select>
+                        </div>
+                    </div>                    
+                </div>
+                <label for="condiciones" class="condiciones">
+                    <input class="conditions" type="checkbox" name="condiciones" id="condiciones" required>
+                    Al enviar este formulario, acepto estas 
+                    <a href="https://www.aucal.edu/condiciones-de-uso" target="_blank" rel="noopener noreferer">condiciones legales </a>
+                </label>
+                <label for="otras_condiciones" class="otras_condiciones" style="display:none;">
+                    <input class="conditions" type="checkbox" name="otras_condiciones" id="otras_condiciones" required>
+                    Al enviar este formulario, acepto estas 
+                    <a href="https://www.aucal.edu/condiciones-de-uso" target="_blank" rel="noopener noreferer">condiciones legales </a>
+                </label>
+                <button class="form-btn-becas g-recaptcha" data-sitekey="6LegDCEpAAAAAIgWa7Q1zxuxt5G3Nt7MIJldEbzi" data-callback='onClick' type="button" data-action='click' id="form_button">Enviar</button>
+                <span id="WrongCaptchaError" class="error"></span>
+            </form>
+        </aside>
+    </div>
+    <script defer src="/2022/dist/js/forms.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LegDCEpAAAAAIgWa7Q1zxuxt5G3Nt7MIJldEbzi"></script>
+    <script>
+        function onClick(e) {
+            if ($('#nombre').val() == "" || $('#apellido1').val() == "" || $('#email').val() == "" || $('#phone').val() == "" || $("#otras_condiciones").is(':checked')) {
+					
+                $('#WrongCaptchaError').text('Error! Rellene los campos obligatorios.').show();
+
+            } else {
+                //e.preventDefault();
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LegDCEpAAAAAIgWa7Q1zxuxt5G3Nt7MIJldEbzi', {action: 'click'}).then(function(token) {
+                        // Add your logic to submit to your backend server here.
+                        $('#token').val(token);
+                        $('#form-becas').submit();
+                    });
+                });
+            }
+        }
+    </script>
+{% endblock %}

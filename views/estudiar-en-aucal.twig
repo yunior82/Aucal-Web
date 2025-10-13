@@ -1,0 +1,858 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content="Especialistas en formación online, disponemos de diversas titulaciones: Másteres, Cursos Superiores y Cursos Técnicos. Con plataforma disponible para alumnos 24 horas."/>
+    <link rel="stylesheet" href="/2022/dist/css/estudiar.css"/>
+    <link rel="stylesheet" href="/2022/dist/css/carrusel_convenios.css"/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/banner_estudiar_.png">
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor" style="display: block"> 
+     <aside class="estudiar-banner">
+            <div class="estudiar-content">
+                <h1 class="h1-estudiar">ESTUDIAR EN AUCAL</h1>
+            </div>
+         </aside>
+        <aside class="estudiar-tabs">
+            <div class="tabs-container">
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="openTab(event,'metodo')">
+                            <p class="estudiar-tablink">METODOLOGÍA</p>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="openTab(event,'titula')">
+                            <p class="estudiar-tablink">TITULACIONES</p>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="openTab(event,'admision')">
+                            <p class="estudiar-tablink">ADMISIÓN</p>                             
+                       </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="openTab(event,'certificados')">
+                             <p class="estudiar-tablink">CERTIFICADOS</p>                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="openTab(event,'bolsa')">
+                            <p class="estudiar-tablink">BOLSA DE EMPLEO Y PRÁCTICAS</p>                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="openTab(event,'inter')">
+                            <p class="estudiar-tablink">INTERNACIONAL</p>                        
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabs">
+                    <!-- METODOLOGIA -->
+                    <div class="metodo tab" id="metodo">
+                        <div class="tabs-cuerpo">
+                            <div class="tabs-head center-head">
+                                <div class="title-center">
+                                    <p class="estudiar-h1">METODOLOGÍA</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red">
+                                </div>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h2-big">
+                                    Plataforma online las 24 horas, los 7 días de la semana, adaptada a las nuevas tecnologías. 
+                                    ¡Estudia de manera flexible, a tu ritmo!
+                                </p>
+                            </div>
+                            <div class="tabs-txt">
+                                <div class="metodo-txt">
+                                    <p class="metodo-txt">
+                                        En AUCAL, damos mucha importancia a la formación práctica , por ello, no solo tendrás los
+                                        conocimientos teóricos, sino también anotaciones del tutor como en una clase tradicional pero 
+                                        <b>adaptada a las nuevas tecnologías</b> con los recursos multimedia actuales para dinamizar el estudio: 
+                                        videos, locuciones, videoconferencias, foros… además de los ejercicios y prácticas que realizaras 
+                                        durante el curso para aplicar los conocimientos aprendidos.
+                                    </p>
+                                    <br/>
+                                </div>                                    
+                               <div class="metodo-txt-img">
+                                    <img src="/2022/dist/images/campus-online-AUCAL.jpg" alt="AUCAL Bussines School Estudiar Aucal Metodologia" class="metodo-img"/>                                    
+                                    <p class="metodo-txt">
+                                        Siempre contarás con la <b>ayuda de un tutor</b> para resolver cualquier duda técnica que puedas tener, 
+                                        y además realizará un seguimiento de tu progreso académico.                
+                                        <br/>
+                                        <br/>
+                                        Nuestros profesores tienen una amplia experiencia tanto docente como profesional para estar
+                                        al tanto de las <b>exigencias del mercado</b> como de avances tecnológicos.
+                                    </p>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="metodo-cuerpo">
+                            <div class="metodo-head">
+                                <p class="metodo-title">
+                                   ¿Por qué elegirnos?                                 
+                                </p>
+                                <p class="center-txt">
+                                    Estos son algunos de los motivos por los cuales elegirnos
+                                </p>
+                            </div>
+                            <div class="metodo-cards">                
+                                <div class="metodo-card card1">
+                                    <div class="metodo-icons">
+                                        <img class="metodo-icon" src="/2022/dist/images/icons/libro-red.png" alt="AUCAL Bussines School Estudiar Aucal Contenidos Multimedia">
+                                    </div>
+                                    <div class="metodo-card-txt">
+                                        <div class="metodo-card-title">
+                                            <p class="card-h3">CONTENIDOS MULTIMEDIA Y WEB 
+                                                Y TODOS LOS MATERIALES INCLUÍDOS</p>
+                                        </div>
+                                        <div class="metodo-card-descript">
+                                            <p class="card-descript">
+                                                Permitiendo una actualización cons-
+                                                tante por parte de nuestros profesores
+                                                con una amplia experiencia profesional
+                                                y docente.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="metodo-card card2">
+                                    <div class="metodo-icons">
+                                        <img class="metodo-icon" src="/2022/dist/images/icons/calendario-red.png" alt="AUCAL Bussines School Estudiar Aucal Horarios Adaptados al Alumno">
+                                    </div>
+                                    <div class="metodo-card-txt">
+                                        <div class="metodo-card-title">
+                                            <p class="card-h3">ADAPTADO A TU TIEMPO
+                                                Y RITMO DE APRENDIZAJE</p>
+                                        </div>
+                                        <div class="metodo-card-descript">
+                                            <p class="card-descript">
+                                                Te asesoramos personalizadamente
+                                                y te acompañamos a lo largo
+                                                de todo el proceso.
+                                            </p>
+                                        </div>
+                                    </div>        
+                                </div>
+                                <div class="metodo-card card3">
+                                    <div class="metodo-icons">
+                                        <img class="metodo-icon" src="/2022/dist/images/icons/call-red.png" alt="AUCAL Bussines School Estudiar Aucal Plataforma E-Learning">
+                                    </div>
+                                    <div class="metodo-card-txt">
+                                        <div class="metodo-card-title">
+                                            <p class="card-h3">PLATAFORMA DE <br/> E-LEARNING</p>
+                                        </div>
+                                        <div class="metodo-card-descript">
+                                            <p class="card-descript">
+                                                Acceso 24/7 los 365 días del año.
+                                                Canales de chat, foros y mensajería,
+                                                interactuando con el profesor, el tutor y
+                                                con el resto de estudiantes.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="metodo-card card4">
+                                    <div class="metodo-icons">
+                                        <img class="metodo-icon" src="/2022/dist/images/icons/mano-red.png" alt="AUCAL Bussines School Estudiar Aucal Programa Becas Descuentos">
+                                    </div>
+                                    <div class="metodo-card-txt">
+                                        <div class="metodo-card-title">
+                                            <p class="card-h3">BECAS Y <br/> DESCUENTOS</p>
+                                        </div>
+                                        <div class="metodo-card-descript">
+                                            <p class="card-descript">
+                                                Descubre nuestro programa
+                                                de becas de hasta el 50%
+                                                para que puedas
+                                                acceder a tu formación.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="metodo-buttons">
+                                <a href="/estudiar-en-aucal/empleo-practicas" class="metodo-btn1 btn-brown">
+                                    <h2 class="metodo-h2">BOLSA DE EMPLEO Y PRÁCTICAS</h2>
+                                    <img src="/2022/dist/images/logos/logo-transparent.png" alt="AUCAL Bussines School Estudiar Aucal Logo" class="metodo-aucalLogo">
+                                </a>
+                                <a href="#" class="metodo-btn2 btn-red">
+                                    <h2 class="metodo-h2">FORMACIÓN BONIFICADA</h2>
+                                    <img src="/2022/dist/images/logos/logo-transparent.png" alt="AUCAL Bussines School Estudiar Aucal Logo" class="metodo-aucalLogo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TITULACIONES -->
+                    <div id="titula" class="titula tab">
+                        <div class="tabs-cuerpo">
+                            <div class="tabs-head center-head">
+                                <div class="title-center">
+                                    <p class="estudiar-h1">TITULACIONES</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red">
+                                </div>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h2-big">
+                                    En AUCAL disponemos de diversas titulaciones: Másteres, Cursos Superiores y Cursos Técnicos. 
+                                    ¡Elige el que más se adapte a tus necesidades!
+                                </p>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h1">¿Qué es un Grado?</p>
+                            </div>
+                            <div class="tabs-txt">
+                                <p class="titula-txt">
+                                    Pertenece al primer ciclo de los estudios universitarios y comprende enseñanzas básicas y de
+                                    formación general, orientadas también al ejercicio de actividades profesionales. Se trata de
+                                    una titulación de educación superior que tiene una duración de hasta 4 años con una carga
+                                    académica de hasta 240 ECTS. Asimismo, te capacita para acceder al segundo nivel de las
+                                    enseñanzas universitarias, el Máster.
+                                </p>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h1">¿Qué es un Postgrado?</p>
+                            </div>
+                            <div class="tabs-txt">
+                                <p class="titula-txt">
+                                    Corresponde al segundo nivel de las enseñanzas universitarias y contiene dos ciclos:
+                                </p>                               
+                            </div>
+                            <div class="cards">
+                                <div class="card card-1">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <div class="titula-title">
+                                                <p class="tab-h2">Segundo Ciclo</p>
+                                            </div>
+                                            <div class="titula-btn">
+                                                <button class="titula-drop" href="javascript:void(0)" onclick="show_hide(event, 'ciclo2')">
+                                                    <img src="/2022/dist/images/icons/drop-down-gris.png" alt="AUCAL Bussines School Estudiar Aucal Titulaciones Ciclos" class="titulo-abajo">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="card-txt txt-titula-drop" id="ciclo2">
+                                            <p>El segundo ciclo, dedicado a la formación
+                                                avanzada, multidisciplinar o especializada,
+                                                dará lugar a la obtención del título de
+                                                Máster que tiene una duración de 60 a 120
+                                                ECTS y están reconocidos en todo el
+                                                territorio de la Unión Europea.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-2">
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <div class="titula-title">
+                                                <p class="tab-h2">Tercer Ciclo</p>
+                                            </div>
+                                            <div class="titula-btn">
+                                                <button class="titula-drop" href="javascript:void(0)" onclick="show_hide(event, 'ciclo3')">
+                                                    <img src="/2022/dist/images/icons/drop-down-gris.png" alt="AUCAL Bussines School Estudiar Aucal Titulaciones Ciclos" class="titulo-abajo">
+                                                </button>
+                                            </div>                                            
+                                        </div>
+                                        <div class="card-txt txt-titula-drop" id="ciclo3">
+                                            <p>
+                                                El tercer ciclo tiene como finalidad la
+                                                formación avanzada del estudiante en las
+                                                técnicas de investigación y obteniendo la
+                                                titulación de Doctor.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h1">¿Qué es un ECTS?</p>
+                            </div>
+                            <div class="titula-txt-img">                                
+                                <div class="titula-parrafo">
+                                    <p class="titula-txt">
+                                        ECTS es una unidad de media de los planes de estudio del E.E.E.S (Espacio Europeo de
+                                        Educación Superior). <b>Un ECTS equivale alrededor de 25-30 horas de trabajo</b> que se engloban
+                                        en: horas lectivas, elaboración de trabajos, prácticas y exámenes.
+                                    </p>   
+                                </div>  
+                                <div class="mapa-img">
+                                    <img src="/2022/dist/images/banner-ECTS-AUCAL.png" alt="AUCAL Bussines School Estudiar Aucal Titulaciones Mapa" class="img">
+                                </div>            
+                            </div>
+                            <div class="tabs-title tabs-title-titulaUnis">
+                                <p class="tab-h1">Titulaciones universitarias</p>
+                            </div>
+                            <div class="tabs-txt">
+                                <p class="titula-txt">
+                                    Las titulaciones universitarias de carácter oficial se estructuran en tres ciclos , cada uno de los
+                                    cuales conduce a la obtención del título correspondiente.
+                                </p>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h2">Primer Ciclo</p>
+                            </div>
+                            <div class="tabs-txt">
+                                <p class="titula-txt">
+                                    El primer ciclo conduce a un título de grado, y el segundo y tercer ciclo permiten obtener los
+                                    títulos de máster y de doctorado, ambos comprendidos en lo que se conoce como programa
+                                    de posgrado, de acuerdo con el esquema siguiente:
+                                </p>
+                                <div class="posgrados">
+                                    <img src="/2022/dist/images/creditos-posgrados-AUCAL.png"  alt="AUCAL Bussines School Estudiar Aucal Titulaciones Posgados"/>
+                                </div>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h2">Segundo Ciclo</p>
+                            </div>
+                            <div class="tabs-txt">
+                                <p class="titula-txt">
+                                    El segundo ciclo conduce a la obtención del título de máster.
+                                </p>
+                                <br/>
+                                <p class="titula-txt">
+                                    El máster universitario ofrece una formación de alto nivel, especializada tanto en un área específica 
+                                    del conocimiento como en áreas interdisciplinarias, con el objetivo de mejorar las competencias 
+                                    específicas en algún ámbito profesional o disciplinario. Entre los ámbitos profesionales a
+                                    los que se dirigen, está la investigación. Por eso, el máster podrá integrarse como parte de la
+                                    formación para la obtención del título de doctor.
+                                </p>
+                                <br/>
+                                <p class="titula-txt">
+                                    Los másteres tienen una extensión de <b>60 a 120 créditos europeos.</b>
+                                </p>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h2">Tercer Ciclo</p>
+                            </div>
+                            <div class="tabs-txt">
+                                <p class="titula-txt">
+                                    El tercer ciclo tiene como finalidad la formación avanzada del estudiante en las técnicas de 
+                                    investigación y conduce a la obtención del título de doctorado.
+                                </p>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h1">Másteres y títulos propios</p>
+                            </div>
+                            <div class="tabs-txt">
+                                <p class="titula-txt">
+                                    Los másteres y posgrados propios de son títulos de posgrado, concebidos con un claro
+                                    propósito de especialización y profundización, para que las habilidades y competencias
+                                    adquiridas tengan un aplicación en el ejercicio profesional.
+                                </p>
+                                <br>
+                                <p class="titula-txt">
+                                    Se ofrecen también cursos con una vocación formativa más académica que proporcionan
+                                    conocimientos para la especialización o la formación integral y el progreso personal.
+                                </p>                               
+                                <br/>
+                                <p class="titula-txt">
+                                    <b>En función de su carga lectiva, los TITULOS propios se clasifican en:</b>
+                                </p>
+                            </div>
+                            <div class="titula-tabla">
+                                <ul class="tabla-titulaciones">
+                                    <li class="tipo-titulo"><span class="titulo-title">Curso superior universitario:</span> menos de 12 créditos.</li>
+                                    <li class="tipo-titulo"><span class="titulo-title">Experto:</span> 15 o más créditos.</li>
+                                    <li class="tipo-titulo"><span class="titulo-title">Diploma de especialización o diploma de postgrado:</span> 30 o más créditos.</li>
+                                    <li class="tipo-titulo"><span class="titulo-title">Máster:</span> 60 o más créditos.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ADMISION -->
+                    <div class="metodo tab" id="admision">
+                        <div class="tabs-cuerpo">
+                            <div class="tabs-head center-head">
+                                <div class="title-center">
+                                    <p class="estudiar-h1">ADMISIÓN</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red">
+                                </div>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h2-big">
+                                    PROCESO DE ADMISIÓN TITULOS OFICIALES
+                                </p>
+                            </div>
+                            <div class="tabs-txt">
+                                <div class="metodo-txt">
+                                    <p class="metodo-txt">
+                                        Si deseas acceder a una <b>titulación Oficial universitaria</b>, debes iniciar el proceso de postulación para comprobar que cumples con todos los requerimientos que exige el Máster.
+                                    </p>
+                                    <br/><br/>
+                                </div>                                    
+                               <div class="admision-txt-img">
+                                    <div class="admision-imagen">
+                                       <img src="/2022/dist/images/proceso-admision.svg" alt="AUCAL Bussines School Estudiar Aucal Metodologia" class="admi-img"/>
+                                    </div>                                 
+                                    <div class="admision-text">
+                                        <p class="admi-txt">
+                                            Lo primero que debes hacer es completar la <b>hoja de admisión</b> con todos los datos y adjuntando la documentación que se te pide. 
+                                            <br/><br/>
+                                            El <b>precio de inscripción</b> es de 100€, que en el caso que tu postulación se admita, se abona al importe de matrícula que debes pagar..
+                                            <br/><br/>
+                                            En el caso que no cumplas los requisitos exigidos, está la opción de devolverte el importe de inscripción inmediatamente.
+                                            <br/><br/>
+                                            Una vez <b>formalizada la matricula</b>, se te dará de alta en la Universidad días antes de iniciar la convocatoria del Máster.
+                                            <br/><br/>
+                                            Recuerda que este procedimiento es sólo para los que quieran acceder al <b>Título Oficial</b>, en caso que no puedas acceder, en <i>AUCAL</i> siempre tendrás oportunidad de estudiar un título profesional que te permitirá adelantar asignaturas en caso que puedas acceder al título oficial en un futuro.
+                                            <br/><br/>
+                                            Los títulos Oficiales cuentan con 2 <b>convocatorias anuales</b>: Marzo y Octubre. 
+                                            <br/><br/>
+                                            Las convocatorias se confirman cuando se haya alcanzado el número <b>mínimo de plazas</b> matriculadas por cada Máster.
+                                            <br/><br/>
+                                            En caso que haya grupos de alumnos adicionales a las plazas disponibles se puede abrir una tercera  convocatoria en el mes de junio.
+                                        </p>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CERTIFICADOS -->
+                    <div id="certificados" class="certificados tab">
+                        <div class="tabs-cuerpo">
+                            <div class="tabs-head center-head">
+                                <div class="title-center">
+                                    <p class="estudiar-h1">CERTIFICADOS</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red">
+                                </div>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h2-big">
+                                    Solicita tu Título Universitario cuando hayas superado todas las asignaturas del 
+                                    Plan de Estudios en el que te  matricules. ¡Así de fácil!
+                                </p>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h1">Expedición de Títulos y Certificados</p>
+                            </div>
+                            <div class="tabs-txt">
+                                <p class="certificados-txt">
+                                    El plazo de solicitud de Título Universitario comienza una vez que tenga el egresado superadas
+                                    todas las asignaturas del Plan de Estudios del que se ha matriculado. 
+                                </p>
+                                <br>
+                                <p class="certificados-txt">
+                                    La solicitud es personalizada y no se admite autorización alguna para que el interesado sea
+                                    sustituido. El plazo de entrega del Resguardo del Título una vez abonada la tasa
+                                    correspondiente y posteriormente entregada toda la documentación en la Secretaría del
+                                    Centro, se comenzará el trámite con la solicitud del número de Registro Nacional de Títulos que
+                                    hay que solicitar al Ministerio de Educación. Este proceso, una vez consultados con los diversos
+                                    organismos que tienen que intervenir en la elaboración del citado Certificado, puede durar
+                                    alrededor de 10 a 15 días, salvo imprevistos.
+                                </p> 
+                            </div>
+                            <div class="certificados-titulos">
+                                <div class="tabla-certis">
+                                    <ul class="certificados-tabla">
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> EXPEDICIÓN DE TÍTULOS, DIPLOMAS Y DUPLICADOS </span>
+                                            <ul class="tabla-detalle">
+                                                <li class="tabla-titulo-precio descri-2">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">TÍTULO OFICIAL DE MÁSTER UNIVERSITARIO</li>
+                                                        <li class="titulo-precio">150,00 €</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio descri-2">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">DUPLICADO DE TÍTULOS PROPIOS</li>
+                                                        <li class="titulo-precio">25,00 €</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> SECRETARIA ACADÉMICA </span>
+                                            <ul class="tabla-detalle">
+                                                <li class="table-titulo-precio descri-2">
+                                                    <ul class="titulo-precio descri-1 tabla-title-2">
+                                                        <li class="titulo-descript">
+                                                            CERTIFICACIONES ACADÉMICAS OFICIALES:
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio descri-2">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">CERTIFICADO ACADÉMICO PERSONAL (Academic Transcript / Record de notas)</li>
+                                                        <li class="titulo-precio">25,00 €</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio descri-2">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">CERTIFICADO DE MATRÍCULA</li>
+                                                        <li class="titulo-precio">25,00 €</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio descri-2">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">LEGALIZACIÓN DE TÍTULO POR APOSTILLA DE LA HAYA</li>
+                                                        <li class="titulo-precio">150€</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio descri-2">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">ENVÍOS POR CORREO POSTAL ESPAÑA</li>
+                                                        <li class="titulo-precio">15,00 €</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="tabla-titulo-precio descri-2">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">ENVÍOS POR CORREO POSTAL INTERNACIONAL</li>
+                                                        <li class="titulo-precio">110,00 €</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>                                
+                                </div>
+                                <div class="tabs-program">
+                                    <div class="tabs-program-img">
+                                        <p class="program-txt">
+                                        Normativa
+                                        de títulos
+                                        propios
+                                        AUCAL
+                                        Business
+                                        School
+                                        </p>
+                                        <img src="/2022/dist/images/logos/logo-transparent.png" alt="AUCAL Bussines School Portada Normativa" class="image-program">
+                                    </div>
+                                    <div class="tabs-program-pdf btn-red-normal">
+                                        <a href="/2022/dist/pdf/NORMATIVA-TITULOS-PROPIOS-AUCAL.pdf" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa {{ course.title }}">
+                                            <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                            <img src="/2022/dist/images/icons/descarga-blanco.png" alt="AUCAL Bussines School Descargar Normativa" class="btn-descarga-blanco">                                            
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BOLSA -->
+                    <div id="bolsa" class="bolsa tab">
+                        <div class="tabs-cuerpo">
+                            <div class="tabs-head center-head">
+                                <div class="title-center">
+                                    <p class="estudiar-h1">BOLSA DE EMPLEO Y PRÁCTICAS</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red">
+                                </div>
+                            </div>
+                            <div class="tabs-title">
+                                <p class="tab-h2-big">
+                                    En AUCAL, las prácticas profesionales y el empleo son parte esencial de tu formación. 
+                                    ¡Incorpórate o progresa en el mercado laboral! 
+                                </p>
+                            </div>
+                            <div class="bolsa-cards">
+                                <div class="bolsa-card card1">
+                                    <div class="bolsa-icons">
+                                        <img src="/2022/dist/images/icons/lap-top-marron.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Formacion Online" class="icon-laptop">
+                                    </div>
+                                    <div class="bolsa-card-txt">
+                                        <div class="bolsa-card-title">
+                                            <p class="card-h2">22 años</p>
+                                        </div>
+                                        <div class="bolsa-card-descript">
+                                            <p class="bolsa-txt">de experiencia <br/> en formación online</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bolsa-card card2">
+                                    <div class="bolsa-icons">
+                                        <img src="/2022/dist/images/icons/graduate-hat-marron.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Bolsa Educativa">
+                                    </div>
+                                    <div class="bolsa-card-txt">
+                                        <div class="bolsa-card-title">
+                                            <p class="card-h2">2586 titulados</p>
+                                        </div>
+                                        <div class="bolsa-card-descript">
+                                            <p class="bolsa-txt">avalan la calidad <br/> educativa de bolsa</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bolsa-card card3">
+                                    <div class="bolsa-icons">
+                                        <img src="/2022/dist/images/icons/hands-marron.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Acuerdos Empresas Instituciones">
+                                    </div>
+                                    <div class="bolsa-card-txt">
+                                        <div class="bolsa-card-title">
+                                            <p class="card-h2">+20 acuerdos</p>
+                                        </div>
+                                        <div class="bolsa-card-descript">
+                                            <p class="">con empresas <br/> e instituciones</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="tabs-title">
+                                <p class="tab-h1">La empleabilidad y las prácticas son parte de tu formación</p>
+                            </div>
+                            <div class="tabs-txt">
+                                <p class="bolsa-txt">
+                                    Ponemos a tu disposición la Bolsa de Empleo y Prácticas de INESEM que facilite la incorporación
+                                    al mercado laboral de nuestros alumnos. Actualmente, la formación es un elemento clave, si lo
+                                    que quieres es que tu carrera profesional despegue. Es relevante la realización de prácticas o
+                                    de incluirte en bolsas de empleo, teniendo en cuenta que estas son utilizadas como lanzadera
+                                    al mundo laboral, con actividades de empresa, destrezas y ritmo de trabajo que solo la
+                                    experiencia puede ofrecer Ponemos a tu disposición la Bolsa de Empleo y Prácticas de INESEM
+                                    que facilite la incorporación al mercado laboral de nuestros alumnos. Actualmente, la
+                                    formación es un elemento clave, si lo que quieres es que tu carrera profesional despegue. Es
+                                    relevante la realización de prácticas o de incluirte en bolsas de empleo, teniendo en cuenta que
+                                    estas son utilizadas como lanzadera al mundo laboral, con actividades de empresa, destrezas y
+                                    ritmo de trabajo que solo la experiencia puede ofrecer. Contarás con:
+                                </p>
+                            </div>
+                            <div class="practicas-cards">                                
+                                <div class="practicas-card">
+                                    <div class="practicas-icons">
+                                        <img class="practicas-icon" src="/2022/dist/images/icons/bolsa-empleo-rojo.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Contenidos Multimedia">
+                                    </div>
+                                    <div class="practicas-card-txt">
+                                        <div class="practicas-card-title">
+                                            <p class="card-h3">BOLSA DE EMPLEO</p>
+                                        </div>
+                                        <div class="practicas-card-descript">
+                                            <p class="card-descript">
+                                                Numerosas ofertas de potenciales empresas en el ámbito nacional.
+                                            </p>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="practicas-card">
+                                    <div class="practicas-icons">
+                                        <img class="practicas-icon" src="/2022/dist/images/icons/gestion-practicas-rojo.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Practicas Profesionales">
+                                    </div>
+                                    <div class="practicas-card-txt">
+                                        <div class="practicas-card-title">
+                                            <p class="card-h3">GESTIÓN DE PRÁCTICAS PROFESIONALES</p>
+                                        </div>
+                                        <div class="practicas-card-descript">
+                                            <p class="card-descript">
+                                                Numerosas ofertas de potenciales empresas en el ámbito nacional.
+                                            </p>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="practicas-card">
+                                    <div class="practicas-icons">
+                                        <img class="practicas-icon" src="/2022/dist/images/icons/catalogo-colabora-rojo.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Empresas Colaboradoras">
+                                    </div>
+                                    <div class="practicas-card-txt">
+                                        <div class="practicas-card-title">
+                                            <p class="card-h3">CATÁLOGO DE EMPRESAS COLABORADORA</p>
+                                        </div>
+                                        <div class="practicas-card-descript">
+                                            <p class="card-descript">
+                                                Numerosas ofertas de potenciales empresas en el ámbito nacional.
+                                            </p>
+                                        </div>
+                                    </div>                                    
+                                </div>                                                              
+                            </div>                             
+                            <div class="carrusel-convenios">
+                                <div class="cc-head center-head">
+                                    <div class="center-title">
+                                        <p class="cc-h2">CONVENIOS CON EMPRESAS</p>
+                                    </div>
+                                    <div class="center-hr">
+                                        <hr class="hr-red"/>
+                                    </div>
+                                </div>
+                                <div class="cc-carrousel items">                                    
+                                    <div class="card-conve item prev" id="ceim">  
+                                        <img src="/2022/dist/images/logos/ceim.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo CEIM" class="logo-conve ceim">
+                                    </div>
+                                    <div class="card-conve item" id="icpf">
+                                        <img src="/2022/dist/images/logos/icpf.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo ICPF" class="logo-conve icpf">                                    
+                                    </div>
+                                    <div class="card-conve item" id="cico">
+                                        <img src="/2022/dist/images/logos/cico.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo CICO" class="logo-conve cico">                
+                                    </div>
+                                    <div class="card-conve item" id="dacor">
+                                        <img src="/2022/dist/images/logos/dacor-intelligence.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo Dacor" class="logo-conve dacor">                                    
+                                    </div> 
+                                    <div class="card-conve item" id="eDigital">
+                                        <img src="/2022/dist/images/logos/espana-digital.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo eDigital" class="logo-conve eDigital">                
+                                    </div>
+                                    <div class="card-conve item active" id="aeen">
+                                        <img src="/2022/dist/images/logos/aeen.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo AEEN" class="logo-conve aeen">
+                                    </div>
+                                    <div class="card-conve item" id="cepsa">
+                                        <img src="/2022/dist/images/logos/cepsa.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo Cepsa" class="logo-conve cepsa">                                    
+                                    </div>
+                                    <div class="card-conve item" id="bbva">
+                                        <img src="/2022/dist/images/logos/BBVA.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo BBVA" class="logo-conve bbva">                                    
+                                    </div> 
+                                    <div class="card-conve item" id="corte">
+                                        <img src="/2022/dist/images/logos/logo-corte.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo El Corte Ingles" class="logo-conve corte">                                    
+                                    </div>
+                                    <div class="card-conve item" id="lumensia">
+                                        <img src="/2022/dist/images/logos/lumensia.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo Lumensia" class="logo-conve lumensia">                                    
+                                    </div>
+                                    <div class="card-conve item next" id="sener">
+                                        <img src="/2022/dist/images/logos/sener.png" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas Logo SENER" class="logo-conve sener">                                    
+                                    </div>
+                                    
+                                    <div class="button-container">
+                                        <div class="button"><i class="fas fa-angle-left" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas"></i></div>
+                                        <div class="button"><i class="fas fa-angle-right" alt="AUCAL Bussines School Estudiar Aucal Bolsa Empleo Practicas"></i></div>
+                                    </div>
+                                </div>       
+                            </div>
+                        </div>
+                    </div>
+                    <!-- INTERNACIONAL -->
+                    <div class="tabs">
+                        <div id="inter" class="inter tab">                            
+                            <div class="tabs-cuerpo">
+                                <div class="tabs-head center-head">
+                                    <div class="title-center">
+                                        <p class="estudiar-h1">INTERNACIONAL</p>
+                                    </div>
+                                    <div class="center-hr">
+                                        <hr class="hr-red">
+                                    </div>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2-big">
+                                        Todas nuestras titulaciones tienenlos mismos efectos académicos y legales, 
+                                        tanto en el país emisor como en el país que reconoce la titulación. 
+                                    </p>
+                                </div>                                                    
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/mapa_inter.png" alt="AUCAL Bussines School Estudiar Aucal Internacional Mapamundi Mapa" class="mapa-inter"/>
+                                    <img src="/2022/dist/images/mapa_inter-movil.png" alt="AUCAL Bussines School Estudiar Aucal Internacional Mapamundi Mapa" class="mapa-inter-movil">
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Un espacio común</p>
+                                </div>                            
+                                <div class="tabs-txt">
+                                    <p class="inter-txt">
+                                        El proceso de reconocimiento de títulos de educación superior tiene como finalidad que <b>la 
+                                        titulación tenga los mismos efectos académicos y legales, tanto en el país emisor como en el 
+                                        país que reconoce la titulación.</b> No es obligatorio en todos los casos, sin embargo, es común su 
+                                        exigencia en procesos vinculados a contrataciones laborales en el sector público.
+                                    </p>
+                                    <br>
+                                    <p class="inter-txt">
+                                        La implantación del <b>Plan Bolonia condujo a una reorganización de los sistemas educativos 
+                                        europeos en torno a una estructura común:</b> El espacio Europeo de Educación Superior, en éste, 
+                                        utilizando como unidad e medida el ECTS se establecen 7 niveles educativos EQF (European 
+                                        Qualification Framework Levels) que engloban a todas las titulaciones oficiales emitidas en el 
+                                        Espacio Europeo y que son correlativos, es decir, la consecución de uno de ellos da acceso al 
+                                        siguiente.
+                                    </p>
+                                    <br>
+                                    <p class="inter-txt">
+                                        Atendiendo a sus particularidades, cada país cuenta con su propia categorización adaptada al 
+                                        Marco Europeo. Puedes encontrar más información haciendo click en el botón:
+                                    </p>
+                                    <br>
+                                </div>
+                                <div class="btns-azules">                                
+                                    <div class="btn-azul fondo-1">
+                                        <a href="/2022/dist/images/sistema-espanol-nivel-meces.png" class="btn-azul-big btn-1" target="_blank" alt="AUCAL Bussines School Estudiar Aucal Internacional Programa MECES Spain">
+                                            <img src="/2022/dist/images/icons/descarga-blanco.png"alt="AUCAL Bussines School Estudiar Aucal Descargar Internacional Programa MECES" class="btn-descarga-blanco">
+                                            <p class="btn-txt-descarga">SISTEMA ESPAÑOL (MECES)</p>
+                                        </a>
+                                    </div>
+                                    <div class="btn-azul fondo-2">
+                                        <a href="/2022/dist/pdf/acreditacion-pegaso.pdf" class="btn-azul-big btn-2" target="_blank" alt="AUCAL Bussines School Estudiar Aucal Internacional Programa PEGASO Italia">
+                                            <img src="/2022/dist/images/icons/descarga-blanco.png" alt="AUCAL Bussines School Estudiar Aucal Internacional Descargar Programa PEGASO Italia" class="btn-descarga-blanco">
+                                            <p class="btn-txt-descarga">SISTEMA ITALIANO (PEGASO)</p>
+                                        </a>
+                                    </div>    
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">
+                                        Títulos otorgados por instituciones dentro del Espacio Europeo de Educación Superior
+                                    </p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="inter-txt">
+                                        Generalmente los reconocimientos de títulos son efectuados por parte de las autoridades 
+                                       competentes de cada país destino sobre títulos otorgados por instituciones legalmente 
+                                        autorizadas en su país de origen y que hayan sido acreditadas por una agencia de acreditación 
+                                        reconocida en su país de origen (en algunos casos también en el país que reconoce la 
+                                        titulación). A partir de esta consideración general cada país tiene diferencias en los procesos de 
+                                        convalidación relativas a criterios académicos, inicio de trámites y plazos de resolución. Haz 
+                                        click (redirección a un sitio externo).
+                                    </p>
+                                    <br>
+                                </div>
+                                <div class="tabs-enlaces">
+                                    <a href="https://www.mineducacion.gov.co/portal/convalidaciones/Convalidaciones-Educacion-Superior/350670:Conozca-el-proceso" target="_blank" class="a-red" alt="AUCAL Bussines School Estudiar Aucal Internacional Colombia">
+                                        <span class="tab-link">COLOMBIA ></span>
+                                    </a>
+                                    <a href="https://www.gob.ec/senescyt/tramites/reconocimiento-general-titulos-extranjero" target="_blank" class="a-red" alt="AUCAL Bussines School Estudiar Aucal Internacional Ecuador">
+                                        <span class="tab-link">ECUADOR ></span>
+                                    </a>
+                                    <a href="https://www.sunedu.gob.pe/procedimiento-de-reconocimiento-de-grados-y-titulos-extranjeros/" target="_blank" class="a-red" alt="AUCAL Bussines School Estudiar Aucal Internacional PerÚ">
+                                         <span class="tab-link">PERÚ ></span>
+                                    </a>
+                                    <a href="https://tramites.umss.edu.bo/requisitos-para-revalidar-titulos-del-exterior/" class="a-red" target="_blank" alt="AUCAL Bussines School Estudiar Aucal Internacional Bolivia">
+                                        <span class="tab-link">BOLIVIA ></span>
+                                    </a>
+                                    <a href="https://www.chileatiende.gob.cl/fichas/2461-reconocimiento-de-titulos-profesionales-obtenidos-en-el-extranjero" class="a-red" target="_blank" alt="AUCAL Bussines School Estudiar Aucal Internacional Bolivia">
+                                        <span class="tab-link">CHILE ></span>
+                                    </a>
+                                    <a href="https://www.gob.mx/sep/acciones-y-programas/revalidacion-de-estudios-del-tipo-superior-sep-18-019" class="a-red" target="_blank" alt="AUCAL Bussines School Estudiar Aucal Internacional Bolivia">
+                                        <span class="tab-link">MÉXICO ></span>
+                                    </a> <br/><br/> 
+                                    <p>
+                                        <a href="/2022/dist/pdf/AUCAL-equivalencia-titulos-espana.pdf" target="_blank" alt="AUCAL Bussines School Estudiar Aucal Internacional Equivalencia títulos España">
+                                            Procedimiento solicitud de equivalencia de títulos extranjeros para alumnos españoles
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">
+                                        Títulos otorgados por instituciones fuera del Espacio Europeo de Educación Superior
+                                    </p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="inter-txt">
+                                        Al igual que en el caso inverso el objetivo será el de equiparar académicamente las titulaciones 
+                                        en ambos países, siendo un requisito concreto para continuar la preparación formativa 
+                                        accediendo niveles académicos superiores de caracter oficial, como criterio general para iniciar 
+                                        el trámite sera necesaria la <b>legalización de los documentos y la titulación a través del trámite 
+                                        de apostilla.</b>
+                                    </p>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </aside>
+        <aside class="futuro">
+            <div class="futuro-head">
+                <div class="center-title">
+                    <p class="futuro-h2">TU FUTURO EMPIEZA AQUÍ</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red"/>
+                </div>
+            </div>
+            <div class="futuro-btns">
+                <div class="btns btns-yellow-1">
+                    <a href="/oferta-formativa" class="btn-yellow-big btn-1" alt="AUCAL Bussines School Oferta Educativa">
+                        <p>Explora cursos y programas</p>
+                    </a>
+                </div>
+                <div class="btns btns-yellow-2">
+                    <a href="/contacto" class="btn-yellow-big btn-2" alt="AUCAL Bussines School Contacto Formulario">
+                        <p>Solicita más información</p>
+                    </a>
+                </div>
+                <div class="btns btns-yellow-3">
+                    <a href="/programa-becas" class="btn-yellow-big btn-3" alt="AUCAL Bussines School Progrma Becas">
+                        <p>Descubre más sobre AUCAL</p>
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </div>
+{% endblock %}

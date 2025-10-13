@@ -1,0 +1,555 @@
+{% extends 'app/app.twig' %}
+
+{% block head %}
+    <meta name="description" content="Descubre nuestro amplio catálogo de formación online en Máster Oficiales, Cursos Superiores y Cursos Técnicos. Reconocidos y válidos en toda la UE."/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/oferta-formativa-aucal.png">
+    
+    <style>
+        .contenedor{
+            font-size: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                "header             header              header"
+                "oferta-banner      oferta-banner       oferta-banner"
+                "oferta-head        oferta-head         oferta-head"
+                "oferta-btns        oferta-btns         oferta-btns"
+                "oferta-links       oferta-links        oferta-links"
+                "carrusel-unis      carrusel-unis       carrusel-unis"
+                "footer             footer              footer";    
+        }
+
+        .contenedor .header{
+            grid-area: header;
+        }
+
+        .contenedor .oferta-banner{
+            grid-area: oferta-banner;
+            color: #fff;
+            padding: 5em;
+            line-height: 3.5rem;
+            width: auto;
+            background-position: center center;
+            text-shadow: 5px 5px 20px #000;
+            background-size: cover; 
+
+        }
+
+        .contenedor .oferta-banner>div .oferta-txt{
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .contenedor .oferta-head{
+            grid-area: oferta-head;
+            width: 80%;
+            margin: 0 auto;
+            line-height: normal;
+            padding: 2em;
+        }
+
+        .contenedor .oferta-head .oferta-title-head{
+            color: #E10031;
+            font-weight: 700;
+        }
+
+        .contenedor .oferta-head .oferta-txt-head{    
+            text-align: justify;
+            font-size: 15px;
+        }
+
+        .contenedor .oferta-btns{
+            grid-area: oferta-btns;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .contenedor .oferta-btns .oferta-cards{
+            width: 100%;
+            margin-top: 1em;
+            color: #fff;
+            line-height: 1.6rem;
+            display: grid;
+            gap: 1em;
+            text-shadow: 1px 1px 5px #000000;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(1, 12em);
+        }
+
+        .contenedor .oferta-btns>div .oferta-card{  
+            text-align: left;
+            padding: 0.5em 1em;
+            line-height: 1.8rem; 
+            font-size: 1.1rem;
+            background-position: center center;
+            background-size: cover;
+            /* capa transparente de color */
+            box-shadow: inset 0 0 0 1000px rgba(1,1,1,0.5);
+            display: grid;
+            align-content: end;
+        
+        }
+
+        .contenedor .oferta-btns .oferta-cards>div a{  color: #fff;}
+
+        .contenedor .oferta-btns .oferta-cards>div a:hover{color: #F8B100; }
+
+        /* .contenedor .oferta-btns .oferta-cards>div a>div{padding-top: 2em;} */
+        .contenedor .oferta-btns .oferta-cards>div a>div .card-title{ font-size: 1.4rem;}
+
+        .contenedor .oferta-links{
+            grid-area: oferta-links;
+            padding: 2em;
+            font-size: 15px;
+        }
+
+        .contenedor .oferta-links>a{
+            padding: 2em;
+            font-weight: 500;
+        }
+
+        .contenedor .carrusel-unis{
+            grid-area: carrusel-unis;
+        }
+
+        .contenedor .footer{
+            grid-area: footer;
+        }
+
+        /* MASTERES */
+        .contenedor .banner-master{background-image: url(/2022/dist/images/master-general-banner.png);}
+
+        /*oficiales*/
+        .card-riesgos{background-image: url(/2022/dist/images/master-prl-url.png);}
+        .card-proyectos{background-image: url(/2022/dist/images/master-direccion-y-gestion-de-proyectos-thun.png);}
+        .card-psicologica{background-image: url(/2022/dist/images/master-psicopedagogia-thun.png);}
+        .card-internacional{background-image: url(/2022/dist/images/master-comercio-internacional-thun.png);}
+        .card-rrhh{background-image: url(/2022/dist/images/master-recursos-humanos-thun.png);}
+        .card-tecnologico{background-image: url(/2022/dist/images/master-compliance-penal-thun.png);}
+
+        /*Executive*/
+        .card-executive-rrhh{ background-image: url(/2022/uploads/courses/master-executive-rrhh-aucal.png); }
+        .card-executive-compi{background-image: url(/2022/uploads/courses/master-executive-compliance.png);}
+        .card-executive-project{background-image: url(/2022/uploads/courses/master-executive-project-management-aucal.png);}
+       
+        /* Cursos TEcnicos */
+        .contenedor .banner-tecnicos{  background-image: url(/2022/dist/images/cursos-supers.png); }
+
+        .card-perito{background-image: url(/2022/dist/images/cursos-tecnicos-perito-judicia-thun.png);}
+        .card-administrador{background-image: url(/2022/dist/images/cursos-tecnicos-administrador-de-fincas-thun.png);}
+        .card-familiar{background-image: url(/2022/dist/images/cursos-tecnicos-mediacion-familiar-thun.png);}
+        .card-pymes{background-image: url(/2022/dist/images/cursos-tecnicos-gestion-pymes-thun.png);}
+
+        /* Cursos Supers */
+        .contenedor .banner-supers{  background-image: url(/2022/dist/images/cursos-supers.png); }
+
+        .card-asesor{background-image: url(/2022/dist/images/cursos-superior-asesor-inmobiliario-thun.png);}
+        .card-fincas{background-image: url(/2022/dist/images/cursos-superior-direccion-y-gestion-inmobiliaria-thun.png);}
+        .card-seguridad{  background-image: url(/2022/dist/images/curso-superior-director-de-seguridad-thun.png); }
+        .card-detective{  background-image: url(/2022/dist/images/curso-superior-detective-privado-thun.png); }
+
+
+        @media (max-width: 991px) {
+            .contenedor .oferta-banner{
+                padding: 2em 0;
+                line-height: 3rem;
+                margin-top: 9em;
+            }
+
+            .contenedor .oferta-banner>div .oferta-txt{ 
+                font-size: 1.5rem;
+                line-height: 1.2em;
+                margin: 0 auto;
+                width: 90%; 
+            }
+        }
+
+
+        @media (max-width: 767.98px) {
+            .contenedor .oferta-head{
+                width: 85%;
+                margin: 2em auto;
+                padding: 0;
+            }
+
+            .contenedor .oferta-head .oferta-title-head{
+                font-weight: 500;
+                width: 100%;
+                margin: 0.5em auto;
+                padding: 0;
+                font-size: 1.1rem;
+                text-align: left;
+            }
+            
+            .contenedor .oferta-head .oferta-txt-head{ 
+                font-size: 15px;
+            }
+            
+            .contenedor .oferta-btns{ width: 85%;}
+
+            .contenedor .oferta-btns .oferta-cards{
+                width: 85%;
+                margin: 0 auto;
+                line-height: 1rem;
+                gap: 1em;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 12em);
+
+            }
+            .contenedor .oferta-btns .oferta-cards>div a{ line-height: 1.2rem;  }
+
+            .contenedor .oferta-btns .oferta-cards>div a>div .card-txt,
+            .contenedor .oferta-btns .oferta-cards>div a>div .card-title{ font-size: 15px; }
+
+            .contenedor .oferta-links{
+                display: none;
+                padding: 2em;
+                font-size: 15px;
+            }
+
+            .contenedor .oferta-links>a{ margin: 2em;}
+            
+            .contenedor .oferta-btns .oferta-cards-tecnicos,
+            .contenedor .oferta-btns .oferta-cards-supers{
+                margin-bottom: 1em;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(1, 12em);
+                
+            }
+        }
+
+        .contenedor{
+            font-size: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                "header                     header                       header"
+                "oferta-banner              oferta-banner                oferta-banner"
+                "oferta-head                oferta-head                  oferta-head"
+                "oferta-btns-masteres       oferta-btns-masteres         oferta-btns-masteres"
+                "oferta-links-masteres      oferta-links-masteres        oferta-links-masteres" 
+                "oferta-btns-executives     oferta-btns-executives       oferta-btns-executives"
+                "oferta-links-executives    oferta-links-executives      oferta-links-executives"        
+                "oferta-btns-superiores     oferta-btns-superiores       oferta-btns-superiores"
+                "oferta-links-superiores    oferta-links-superiores      oferta-links-superiores"
+                "oferta-btns-tecnicos       oferta-btns-tecnicos         oferta-btns-tecnicos"
+                "oferta-links-tecnicos      oferta-links-tecnicos        oferta-links-tecnicos"
+                "carrusel-unis              carrusel-unis                carrusel-unis"
+                "footer                     footer                       footer";    
+        }
+
+        .contenedor .banner-oferta{ background-image: url(/2022/dist/images/oferta-formativa-aucal.png);}
+
+        .h1-red{
+            font-size: 24px!important;
+            font-weight: 600;
+            color: #E10031;
+        }
+
+        .oferta-txt-subtitle{
+            width: 90%;
+            margin: 0 auto;    
+            font-size: 14px;  
+            color: #6a6a6a;
+        }
+
+        .contenedor .oferta-links-oferta{
+            text-align: end;
+            width: 90%;  
+        }
+
+        .contenedor .oferta-links-oferta>a:hover{font-weight: 700;}
+
+        .contenedor .oferta-btns-masteres{grid-area: oferta-btns-masteres;}
+        .contenedor .oferta-links-masteres{ grid-area: oferta-links-masteres;}
+         .contenedor .oferta-btns-executives{grid-area: oferta-btns-executives;}
+        .contenedor .oferta-links-executives{ grid-area: oferta-links-executives;}
+        .contenedor .oferta-btns-tecnicos{ grid-area: oferta-btns-tecnicos;}
+        .contenedor .oferta-links-tecnicos{ grid-area: oferta-links-tecnicos;}
+        .contenedor .oferta-btns-superiores{ grid-area: oferta-btns-superiores;}
+        .contenedor .oferta-links-superiores{ grid-area: oferta-links-superiores;}
+
+        @media (max-width: 767.98px) {
+            .contenedor .oferta-btns .oferta-cards{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 12em);
+            }
+
+            .contenedor .oferta-links-oferta{ 
+                display: block;
+                text-align: end;
+                margin: 0 0 1em;
+                padding: 0;
+                font-size: 14px;
+            }
+
+            .contenedor .oferta-btns {  margin-top: 1em; }
+        }
+
+	    @media (max-width: 575.98px){
+            .oferta-txt-subtitle{
+                text-align: justify;
+                margin: 1.5em auto;
+                width: 100%;
+            }
+            
+            .contenedor .oferta-links>a {margin: 2em 0; }
+
+            .contenedor .oferta-btns>div .oferta-card {
+                padding: 1.5em 1em;
+                height: 6em;
+                margin: 0;
+            }
+
+            .contenedor .oferta-btns .oferta-cards>div a>div .card-txt, 
+            .contenedor .oferta-btns .oferta-cards>div a>div .card-title {
+                font-size: 20px;
+            }
+
+            .oferta-btns .center-title { padding: 1em 0 0; }
+	    }
+    </style>
+{% endblock %}
+
+
+{% block body %}
+    <div class="contenedor"> 
+        <aside class="oferta-banner banner-oferta">            
+            <div class="oferta-title-banner center-head">
+                <div class="oferta-title center-title">
+                    <p class="h2-oferta">OFERTA EDUCATIVA</p>
+                </div>
+                <div class="oferta-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="oferta-txt center-title">
+                    <p class="h1-oferta">Descubre nuestro catálogo de Másteres, Cursos Técnicos y Cursos Superiores</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="oferta-head">
+            <div class="center-title oferta-title-head">
+                <p class="oferta-h1">
+                    Reconocidos y válidos en toda la UE
+                </p>
+            </div> 
+            <div class="oferta-txt-head">
+                <p class="oferta-txt">
+                    El catálogo formativo de <b>AUCAL</b> ofrece variados títulos académicos en modalidad online, 
+                    donde se destacan másteres online de títulos oficiales, cursos superiores y cursos técnicos 
+                    de títulos universitarios. <b>AUCAL</b> se enfoca en formar a profesionales con expectativas 
+                    de crecer en el mercado laboral y que adquieran las capacidades y habilidades necesarias 
+                    para enfrentar los desafíos a los que se enfrentan en la actualidad.
+                </p>
+            </div> 
+        </aside>
+        <aside class="oferta-btns oferta-btns-masteres">
+            <div class="center-title">
+                <p class="h1-red">MÁSTERES OFICIALES</p>
+            </div>
+            <div class="oferta-txt-subtitle">
+                <p class="oferta-txt">
+                    Nuestros <b>Másteres Universitarios</b> tienen como finalidad la adquisición, 
+                    por parte del estudiante, de una formación avanzada orientada a la especialización 
+                    académica o profesional, o bien a la iniciación en las tareas investigadoras. 
+                    Se han desarrollado con la colaboración de grandes Universidades de reconocida 
+                    trayectoria, tanto en España como internacional.
+                </p>
+            </div> 
+            <div class="oferta-cards">
+                <div class="oferta-card card-psicologica">
+                    <a href="/oferta-formativa/master-oficial/master-psicopedagogia" class="oferta-a" alt="AUCAL Bussines School Master Orientacion Educativa Intervencion Psicopedagogica">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Universitario en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Orientación Educativa e Interveción Psicológica</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-rrhh">
+                    <a href="/oferta-formativa/master-oficial/master-direccion-recursos-humanos" class="oferta-a" alt="AUCAL Bussines School Master Direccion Recursos humanos RRHH">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Universitario en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Dirección de Recursos Humanos</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-tecnologico">
+                    <a href="/oferta-formativa/master-oficial/master-compliance-penal-y-tecnologico" class="oferta-a" alt="AUCAL Bussines School Master Compliance Penal Tecnologico">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Universitario en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Compliace Penal y Tecnológico</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <aside class="oferta-links oferta-links-masteres oferta-links-oferta">
+            <a href="/oferta-formativa/master-oficial" class="link-oferta link-superiores" alt="AUCAL Bussines School Oferta Formativa Masters Masteres">VER TODOS LOS MÁSTERES OFICIALES>> </a>
+        </aside>
+
+        <aside class="oferta-btns oferta-btns-executives">
+            <div class="center-title">
+                <p class="h1-red">MÁSTERES EXECUTIVES</p>
+            </div>
+            <div class="oferta-txt-subtitle">
+                <p class="oferta-txt">
+                    Nuestros <b>Másteres Executives</b> online tienen como objetivo entregar al profesional 
+                    una excelencia académica al mismo nivel de un título oficial, combinada con una 
+                    experiencia de alto valor y reconocimiento en el desarrollo práctico más que el teórico, 
+                    preparando al alumno a enfrentar de mejor manera los desafíos laborales del futuro.                
+                </p>
+            </div> 
+            <div class="oferta-cards ">               
+                <div class="oferta-card card-executive-compi">
+                    <a href="/oferta-formativa/master-executive/master-executive-en-compliance-penal-y-tecnologico" class="oferta-a" alt="AUCAL Bussines School Master Executive Compliance Penal Tecnologico">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Executive en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Compliace Penal y Tecnológico</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-executive-rrhh">
+                    <a href="/oferta-formativa/master-executive/master-executive-en-recursos-humanos-y-salud-laboral" class="oferta-a" alt="AUCAL Bussines School Master Executive RRHH REcursos Humanos y salud laboral">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Executive en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Recursos Humanos y Salud Laboral</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-executive-project">
+                    <a href="/oferta-formativa/master-executive/master-executive-en-project-management" class="oferta-a" alt="AUCAL Bussines School Master Executive RRHH REcursos Humanos y salud laboral">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Máster Executive en</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Project Management</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <aside class="oferta-links oferta-links-executives oferta-links-oferta">
+            <a href="/oferta-formativa/master-executive" class="link-oferta link-superiores" alt="AUCAL Bussines School Oferta Formativa Masters Masteres">VER TODOS LOS MÁSTERES EXECUTIVES>> </a>
+        </aside>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <aside class="oferta-btns oferta-btns-superiores">
+            <div class="center-title">
+                <p class="h1-red">CURSOS SUPERIORES</p>
+            </div>
+            <div class="oferta-txt-subtitle">
+                <p class="oferta-txt">
+                    Nuestros <b>Cursos Superiores</b> brindan una educación de tipo 
+                    profesional o académica. Están dirigidos a aquellos que busca 
+                    unos estudios superiores prácticos, que los cualifiquen para 
+                    incorporarse al mundo laboral. Poseen titulaciones universitarias
+                    y y ofrecen un alto grado de especialización y cualificación 
+                    profesional con un plan de estudio adecuado para cada área, 
+                    necesario para la correcta formación académica.
+                </p>
+            </div> 
+            <div class="oferta-cards">
+                <div class="oferta-card card-seguridad">
+                    <a href="/oferta-formativa/curso-superior/curso-director-de-seguridad-privada" class="oferta-a" alt="AUCAL Bussines School Curso Superior Director Seguridad Privada">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Curso Superior de</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Director de Seguridad</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-detective">
+                    <a href="/oferta-formativa/curso-superior/curso-detective-privado" class="oferta-a" alt="AUCAL Bussines School Curso Superior Detective Privado">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Diploma Superior</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title"> Universitario de Detective Privado</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-fincas">
+                    <a href="/oferta-formativa/curso-superior/curso-gestion-inmobiliaria" class="oferta-a" alt="AUCAL Bussines School Curso Superior Gestion Inmobiliaria Administracion Fincas PINM">
+                        <div class="ofer-card-txt">
+                            <p class="card-txt">Programa Superior de</p>
+                        </div>
+                        <div class="ofer-card-title">
+                            <p class="card-title">Dirección y Gestión Inmobiliaria y Administración de Fincas (PINM)</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <aside class="oferta-links oferta-links-superiores oferta-links-oferta">
+            <a href="/oferta-formativa/curso-superior" class="link-oferta link-superiores" alt="AUCAL Bussines School Oferta Formativa Cursos Superiores">VER MÁS CURSOS SUPERIORES>> </a>
+        </aside>
+        <aside class="oferta-btns oferta-btns-tecnicos">
+            <div class="center-title">
+                <p class="h1-red">CURSOS TÉCNICOS</p>
+            </div>
+            <div class="oferta-txt-subtitle">
+                <p class="oferta-txt">
+                    Nuestros <b>Cursos Técnicos</b> son ideales para capacitar a los 
+                    estudiantes para varias labores industriales u autónomas. 
+                    Con una duración menos a 6 meses, tienen salidas laborales rápidas 
+                    y una gran especialización en el área. Suelen complementar la formación
+                    reglada con la finalidad de especializarse un área profesional técnica específica.
+                </p>
+            </div> 
+            <div class="oferta-cards">
+                <div class="oferta-card card-administrador">
+                    <a href="/oferta-formativa/curso-tecnico/curso-administracion-de-fincas" class="oferta-a" alt="AUCAL Bussines School Curso Tecnico Especialista Administracion Fincas">
+                        <div class="ofer-card-title">
+                            <p class="card-title">Especialista en Administración de Fincas</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-familiar">
+                    <a href="/oferta-formativa/curso-tecnico/curso-mediacion-familiar" class="oferta-a" alt="AUCAL Bussines School Curso Tecnico Mediacion Familiar">
+                        <div class="ofer-card-title">
+                            <p class="card-title">Mediación Familiar</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="oferta-card card-pymes">
+                    <a href="/oferta-formativa/curso-tecnico/curso-gestion-de-empresas" class="oferta-a" alt="AUCAL Bussines School Curso Tecnico Prevencion Riesgos Laborales PRL">
+                        <div class="ofer-card-title">
+                            <p class="card-title">Experto en Gestión de Pymes</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <aside class="oferta-links oferta-links-tecnicos oferta-links-oferta">
+            <a href="/oferta-formativa/curso-tecnico" class="link-oferta link-superiores" alt="AUCAL Bussines School Ofertiva Formativa Cursos Tecnicos">VER MÁS CURSOS TÉCNICOS>> </a>
+        </aside>       
+    </div>
+{% endblock %}

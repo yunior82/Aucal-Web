@@ -1,0 +1,719 @@
+{% extends 'app/app.twig' %}
+{% block head %}
+    <meta name="description" content="Curso Superior de Dirección y Gestión Inmobiliaria y Administración de Fincas reconocido por el Consejo General de Administradores de Fincas. 100% online."/>
+    <meta property="og:image" content="https://www.aucal.edu/2022/dist/images/cursos-superior-direccion-y-gestion-inmobiliaria-thun.png">
+    <link rel="stylesheet" href="/2022/dist/css/master-cursos.css"/>
+{% endblock %}
+
+{% block body %}
+    <div class="contenedor">
+         <aside class="cursos-banner banner-inmobiliaria">            
+            <div class="cursos-title-banner center-head">
+                <div class="cursos-title center-title">
+                    <p class="h2-cursos">CURSOS SUPERIORES</p>
+                </div>
+                <div class="cursos-hr center-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="cursos-txt center-title">
+                    <p class="h1-cursos">Programa Superior de Dirección y Gestión Inmobiliaria y Administración de Fincas</p>
+                </div>
+            </div>      
+        </aside>
+        <aside class="cursos-tabs">
+            <div class="tabs-container">
+                <div class="tabs-head tabs-head-responsive">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Programa Superior de Dirección y Gestión Inmobiliaria y Administración de Fincas</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                184 ECTS | 36 meses | Online <br/>
+                                Título propio Universidad Antonio de Nebrija. <br/>
+                                Reconocido por el Consejo General de Administradores de Fincas
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="#formSolicitar" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion">Matricúlate ahora</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="tabs-list">
+                    <ul class="tabs-barra">
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'presentacion')">
+                            <span class="cursos-tablink">PRESENTACIÓN</span>                                                
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'informacion')">
+                            <span class="cursos-tablink">INFORMACIÓN</span>                        
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'planEstudios')">
+                             <span class="cursos-tablink">PLAN DE ESTUDIOS</span>
+                             
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'titulacion')">
+                            <span class="cursos-tablink">TITULACIÓN</span>
+                            
+                        </li>
+                        <li href="javascript:void(0)" class="btn-red-normal" onclick="showTab(event,'materiales')">
+                            <span class="cursos-tablink">MATERIALES</span>                        
+                        </li>
+                    </ul>
+                </div>  
+                <div class="tabs-head tabs-head-principal">
+                    <div class="tabs-title">
+                        <p class="tab-h1">Estudia el Programa Superior de Dirección y Gestión Inmobiliaria y Administración de Fincas</p>
+                    </div>
+                    <div class="tabs-script">
+                        <div class="tab-txt">
+                            <p class="tab-h2-big">
+                                184 ECTS | 36 meses | Online <br/>
+                                Título propio Universidad Antonio de Nebrija. <br/>
+                                Reconocido por el Consejo General de Administradores de Fincas
+                                
+                            </p>
+                        </div>
+                        <div class="tab-txt-btn">
+                            <a href="#formSolicitar" class="btn-yellow" alt="AUCAL Bussines School Matricula Inscripcion">Matricúlate ahora</a>
+                        </div>
+                    </div>
+                </div>   
+                <div class="tabs-cuerpo">
+                    <div class="tabs-widgets">
+                        <div class="tab-sec">
+                            <ul class="tab-sec-list">
+                                <li class="tab-link" href="javascript:void(0)"onclick="changeTab(event,'presentacion')" >
+                                    <p class="tab-sec-txt">PRESENTACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)"  onclick="changeTab(event,'informacion')">
+                                    <p class="tab-sec-txt">INFORMACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'planEstudios')">
+                                    <p class="tab-sec-txt">PLAN DE ESTUDIOS</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'titulacion')">
+                                    <p class="tab-sec-txt">TITULACIÓN</p>
+                                </li>
+                                <li class="tab-link" href="javascript:void(0)" onclick="changeTab(event,'materiales')">
+                                    <p class="tab-sec-txt">MATERIALES</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabs-program">
+                            <div class="tabs-program-img">
+                                <img src="/2022/dist/images/oferta/portada-superior-PINM.PNG" alt="AUCAL Bussines School Portada Curso Superior Direccion Gestion Inmobiliaria Administracion Fincas PINM" class="image-program">
+                            </div>
+                            <div class="tabs-program-pdf btn-red-normal">
+                                <a href="/2022/dist/pdf/AUCAL-dossier-superior-PINM.pdf" class="btn-red-normal" target="_blank" alt="AUCAL Bussines School Programa Curso Superior Direccion Gestion Inmobiliaria Administracion Fincas PINM">
+                                    <p class="btn-txt-descarga">DESCARGAR PROGRAMA</p>
+                                    <img src="/2022/dist/images/icons/descarga-blanco.png" alt="AUCAL Bussines School Descargar Curso Superior Direccion Gestion Inmobiliaria Administracion Fincas PINM" class="btn-descarga-blanco">                                            
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <!-- PRESENTACION --> 
+                        <div class="presentacion tab" id="presentacion">                             
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Presentación</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El <b>Programa Superior de Dirección y Gestión Inmobiliaria y Administración de Fincas</b> se encuentra reconocido por el Consejo General de Administradores de Fincas y podrá colegiarse en el mismo. Con esta titulación, el alumno podrá: mediar en la compra-venta de bienes inmuebles, realizar la constitución y renovación de préstamos con garantía real, arrendamientos de fincas urbanas, rústicas, locales de negocio, comercios u oficinas, realización de informes de valoraciones judiciales...
+                                    </p>
+                                </div>    
+                                <div class="tabs-txt">
+                                    <p class="presentacion-txt">
+                                        Te podrás registrar en Aspejure para poder ejercer como perito judicial en los listados judiciales de: Tribunales Superiores de Justicia, Audiencias Provinciales y Juzgados Decanos; además, estará incluido en todos los juzgados de las provincias que desee. (Ver condiciones en la pestaña de Documentación).
+                                    </p>
+                                </div>               
+                            </div> 
+                            <!-- <div class="tabs-video">
+                                <div class="center-title">
+                                    <p class="tab-h2">VIDEO DE PRESENTACION</p>
+                                </div>
+                                <div class="center-hr">
+                                    <hr class="hr-red"/>
+                                </div>
+                                <div class="video-curso">
+                                    <iframe src="https://www.youtube.com/embed/ErJfACoeqIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt="AUCAL Bussines School Video Curso Superior Direccion Gestion Inmobiliaria Administracion Fincas PINM"></iframe>
+                                </div>
+                            </div>                                                         -->
+                        </div> 
+                        <!-- INFORMACION -->
+                         <div id="informacion" class="informacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Información</p>
+                                </div>                                
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Objetivos</p>
+                                </div>
+                                <div class="tabs-txt">
+                                    <p class="informacion-txt">
+                                        En este <b>Programa Superior de Dirección y Gestión Inmobiliaria y Administración de Fincas</b> se pretende alcanzar los siguientes objetivos:      
+                                    </p>
+                                    <ul class="tabla-titulaciones">
+                                        <li class="tipo-titulo">
+                                            Tasar cualquier bien inmueble con su valor real de venta, desde una compra-venta de viviendas, hasta arrendamientos rústicos o urbanos y traspasos.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Resolución de contratos con garantía jurídica para el consumidor aportando a la transacción inmobiliaria profesionalidad e información veraz de la situación real del mercado inmobiliario.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Realizar operaciones como: compra-venta y permuta de fincas rústicas y urbanas.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Préstamos con garantía hipotecaria sobre fincas rústicas y urbanas.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Ejecutar las consultas y dictámenes que les sean solicitados sobre el valor de venta, cesión o traspaso de los bienes inmuebles a los que se refieren los tres apartados anteriores.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Asesoramiento sobre el precio y el valor del mercado en función del estudio del mercado en cada momento puntual.
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Comprobación de todos los datos de la transacción inmobiliaria como el: registro, catastro, cargas, calificación urbanística…
+                                        </li>
+                                        <li class="tipo-titulo">
+                                            Gestionar todo lo relativo a la administración de fincas, desde administrar la contabilidad de estas comunidades hasta gestionar ayudas y subvenciones.
+                                        </li>
+                                    </ul>                                                                            
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- PLAN ESTUDIOS -->
+                        <div id="planEstudios" class="plan-estudios tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Asignaturas</p>
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">MATERIAS COMUNES (obligatorias)</p>
+                                </div>
+                                <div class="plan-estudios-tabla">
+                                    <ul class="agignaturas-tabla">
+                                        <li class="tabla-seccion">
+                                            <span class="tabla-title"> ASIGNATURAS </span>                                            
+                                            <!--<span class="tabla-ect">ECTS</span> -->
+                                            <ul class="tabla-detalle">
+                                                <p class="plan-estudios-txt">
+                                                    <b>PRIMERO</b>
+                                                </p>                                          
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Administración de Fincas</li>
+                                                        <!--<li class="titulo-precio">6</li>-->
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Derecho Inmobiliario </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Contabilidad</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Creación de Empresas</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Aplicaciones Informáticas</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Gestión de Personal</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Dirección y Gestión de Planes de Marketing</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Prevención de Riesgos Laborales</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Habilidades Directivas</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="tabla-detalle">
+                                                <p class="plan-estudios-txt">
+                                                    <b>SEGUNDO</b>
+                                                </p>                                          
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Valoraciones Inmobiliarias</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Informática Aplicada I</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Asesoría Fiscal</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Urbanismo</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Interpretación de Planos</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Introducción a la Economía</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Gestión de la Calidad</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="tabla-detalle">
+                                                <p class="plan-estudios-txt">
+                                                    <b>TERCERO</b>
+                                                </p>                                          
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Gestión de Proyectos</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Construcción</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Informática Aplicada II</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Mantenimiento y Normas Técnicas de Edificios</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Financiación de la Empresa</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Deontología Profesional</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Peritaje Judicial</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!--<li class="tabla-total">
+                                            <span class="tabla-title">TOTALES</span>
+                                            <span class="tabla-ect">66</span>
+                                        </li>-->
+                                    </ul>
+                                </div>  
+				<br><br>  
+                                <div class="tabs-txt">
+                                    <p class="informacion-txt">
+                                        La impartición de este Programa Superior es como acabamos de ver, no obstante, el Expediente Académico será el que figura a continuación:
+                                    </p>                                   
+                                </div> <!--tabs-txt-->
+                                <div class="plan-estudios-tabla">
+                                    <ul class="agignaturas-tabla">
+                                        <li class="tabla-seccion">                                            
+                                            <ul class="tabla-detalle"> 
+                                                <p class="plan-estudios-txt">
+                                                    <b>CURSO 1</b>
+                                                </p>                                                 
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho civil I</li>
+                                                        <li class="titulo-precio">7</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Contabilidad I </li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Marketing y Promoción Inmobiliaria</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Fiscalidad y Tributación I</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Introducción a la Economía</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Gestión de Proyectos I</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Financiación de la Empresa Inmobiliaria</li>
+                                                        <li class="titulo-precio">7</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho del trabajo y la seguridad social</li>
+                                                        <li class="titulo-precio">5</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Construcción I</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Introducción a la informática</li>
+                                                        <li class="titulo-precio">5</li>
+                                                    </ul>
+                                                </li>
+                                            </ul> 
+                                            <ul class="tabla-detalle">  
+                                                <p class="plan-estudios-txt">
+                                                    <b>CURSO 2</b>
+                                                </p>                                               
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho civil II</li>
+                                                        <li class="titulo-precio">7</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Contabilidad II</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho mercantil I</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Fiscalidad y Tributación II</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Planeamiento y Gestión Urbanística</li>
+                                                        <li class="titulo-precio">9</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Gestión de Proyectos II</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Informática aplicada I</li>
+                                                        <li class="titulo-precio">7</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Habilidades directivas I. Liderazgo y motivación</li>
+                                                        <li class="titulo-precio">5</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Construcción II</li>
+                                                        <li class="titulo-precio">5</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Gestión de calidad</li>
+                                                        <li class="titulo-precio">5</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>                                       
+                                            <ul class="tabla-detalle">   
+                                                <p class="plan-estudios-txt">
+                                                    <b>CURSO 3</b>
+                                                </p>                                              
+                                                <li class="tabla-titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Derecho civil III</li>
+                                                        <li class="titulo-precio">7</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio ">
+                                                        <li class="titulo-descript">Contabilidad III</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Construcción III</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Gestión de Proyectos III</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Interpretación de Planos</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Informática aplicada II</li>
+                                                        <li class="titulo-precio">6</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript">Habilidades directivas II. Técnicas de negociación</li>
+                                                        <li class="titulo-precio">5</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Prevención de Riesgos Laborales</li>
+                                                        <li class="titulo-precio">5</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Deontología profesional</li>
+                                                        <li class="titulo-precio">4</li>
+                                                    </ul>
+                                                </li>
+                                                
+                                                <li class="titulo-precio">
+                                                    <ul class="titulo-precio">
+                                                        <li class="titulo-descript descript-bold">Gestión de calidad</li>
+                                                        <li class="titulo-precio">5</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>                                                                              
+                                    </ul>                                    
+                                </div>
+                            </div> <!--tabs-resumen-->
+                        </div> <!--plan estudios-->
+                        
+                        <!-- TITULACION -->
+                        <div id="titulacion" class="titulacion tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Titulación</p>
+                                </div>                            
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN UNIVERSIDAD ANTONIO DE NEBRIJA
+                                    </p>                                      
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Programa Superior de Dirección y Gestión Inmobiliaria y Administración de Fincas"</p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-NEBRIJA.jpg" alt="AUCAL Bussines School Diploma Curso Superior Direccion Gestion Inmobiliaria Administracion Fincas PINM Nebrija" class="img-diploma">                                    
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        TITULACIÓN PROPIA AUCAL BUSINESS SCHOOL
+                                    </p>                                      
+                                </div>
+                                <div class="tabs-title">
+                                    <p class="tab-h2">Mención: "Curso Gestión Inmobiliaria"</p>
+                                </div>
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/diploma-AUCAL.jpg" alt="AUCAL Bussines School Diploma Curso Superior Direccion Gestion Inmobiliaria Administracion Fincas PINM AUCAL" class="img-diploma">                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- MATERIALES -->
+                        <div id="materiales" class="materiales tab">
+                            <div class="tabs-resumen">
+                                <div class="tabs-title">
+                                    <p class="tab-h1">Materiales</p>
+                                </div>
+                                <div class="tab-resu-txt">
+                                    <p class="presentacion-txt">
+                                        El alumno dispondrá del material de estudio necesario para la realización de la formación en la plataforma virtual.                                    
+				    </p>
+                                </div>                                
+                                <div class="tabs-img">
+                                    <img src="/2022/dist/images/material_aucal.png" alt="AUCAL Bussines School Material Curso Superior Direccion Gestion Inmobiliaria Administracion Fincas PINM" class="materiales-img"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--tabs-->
+                </div> <!-- tabs-cuerpo -->
+            </div><!-- tabs-container -->
+        </aside>
+        <aside class="coordinador-perfil">
+            <!-- BIOGRAFIA COORDINADOR -->
+            <div class="tabs-banner-bottom">
+                <div class="banner-bottom-img">
+                    <img src="/2022/dist/images/coordis/tamara-belver.png" alt="AUCAL Bussines School Coordinador Curso Superior Direccion Gestion Inmobiliaria Administracion Fincas PINM" class="img-coordinador"/>
+                </div>
+                <div class="banner-bottom-txt">
+                    <div class="tabs-title">
+                        <p class="tab-h2">Coordinadora del Curso</p>
+                        <p class="tab-h1">Tamara Belver</p>
+                    </div>
+                    <div class="tabs-txt">
+                        <p class="banner-bottom-descript">
+                            Licenciada en Administración y Dirección de Empresas; 
+                            Máster en Investigación de Economía de la Empresa. 
+                            Posee más de 7 años de experiencia como docente.
+                        </p>
+                    </div>
+                </div>                            
+            </div>   
+            <div class="ficha-master">
+                <!-- PERFIL ALUMNO Y DOCUMENTACION -->  
+                <div class="perfil-alumno ficha-dropdown">
+                    <div class="drop-title">
+                         <div>
+                            <button class="dropbtn" onclick="show_hide(event, 'perfil')"> 
+                                <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                              <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                            </button>
+                         </div>
+                        <div>
+                            <p class="tab-h2">Perfil del alumno</p>   
+                        </div>                     
+                    </div>
+                    <div class="ficha-dropdown-txt" id="perfil">
+                        <p class="informacion-txt">
+                            Este <b>Programa Superior en Gestión Inmobiliaria</b> está dirigido a profesionales que deseen especializarse en el sector inmobiliario con una visión y enfoque de emprendedor, gestión y planificación. 
+                        </p> 
+                        <br/>
+                        <p class="informacion-txt">
+                            Los <b>Requisitos</b>  para matricularse en este <b>Programa</b> son:
+                        </p> 
+			            <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo">
+                                Título Universitario o en su defecto el acceso a la universidad (Bachillerato +PAU, prueba de acceso mayores de 25 años, prueba de acceso mayores de 40 años o Título Superior en Formación Profesional).
+                            </li>
+                        </ul>
+                        
+             
+                    </div>
+                </div>
+                <div class="documentacion ficha-dropdown">
+                    <div class="drop-title">
+                        <div>
+                           <button class="dropbtn" onclick="show_hide(event, 'documentacion')"> 
+                               <img src="/2022/dist/images/icons/drop-down-rojo.png" alt="AUCAL Bussines School" class="icono-down"/>
+                             <!--  <img src="/2022/dist/images/icons/drop-left-rojo.png" alt="AUCAL Bussines School" class="icono-left hidden"/> -->                                          
+                           </button>
+                        </div>
+                       <div>
+                           <p class="tab-h2">Documentación</p>   
+                       </div>  		                          
+                   </div>
+                    <div class="ficha-dropdown-txt" id="documentacion"> 
+			            <ul class="tabla-titulaciones">
+                            <li class="tipo-titulo">
+                               <b>Título Universitario </b> o en su defecto el acceso a la universidad (Bachillerato +PAU, 
+                                prueba de acceso mayores de 25 años, prueba de acceso mayores de 40 años o Título 
+                                Superior en Formación Profesional).
+                            </li>
+                        </ul>
+                                   
+                    </div>
+                </div>
+            </div>   
+        </aside>
+        <aside class="banner-azul-right">
+            <div class="azul-right-img img-master"></div> 
+            <div class="azul-right-txt">
+               <div class="azul-right-title">
+                    <p class="h2-azul-right">¿Quieres conocer las becas que tenemos en AUCAL?</p>
+                </div>
+                <div class="azul-right-hr">
+                    <hr class="hr-red"/>
+                </div>
+                <div class="azul-right-descript">
+                    <p class="p-zul-right">
+                        Descubre nuestras becas nacionales e internacionales <br/>
+                        <b>de hasta el 50%. ¡Inscríbete ahora!</b>
+                    </p>
+                </div>
+            </div>
+            <div class="azul-right-btn">
+                <a href="https://www.aucal.edu/programa-becas" class="btn-border" alt="AUCAL Bussines School Programa Becas">VER BECAS
+                </a>
+            </div>                     
+        </aside>         
+        <aside class="titulo-fomulario" id="formSolicitar">
+            <div class="becas-head center-head">
+                <div class="title-center">
+                    <p class="becas-h1">Formulario de solicitud</p>
+                </div>
+                <div class="center-hr">
+                    <hr class="hr-red">
+                </div>
+            </div>
+            <div class="becas-title">
+                <p class="black-h1-big">
+                    Déjanos tus datos y escribe tu consulta con la ayuda que deseas solicitar. Contactaremos contigo lo
+                    antes posible para asesorate lo mejor posible en todo lo que necesites. 
+                </p>
+            </div>
+        </aside>
+        <aside class="formulario">            
+            <iframe frameborder="0" style="height:1150px;width:99%;border:none;" 
+            src='https://formulario.aucal.edu/aucalbusinessschool/form/FormularionuevaWebAUCAL/formperma/7-ULZDtrn9jf9iR3AmWEYjBwVmxtAmdLMjZk9fTGaYg' 
+	    alt="AUCAL Bussines School Formulario Inscripcion">
+            </iframe>  
+        </aside>
+    </div>
+{% endblock %}
