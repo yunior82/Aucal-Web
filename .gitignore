@@ -31,6 +31,7 @@ Thumbs.db
 
 # Configuración local
 config.local.php
+/src/Renderer.php
 
 # Otros archivos
 .htaccess

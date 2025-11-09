@@ -2,9 +2,7 @@
 <?php
 require './../vendor/autoload.php';
 
-$conexion = mysqli_connect("localhost", "aucalorg", "AorX07NF14abd") or die ("Error de conexión");
-mysqli_select_db($conexion, "aucalorg");
-mysqli_query ($conexion, "SET NAMES 'utf8'");
+require_once __DIR__ . '/../config/config.php';
 
 
 function pagination($page, $max, $distance = 5)
